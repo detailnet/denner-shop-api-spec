@@ -1489,9 +1489,6 @@ definitions:
       name:
         type: string
         description: Article name
-      incomplete:
-        type: boolean
-        description: Is the article complete?
       title:
         $ref: '#/definitions/Translations'
       description:
