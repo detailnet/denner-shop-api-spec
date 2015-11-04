@@ -1,0 +1,74 @@
+{
+    "online_groups": [
+        {
+            "id": "7627150d-36bd-4867-89b2-091800a03d24",
+            "code": 1001,
+            "sort_index": 0,
+            "allow_featuring": true,
+            "allow_promotion": true,
+            "allow_background": true,
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Frischprodukte"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Produits frais"
+                },
+                {
+                    "locale": "it",
+                    "value": "Prodotti freschi"
+                }
+            ],
+            "children": [
+                {
+                    "id": "58afec5c-ece9-4b66-bc55-00d6dc1b65b8",
+                    "code": 1001,
+                    "sort_index": 0,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Milchprodukte"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Produits laitiers"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Latticini"
+                        }
+                    ],
+                    "children": []
+                },
+                {
+                    "id": "e5216167-9da5-41d6-b7b3-96362b60de89",
+                    "code": 1002,
+                    "sort_index": 1,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Eier"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Oeufs"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Uova"
+                        }
+                    ],
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
