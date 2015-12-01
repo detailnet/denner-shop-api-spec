@@ -145,394 +145,44 @@
             },
             "options": [
                 {
-                    "value": "1",
                     "title": "Abruzzen",
-                    "resultCount":"2"
+                    "value": "3b7dfc06-94bd-45af-8baa-e269b8556659"
                 },
                 {
-                    "value": "2",
                     "title": "Alentejo",
-                    "resultCount":"1"
+                    "value": "826e51d0-a1bf-4b47-882b-e3fbfce38c65"
                 },
                 {
-                    "value": "411",
                     "title": "Alicante",
-                    "resultCount":"1"
+                    "value": "768a73be-2ad6-467d-b369-3db14eb5e0b9"
                 },
                 {
-                    "value": "3",
                     "title": "Apulien",
-                    "resultCount":"9"
+                    "value": "f1cd9437-d240-4e9a-8eac-ff6e4f06acbf"
                 },
                 {
-                    "value": "196",
                     "title": "Baden (D)",
-                    "resultCount":"1"
+                    "value": "3adb4fbe-f025-4b93-bbf2-c77a6d0db2d5"
                 },
                 {
-                    "value": "6",
                     "title": "Beaujolais",
-                    "resultCount":"1"
+                    "value": "58f86296-1c57-4f6c-bbec-af141461d161"
                 },
                 {
-                    "value": "7",
                     "title": "Beiras",
-                    "resultCount":"1"
+                    "value": "d22cfb45-09e2-4d36-b75a-fb7172418b7f"
                 },
                 {
-                    "value": "10",
                     "title": "Bordeaux",
-                    "resultCount":"25"
+                    "value": "35a159be-6495-4240-aebc-e7eacacd8683"
                 },
                 {
-                    "value": "5",
                     "title": "B\u00fcndner Herrschaft",
-                    "resultCount":"1"
+                    "value": "0e6ac2c7-6114-4ebb-bed3-8f8930092b58"
                 },
                 {
-                    "value": "12",
                     "title": "Burgund",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "15",
-                    "title": "Calchaqui Valley",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "16",
-                    "title": "Cari\u00f1ena",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "17",
-                    "title": "Castilla y L\u00e9on",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "19",
-                    "title": "Catalunya",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "23",
-                    "title": "Central Valley",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "24",
-                    "title": "Champagne",
-                    "resultCount":"10"
-                },
-                {
-                    "value": "26",
-                    "title": "Chianti, Toskana",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "27",
-                    "title": "Colchagua Valley",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "138",
-                    "title": "Colli del Mendrisiotto, Tessin",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "408",
-                    "title": "Corbi\u00e8res",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "29",
-                    "title": "Costi\u00e8res de N\u00eemes",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "20",
-                    "title": "C\u00f4tes de Provence",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "22",
-                    "title": "C\u00f4tes-du-Rh\u00f4ne",
-                    "resultCount":"7"
-                },
-                {
-                    "value": "32",
-                    "title": "Elsass",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "34",
-                    "title": "Genf",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "407",
-                    "title": "Jumilla",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "139",
-                    "title": "Kalifornien",
-                    "resultCount":"8"
-                },
-                {
-                    "value": "41",
-                    "title": "La C\u00f4te, Waadt",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "42",
-                    "title": "La Mancha",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "47",
-                    "title": "Languedoc-Roussillon",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "420",
-                    "title": "Leyda Valley",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "48",
-                    "title": "Loire",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "50",
-                    "title": "Maipo Valley",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "419",
-                    "title": "Marlborough",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "53",
-                    "title": "M\u00e9doc, Bordeaux",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "55",
-                    "title": "Mendoza",
-                    "resultCount":"5"
-                },
-                {
-                    "value": "56",
-                    "title": "Minervois",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "59",
-                    "title": "Navarra",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "60",
-                    "title": "Neuenburg",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "62",
-                    "title": "Ostschweiz",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "64",
-                    "title": "Pened\u00e8s",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "66",
-                    "title": "Piemont",
-                    "resultCount":"6"
-                },
-                {
-                    "value": "74",
-                    "title": "Ribera del Duero",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "76",
-                    "title": "Rioja",
-                    "resultCount":"12"
-                },
-                {
-                    "value": "77",
-                    "title": "Rueda",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "134",
-                    "title": "Salento, Apulien",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "392",
-                    "title": "Sardinien",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "83",
-                    "title": "Schaffhausen",
-                    "resultCount":"4"
-                },
-                {
-                    "value": "421",
-                    "title": "Setubal",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "84",
-                    "title": "Sizilien",
-                    "resultCount":"7"
-                },
-                {
-                    "value": "430",
-                    "title": "South Australia",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "86",
-                    "title": "South Eastern Australia",
-                    "resultCount":"7"
-                },
-                {
-                    "value": "89",
-                    "title": "Tessin",
-                    "resultCount":"13"
-                },
-                {
-                    "value": "90",
-                    "title": "Toro",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "92",
-                    "title": "Toskana",
-                    "resultCount":"13"
-                },
-                {
-                    "value": "93",
-                    "title": "Umbrien",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "94",
-                    "title": "Utiel-Reque\u00f1a",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "96",
-                    "title": "Valdepe\u00f1as",
-                    "resultCount":"3"
-                },
-                {
-                    "value": "97",
-                    "title": "Valencia",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "104",
-                    "title": "Veneto",
-                    "resultCount":"17"
-                },
-                {
-                    "value": "214",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"6"
-                },
-                {
-                    "value": "182",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "207",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"4"
-                },
-                {
-                    "value": "414",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "323",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "239",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "249",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "409",
-                    "title": "verschiedene Regionen",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "428",
-                    "title": "Victoria",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "405",
-                    "title": "Vin de Pays d'Oc",
-                    "resultCount":"12"
-                },
-                {
-                    "value": "107",
-                    "title": "Vinho Verde",
-                    "resultCount":"2"
-                },
-                {
-                    "value": "108",
-                    "title": "Vino de la Tierra de Castilla",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "110",
-                    "title": "Waadt",
-                    "resultCount":"17"
-                },
-                {
-                    "value": "112",
-                    "title": "Wallis",
-                    "resultCount":"28"
-                },
-                {
-                    "value": "425",
-                    "title": "Weinviertel",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "113",
-                    "title": "Western Cape",
-                    "resultCount":"5"
-                },
-                {
-                    "value": "114",
-                    "title": "Westschweiz",
-                    "resultCount":"4"
-                },
-                {
-                    "value": "115",
-                    "title": "Z\u00fcrich",
-                    "resultCount":"1"
+                    "value": "7755be1f-85c9-4820-ae03-a2e636a07744"
                 }
             ]
         },
