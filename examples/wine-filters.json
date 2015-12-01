@@ -1,0 +1,814 @@
+{
+    "wine_filters": [
+        {
+            "id": "types",
+            "title": "Weintyp",
+            "type": "list",
+            "filter": {
+                "property": "country",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id": "2",
+                    "label": "Rotwein",
+                    "resultCount": "158"
+                },
+                {
+                    "id": "6",
+                    "label": "Bordeaux Grand Cru",
+                    "resultCount": "15"
+                },
+                {
+                    "id": "1",
+                    "label": "Weisswein",
+                    "resultCount": "71"
+                },
+                {
+                    "id": "4",
+                    "label": "Schaumwein",
+                    "resultCount": "34"
+                },
+                {
+                    "id": "3",
+                    "label": "Rosé",
+                    "resultCount": "20"
+                },
+                {
+                    "id": "5",
+                    "label": "Andere",
+                    "resultCount": "1"
+                }
+            ]
+        },
+        {
+            "id": "countries",
+            "title": "Land",
+            "type": "list",
+            "filter": {
+                "property": "country",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id":"44",
+                    "label":"Argentinien",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"47",
+                    "label":"Australien",
+                    "resultCount":"9"
+                },
+                {
+                    "id":"79",
+                    "label":"Chile",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"90",
+                    "label":"Deutschland",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"284",
+                    "label":"Europa",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"108",
+                    "label":"Frankreich",
+                    "resultCount":"76"
+                },
+                {
+                    "id":"143",
+                    "label":"Italien",
+                    "resultCount":"62"
+                },
+                {
+                    "id":"204",
+                    "label":"Neuseeland",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"46",
+                    "label":"\u00d6sterreich",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"217",
+                    "label":"Portugal",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"76",
+                    "label":"Schweiz",
+                    "resultCount":"76"
+                },
+                {
+                    "id":"101",
+                    "label":"Spanien",
+                    "resultCount":"38"
+                },
+                {
+                    "id":"280",
+                    "label":"S\u00fcdafrika",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"133",
+                    "label":"Ungarn",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"266",
+                    "label":"Vereinigte Staaten",
+                    "resultCount":"8"
+                },
+                {
+                    "id":"294",
+                    "label":"verschiedene L\u00e4nder",
+                    "resultCount":"2"
+                }
+            ]
+        },
+        {
+            "id": "regions",
+            "title": "Region",
+            "type": "list",
+            "filter": {
+                "property": "region",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id":"1",
+                    "label":"Abruzzen",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"2",
+                    "label":"Alentejo",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"411",
+                    "label":"Alicante",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"3",
+                    "label":"Apulien",
+                    "resultCount":"9"
+                },
+                {
+                    "id":"196",
+                    "label":"Baden (D)",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"6",
+                    "label":"Beaujolais",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"7",
+                    "label":"Beiras",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"10",
+                    "label":"Bordeaux",
+                    "resultCount":"25"
+                },
+                {
+                    "id":"5",
+                    "label":"B\u00fcndner Herrschaft",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"12",
+                    "label":"Burgund",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"15",
+                    "label":"Calchaqui Valley",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"16",
+                    "label":"Cari\u00f1ena",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"17",
+                    "label":"Castilla y L\u00e9on",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"19",
+                    "label":"Catalunya",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"23",
+                    "label":"Central Valley",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"24",
+                    "label":"Champagne",
+                    "resultCount":"10"
+                },
+                {
+                    "id":"26",
+                    "label":"Chianti, Toskana",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"27",
+                    "label":"Colchagua Valley",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"138",
+                    "label":"Colli del Mendrisiotto, Tessin",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"408",
+                    "label":"Corbi\u00e8res",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"29",
+                    "label":"Costi\u00e8res de N\u00eemes",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"20",
+                    "label":"C\u00f4tes de Provence",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"22",
+                    "label":"C\u00f4tes-du-Rh\u00f4ne",
+                    "resultCount":"7"
+                },
+                {
+                    "id":"32",
+                    "label":"Elsass",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"34",
+                    "label":"Genf",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"407",
+                    "label":"Jumilla",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"139",
+                    "label":"Kalifornien",
+                    "resultCount":"8"
+                },
+                {
+                    "id":"41",
+                    "label":"La C\u00f4te, Waadt",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"42",
+                    "label":"La Mancha",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"47",
+                    "label":"Languedoc-Roussillon",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"420",
+                    "label":"Leyda Valley",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"48",
+                    "label":"Loire",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"50",
+                    "label":"Maipo Valley",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"419",
+                    "label":"Marlborough",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"53",
+                    "label":"M\u00e9doc, Bordeaux",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"55",
+                    "label":"Mendoza",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"56",
+                    "label":"Minervois",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"59",
+                    "label":"Navarra",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"60",
+                    "label":"Neuenburg",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"62",
+                    "label":"Ostschweiz",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"64",
+                    "label":"Pened\u00e8s",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"66",
+                    "label":"Piemont",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"74",
+                    "label":"Ribera del Duero",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"76",
+                    "label":"Rioja",
+                    "resultCount":"12"
+                },
+                {
+                    "id":"77",
+                    "label":"Rueda",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"134",
+                    "label":"Salento, Apulien",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"392",
+                    "label":"Sardinien",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"83",
+                    "label":"Schaffhausen",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"421",
+                    "label":"Setubal",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"84",
+                    "label":"Sizilien",
+                    "resultCount":"7"
+                },
+                {
+                    "id":"430",
+                    "label":"South Australia",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"86",
+                    "label":"South Eastern Australia",
+                    "resultCount":"7"
+                },
+                {
+                    "id":"89",
+                    "label":"Tessin",
+                    "resultCount":"13"
+                },
+                {
+                    "id":"90",
+                    "label":"Toro",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"92",
+                    "label":"Toskana",
+                    "resultCount":"13"
+                },
+                {
+                    "id":"93",
+                    "label":"Umbrien",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"94",
+                    "label":"Utiel-Reque\u00f1a",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"96",
+                    "label":"Valdepe\u00f1as",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"97",
+                    "label":"Valencia",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"104",
+                    "label":"Veneto",
+                    "resultCount":"17"
+                },
+                {
+                    "id":"214",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"182",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"207",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"414",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"323",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"239",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"249",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"409",
+                    "label":"verschiedene Regionen",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"428",
+                    "label":"Victoria",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"405",
+                    "label":"Vin de Pays d'Oc",
+                    "resultCount":"12"
+                },
+                {
+                    "id":"107",
+                    "label":"Vinho Verde",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"108",
+                    "label":"Vino de la Tierra de Castilla",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"110",
+                    "label":"Waadt",
+                    "resultCount":"17"
+                },
+                {
+                    "id":"112",
+                    "label":"Wallis",
+                    "resultCount":"28"
+                },
+                {
+                    "id":"425",
+                    "label":"Weinviertel",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"113",
+                    "label":"Western Cape",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"114",
+                    "label":"Westschweiz",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"115",
+                    "label":"Z\u00fcrich",
+                    "resultCount":"1"
+                }
+            ]
+        },
+        {
+            "id": "price",
+            "title": "Preisklasse",
+            "type": "slider",
+            "filter": {
+                "property": "price_from",
+                "operator": "=",
+                "type": "integer"
+            },
+            "range": {
+                "min": {
+                    "value": 1,
+                    "filter": {
+                        "property": "price_from",
+                        "operator": ">=",
+                        "type": "integer"
+                    }
+                },
+                "max": {
+                    "value": 75,
+                    "filter": {
+                        "property": "price_to",
+                        "operator": "<=",
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        {
+            "id": "fits_withs",
+            "title": "Passend zu",
+            "type": "list",
+            "filter": {
+                "property": "fits_withs",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id":"1",
+                    "label":"Ap\u00e9ro (Antipasti, Tapas)",
+                    "resultCount":"93"
+                },
+                {
+                    "id":"4",
+                    "label":"Charcuterie",
+                    "resultCount":"28"
+                },
+                {
+                    "id":"6",
+                    "label":"Dessert",
+                    "resultCount":"10"
+                },
+                {
+                    "id":"7",
+                    "label":"Eintopf",
+                    "resultCount":"24"
+                },
+                {
+                    "id":"8",
+                    "label":"Exotische K\u00fcche",
+                    "resultCount":"21"
+                },
+                {
+                    "id":"10",
+                    "label":"Fisch: grilliert",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"9",
+                    "label":"Fisch: S\u00fcsswasser",
+                    "resultCount":"28"
+                },
+                {
+                    "id":"11",
+                    "label":"Fleisch: hell",
+                    "resultCount":"99"
+                },
+                {
+                    "id":"12",
+                    "label":"Fleisch: rot",
+                    "resultCount":"124"
+                },
+                {
+                    "id":"13",
+                    "label":"Fondue, Raclette",
+                    "resultCount":"14"
+                },
+                {
+                    "id":"14",
+                    "label":"Gem\u00fcse",
+                    "resultCount":"42"
+                },
+                {
+                    "id":"15",
+                    "label":"Gratin",
+                    "resultCount":"3"
+                },
+                {
+                    "id":"16",
+                    "label":"K\u00e4se: hart",
+                    "resultCount":"30"
+                },
+                {
+                    "id":"17",
+                    "label":"K\u00e4se: weich",
+                    "resultCount":"15"
+                },
+                {
+                    "id":"19",
+                    "label":"K\u00e4se: w\u00fcrzig, reif",
+                    "resultCount":"72"
+                },
+                {
+                    "id":"21",
+                    "label":"Lasagne",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"22",
+                    "label":"Meeresfr\u00fcchte",
+                    "resultCount":"20"
+                },
+                {
+                    "id":"24",
+                    "label":"Paella",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"25",
+                    "label":"Pasta",
+                    "resultCount":"86"
+                },
+                {
+                    "id":"27",
+                    "label":"Pilze",
+                    "resultCount":"9"
+                },
+                {
+                    "id":"29",
+                    "label":"Pizza",
+                    "resultCount":"13"
+                },
+                {
+                    "id":"30",
+                    "label":"Polenta",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"32",
+                    "label":"Risotto",
+                    "resultCount":"21"
+                },
+                {
+                    "id":"34",
+                    "label":"Salate",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"2",
+                    "label":"Trockenfleisch",
+                    "resultCount":"6"
+                }
+            ]
+        },
+        {
+            "id": "awards",
+            "title": "Auszeichnungen",
+            "type": "list",
+            "filter": {
+                "property": "awards",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id":"37",
+                    "label":"Berliner Wein Trophy",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"39",
+                    "label":"Decanter",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"41",
+                    "label":"Expovina",
+                    "resultCount":"24"
+                },
+                {
+                    "id":"43",
+                    "label":"Gold Concours Mondial de Bruxelles",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"35",
+                    "label":"Gu\u00eda Pe\u00f1in",
+                    "resultCount":"1"
+                },
+                {
+                    "id":"47",
+                    "label":"Mundus Vini",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"48",
+                    "label":"Parker",
+                    "resultCount":"15"
+                },
+                {
+                    "id":"49",
+                    "label":"Silber Concours Mondial de Bruxelles",
+                    "resultCount":"2"
+                },
+                {
+                    "id":"51",
+                    "label":"Weinseller",
+                    "resultCount":"6"
+                },
+                {
+                    "id":"45",
+                    "label":"Wine Challenge London",
+                    "resultCount":"5"
+                },
+                {
+                    "id":"52",
+                    "label":"Wine Spectator",
+                    "resultCount":"18"
+                },
+                {
+                    "id":"53",
+                    "label":"Wine&Spirit",
+                    "resultCount":"7"
+                }
+            ]
+        },
+        {
+            "id": "promotion_type",
+            "title": "Aktionen",
+            "type": "list",
+            "filter": {
+                "property": "promotion_type",
+                "operator": "in",
+                "type": "array"
+            },
+            "options": [
+                {
+                    "id":"0",
+                    "label":"Alle Aktionen",
+                    "resultCount":"29"
+                },
+                {
+                    "id":"2",
+                    "label":"Rotwein-Aktionen",
+                    "resultCount":"10"
+                },
+                {
+                    "id":"1",
+                    "label":"Weisswein-Aktionen",
+                    "resultCount":"4"
+                },
+                {
+                    "id":"4",
+                    "label":"Schaumwein-Aktionen",
+                    "resultCount":"14"
+                },
+                {
+                    "id":"5",
+                    "label":"Andere Aktionen",
+                    "resultCount":"1"
+                }
+            ]
+        }
+    ]
+}

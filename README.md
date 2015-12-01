@@ -18,7 +18,7 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 ### Wines
 
 * `/wines` (Weine)
-* `/wine-filters` (Filter)
+* `/wine-filters` (Filter, [example](examples/wine-filters.json))
 * `/wines/{id}/appraisals` (Weinbewertungen)
 
 ### Banners
