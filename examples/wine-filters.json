@@ -540,11 +540,6 @@
             "id": "price",
             "title": "Preisklasse",
             "type": "slider",
-            "filter": {
-                "property": "price_from",
-                "operator": "=",
-                "type": "integer"
-            },
             "range": {
                 "min": {
                     "value": 1,
