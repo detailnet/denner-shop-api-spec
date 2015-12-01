@@ -5,8 +5,8 @@
             "name": "Mandorla Primitivo di Puglia IGT",
             "description": "2013, Apulien, Italien, 6 x 75 cl",
             "prices": {
-                "sales": 9.9,
-                "instead": 11.4,
+                "sales": 59.4,
+                "instead": 68.4,
                 "base": 1.32,
                 "by_quantity": [
                     {
@@ -20,6 +20,10 @@
                         "instead": 68.4
                     }
                 ]
+            },
+            "quantity": 6,
+            "content": {
+                "text": "75 cl"
             },
             "base": {
                 "text": "10 cl"
