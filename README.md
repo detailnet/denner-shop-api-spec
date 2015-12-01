@@ -10,7 +10,7 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 
 ### Promotions
 
-* `/featured-articles` (Startseitenartikel)
+* `/featured-articles` (Startseitenartikel, [example](examples/featured-articles.json))
 * `/online-filters` (Angebotsfilter, [example](examples/online-filters.json))
 * `/online-filters/{id}/online-publications` (Werbemittel, [example](examples/online-publications.json))
 * `/online-filters/{id}/online-groups` (Internet-Sortimente), [example](examples/online-groups.json))
