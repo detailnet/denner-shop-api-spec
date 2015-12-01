@@ -1,26 +1,31 @@
 # Denner Mobile API Spec
 
 ## Data and resources
-The Denner Mobile Web Service provides mostly advertising related data.
+The Denner Mobile Web Service provides data and functions for the Denner Mobile Apps.
 
 ### Stores
 
 * `/stores` (Filialen, [example](examples/stores.json))
 * `/store-channels` (Filialkanäle, [example](examples/store-channels.json))
 * `/store-services` (Filialangebote, [example](examples/store-services.json))
+* `/store-filters` (Filter)
 
-### Articles
+### Promotions
 
-* `/online-groups` (Internet-Sortimente, [example](examples/online-groups.json))
-
-### Promotions/Advertising
-
+* `/featured-articles` (Startseitenartikel)
 * `/online-filters` (Angebotsfilter, [example](examples/online-filters.json))
-* `/online-publications` (Werbemittel, [example](examples/online-publications.json))
+* `/online-filters/{id}/online-publications` (Werbemittel, [example](examples/online-publications.json))
+* `/online-filters/{id}/online-groups` (Internet-Sortimente), [example](examples/online-groups.json))
 
 ### Wines
 
 * `/wines` (Weine)
+* `/wine-filters` (Filter)
+* `/wines/{id}/appraisals` (Weinbewertungen)
+
+### Banners
+
+* `/banners` (Banner)
 
 
 ## Building
