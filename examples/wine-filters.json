@@ -5,40 +5,35 @@
             "title": "Weintyp",
             "type": "list",
             "filter": {
-                "property": "country",
+                "property": "type",
                 "operator": "in",
                 "type": "array"
             },
             "options": [
                 {
-                    "id": "2",
                     "title": "Rotwein",
-                    "resultCount": "158"
+                    "value": 2
                 },
                 {
-                    "id": "6",
                     "title": "Bordeaux Grand Cru",
-                    "resultCount": "15"
+                    "value": 6
                 },
                 {
-                    "id": "1",
                     "title": "Weisswein",
-                    "resultCount": "71"
+                    "value": 1
                 },
                 {
-                    "id": "4",
                     "title": "Schaumwein",
-                    "resultCount": "34"
+                    "value": 4
                 },
                 {
-                    "id": "3",
                     "title": "Rosé",
-                    "resultCount": "20"
+                    "value": 3
                 },
                 {
                     "id": "5",
                     "title": "Andere",
-                    "resultCount": "1"
+                    "value": 5
                 }
             ]
         },
@@ -276,13 +271,13 @@
                     "value": 1
                 },
                 {
-                    "title": "Rosé-Aktionen",
-                    "value": 3
-                },
-                {
                     "title": "Schaumwein-Aktionen",
                     "value": 4
                 },
+                {
+                    "title": "Rosé-Aktionen",
+                    "value": 3
+                }
                 {
                     "title": "Andere Aktionen",
                     "value": 5
