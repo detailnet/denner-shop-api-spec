@@ -1,5 +1,5 @@
 {
-    "filters": [
+    "store_filters": [
         {
             "id": "opening",
             "title": "Öffnungszeit",
