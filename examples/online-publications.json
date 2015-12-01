@@ -1,5 +1,5 @@
 {
-    "publications": [
+    "online_publications": [
         {
             "id": "2c8616be-07c8-4fba-83a2-ee780449ff32",
             "name": "Wochenaktionen KW 26/2015",
@@ -180,15 +180,15 @@
                             "text": [
                                 {
                                     "locale": "de",
-                                    "text": "1/2 Preis\nWeinheit!"
+                                    "value": "1/2 Preis\nWeinheit!"
                                 },
                                 {
                                     "locale": "fr",
-                                    "text": "1/2 prix\nLe top du vin!"
+                                    "value": "1/2 prix\nLe top du vin!"
                                 },
                                 {
                                     "locale": "it",
-                                    "text": "1/2 prezzo\nSuperofferta vino!"
+                                    "value": "1/2 prezzo\nSuperofferta vino!"
                                 }
                             ],
                             "images": [
@@ -375,8 +375,8 @@
                             "name": "Weine"
                         }
                     },
-                    "packshot": {
-                        "image_url": "https://s3-eu-west-1.amazonaws.com/denner-assets/assets/c4b58b4e-b222-4d5f-894e-6225662e5669/051273.png"
+                    "packshot" : {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
                     },
                     "wine": {
                         "country": {

@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   description: RESTful API for the Denner Mobile App
-  version: 0.11.0
+  version: 0.1.0
   title: Denner Mobile Web Service
   contact:
     name: DETAIL NET
@@ -426,8 +426,8 @@ paths:
                       locale: "it"
                       value: "Punto cottura"
 
-  ### Advertising
-  /publications:
+  ### Online Advertising
+  /online-publications:
     get:
       summary: List all online publications
       description: >
@@ -523,7 +523,7 @@ paths:
                     name: "Dennerwoche"
                   sort_index: 0
 
-  /publications/{publication_id}:
+  /online-publications/{publication_id}:
     get:
       summary: Get single online publication (includes all advertised articles)
       description: >
@@ -670,19 +670,40 @@ paths:
                     -
                       locale: "it"
                       value: "9.90 a bottiglia invece di 11.40"
-                  dot:
+                  dots:
                     -
-                      locale: "de"
-                      value: "1/2 Preis"
-                      image_url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.png"
-                    -
-                      locale: "fr"
-                      value: "1/2 prix"
-                      image_url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-fr.png"
-                    -
-                      locale: "it"
-                      value: "1/2 prezzo"
-                      image_url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-it.png"
+                      id: "d4bca729-10ad-482c-bdda-b1a1398173b5"
+                      type:
+                        id: "semi_price_winehit"
+                      text:
+                        -
+                          locale: "de"
+                          value: "1/2 Preis\nWeinheit!"
+                        -
+                          locale: "fr"
+                          value: "1/2 prix\nLe top du vin!"
+                        -
+                          locale: "it"
+                          value: "1/2 prezzo\nSuperofferta vino!"
+                      images:
+                        -
+                          locale: "de"
+                          formats:
+                            -
+                              type: "image/svg+xml"
+                              url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
+                        -
+                          locale: "fr"
+                          formats:
+                            -
+                              type: "image/svg+xml"
+                              url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-fr.svg"
+                        -
+                          locale: "it"
+                          formats:
+                            -
+                              type: "image/svg+xml"
+                              url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-it.svg"
                   panel:
                     -
                       locale: "de"
@@ -805,7 +826,7 @@ paths:
                       code: "60"
                       name: "Weine"
                   packshot:
-                    image_url: "https://s3-eu-west-1.amazonaws.com/denner-assets/assets/c4b58b4e-b222-4d5f-894e-6225662e5669/051273.png"
+                    image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
                   wine:
                     country:
                       id: "IT"
@@ -1506,8 +1527,6 @@ definitions:
         $ref: '#/definitions/AssignedOnlineGroup'
       article_group:
         $ref: '#/definitions/AssignedArticleGroup'
-      packshot:
-        $ref: '#/definitions/Packshot'
       wine:
         $ref: '#/definitions/ArticleWine'
 
@@ -1650,18 +1669,53 @@ definitions:
   Dots:
     type: array
     items:
-      $ref: '#/definitions/Dot'
+      $ref: '#/definitions/Output'
 
-  Dot:
+  Output:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      type:
+        type: object
+        description: Output type
+        properties:
+          id:
+            type: string
+            description: Output type id
+      text:
+        $ref: '#/definitions/Translations'
+      images:
+        $ref: '#/definitions/OutputImages'
+
+  OutputImages:
+    type: array
+    items:
+      $ref: '#/definitions/OutputImage'
+
+  OutputImage:
     type: object
     properties:
       locale:
-        $ref: '#/definitions/Locale'
-      value:
         type: string
-        description: Translated text value
-      image_url:
-        $ref: '#/definitions/Url'
+        description: Locale for the image formats
+      formats:
+        $ref: '#/definitions/OutputImageFormats'
+
+  OutputImageFormats:
+    type: array
+    items:
+      $ref: '#/definitions/OutputImageFormat'
+
+  OutputImageFormat:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Mime type for the output image
+      url:
+        type: string
+        description: Image url which can be used, for example, in an 'img' tag
 
   ### Online publicated article
   OnlineArticle:
@@ -1686,7 +1740,7 @@ definitions:
         $ref: '#/definitions/Translations'
       unit_price_info:
         $ref: '#/definitions/Translations'
-      dot:
+      dots:
         $ref: '#/definitions/Dots'
       panel:
         $ref: '#/definitions/Translations'
