@@ -784,7 +784,8 @@
             },
             "options": [
                 {
-                    "title": "Alle Aktionen"
+                    "title": "Alle Aktionen",
+                    "value": 0
                 },
                 {
                     "title":"Rotwein-Aktionen",
