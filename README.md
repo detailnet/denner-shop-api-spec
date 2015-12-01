@@ -11,16 +11,16 @@ The Denner Mobile Web Service provides mostly advertising related data.
 
 ### Articles
 
-* `/online-groups` (Internet-Sortimente, [example](examples/groups.json))
+* `/online-groups` (Internet-Sortimente, [example](examples/online-groups.json))
 
 ### Promotions/Advertising
 
-* `/online-filters` (Angebotsfilter, [example](examples/filters.json))
-* `/publications` (Werbemittel, [example](examples/publications.json))
+* `/online-filters` (Angebotsfilter, [example](examples/online-filters.json))
+* `/online-publications` (Werbemittel, [example](examples/online-publications.json))
 
 ### Wines
 
-* `/wines` (Weine, [example](examples/wines.json))
+* `/wines` (Weine)
 
 
 ## Building
