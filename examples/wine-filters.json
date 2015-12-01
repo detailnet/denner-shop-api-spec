@@ -53,84 +53,20 @@
             },
             "options": [
                 {
-                    "value": "44",
                     "title": "Argentinien",
-                    "resultCount":"6"
+                    "value": "AR"
                 },
                 {
-                    "value": "47",
                     "title": "Australien",
-                    "resultCount":"9"
+                    "value": "AU"
                 },
                 {
-                    "value": "79",
                     "title": "Chile",
-                    "resultCount":"6"
+                    "value": "CL"
                 },
                 {
-                    "value": "90",
                     "title": "Deutschland",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "284",
-                    "title": "Europa",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "108",
-                    "title": "Frankreich",
-                    "resultCount":"76"
-                },
-                {
-                    "value": "143",
-                    "title": "Italien",
-                    "resultCount":"62"
-                },
-                {
-                    "value": "204",
-                    "title": "Neuseeland",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "46",
-                    "title": "\u00d6sterreich",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "217",
-                    "title": "Portugal",
-                    "resultCount":"6"
-                },
-                {
-                    "value": "76",
-                    "title": "Schweiz",
-                    "resultCount":"76"
-                },
-                {
-                    "value": "101",
-                    "title": "Spanien",
-                    "resultCount":"38"
-                },
-                {
-                    "value": "280",
-                    "title": "S\u00fcdafrika",
-                    "resultCount":"5"
-                },
-                {
-                    "value": "133",
-                    "title": "Ungarn",
-                    "resultCount":"1"
-                },
-                {
-                    "value": "266",
-                    "title": "Vereinigte Staaten",
-                    "resultCount":"8"
-                },
-                {
-                    "value": "294",
-                    "title": "verschiedene L\u00e4nder",
-                    "resultCount":"2"
+                    "value": "DE"
                 }
             ]
         },
