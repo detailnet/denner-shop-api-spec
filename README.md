@@ -6,9 +6,7 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 ### Stores
 
 * `/stores` (Filialen, [example](examples/stores.json))
-* `/store-channels` (Filialkanäle, [example](examples/store-channels.json))
-* `/store-services` (Filialangebote, [example](examples/store-services.json))
-* `/store-filters` (Filter)
+* `/store-filters` (Filter, [example](examples/store-filters.json))
 
 ### Promotions
 

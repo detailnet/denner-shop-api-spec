@@ -1,0 +1,67 @@
+{
+    "filters": [
+        {
+            "id": "opening",
+            "title": "Öffnungszeit",
+            "property": "open_on",
+            "operator": "=",
+            "type": "string",
+            "options": [
+                {
+                    "title": "Jetzt geöffnet",
+                    "value": "now"
+                },
+                {
+                    "title": "Heute bis 20 Uhr geöffnet",
+                    "value": "20:00:00"
+                }
+            ]
+        },
+        {
+            "id": "services",
+            "title": "Besondere Sortimente",
+            "property": "services",
+            "operator": "in",
+            "type": "array",
+            "options": [
+                {
+                    "id": "acb911fb-b7e3-480f-ab91-1109e750892a",
+                    "name": "Humidor"
+                },
+                {
+                    "id": "85aa57ad-2bf3-48e5-a1a0-813889cbae26",
+                    "title": "Bordeaux Grands Crus"
+                },
+                {
+                    "id": "d7b4925e-79f8-415f-9436-0adb4a9cc4de",
+                    "title": "Früchte und Gemüse"
+                },
+                {
+                    "id": "47191064-ad2e-482a-a5cf-2aa32d0b8116",
+                    "title": "Früchte und Gemüse im Offenverkauf"
+                },
+                {
+                    "id": "57d0301a-fd5d-4dce-ab0d-75dee1d16631",
+                    "title": "Backstation"
+                }
+            ]
+        },
+        {
+            "id": "channels",
+            "title": "Filialtyp",
+            "property": "channel",
+            "operator": "in",
+            "type": "array",
+            "options": [
+                {
+                    "id": "5d1c3dd5-35a9-4c66-ab20-3409ea640334",
+                    "title": "Denner"
+                },
+                {
+                    "id": "18549f95-6471-4e21-968f-8a0bf2e0f79b",
+                    "title": "Denner Satellit und Denner Express"
+                }
+            ]
+        }
+    ]
+}
