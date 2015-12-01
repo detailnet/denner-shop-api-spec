@@ -1649,7 +1649,7 @@ definitions:
       message:
         $ref: '#/definitions/Translations'
 
-  ### Publicated article (both online and screen)
+  ### Publicated article
   Dots:
     type: array
     items:
@@ -1720,65 +1720,6 @@ definitions:
       promoted:
         type: boolean
         description: Is it a promoted article (should be displayed with full information)?
-      compared:
-        type: boolean
-        description: Is the article's price compared to an offer from an other company?
-      cooling:
-        $ref: '#/definitions/Cooling'
-      online_group:
-        $ref: '#/definitions/AssignedOnlineGroup'
-      article_group:
-        $ref: '#/definitions/AssignedArticleGroup'
-      packshot:
-        $ref: '#/definitions/Packshot'
-      wine:
-        $ref: '#/definitions/ArticleWine'
-
-  ScreenArticle:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      article_id:
-        type: string
-        pattern: '/^\d{6}$/'
-        description: Navision article code
-      name:
-        type: string
-        description: Article name
-      title:
-        $ref: '#/definitions/Translations'
-      description:
-        $ref: '#/definitions/Translations'
-      prices:
-        $ref: '#/definitions/ArticlePrices'
-      price_info:
-        $ref: '#/definitions/Translations'
-      unit_price_info:
-        $ref: '#/definitions/Translations'
-      dot:
-        $ref: '#/definitions/Dots'
-      panel:
-        $ref: '#/definitions/Translations'
-      quantity:
-        $ref: '#/definitions/Quantity'
-#      Removed because we cannot calculate a valid size, neither display a standardized unit
-#      content:
-#        $ref: '#/definitions/Content'
-      base:
-        $ref: '#/definitions/BaseContent'
-      validity:
-        $ref: '#/definitions/ArticleValidity'
-      availability_limitations:
-        type: object
-        description: Texts for information about limited availability
-        properties:
-          region:
-            $ref: '#/definitions/Translations'
-          store:
-            $ref: '#/definitions/Translations'
-      sort_index:
-        $ref: '#/definitions/SortIndex'
       compared:
         type: boolean
         description: Is the article's price compared to an offer from an other company?
