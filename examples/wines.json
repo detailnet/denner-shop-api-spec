@@ -1,0 +1,61 @@
+{
+    "wines": [
+        {
+            "id": "051273",
+            "name": "Mandorla Primitivo di Puglia IGT",
+            "description": "2013, Apulien, Italien, 6 x 75 cl",
+            "prices": {
+                "sales": 9.9,
+                "instead": 11.4,
+                "base": 1.32,
+                "by_quantity": [
+                    {
+                        "quantity": 1,
+                        "sales": 9.9,
+                        "instead": 11.4
+                    },
+                    {
+                        "quantity": 6,
+                        "sales": 59.4,
+                        "instead": 68.4
+                    }
+                ]
+            },
+            "base": {
+                "text": "10 cl"
+            },
+            "wine": {
+                "country": {
+                    "id": "IT",
+                    "title": "Italien"
+                },
+                "region": {
+                    "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
+                    "title": "Apulien"
+                },
+                "type": {
+                    "id": 2,
+                    "title": "Rotwein"
+                },
+                "year": 2013,
+                "fits_with": "Pasta, Fleisch mit würzigen Saucen",
+                "varietal": "Primitivo",
+                "character": "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen.",
+                "temperature": "16-18 °C",
+                "awards": "",
+                "storage": "3 Jahre",
+                "rating": {
+                    "value": 4.45,
+                    "total": 11,
+                    "valid": true
+                },
+                "stock": {
+                    "value": -15,
+                    "code": 2,
+                    "message": "Derzeit nicht bestellbar"
+                },
+                "shop_url": "http://denner-wineshop.ch/skuredirect/051273/"
+            }
+        }
+    ]
+}
