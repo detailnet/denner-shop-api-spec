@@ -1,0 +1,25 @@
+{
+    "status":{
+        "code":null,
+        "message":null
+    },
+    "result":{
+        "banners":[
+            {
+                "id":38,
+                "isClosable":true,
+                "name":"Lindt-Artikel",
+                "label":"20% auf alle Lindt-Artikel*",
+                "html":"Freitag, 27. und Samstag, 28. November 2015<br>20% auf alle Lindt-Artikel*\u2013 auch auf bestehende Aktionspreise!<br>*nicht mit anderen Gutscheinen und Bons kumulierbar. Solange Vorrat.",
+                "url":null,
+                "utmSource":null,
+                "utmMedium":null,
+                "utmCampaign":null,
+                "images":{
+                    "default":"http:\/\/mobile.denner.ch\/data\/banners\/20151127024650_20151127024650\/images\/de\/default\/38.png"
+                }
+            }
+        ],
+        "totalBanners":1
+    }
+}

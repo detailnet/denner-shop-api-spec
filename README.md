@@ -23,7 +23,7 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 
 ### Banners
 
-* `/banners` (Banner)
+* `/banners` (Banner, [example](examples/banners.json))
 
 
 ## Building
