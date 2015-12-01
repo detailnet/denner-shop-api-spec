@@ -784,29 +784,27 @@
             },
             "options": [
                 {
-                    "id":"0",
-                    "label":"Alle Aktionen",
-                    "resultCount":"29"
+                    "title": "Alle Aktionen"
                 },
                 {
-                    "id":"2",
-                    "label":"Rotwein-Aktionen",
-                    "resultCount":"10"
+                    "title":"Rotwein-Aktionen",
+                    "value": 2
                 },
                 {
-                    "id":"1",
-                    "label":"Weisswein-Aktionen",
-                    "resultCount":"4"
+                    "title":"Weisswein-Aktionen",
+                    "value": 1
                 },
                 {
-                    "id":"4",
-                    "label":"Schaumwein-Aktionen",
-                    "resultCount":"14"
+                    "title":"Rosé-Aktionen",
+                    "value": 3
                 },
                 {
-                    "id":"5",
-                    "label":"Andere Aktionen",
-                    "resultCount":"1"
+                    "title":"Schaumwein-Aktionen",
+                    "value": 4
+                },
+                {
+                    "title":"Andere Aktionen",
+                    "value": 5
                 }
             ]
         }
