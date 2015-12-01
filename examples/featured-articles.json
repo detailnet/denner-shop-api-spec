@@ -59,6 +59,9 @@
             "packshot": {
                 "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
             },
+            "layout": {
+                "image_url": null
+            },
             "wine": {
                 "country": {
                     "id": "IT",
