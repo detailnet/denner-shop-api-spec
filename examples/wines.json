@@ -4,24 +4,6 @@
             "id": "051273",
             "name": "Mandorla Primitivo di Puglia IGT",
             "description": "2013, Apulien, Italien, 6 x 75 cl",
-            "prices": {
-                "sales": 59.4,
-                "instead": 68.4,
-                "base": 1.32,
-                "by_quantity": [
-                    {
-                        "quantity": 1,
-                        "sales": 9.9,
-                        "instead": 11.4
-                    },
-                    {
-                        "quantity": 6,
-                        "sales": 59.4,
-                        "instead": 68.4
-                    }
-                ]
-            },
-            "quantity": 6,
             "content": {
                 "text": "75 cl"
             },
@@ -53,12 +35,29 @@
                     "total": 11,
                     "valid": true
                 },
-                "stock": {
-                    "value": -15,
-                    "code": 2,
-                    "message": "Derzeit nicht bestellbar"
-                },
-                "shop_url": "http://denner-wineshop.ch/skuredirect/051273/"
+                "shop": {
+                    "url": "http://denner-wineshop.ch/skuredirect/051273/de/",
+                    "quantity": 6,
+                    "prices": {
+                        "sales": 68.4,
+                        "base": 1.52,
+                        "by_quantity": [
+                            {
+                                "quantity": 1,
+                                "sales": 11.4
+                            },
+                            {
+                                "quantity": 6,
+                                "sales": 68.4
+                            }
+                        ]
+                    },
+                    "stock": {
+                        "value": -15,
+                        "code": 2,
+                        "message": "Derzeit nicht bestellbar"
+                    }
+                }
             }
         }
     ]
