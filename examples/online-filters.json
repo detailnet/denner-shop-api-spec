@@ -2,41 +2,11 @@
     "online_filters": [
         {
             "id": "3734ef1f-4c1a-428c-af24-7d85af7c5041",
-            "name": "Aktionen der Folgewoche",
-            "title": [
-                {
-                    "locale": "de",
-                    "value": "Aktionen der Folgewoche"
-                },
-                {
-                    "locale": "fr",
-                    "value": "Hits de la semaine suivante"
-                },
-                {
-                    "locale": "it",
-                    "value": "Promozioni della settimana seguente"
-                }
-            ],
-            "sort_index": 0
+            "title": "Aktionen der Folgewoche"
         },
         {
             "id": "f5064fb7-c5d5-467e-9bdb-e5c4ed4dea6c",
-            "name": "Aktionen aktuelle Woche",
-            "title": [
-                {
-                    "locale": "de",
-                    "value": "Aktionen aktuelle Woche"
-                },
-                {
-                    "locale": "fr",
-                    "value": "Hits de la semaine en cours"
-                },
-                {
-                    "locale": "it",
-                    "value": "Promozioni della settimana corrente"
-                }
-            ],
-            "sort_index": 1
+            "title": "Aktionen aktuelle Woche"
         }
     ]
 }
