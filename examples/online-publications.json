@@ -2,130 +2,18 @@
     "online_publications": [
         {
             "id": "2c8616be-07c8-4fba-83a2-ee780449ff32",
-            "name": "Wochenaktionen KW 26/2015",
-            "year": 2015,
-            "week": 26,
-            "title": [
-                {
-                    "locale": "de",
-                    "value": "Wochenaktionen"
-                },
-                {
-                    "locale": "fr",
-                    "value": "Hits de la semaine"
-                },
-                {
-                    "locale": "it",
-                    "value": "Promozioni della settimana"
-                }
-            ],
-            "list_title": [
-                {
-                    "locale": "de",
-                    "value": "Weitere Wochenaktionen"
-                },
-                {
-                    "locale": "fr",
-                    "value": "Autre hits de la semaine"
-                },
-                {
-                    "locale": "it",
-                    "value": "Altre promozioni della settimana"
-                }
-            ],
-            "show_details_text": [
-                {
-                    "locale": "de",
-                    "value": "Alle Wochenaktionen zeigen"
-                },
-                {
-                    "locale": "fr",
-                    "value": "..."
-                },
-                {
-                    "locale": "it",
-                    "value": "..."
-                }
-            ],
+            "title": "Wochenaktionen",
             "validity": {
                 "from": "2015-06-23",
                 "to": "2015-06-29",
-                "text": [
-                    {
-                        "locale": "de",
-                        "value": "23.06.2015 bis 29.06.2015, solange Vorrat"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "tbd"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "tbd"
-                    }
-                ]
+                "text": "23.06.2015 bis 29.06.2015, solange Vorrat"
             },
-            "filters": [
-                {
-                    "id": "3734ef1f-4c1a-428c-af24-7d85af7c5041",
-                    "name": "Aktionen der Folgewoche",
-                    "appearances": [
-                        {
-                            "from": "2015-06-19",
-                            "to": "2015-06-22"
-                        }
-                    ]
-                },
-                {
-                    "id": "f5064fb7-c5d5-467e-9bdb-e5c4ed4dea6c",
-                    "name": "Aktionen aktuelle Woche",
-                    "appearances": [
-                        {
-                            "from": "2015-06-23",
-                            "to": "2015-06-29"
-                        }
-                    ]
-                }
-            ],
-            "promotion_type": {
-                "id": "089f8537-981a-42ba-9b0a-b3cba4a1c7d5",
-                "code": "FLUGBLATT",
-                "name": "Dennerwoche"
-            },
-            "sort_index": 0,
             "articles": [
                 {
                     "id": "dfbc2b0d-0f47-4ac2-86e5-3bd4f9936ef6",
                     "article_id": "051273",
-                    "name": "Mandorla Primitivo IGT Puglia",
-                    "title": [
-                        {
-                            "locale": "de",
-                            "value": "Mandorla Primitivo di Puglia IGT"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "Mandorla Primitivo di Puglia IGT"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "Mandorla Primitivo di Puglia IGT"
-                        }
-                    ],
-                    "description": [
-                        {
-                            "locale": "de",
-                            "value": "2013, Apulien, Italien, 6 x 75 cl"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "2013, les Pouilles, Italie, 6 x 75 cl"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "2013, Puglia, Italia, 6 x 75 cl"
-                        }
-                    ],
+                    "title": "Mandorla Primitivo di Puglia IGT",
+                    "description": "2013, Apulien, Italien, 6 x 75 cl",
                     "prices": {
                         "sales": 59.4,
                         "instead": 68.4,
@@ -143,378 +31,63 @@
                             }
                         ]
                     },
-                    "price_info": [
-                        {
-                            "locale": "de",
-                            "value": "Konkurrenzvergleich"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "Comparaison concurrentielle"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "Confronto con la concorrenza"
-                        }
-                    ],
-                    "unit_price_info": [
-                        {
-                            "locale": "de",
-                            "value": "Einzelflasche: 9.90 statt 11.40"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "9.90 la bouteille au lieu de 11.40"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "9.90 a bottiglia invece di 11.40"
-                        }
-                    ],
+                    "price_info": "Konkurrenzvergleich",
+                    "unit_price_info": "Einzelflasche: 9.90 statt 11.40",
                     "dots": [
                         {
                             "id": "d4bca729-10ad-482c-bdda-b1a1398173b5",
                             "type": {
                                 "id": "semi_price_winehit"
                             },
-                            "text": [
-                                {
-                                    "locale": "de",
-                                    "value": "1/2 Preis\nWeinheit!"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "1/2 prix\nLe top du vin!"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "1/2 prezzo\nSuperofferta vino!"
-                                }
-                            ],
                             "images": [
                                 {
-                                    "locale": "de",
-                                    "formats": [
-                                        {
-                                            "type": "image/svg+xml",
-                                            "url": "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "locale": "fr",
-                                    "formats": [
-                                        {
-                                            "type": "image/svg+xml",
-                                            "url": "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-fr.svg"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "locale": "it",
-                                    "formats": [
-                                        {
-                                            "type": "image/svg+xml",
-                                            "url": "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-it.svg"
-                                        }
-                                    ]
+                                    "type": "image/svg+xml",
+                                    "url": "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
                                 }
                             ]
                         }
                     ],
-                    "panel": [
-                        {
-                            "locale": "de",
-                            "value": "9.- sparen"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "9.- éparmié"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "9.- risparmiati"
-                        }
-                    ],
+                    "panel": "9.- sparen",
                     "quantity": 6,
                     "base": {
-                        "text": [
-                            {
-                                "locale": "de",
-                                "value": "10 cl"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "10 cl"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "10 cl"
-                            }
-                        ]
+                        "text": "10 cl"
                     },
                     "validity": {
                         "from": "2015-06-23",
                         "to": "2015-06-29",
-                        "short_text": [
-                            {
-                                "locale": "de",
-                                "value": "Gültig von 23.06.–29.06."
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "..."
-                            },
-                            {
-                                "locale": "it",
-                                "value": "..."
-                            }
-                        ],
-                        "long_text": [
-                            {
-                                "locale": "de",
-                                "value": "Angebot gültig von 23.06.2015 bis 29.06.2015"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "..."
-                            },
-                            {
-                                "locale": "it",
-                                "value": "..."
-                            }
-                        ]
+                        "short_text": "Gültig von 23.06.–29.06.",
+                        "long_text": "Angebot gültig von 23.06.2015 bis 29.06.2015"
                     },
                     "availability_limitations": {
-                        "region": [
-                            {
-                                "locale": "de",
-                                "value": "Nur in der deutschen und französischen Schweiz erhältlich"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "..."
-                            },
-                            {
-                                "locale": "it",
-                                "value": "..."
-                            }
-                        ],
-                        "store": [
-                            {
-                                "locale": "de",
-                                "value": "Nur in Filialen mit Frischprodukten erhältlich"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "Disponible(s) uniquement dans les succursales aves des produits frais"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "..."
-                            }
-                        ]
+                        "region": "Nur in der deutschen und französischen Schweiz erhältlich",
+                        "store": "Nur in Filialen mit Frischprodukten erhältlich"
                     },
-                    "sort_index": 0,
-                    "featured_sort_index": 10,
-                    "featured": true,
                     "promoted": true,
                     "compared": true,
                     "cooling": 0,
-                    "online_group": {
-                        "id": "671988cc-ca5f-484e-8db8-23a65ea0044a",
-                        "code": 4003,
-                        "disabled": false,
-                        "allow_featuring": true,
-                        "allow_promotion": true,
-                        "allow_background": true,
-                        "title": [
-                            {
-                                "locale": "de",
-                                "value": "Wein"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "Vins"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "Vini"
-                            }
-                        ],
-                        "parent": {
-                            "id": "5b79391b-b436-45f9-b3e4-93ec3ae1fae2",
-                            "code": 4001,
-                            "disabled": false,
-                            "allow_featuring": true,
-                            "allow_promotion": true,
-                            "allow_background": true,
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Tafelgetränke und Mineralwasser"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Boissons table et eau minérale"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Bevande da tavola e acque minerali"
-                                }
-                            ]
-                        }
-                    },
-                    "article_group": {
-                        "id": "0c309757-5432-4652-8201-ec35f31c5260",
-                        "code": "60-56",
-                        "name": "Italien Rot 70 cl",
-                        "parent": {
-                            "id": "3f3df00f-6a7e-49a9-8eca-a36727ca4977",
-                            "code": "60",
-                            "name": "Weine"
-                        }
-                    },
-                    "packshot" : {
+                    "packshot": {
                         "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
                     },
                     "wine": {
                         "country": {
                             "id": "IT",
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Italien"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Italie"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Italia"
-                                }
-                            ]
+                            "title": "Italien"
                         },
                         "region": {
                             "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Apulien"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Les Pouilles"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Puglia"
-                                }
-                            ]
+                            "title": "Apulien"
                         },
                         "type": {
                             "id": 2,
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Rotwein"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Vin rouge"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Vino rosso"
-                                }
-                            ]
+                            "title": "Rotwein"
                         },
                         "year": 2013,
-                        "fits_with": [
-                            {
-                                "locale": "de",
-                                "value": "Pasta, Fleisch mit würzigen Saucen"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "Pâtes, viande aux sauces relevées"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "Pasta, carni accompagnate da salse aromatiche"
-                            }
-                        ],
-                        "varietal": [
-                            {
-                                "locale": "de",
-                                "value": "Primitivo"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "Primitivo"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "Primitivo"
-                            }
-                        ],
-                        "character": [
-                            {
-                                "locale": "de",
-                                "value": "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "Robe rubis foncé. Nez de baies rouges, de cerises matures et de mûres. Bouche moelleuse."
-                            },
-                            {
-                                "locale": "it",
-                                "value": "Rosso rubino scuro. Al naso aromi di bacche rosse, ciliege mature e more. Morbido al palato."
-                            }
-                        ],
-                        "temperature": [
-                            {
-                                "locale": "de",
-                                "value": "16-18 °C"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "16-18 °C"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "16-18 °C"
-                            }
-                        ],
-                        "awards": [
-                            {
-                                "locale": "de",
-                                "value": ""
-                            },
-                            {
-                                "locale": "fr",
-                                "value": ""
-                            },
-                            {
-                                "locale": "it",
-                                "value": ""
-                            }
-                        ],
-                        "storage": [
-                            {
-                                "locale": "de",
-                                "value": "3 Jahre"
-                            },
-                            {
-                                "locale": "fr",
-                                "value": "3 ans"
-                            },
-                            {
-                                "locale": "it",
-                                "value": "3 anni"
-                            }
-                        ],
+                        "fits_with": "Pasta, Fleisch mit würzigen Saucen",
+                        "varietal": "Primitivo",
+                        "character": "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen.",
+                        "temperature": "16-18 °C",
+                        "awards": "",
+                        "storage": "3 Jahre",
                         "rating": {
                             "value": 4.45,
                             "total": 11,
@@ -523,20 +96,7 @@
                         "stock": {
                             "value": -15,
                             "code": 2,
-                            "message": [
-                                {
-                                    "locale": "de",
-                                    "value": "Derzeit nicht bestellbar"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Actuellement pas disponible"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Attualmente non disponibile"
-                                }
-                            ]
+                            "message": "Derzeit nicht bestellbar"
                         },
                         "shop_url": null
                     }
