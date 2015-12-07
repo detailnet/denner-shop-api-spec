@@ -6,8 +6,8 @@
             "type": "list",
             "filter": {
                 "property": "open_on",
-                "operator": "=",
-                "type": "string"
+                "operator": "in",
+                "type": "array"
             },
             "options": [
                 {
