@@ -37,8 +37,8 @@ paths:
           examples:
             application/json:
 
-              page_count: 1
-              page_size: 1
+#              page_count: 1
+#              page_size: 1
               total_items: 1
               stores:
                 -
@@ -271,153 +271,76 @@ paths:
                         -
                           from: "2013-01-01"
 
-  /store-channels:
+  /store-filters:
     get:
-      summary: List all store channels
-      description: >
-        Use this operation to get a list of all store channels
-        (Filialkanäle; e.g. "Denner" or "Denner Satellit").
+      summary: List all store filters
+      description: Use this operation to get a list of the store filters
       tags:
         - Stores – Filialdaten
-      operationId: listStoreChannels
-#      parameters:
-#        - $ref: '#/parameters/PageParam'
-#        - $ref: '#/parameters/PageSizeParam'
+      operationId: listStoreFilters
       responses:
         200:
           description: Successful listing
           schema:
-            $ref: '#/definitions/StoreChannelsResponse'
+            $ref: '#/definitions/StoreFiltersResponse'
           examples:
             application/json:
 
-              page_count: 1
-              page_size: 2
-              total_items: 2
-              store_channels:
+              store_filters:
                   -
-                    id: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
-                    code: 1
-                    name: "Denner"
-                    title:
+                    id: "opening"
+                    title: "Öffnungszeit"
+                    type: "list"
+                    filter:
+                      property: "open_on"
+                      operator: "in"
+                      type: "array"
+                    options:
                       -
-                        locale: "de"
-                        value: "Denner"
+                        title: "Jetzt geöffnet"
+                        value: "now"
                       -
-                        locale: "fr"
-                        value: "Denner"
-                      -
-                        locale: "it"
-                        value: "Denner"
+                        title: "Heute bis 20 Uhr geöffnet"
+                        value: "20:00:00"
                   -
-                    id: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
-                    code: 2
-                    name: "Denner Satellit und Denner Express"
-                    title:
+                    id: "services"
+                    title: "Besondere Sortimente"
+                    type: "list"
+                    filter:
+                      property: "services"
+                      operator: "in"
+                      type: "array"
+                    options:
                       -
-                        locale: "de"
-                        value: "Denner Satellit und Denner Express"
+                        title: "Humidor"
+                        value: "acb911fb-b7e3-480f-ab91-1109e750892a"
                       -
-                        locale: "fr"
-                        value: "Satellite Denner et Denner Express"
+                        title: "Bordeaux Grands Crus"
+                        value: "85aa57ad-2bf3-48e5-a1a0-813889cbae26"
                       -
-                        locale: "it"
-                        value: "Satelliti Denner e Denner Express"
-
-  /store-services:
-    get:
-      summary: List all store services
-      description: >
-        Use this operation to get a list of all store services
-        (Filialangebote; e.g. "Humidor" or "Backstation").
-      tags:
-        - Stores – Filialdaten
-      operationId: listStoreServices
-#      parameters:
-#        - $ref: '#/parameters/PageParam'
-#        - $ref: '#/parameters/PageSizeParam'
-      responses:
-        200:
-          description: Successful listing
-          schema:
-            $ref: '#/definitions/StoreServicesResponse'
-          examples:
-            application/json:
-
-              page_count: 1
-              page_size: 5
-              total_items: 5
-              store_services:
-                -
-                  id: "acb911fb-b7e3-480f-ab91-1109e750892a"
-                  code: 1
-                  name: ""
-                  title:
-                    -
-                      locale: "de"
-                      value: "Humidor"
-                    -
-                      locale: "fr"
-                      value: "Humidor"
-                    -
-                      locale: "it"
-                      value: "Humidor"
-                -
-                  id: "85aa57ad-2bf3-48e5-a1a0-813889cbae26"
-                  code: 2
-                  name: "Bordeaux Grands Crus"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Bordeaux Grands Crus"
-                    -
-                      locale: "fr"
-                      value: "Bordeaux Grands Crus"
-                    -
-                      locale: "it"
-                      value: "Bordeaux Grands Crus"
-                -
-                  id: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
-                  code: 3
-                  name: "Früchte und Gemüse"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Früchte und Gemüse"
-                    -
-                      locale: "fr"
-                      value: "Fruits et Légumes"
-                    -
-                      locale: "it"
-                      value: "Frutta e verdura"
-                -
-                  id: "47191064-ad2e-482a-a5cf-2aa32d0b8116"
-                  code: 4
-                  name: "Früchte und Gemüse im Offenverkauf"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Früchte und Gemüse im Offenverkauf"
-                    -
-                      locale: "fr"
-                      value: "Fruits et légumes en vrac"
-                    -
-                      locale: "it"
-                      value: "Frutta e verdura in vendita sfusa"
-                -
-                  id: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
-                  code: 5
-                  name: "Backstation"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Backstation"
-                    -
-                      locale: "fr"
-                      value: "Four à pain"
-                    -
-                      locale: "it"
-                      value: "Punto cottura"
+                        title: "Früchte und Gemüse"
+                        value: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
+                      -
+                        title: "Früchte und Gemüse im Offenverkauf"
+                        value: "47191064-ad2e-482a-a5cf-2aa32d0b8116"
+                      -
+                        title: "Backstation"
+                        value: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
+                  -
+                    id: "channels"
+                    title: "Filialtyp"
+                    type: "list"
+                    filter:
+                      property: "channel"
+                      operator: "in"
+                      type: "array"
+                    options:
+                      -
+                        title: "Denner"
+                        value: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
+                      -
+                        title: "Denner Satellit und Denner Express"
+                        value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
   ### Online Advertising
   /online-publications:
@@ -1258,6 +1181,48 @@ definitions:
     minimum: 0
     description: Index for sorting
 
+  Filter:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique identifier
+      title:
+        type: string
+        description: Public title as displayed to users (localized)
+      type:
+        type: string
+        description: Filter type (e.g. "list")
+
+  ListFilter:
+    allOf:
+      - $ref: '#/definitions/Filter'
+      - properties:
+          filter:
+            type: object
+            properties:
+              property:
+                type: string
+                description: Name of the property to filter against
+              operator:
+                type: string
+                description: Operator to compare the value (e.g. "=")
+              type:
+                type: string
+                description: Data type of the value (e.g. "integer")
+          options:
+            type: array
+            description: Options
+            items:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Public title of the option as displayed to users (localized)
+                value:
+                  type: string # Mixed, but Swagger doesn't support it
+                  description: Value to filter against
+
   ### Store
   Store:
     type: object
@@ -1423,19 +1388,19 @@ definitions:
         $ref: '#/definitions/Translations'
 
   ### Store Service
-  StoreService:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      code:
-        type: integer
-        description: Navision service code
-      name:
-        type: string
-        description: Service name
-      title:
-        $ref: '#/definitions/Translations'
+#  StoreService:
+#    type: object
+#    properties:
+#      id:
+#        $ref: '#/definitions/UUIDv4'
+#      code:
+#        type: integer
+#        description: Navision service code
+#      name:
+#        type: string
+#        description: Service name
+#      title:
+#        $ref: '#/definitions/Translations'
 
   AssignedStoreService:
     type: object
@@ -1904,15 +1869,10 @@ definitions:
     items:
       $ref: '#/definitions/Store'
 
-  StoreChannels:
+  StoreFilters:
     type: array
     items:
-      $ref: '#/definitions/StoreChannel'
-
-  StoreServices:
-    type: array
-    items:
-      $ref: '#/definitions/StoreService'
+      $ref: '#/definitions/ListFilter'
 
   ArticleGroups:
     type: array
@@ -1963,41 +1923,23 @@ definitions:
       stores:
         $ref: '#/definitions/Stores'
 
-  StoreChannelsResponse:
+  StoreFiltersResponse:
     type: object
     properties:
-      page_count:
-        description: The number of pages
-        type: integer
-        format: int32
-      page_size:
-        description: The page size
-        type: integer
-        format: int32
-      total_items:
-        description: The number of items on all pages
-        type: integer
-        format: int32
-      store_channels:
-        $ref: '#/definitions/StoreChannels'
-
-  StoreServicesResponse:
-    type: object
-    properties:
-      page_count:
-        description: The number of pages
-        type: integer
-        format: int32
-      page_size:
-        description: The page size
-        type: integer
-        format: int32
-      total_items:
-        description: The number of items on all pages
-        type: integer
-        format: int32
-      store_services:
-        $ref: '#/definitions/StoreServices'
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+#      total_items:
+#        description: The number of items on all pages
+#        type: integer
+#        format: int32
+      store_filters:
+        $ref: '#/definitions/StoreFilters'
 
   OnlineFiltersResponse:
     type: object
