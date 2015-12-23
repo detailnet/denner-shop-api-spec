@@ -68,6 +68,12 @@
                     "promoted": true,
                     "compared": true,
                     "cooling": 0,
+                    "eco_labels": [
+                        {
+                            "id": "66d94617-bbd7-477e-ae66-183deb67ba5b",
+                            "code": "bio"
+                        }
+                    ],
                     "packshot": {
                         "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
                     },

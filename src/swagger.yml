@@ -24,9 +24,6 @@ paths:
       tags:
         - Stores – Filialdaten
       operationId: listStores
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -281,9 +278,6 @@ paths:
       tags:
         - Stores – Filialdaten
       operationId: listStoreChannels
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -337,9 +331,6 @@ paths:
       tags:
         - Stores – Filialdaten
       operationId: listStoreServices
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -436,9 +427,6 @@ paths:
       tags:
         - Promotions/Advertising – Aktionsdaten
       operationId: listOnlinePublications
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -533,9 +521,6 @@ paths:
       tags:
         - Promotions/Advertising – Aktionsdaten
       operationId: getOnlinePublication
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PublicationIdPathParam'
       responses:
@@ -825,6 +810,10 @@ paths:
                       id: "3f3df00f-6a7e-49a9-8eca-a36727ca4977"
                       code: "60"
                       name: "Weine"
+                  eco_labels:
+                    -
+                      id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
+                      code: "bio"
                   packshot:
                     image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
                   wine:
@@ -953,9 +942,6 @@ paths:
       tags:
         - Promotions/Advertising – Aktionsdaten
       operationId: listOnlineFilters
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -1008,9 +994,6 @@ paths:
       tags:
         - Articles - Artikeldaten
       operationId: listOnlineGroups
-      security:
-        - appKey: []
-        - appId: []
       parameters:
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
@@ -1106,6 +1089,7 @@ parameters:
     description: The unique identifier of an online publication
     in: path
     type: string
+    required: true
     pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
   FilterParam:
     name: filter
@@ -1499,6 +1483,16 @@ definitions:
       parent:
         $ref: '#/definitions/AssignedArticleGroup'
 
+  ### Eco label
+  EcoLabel:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      code:
+        type: string
+        description: Navision identification code
+
   ### Article
   Article:
     type: object
@@ -1780,6 +1774,8 @@ definitions:
         $ref: '#/definitions/AssignedOnlineGroup'
       article_group:
         $ref: '#/definitions/AssignedArticleGroup'
+      eco_labels:
+        $ref: '#/definitions/EcoLabels'
       packshot:
         $ref: '#/definitions/Packshot'
       wine:
@@ -1933,6 +1929,11 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/ArticleGroup'
+
+  EcoLabels:
+    type: array
+    items:
+      $ref: '#/definitions/EcoLabel'
 
   Articles:
     type: array
