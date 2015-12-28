@@ -2,7 +2,7 @@
     "wines": [
         {
             "id": "051273",
-            "name": "Mandorla Primitivo di Puglia IGT",
+            "title": "Mandorla Primitivo di Puglia IGT",
             "description": "2013, Apulien, Italien, 6 x 75 cl",
             "content": {
                 "text": "75 cl"
