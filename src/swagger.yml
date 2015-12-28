@@ -213,7 +213,40 @@ paths:
                         title: "Denner Satellit und Denner Express"
                         value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
-  ### Online Advertising
+  ### Promotions/Advertising
+  /online-filters:
+    get:
+      summary: List the online filters of a given type
+      description: >
+        Use this operation to get a list of all online filters
+        (Angebotsfilter; e.g. "Aktionen aktuelle Woche" or "Aktionen der Folgewoche").
+      tags:
+        - Promotions/Advertising – Aktionsdaten
+      operationId: listOnlineFilters
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: type
+          description: Type of online filters to list (supported are "promotion" and "wine")
+          in: query
+          type: string
+          required: true
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/OnlineFiltersResponse'
+          examples:
+            application/json:
+
+              online_filters:
+                -
+                  id: "3734ef1f-4c1a-428c-af24-7d85af7c5041"
+                  title: "Aktionen der Folgewoche"
+                -
+                  id: "f5064fb7-c5d5-467e-9bdb-e5c4ed4dea6c"
+                  title: "Aktionen aktuelle Woche"
+
   /online-publications:
     get:
       summary: List all online publications
@@ -731,59 +764,6 @@ paths:
                           value: "Attualmente non disponibile"
                     shop_url: null
 
-  /online-filters:
-    get:
-      summary: List all online filters
-      description: >
-        Use this operation to get a list of all online filters
-        (Angebotsfilter; e.g. "Aktionen aktuelle Woche" or "Aktionen der Folgewoche").
-      tags:
-        - Promotions/Advertising – Aktionsdaten
-      operationId: listOnlineFilters
-#      parameters:
-#        - $ref: '#/parameters/PageParam'
-#        - $ref: '#/parameters/PageSizeParam'
-      responses:
-        200:
-          description: Successful listing
-          schema:
-            $ref: '#/definitions/OnlineFiltersResponse'
-          examples:
-            application/json:
-
-              page_count: 1
-              page_size: 2
-              total_items: 2
-              online_filters:
-                -
-                  id: "3734ef1f-4c1a-428c-af24-7d85af7c5041"
-                  name: "Aktionen der Folgewoche"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Aktionen der Folgewoche"
-                    -
-                      locale: "fr"
-                      value: "Hits de la semaine suivante"
-                    -
-                      locale: "it"
-                      value: "Promozioni della settimana seguente"
-                  sort_index: 0
-                -
-                  id: "f5064fb7-c5d5-467e-9bdb-e5c4ed4dea6c"
-                  name: "Aktionen aktuelle Woche"
-                  title:
-                    -
-                      locale: "de"
-                      value: "Aktionen aktuelle Woche"
-                    -
-                      locale: "fr"
-                      value: "Hits de la semaine en cours"
-                    -
-                      locale: "it"
-                      value: "Promozioni della settimana corrente"
-                  sort_index: 1
-
   /online-groups:
     get:
       summary: List all online groups
@@ -1030,16 +1010,6 @@ definitions:
     format: int32
     minimum: 0
     description: Cooling type (0 = no cooling, 1 = refrigerated, 2 = frozen)
-
-  Appearance:
-    type: object
-    properties:
-      from:
-        type: string
-        format: date
-      to:
-        type: string
-        format: date
 
   Validity:
     type: object
@@ -1624,11 +1594,6 @@ definitions:
         $ref: '#/definitions/Translations'
       validity:
         $ref: '#/definitions/Validity'
-      filters:
-        type: array
-        items:
-          $ref: '#/definitions/AssignedOnlineFilter'
-        description: Online filter with appearances (and no localised title)
       promotion_type:
         $ref: '#/definitions/PromotionType'
       sort_index:
@@ -1658,22 +1623,9 @@ definitions:
     properties:
       id:
         $ref: '#/definitions/UUIDv4'
-      name:
-        type: string
       title:
-        $ref: '#/definitions/Translations'
-      sort_index:
-        $ref: '#/definitions/SortIndex'
-
-  AssignedOnlineFilter:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      name:
         type: string
-      appearances:
-        $ref: '#/definitions/Appearances'
+        description: Public title as displayed to users (localized)
 
   ### Online group
   OnlineGroup:
@@ -1728,11 +1680,6 @@ definitions:
         $ref: '#/definitions/AssignedOnlineGroup'
 
   ### Collections
-  Appearances:
-    type: array
-    items:
-      $ref: '#/definitions/Appearance'
-
   Stores:
     type: array
     items:
@@ -1818,18 +1765,18 @@ definitions:
   OnlineFiltersResponse:
     type: object
     properties:
-      page_count:
-        description: The number of pages
-        type: integer
-        format: int32
-      page_size:
-        description: The page size
-        type: integer
-        format: int32
-      total_items:
-        description: The number of items on all pages
-        type: integer
-        format: int32
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+#      total_items:
+#        description: The number of items on all pages
+#        type: integer
+#        format: int32
       online_filters:
         $ref: '#/definitions/OnlineFilters'
 
