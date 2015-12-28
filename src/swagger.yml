@@ -1148,13 +1148,13 @@ definitions:
         minimum: 1000
         maximum: 9699
         description: Zip code
-      city:
-        type: string
-        description: City
       canton_code:
         type: string
         description: Canton (state) code
-      country:
+      city:
+        type: string
+        description: City
+      country_code:
         type: string
         pattern: '/^[A-Z]{2}$/'
         description: Country code definition from ISO 3166
@@ -1186,21 +1186,21 @@ definitions:
         type: string
         format: date
         description: Renovation ending on
-      longitude:
-        type: number
-        format: float
-        description: Geographic longitude
       latitude:
         type: number
         format: float
         description: Geographic latitude
+      longitude:
+        type: number
+        format: float
+        description: Geographic longitude
       language:
         type: string
         description: Language spoken in the store
       email:
         type: string
 #        pattern: @todo Fixed pattern?
-        description: E-mail address
+        description: Email address
       homepage:
         $ref: '#/definitions/Url'
       parking_count:
@@ -1220,15 +1220,10 @@ definitions:
         items:
           $ref: '#/definitions/SpecialOpeningTime'
         description: Special opening times
-      calendar_opening_times:
-        type: array
-        items:
-          $ref: '#/definitions/CalendarOpeningTime'
-        description: Calendar opening times
       services:
         type: array
         items:
-          $ref: '#/definitions/AssignedStoreService'
+          $ref: '#/definitions/StoreService'
         description: Services provided by the store
 
   PaymentType:
@@ -1261,62 +1256,24 @@ definitions:
         type: boolean
         description: Is the store closed on this day?
 
-  CalendarOpeningTime:
-    type: object
-    properties:
-      day:
-        $ref: '#/definitions/Date'
-      open_from:
-        $ref: '#/definitions/Time'
-      open_to:
-        $ref: '#/definitions/Time'
-
   ### Store Channel
   StoreChannel:
     type: object
     properties:
       id:
         $ref: '#/definitions/UUIDv4'
-      code:
-        type: integer
-        format: int32
-        description: Navision channel code
-      name:
-        type: string
-        description: Channel name
       title:
-        $ref: '#/definitions/Translations'
+        type: string
+        description: Channel title
 
-  ### Store Service
-#  StoreService:
-#    type: object
-#    properties:
-#      id:
-#        $ref: '#/definitions/UUIDv4'
-#      code:
-#        type: integer
-#        description: Navision service code
-#      name:
-#        type: string
-#        description: Service name
-#      title:
-#        $ref: '#/definitions/Translations'
-
-  AssignedStoreService:
+  StoreService:
     type: object
     properties:
       id:
         $ref: '#/definitions/UUIDv4'
-      code:
-        type: integer
-        description: Navision service code
-      name:
-        type: string
-        description: Service name
       title:
-        $ref: '#/definitions/Translations'
-      appearances:
-        $ref: '#/definitions/Appearances'
+        type: string
+        description: Service title
 
   ### Article group
   ArticleGroup:
