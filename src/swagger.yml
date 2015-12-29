@@ -15,7 +15,7 @@ consumes:
 produces:
   - application/json
 paths:
-  ### Stores
+  ### Store
   /stores:
     get:
       summary: List all stores
@@ -32,7 +32,7 @@ paths:
         - __channels__ (e.g. "Denner Satellit und Denner Express):
           [{"property":"channels","operator":"in","type":"array","value":["18549f95-6471-4e21-968f-8a0bf2e0f79b"]}]
       tags:
-        - Stores – Filialdaten
+        - Store – Filialdaten
       operationId: listStores
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -144,7 +144,7 @@ paths:
       summary: List all store filters
       description: Use this operation to get a list of the store filters
       tags:
-        - Stores – Filialdaten
+        - Store – Filialdaten
       operationId: listStoreFilters
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -213,7 +213,7 @@ paths:
                         title: "Denner Satellit und Denner Express"
                         value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
-  ### Promotions
+  ### Promotion
   /online-filters:
     get:
       summary: List the online filters of a given type
@@ -221,7 +221,7 @@ paths:
         Use this operation to get a list of all online filters
         (Angebotsfilter; e.g. "Aktionen aktuelle Woche" or "Aktionen der Folgewoche").
       tags:
-        - Promotions – Aktionsdaten
+        - Promotion – Aktionsdaten
       operationId: listOnlineFilters
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -255,7 +255,7 @@ paths:
         for a specific online filter
         (e.g. "Wochenaktionen" and "Wochenend-Knaller", which are both appearing within "Aktionen aktuelle Woche").
       tags:
-        - Promotions – Aktionsdaten
+        - Promotion – Aktionsdaten
       operationId: listOnlinePublicationsByOnlineFilter
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -375,7 +375,7 @@ paths:
       description: >
         Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
       tags:
-        - Promotions – Aktionsdaten
+        - Promotion – Aktionsdaten
       operationId: listOnlineGroupsByOnlineFilter
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -403,14 +403,14 @@ paths:
                       title: "Eier"
                       children: []
 
-  ### Wines
+  ### Wine
   /wines:
     get:
       summary: List the online groups appearing in given online filter
       description: >
         Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
       tags:
-        - Wines – Weindaten
+        - Wine – Weindaten
       operationId: listWines
       parameters:
         - $ref: '#/parameters/AcceptHeader'
