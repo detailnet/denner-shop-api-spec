@@ -802,6 +802,52 @@ paths:
               city: "Cossonay"
               language: "fr"
 
+  ### Banner
+  /banners:
+    get:
+      summary: List all banners
+      description: >
+        Use this operation to get a list of all banners.
+      tags:
+        - Banner – Bannerdaten
+      operationId: listBanners
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/AcceptLanguageHeader'
+        - $ref: '#/parameters/UserAgentHeader'
+#        - $ref: '#/parameters/FilterParam'
+#        - $ref: '#/parameters/SortParam'
+#        - $ref: '#/parameters/PageParam'
+#        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/BannersResponse'
+          examples:
+            application/json:
+
+#              page_count: 1
+#              page_size: 1
+#              total_items: 250
+              banners:
+                -
+                  id: "73f91ae8-fa76-4f76-86d9-78f6bcd5d3ab"
+                  types:
+                    - "promotion"
+                    - "wine"
+                  closable: true
+                  position: "top"
+                  title: "20% auf alle Lindt-Artikel*"
+                  html: "Freitag, 27. und Samstag, 28. November 2015<br>20% auf alle Lindt-Artikel*– auch auf bestehende Aktionspreise!<br>*nicht mit anderen Gutscheinen und Bons kumulierbar. Solange Vorrat."
+                  link: null
+                  image:
+                    image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/banners/ec63c8de-eb6d-41f4-813b-35cd6ef8631f/lindt.png"
+                  campaign:
+                    source: null
+                    medium: null
+                    name: null
+
 parameters:
   PageParam:
     name: page
@@ -893,6 +939,13 @@ parameters:
     default: application/json
     description: >
       Request body content type (supported is "application/json")
+  UserAgentHeader:
+    name: User-Agent
+    in: header
+    type: string
+    required: false
+    description: >
+      User agent
 
 definitions:
   ### Common
@@ -1610,6 +1663,51 @@ definitions:
       - title
       - rating
 
+  ### Banner
+  Banner:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      types:
+        type: array
+        items:
+          type: string
+      closable:
+        type: boolean
+        description: Can the user close the banner?
+      position:
+        type: string
+        description: Where the banner is shown in the UI
+      title:
+        type: string
+        description: Title as shown to the user (localized)
+      html:
+        type: string
+        description: Text as shown to the user (localized)
+      link:
+        $ref: '#/definitions/Url'
+      image:
+        type: object
+        properties:
+          image_url:
+            $ref: '#/definitions/Url'
+      campaign:
+        type: object
+        properties:
+          source:
+            type: string
+            description: Campaign source (UTM)
+          medium:
+            type: string
+            description: Campaign medium (UTM)
+          name:
+            type: string
+            description: Campaign name (UTM)
+    required:
+      - types
+      - title
+
   ### Collections
   Stores:
     type: array
@@ -1660,6 +1758,11 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Appraisal'
+
+  Banners:
+    type: array
+    items:
+      $ref: '#/definitions/Banner'
 
   ### Responses
   StoresResponse:
@@ -1805,3 +1908,21 @@ definitions:
         format: int32
       appraisals:
         $ref: '#/definitions/Appraisals'
+
+  BannersResponse:
+    type: object
+    properties:
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+#      total_items:
+#        description: The number of items on all pages
+#        type: integer
+#        format: int32
+      appraisals:
+        $ref: '#/definitions/Banners'

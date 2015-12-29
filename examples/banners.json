@@ -10,9 +10,9 @@
             "position": "top",
             "title": "20% auf alle Lindt-Artikel*",
             "html": "Freitag, 27. und Samstag, 28. November 2015<br>20% auf alle Lindt-Artikel*\u2013 auch auf bestehende Aktionspreise!<br>*nicht mit anderen Gutscheinen und Bons kumulierbar. Solange Vorrat.",
-            "url": null,
+            "link": null,
             "image": {
-                "url": "https://denner-assets.s3-eu-west-1.amazonaws.com/banners/ec63c8de-eb6d-41f4-813b-35cd6ef8631f/lindt.png"
+                "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/banners/ec63c8de-eb6d-41f4-813b-35cd6ef8631f/lindt.png"
             },
             "campaign": {
                 "source": null,
