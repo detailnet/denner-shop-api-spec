@@ -370,38 +370,38 @@ paths:
                               message: "Derzeit nicht bestellbar"
 
   /online-filters/{filter_id}/online-groups:
-      get:
-        summary: List the online groups appearing in given online filter
-        description: >
-          Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
-        tags:
-          - Promotions/Advertising – Aktionsdaten
-        operationId: listOnlineGroupsByOnlineFilter
-        parameters:
-          - $ref: '#/parameters/AcceptHeader'
-          - $ref: '#/parameters/AcceptLanguageHeader'
-          - $ref: '#/parameters/OnlineFilterIdPathParam'
-        responses:
-          200:
-            description: Successful listing
-            schema:
-              $ref: '#/definitions/OnlineGroupsResponse'
-            examples:
-              application/json:
+    get:
+      summary: List the online groups appearing in given online filter
+      description: >
+        Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
+      tags:
+        - Promotions/Advertising – Aktionsdaten
+      operationId: listOnlineGroupsByOnlineFilter
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/AcceptLanguageHeader'
+        - $ref: '#/parameters/OnlineFilterIdPathParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/OnlineGroupsResponse'
+          examples:
+            application/json:
 
-                online_groups:
-                  -
-                    id: "7627150d-36bd-4867-89b2-091800a03d24"
-                    title: "Frischprodukte"
-                    children:
-                      -
-                        id: "58afec5c-ece9-4b66-bc55-00d6dc1b65b8"
-                        title: "Milchprodukte"
-                        children: []
-                      -
-                        id: "e5216167-9da5-41d6-b7b3-96362b60de89"
-                        title: "Eier"
-                        children: []
+              online_groups:
+                -
+                  id: "7627150d-36bd-4867-89b2-091800a03d24"
+                  title: "Frischprodukte"
+                  children:
+                    -
+                      id: "58afec5c-ece9-4b66-bc55-00d6dc1b65b8"
+                      title: "Milchprodukte"
+                      children: []
+                    -
+                      id: "e5216167-9da5-41d6-b7b3-96362b60de89"
+                      title: "Eier"
+                      children: []
 
 parameters:
   PageParam:
