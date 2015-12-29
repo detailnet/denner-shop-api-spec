@@ -712,6 +712,96 @@ paths:
                       title: "Andere Aktionen"
                       value: 5
 
+  /wines/{article_id}/appraisals:
+    get:
+      summary: List the appraisals of given wine
+      description: >
+        Use this operation to get a list of all appraisals (Bewertungen) for a specific wine.
+      tags:
+        - Wine – Weindaten
+      operationId: listAppraisalsByWine
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+#        - $ref: '#/parameters/AcceptLanguageHeader'
+        - $ref: '#/parameters/ArticleIdPathParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/AppraisalsResponse'
+          examples:
+            application/json:
+
+              total_items: 15
+              appraisals:
+                -
+                  id: "7063984c-4eea-4abe-825b-e80612ba89c3"
+                  created_on: "2015-10-30T10:16:41+0200"
+                  wine_year: "2013"
+                  title: "un très très bon vin"
+                  description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+                  rating: 5
+                  firstname: "Isabelle"
+                  lastname: "Rossetti"
+                  address: "3 rue du Temple"
+                  zip_code: "1304"
+                  city: "Cossonay"
+                  language: "fr"
+                -
+                  id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
+                  created_on: "2015-10-20T14:37:56+0200"
+                  wine_year: null
+                  title: "Ein Primitivo passt immer."
+                  description: null
+                  rating: 4
+                  firstname: "Pitsch"
+                  lastname: "Frei"
+                  address: "Au 7"
+                  zip_code: "5420"
+                  city: "Ehrendingen"
+                  language: "de"
+    post:
+      summary: Create a new appraisals for the given wine
+      description: >
+        Use this operation to create a new appraisal (Bewertung) for a specific wine.
+      tags:
+        - Wine – Weindaten
+      operationId: createAppraisal
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/ContentTypeHeader'
+#        - $ref: '#/parameters/AcceptLanguageHeader'
+        - $ref: '#/parameters/ArticleIdPathParam'
+        - name: appraisal
+          description: >
+            Data for the appraisal
+          in: body
+          schema:
+            $ref: '#/definitions/Appraisal'
+          required: true
+      responses:
+        201:
+          description: Successful creation
+          schema:
+            $ref: '#/definitions/Appraisal'
+          examples:
+            application/json:
+
+              id: "7063984c-4eea-4abe-825b-e80612ba89c3"
+              created_on: "2015-10-30T10:16:41+0200"
+              wine_year: "2013"
+              title: "un très très bon vin"
+              description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+              rating: 5
+              firstname: "Isabelle"
+              lastname: "Rossetti"
+              address: "3 rue du Temple"
+              zip_code: "1304"
+              city: "Cossonay"
+              language: "fr"
+
 parameters:
   PageParam:
     name: page
@@ -741,6 +831,13 @@ parameters:
     type: string
     required: true
     pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
+  ArticleIdPathParam:
+    name: article_id
+    description: The unique identifier of an article
+    in: path
+    type: string
+    required: true
+    pattern: '/^\d{6}$/'
   FilterParam:
     name: filter
     in: query
@@ -788,6 +885,14 @@ parameters:
     default: de
     description: >
       Accepted locale (supported are "de", "fr", and "it")
+  ContentTypeHeader:
+    name: Content-Type
+    in: header
+    type: string
+    required: false
+    default: application/json
+    description: >
+      Request body content type (supported is "application/json")
 
 definitions:
   ### Common
@@ -1457,6 +1562,54 @@ definitions:
       wine:
         $ref: '#/definitions/ArticleWine'
 
+  Appraisal:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      created_on:
+        type: string
+        format: date-time
+        description: Timestamp
+      wine_year:
+        $ref: '#/definitions/Year'
+      title:
+        type: string
+        description: Title
+      description:
+        type: string
+        description: Description
+      rating:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 5
+        description: Given rating
+      firstname:
+        type: string
+        description: Person's first name
+      lastname:
+        type: string
+        description: Person's last name
+      address:
+        type: string
+        description: Person's address
+      zip_code:
+        type: integer
+        format: int32
+        minimum: 1000
+        maximum: 9699
+        description: Person's ZIP code
+      city:
+        type: string
+        description: Person's city
+      language:
+        type: string
+        description: Locale
+    required:
+      - title
+      - rating
+
   ### Collections
   Stores:
     type: array
@@ -1502,6 +1655,11 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/FilterSection' # Actually it can be ListFilterSection and SliderFilterSection
+
+  Appraisals:
+    type: array
+    items:
+      $ref: '#/definitions/Appraisal'
 
   ### Responses
   StoresResponse:
@@ -1629,3 +1787,21 @@ definitions:
 #        format: int32
       wine_filters:
         $ref: '#/definitions/WineFilters'
+
+  AppraisalsResponse:
+    type: object
+    properties:
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      appraisals:
+        $ref: '#/definitions/Appraisals'
