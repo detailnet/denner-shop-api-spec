@@ -53,91 +53,91 @@ paths:
 #              page_size: 1
               total_items: 794
               stores:
-                  -
-                    id: "bcb8a388-8998-4d08-85a6-4864199704ee"
-                    code: 302
-                    name: null
-                    address: "Werdstrasse"
-                    number: "36"
-                    zip_code: 8004
-                    canton_code: "ZH"
-                    city: "Zürich"
-                    country_code: "CH"
-                    phone: "044 240 22 83"
-                    hotline: "0848 99 66 33"
-                    payment_types:
-                      - "cash"
-                      - "euro"
-                      - "maestro"
-                      - "post"
-                    credit_card: true
-                    open_from: "1998-08-01"
-                    open_to: null
-                    renovation_from: "2015-06-25"
-                    renovation_to: "2015-06-26"
-                    latitude: 47.3728447
-                    longitude: 8.5295153
-                    language: "de"
-                    email: "info@denner.ch"
-                    homepage: "http://www.denner.ch"
-                    parking_count: 0
-                    channel:
-                      id: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
-                      title: "Denner"
-                    opening_times:
-                      -
-                        weekday: 1
-                        open_from: "08:00"
-                        open_to: "20:00"
-                      -
-                        weekday: 2
-                        open_from: "08:00"
-                        open_to: "20:00"
-                      -
-                        weekday: 3
-                        open_from: "08:00"
-                        open_to: "20:00"
-                      -
-                        weekday: 4
-                        open_from: "08:00"
-                        open_to: "20:00"
-                      -
-                        weekday: 5
-                        open_from: "08:00"
-                        open_to: "20:00"
-                      -
-                        weekday: 6
-                        open_from: "08:00"
-                        open_to: "12:00"
-                      -
-                        weekday: 6
-                        open_from: "14:00"
-                        open_to: "20:00"
-                    special_opening_times:
-                      -
-                        day: "2015-06-25"
-                        reason: "Umbau"
-                        closed: true
-                      -
-                        day: "2015-06-26"
-                        reason: "Umbau"
-                        closed: true
-                      -
-                        day: "2015-06-28"
-                        open_from: "10:00"
-                        open_to: "16:00"
-                        reason: "Sonntagsverkauf"
-                        closed: false
-                    services:
-                      -
-                        id: "acb911fb-b7e3-480f-ab91-1109e750892a"
-                        title: "Humidor"
-                      -
-                        id: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
-                        title: "Früchte und Gemüse"
-                      -
-                        id: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
-                        title: "Backstation"
+                -
+                  id: "bcb8a388-8998-4d08-85a6-4864199704ee"
+                  code: 302
+                  name: null
+                  address: "Werdstrasse"
+                  number: "36"
+                  zip_code: 8004
+                  canton_code: "ZH"
+                  city: "Zürich"
+                  country_code: "CH"
+                  phone: "044 240 22 83"
+                  hotline: "0848 99 66 33"
+                  payment_types:
+                    - "cash"
+                    - "euro"
+                    - "maestro"
+                    - "post"
+                  credit_card: true
+                  open_from: "1998-08-01"
+                  open_to: null
+                  renovation_from: "2015-06-25"
+                  renovation_to: "2015-06-26"
+                  latitude: 47.3728447
+                  longitude: 8.5295153
+                  language: "de"
+                  email: "info@denner.ch"
+                  homepage: "http://www.denner.ch"
+                  parking_count: 0
+                  channel:
+                    id: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
+                    title: "Denner"
+                  opening_times:
+                    -
+                      weekday: 1
+                      open_from: "08:00"
+                      open_to: "20:00"
+                    -
+                      weekday: 2
+                      open_from: "08:00"
+                      open_to: "20:00"
+                    -
+                      weekday: 3
+                      open_from: "08:00"
+                      open_to: "20:00"
+                    -
+                      weekday: 4
+                      open_from: "08:00"
+                      open_to: "20:00"
+                    -
+                      weekday: 5
+                      open_from: "08:00"
+                      open_to: "20:00"
+                    -
+                      weekday: 6
+                      open_from: "08:00"
+                      open_to: "12:00"
+                    -
+                      weekday: 6
+                      open_from: "14:00"
+                      open_to: "20:00"
+                  special_opening_times:
+                    -
+                      day: "2015-06-25"
+                      reason: "Umbau"
+                      closed: true
+                    -
+                      day: "2015-06-26"
+                      reason: "Umbau"
+                      closed: true
+                    -
+                      day: "2015-06-28"
+                      open_from: "10:00"
+                      open_to: "16:00"
+                      reason: "Sonntagsverkauf"
+                      closed: false
+                  services:
+                    -
+                      id: "acb911fb-b7e3-480f-ab91-1109e750892a"
+                      title: "Humidor"
+                    -
+                      id: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
+                      title: "Früchte und Gemüse"
+                    -
+                      id: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
+                      title: "Backstation"
 
   /store-filters:
     get:
@@ -158,60 +158,60 @@ paths:
             application/json:
 
               store_filters:
-                  -
-                    id: "opening"
-                    title: "Öffnungszeit"
-                    type: "list"
-                    filter:
-                      property: "open_on"
-                      operator: "in"
-                      type: "array"
-                    options:
-                      -
-                        title: "Jetzt geöffnet"
-                        value: "now"
-                      -
-                        title: "Heute bis 20 Uhr geöffnet"
-                        value: "20:00:00"
-                  -
-                    id: "services"
-                    title: "Besondere Sortimente"
-                    type: "list"
-                    filter:
-                      property: "services"
-                      operator: "in"
-                      type: "array"
-                    options:
-                      -
-                        title: "Humidor"
-                        value: "acb911fb-b7e3-480f-ab91-1109e750892a"
-                      -
-                        title: "Bordeaux Grands Crus"
-                        value: "85aa57ad-2bf3-48e5-a1a0-813889cbae26"
-                      -
-                        title: "Früchte und Gemüse"
-                        value: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
-                      -
-                        title: "Früchte und Gemüse im Offenverkauf"
-                        value: "47191064-ad2e-482a-a5cf-2aa32d0b8116"
-                      -
-                        title: "Backstation"
-                        value: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
-                  -
-                    id: "channels"
-                    title: "Filialtyp"
-                    type: "list"
-                    filter:
-                      property: "channel"
-                      operator: "in"
-                      type: "array"
-                    options:
-                      -
-                        title: "Denner"
-                        value: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
-                      -
-                        title: "Denner Satellit und Denner Express"
-                        value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
+                -
+                  id: "opening"
+                  title: "Öffnungszeit"
+                  type: "list"
+                  filter:
+                    property: "open_on"
+                    operator: "in"
+                    type: "array"
+                  options:
+                    -
+                      title: "Jetzt geöffnet"
+                      value: "now"
+                    -
+                      title: "Heute bis 20 Uhr geöffnet"
+                      value: "20:00:00"
+                -
+                  id: "services"
+                  title: "Besondere Sortimente"
+                  type: "list"
+                  filter:
+                    property: "services"
+                    operator: "in"
+                    type: "array"
+                  options:
+                    -
+                      title: "Humidor"
+                      value: "acb911fb-b7e3-480f-ab91-1109e750892a"
+                    -
+                      title: "Bordeaux Grands Crus"
+                      value: "85aa57ad-2bf3-48e5-a1a0-813889cbae26"
+                    -
+                      title: "Früchte und Gemüse"
+                      value: "d7b4925e-79f8-415f-9436-0adb4a9cc4de"
+                    -
+                      title: "Früchte und Gemüse im Offenverkauf"
+                      value: "47191064-ad2e-482a-a5cf-2aa32d0b8116"
+                    -
+                      title: "Backstation"
+                      value: "57d0301a-fd5d-4dce-ab0d-75dee1d16631"
+                -
+                  id: "channels"
+                  title: "Filialtyp"
+                  type: "list"
+                  filter:
+                    property: "channel"
+                    operator: "in"
+                    type: "array"
+                  options:
+                    -
+                      title: "Denner"
+                      value: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
+                    -
+                      title: "Denner Satellit und Denner Express"
+                      value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
   ### Promotion
   /online-filters:
@@ -270,104 +270,104 @@ paths:
             application/json:
 
               online_publications:
-                  -
-                    id: "2c8616be-07c8-4fba-83a2-ee780449ff32"
-                    title: "Wochenaktionen"
-                    validity:
-                      from: "2015-06-23"
-                      to: "2015-06-29"
-                      text: "23.06.2015 bis 29.06.2015, solange Vorrat"
-                    articles:
-                      -
-                        id: "dfbc2b0d-0f47-4ac2-86e5-3bd4f9936ef6"
-                        article_id: "051273"
-                        title: "Mandorla Primitivo di Puglia IGT"
-                        description: "2013, Apulien, Italien, 6 x 75 cl"
-                        prices:
-                          sales: 59.4
-                          instead: 68.4
-                          base: 1.32
-                          by_quantity:
-                            -
-                              quantity: 1
-                              sales: 9.9
-                              instead: 11.4
-                            -
-                              quantity: 6
-                              sales: 59.4
-                              instead: 68.4
-                        price_info: "Konkurrenzvergleich"
-                        unit_price_info: "Einzelflasche: 9.90 statt 11.40"
-                        dots:
+                -
+                  id: "2c8616be-07c8-4fba-83a2-ee780449ff32"
+                  title: "Wochenaktionen"
+                  validity:
+                    from: "2015-06-23"
+                    to: "2015-06-29"
+                    text: "23.06.2015 bis 29.06.2015, solange Vorrat"
+                  articles:
+                    -
+                      id: "dfbc2b0d-0f47-4ac2-86e5-3bd4f9936ef6"
+                      article_id: "051273"
+                      title: "Mandorla Primitivo di Puglia IGT"
+                      description: "2013, Apulien, Italien, 6 x 75 cl"
+                      prices:
+                        sales: 59.4
+                        instead: 68.4
+                        base: 1.32
+                        by_quantity:
                           -
-                            id: "d4bca729-10ad-482c-bdda-b1a1398173b5"
-                            type:
-                              id: "semi_price_winehit"
-                            images:
-                              -
-                                type: "image/svg+xml"
-                                url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
-                        panel: "9.- sparen"
-                        quantity: 6
-                        content:
-                          text: "75 cl"
-                        base:
-                          text: "10 cl"
-                        validity:
-                          from: "2015-06-23"
-                          to: "2015-06-29"
-                          short_text: "Gültig von 23.06.–29.06."
-                          long_text: "Angebot gültig von 23.06.2015 bis 29.06.2015"
-                        availability_limitations:
-                          region: "Nur in der deutschen und französischen Schweiz erhältlich"
-                          store: "Nur in Filialen mit Frischprodukten erhältlich"
-                        promoted: true
-                        compared: true
-                        cooling: 0
-                        eco_labels:
+                            quantity: 1
+                            sales: 9.9
+                            instead: 11.4
                           -
-                            id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
-                            code: "bio"
-                        packshot:
-                          image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
-                        wine:
-                          country:
-                            id: "IT"
-                            title: "Italien"
-                          region:
-                            id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
-                            title: "Apulien"
-                          type:
-                            id: 2
-                            title: "Rotwein"
-                          year: 2013
-                          fits_with: "Pasta, Fleisch mit würzigen Saucen"
-                          varietal: "Primitivo"
-                          character: "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
-                          temperature: "16-18 °C"
-                          awards: ""
-                          storage: "3 Jahre"
-                          rating:
-                            value: 4.45
-                            total: 11
-                            valid: true
-                          shop:
-                            url: "http://denner-wineshop.ch/skuredirect/051273/"
                             quantity: 6
-                            prices:
-                              sales: 68.4
-                              base: 1.52
-                              by_quantity:
-                                -
-                                  quantity: 1
-                                  sales: 11.4
-                                -
-                                  quantity: 6
-                                  sales: 68.4
-                            stock:
-                              value: -15
-                              code: 2
-                              message: "Derzeit nicht bestellbar"
+                            sales: 59.4
+                            instead: 68.4
+                      price_info: "Konkurrenzvergleich"
+                      unit_price_info: "Einzelflasche: 9.90 statt 11.40"
+                      dots:
+                        -
+                          id: "d4bca729-10ad-482c-bdda-b1a1398173b5"
+                          type:
+                            id: "semi_price_winehit"
+                          images:
+                            -
+                              type: "image/svg+xml"
+                              url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
+                      panel: "9.- sparen"
+                      quantity: 6
+                      content:
+                        text: "75 cl"
+                      base:
+                        text: "10 cl"
+                      validity:
+                        from: "2015-06-23"
+                        to: "2015-06-29"
+                        short_text: "Gültig von 23.06.–29.06."
+                        long_text: "Angebot gültig von 23.06.2015 bis 29.06.2015"
+                      availability_limitations:
+                        region: "Nur in der deutschen und französischen Schweiz erhältlich"
+                        store: "Nur in Filialen mit Frischprodukten erhältlich"
+                      promoted: true
+                      compared: true
+                      cooling: 0
+                      eco_labels:
+                        -
+                          id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
+                          code: "bio"
+                      packshot:
+                        image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
+                      wine:
+                        country:
+                          id: "IT"
+                          title: "Italien"
+                        region:
+                          id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
+                          title: "Apulien"
+                        type:
+                          id: 2
+                          title: "Rotwein"
+                        year: 2013
+                        fits_with: "Pasta, Fleisch mit würzigen Saucen"
+                        varietal: "Primitivo"
+                        character: "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
+                        temperature: "16-18 °C"
+                        awards: ""
+                        storage: "3 Jahre"
+                        rating:
+                          value: 4.45
+                          total: 11
+                          valid: true
+                        shop:
+                          url: "http://denner-wineshop.ch/skuredirect/051273/"
+                          quantity: 6
+                          prices:
+                            sales: 68.4
+                            base: 1.52
+                            by_quantity:
+                              -
+                                quantity: 1
+                                sales: 11.4
+                              -
+                                quantity: 6
+                                sales: 68.4
+                          stock:
+                            value: -15
+                            code: 2
+                            message: "Derzeit nicht bestellbar"
 
   /online-filters/{filter_id}/online-groups:
     get:
