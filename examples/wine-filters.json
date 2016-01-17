@@ -5,7 +5,7 @@
             "title": "Weintyp",
             "type": "list",
             "filter": {
-                "property": "type",
+                "property": "f.type",
                 "operator": "in",
                 "type": "array"
             },
@@ -42,7 +42,7 @@
             "title": "Land",
             "type": "list",
             "filter": {
-                "property": "country",
+                "property": "f.country",
                 "operator": "in",
                 "type": "array"
             },
@@ -70,7 +70,7 @@
             "title": "Region",
             "type": "list",
             "filter": {
-                "property": "region",
+                "property": "f.region",
                 "operator": "in",
                 "type": "array"
             },
@@ -125,16 +125,16 @@
                 "min": {
                     "value": 1,
                     "filter": {
-                        "property": "price_from",
-                        "operator": ">=",
+                        "property": "f.price",
+                        "operator": "gte",
                         "type": "integer"
                     }
                 },
                 "max": {
                     "value": 75,
                     "filter": {
-                        "property": "price_to",
-                        "operator": "<=",
+                        "property": "f.price",
+                        "operator": "lte",
                         "type": "integer"
                     }
                 }
@@ -145,7 +145,7 @@
             "title": "Passend zu",
             "type": "list",
             "filter": {
-                "property": "fits_withs",
+                "property": "f.fits_withs",
                 "operator": "in",
                 "type": "array"
             },
@@ -193,7 +193,7 @@
             "title": "Auszeichnungen",
             "type": "list",
             "filter": {
-                "property": "awards",
+                "property": "f.awards",
                 "operator": "in",
                 "type": "array"
             },
@@ -253,7 +253,7 @@
             "title": "Aktionen",
             "type": "list",
             "filter": {
-                "property": "promotion_type",
+                "property": "f.promotion_type",
                 "operator": "in",
                 "type": "array"
             },
