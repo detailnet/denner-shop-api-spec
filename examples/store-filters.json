@@ -5,7 +5,7 @@
             "title": "Öffnungszeit",
             "type": "list",
             "filter": {
-                "property": "open_on",
+                "property": "f.open_on",
                 "operator": "in",
                 "type": "array"
             },
@@ -25,7 +25,7 @@
             "title": "Besondere Sortimente",
             "type": "list",
             "filter": {
-                "property": "services",
+                "property": "f.services.id",
                 "operator": "in",
                 "type": "array"
             },
@@ -57,7 +57,7 @@
             "title": "Filialtyp",
             "type": "list",
             "filter": {
-                "property": "channel",
+                "property": "f.channel.id",
                 "operator": "in",
                 "type": "array"
             },
