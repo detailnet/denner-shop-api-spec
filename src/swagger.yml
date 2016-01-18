@@ -416,9 +416,9 @@ paths:
   ### Wine
   /wines:
     get:
-      summary: List the online groups appearing in given online filter
+      summary: List wines
       description: >
-        Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
+        Use this operation to get a list of all wines.
       tags:
         - Wine – Weindaten
       operationId: listWines
@@ -428,8 +428,8 @@ paths:
 #        - $ref: '#/parameters/FilterParam'
         - $ref: '#/parameters/QueryParam'
 #        - $ref: '#/parameters/SortParam'
-        - $ref: '#/parameters/PageParam'
-        - $ref: '#/parameters/PageSizeParam'
+#        - $ref: '#/parameters/PageParam'
+#        - $ref: '#/parameters/PageSizeParam'
       responses:
         200:
           description: Successful listing
