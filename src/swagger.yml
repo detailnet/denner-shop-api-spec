@@ -21,26 +21,31 @@ paths:
       summary: List all stores
       description: >
         Use this operation to get a list of all stores (Filialen).
-
-
-        The query param "filter" supports the following properties:
-
-        - __opening__:
-          [{"property":"opening","operator":"in","type":"array","value":["now","20:00:00"]}]
-        - __services__ (e.g. "Humidor):
-          [{"property":"services","operator":"in","type":"array","value":["acb911fb-b7e3-480f-ab91-1109e750892a"]}]
-        - __channels__ (e.g. "Denner Satellit und Denner Express):
-          [{"property":"channels","operator":"in","type":"array","value":["18549f95-6471-4e21-968f-8a0bf2e0f79b"]}]
       tags:
         - Store – Filialdaten
       operationId: listStores
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
-        - $ref: '#/parameters/FilterParam'
-#        - $ref: '#/parameters/SortParam'
-#        - $ref: '#/parameters/PageParam'
-#        - $ref: '#/parameters/PageSizeParam'
+        - name: f.open
+          description: >
+            Filter by opening, e.g. "f.open=__in_now||20:00" will return all stores which are open right now or today at 8:00 p.m.
+          in: query
+          type: string
+        - name: f.services
+          description: >
+            Filter by services, e.g. "f.services=__in_d4d34d84-b32b-46fb-b45f-2bde4b72be81" will return all stores which have at least one of the given services
+          in: query
+          type: string
+        - name: f.channel
+          description: >
+            Filter by channels, e.g. "f.channel=__in_18549f95-6471-4e21-968f-8a0bf2e0f79b" will return all stores which have one of the given channels
+          in: query
+          type: string
+#        - $ref: '#/parameters/FilterParam'
+        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
       responses:
         200:
           description: Successful listing
@@ -415,7 +420,7 @@ paths:
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
-        - $ref: '#/parameters/FilterParam'
+#        - $ref: '#/parameters/FilterParam'
         - $ref: '#/parameters/QueryParam'
 #        - $ref: '#/parameters/SortParam'
         - $ref: '#/parameters/PageParam'
@@ -864,12 +869,21 @@ parameters:
     name: page_size
     description: >
       The page size.
-      Default: -1 (no limit)
+      Default: 10
+
+      To disable pagination (when supported) send "-1".
     in: query
     type: integer
     required: false
     format: int32
-    default: -1
+    default: 10
+  SortParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
   OnlineFilterIdPathParam:
     name: filter_id
     description: The unique identifier of an online filter
@@ -884,30 +898,30 @@ parameters:
     type: string
     required: true
     pattern: '/^\d{6}$/'
-  FilterParam:
-    name: filter
-    in: query
-    type: string
-    required: false
-    description: >
-      Filters: JSON array of Filter object, urlencoded.
-
-
-      Filter object:
-
-      - __property__:
-        Property to filter on.
-      - __operator__:
-        Operation property. Enumeration ('eq', 'like', 'lt', 'gt', 'in', ...). Dependent from property (not all might be allowed).
-      - __type__:
-        Type of value. Enumeration ('string', 'integer', 'boolean', 'array') Dependent from property and operator (not all might be allowed).
-      - __value__:
-        Value. Must be of the defined type.
-
-
-      Example:
-
-      [{"property":"id","operator":"eq","type":"string","value":"bcb8a388-8998-4d08-85a6-4864199704ee"}]
+#  FilterParam:
+#    name: filter
+#    in: query
+#    type: string
+#    required: false
+#    description: >
+#      Filters: JSON array of Filter object, urlencoded.
+#
+#
+#      Filter object:
+#
+#      - __property__:
+#        Property to filter on.
+#      - __operator__:
+#        Operation property. Enumeration ('eq', 'like', 'lt', 'gt', 'in', ...). Dependent from property (not all might be allowed).
+#      - __type__:
+#        Type of value. Enumeration ('string', 'integer', 'boolean', 'array') Dependent from property and operator (not all might be allowed).
+#      - __value__:
+#        Value. Must be of the defined type.
+#
+#
+#      Example:
+#
+#      [{"property":"id","operator":"eq","type":"string","value":"bcb8a388-8998-4d08-85a6-4864199704ee"}]
   QueryParam:
       name: query
       description: Search text
