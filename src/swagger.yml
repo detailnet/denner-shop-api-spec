@@ -425,6 +425,46 @@ paths:
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: f.types
+          description: >
+            Filter by types, e.g. "f.types=__in_2,3" will return all wines which are open red or rosé.
+          in: query
+          type: string
+        - name: f.countries
+          description: >
+            Filter by countries, e.g. "f.countries=__in_AR,CL" will return all wines which are coming from Argeninia or Chile
+          in: query
+          type: string
+        - name: f.regions
+          description: >
+            Filter by regions, e.g. "f.regions=__in_3b7dfc06-94bd-45af-8baa-e269b8556659,f1cd9437-d240-4e9a-8eac-ff6e4f06acbf" will return all wines which are coming from Abruzzo or Apulia
+          in: query
+          type: string
+        - name: f.price_from
+          description: >
+            Filter by price, e.g. "f.price_from=5" will return all wines that cost at least 5 CHF
+          in: query
+          type: integer
+        - name: f.price_to
+          description: >
+            Filter by price, e.g. "f.price_to=50" will return all wines that cost less than 50 CHF
+          in: query
+          type: integer
+        - name: f.fits_withs
+          description: >
+            Filter by dish that fits withs, e.g. "f.fits_withs=__in_4797e12c-75ef-4066-9fee-9c0f3ec3323a,caadd673-57cd-44b9-9880-51439bf5bcea" will return all wines which fits with dessert or starter dishes
+          in: query
+          type: string
+        - name: f.awards
+          description: >
+            Filter by awards, e.g. "f.awards=__in_4c2ce3c7-d182-4c38-be9a-f6ec22166bea" will return all wines which where awarded in Expovina
+          in: query
+          type: string
+        - name: f.promotion_type
+          description: >
+            Filter by promotion type, e.g. "f.promotion_type=__in_0" will return all wines which are in promotion
+          in: query
+          type: string
 #        - $ref: '#/parameters/FilterParam'
         - $ref: '#/parameters/QueryParam'
 #        - $ref: '#/parameters/SortParam'
