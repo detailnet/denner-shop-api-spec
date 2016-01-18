@@ -1690,71 +1690,15 @@ definitions:
 
   ### Online publication article
   FeaturedArticle:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      article_id:
-        type: string
-        pattern: '/^\d{6}$/'
-        description: Navision article code
-      title:
-        type: string
-        description: Public title as displayed to users (localized)
-      description:
-        type: string
-        description: Public description as displayed to users (localized)
-      prices:
-        $ref: '#/definitions/ArticlePrices'
-      price_info:
-        type: string
-        description: >
-          Price information as displayed to users (localized, e.g. "Konkurrenzvergleich")
-      unit_price_info:
-        type: string
-        description: >
-          Unit price information as displayed to users (localized, e.g. "Einzelflasche: 9.90 statt 11.40")
-      dots:
-        $ref: '#/definitions/Dots'
-      panel:
-        type: string
-        description: Panel text as displayed to users (localized)
-      quantity:
-        $ref: '#/definitions/Quantity'
-      content:
-        $ref: '#/definitions/Content'
-      base:
-        $ref: '#/definitions/BaseContent'
-      validity:
-        $ref: '#/definitions/ArticleValidity'
-      availability_limitations:
-        type: object
-        description: Texts for information about limited availability
-        properties:
-          region:
-            type: string
-            description: Region availability as displayed to users (localized)
-          store:
-            type: string
-            description: Store availability as displayed to users (localized)
-      promoted:
-        type: boolean
-        description: Is it a promoted article (should be displayed with full information)?
-      compared:
-        type: boolean
-        description: Is the article's price compared to an offer from an other company?
-      cooling:
-        $ref: '#/definitions/Cooling'
-      packshot:
-        $ref: '#/definitions/Packshot'
-      layout:
-        type: object
-        #description: Featured article layout
-        properties:
-          image_url:
-            $ref: '#/definitions/Url'
-      wine:
-        $ref: '#/definitions/ArticleWine'
+    allOf:
+      - $ref: '#/definitions/OnlinePublicationArticle'
+      - properties:
+          layout:
+            type: object
+            #description: Featured article layout
+            properties:
+              image_url:
+                $ref: '#/definitions/Url'
 
   ### Online publication
   OnlinePublication:
