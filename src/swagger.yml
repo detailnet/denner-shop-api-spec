@@ -29,7 +29,7 @@ paths:
         - $ref: '#/parameters/AcceptLanguageHeader'
         - name: f.open
           description: >
-            Filter by opening, e.g. "f.open=__in_now||20:00" will return all stores which are open right now or today at 8:00 p.m.
+            Filter by opening, e.g. "f.open=__in_now,20:00" will return all stores which are open right now or today at 8:00 p.m.
           in: query
           type: string
         - name: f.services
@@ -265,6 +265,11 @@ paths:
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: f.online_groups
+          description: >
+            Filter by online groups, e.g. "f.online_groups=__in_58afec5c-ece9-4b66-bc55-00d6dc1b65b8" will return all online publications which have at least one of the given online groups
+          in: query
+          type: string
         - $ref: '#/parameters/OnlineFilterIdPathParam'
       responses:
         200:
