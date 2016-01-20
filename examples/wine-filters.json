@@ -125,16 +125,16 @@
                 "min": {
                     "value": 1,
                     "filter": {
-                        "property": "f.price",
-                        "operator": "gte",
+                        "property": "price_from",
+                        "operator": "=",
                         "type": "integer"
                     }
                 },
                 "max": {
                     "value": 75,
                     "filter": {
-                        "property": "f.price",
-                        "operator": "lte",
+                        "property": "price_to",
+                        "operator": "=",
                         "type": "integer"
                     }
                 }
@@ -145,7 +145,7 @@
             "title": "Passend zu",
             "type": "list",
             "filter": {
-                "property": "f.fits_withs",
+                "property": "f.fits_with",
                 "operator": "in",
                 "type": "array"
             },
@@ -249,7 +249,7 @@
             ]
         },
         {
-            "id": "promotion_type",
+            "id": "promotion_types",
             "title": "Aktionen",
             "type": "list",
             "filter": {
