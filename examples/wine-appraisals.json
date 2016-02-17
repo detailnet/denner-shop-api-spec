@@ -7,10 +7,7 @@
             "title": "un tr\u00e8s tr\u00e8s bon vin",
             "description": "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le c\u00e9page ORIGINAL !!! Denner, qu'est ce qui vous arrive ???",
             "rating": 5,
-            "firstname": "Isabelle",
-            "lastname": "Rossetti",
-            "address": "3 rue du Temple",
-            "zip_code": "1304",
+            "display_name": "Hans M.",
             "city": "Cossonay",
             "language": "fr"
         },
@@ -21,11 +18,8 @@
             "title": "Ein Primitivo passt immer.",
             "description": null,
             "rating": 4,
-            "firstname": "Pitsch",
-            "lastname": "Frei",
-            "address": "Au 7",
-            "zip_code": "5420",
-            "city": "Ehrendingen",
+            "display_name": "Michelle M.",
+            "city": "Zürich",
             "language": "de"
         }
     ],

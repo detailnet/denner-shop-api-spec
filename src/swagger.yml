@@ -914,10 +914,7 @@ paths:
                   title: "un très très bon vin"
                   description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
                   rating: 5
-                  firstname: "Isabelle"
-                  lastname: "Rossetti"
-                  address: "3 rue du Temple"
-                  zip_code: "1304"
+                  display_name: "Hans M."
                   city: "Cossonay"
                   language: "fr"
                 -
@@ -927,11 +924,8 @@ paths:
                   title: "Ein Primitivo passt immer."
                   description: null
                   rating: 4
-                  firstname: "Pitsch"
-                  lastname: "Frei"
-                  address: "Au 7"
-                  zip_code: "5420"
-                  city: "Ehrendingen"
+                  display_name: "Michelle M."
+                  city: "Zürich"
                   language: "de"
     post:
       summary: Create a new appraisals for the given wine
@@ -950,8 +944,9 @@ paths:
             Data for the appraisal
           in: body
           schema:
-            $ref: '#/definitions/Appraisal'
+            $ref: '#/definitions/NewAppraisal'
           required: true
+
       responses:
         201:
           description: Successful creation
@@ -966,10 +961,7 @@ paths:
               title: "un très très bon vin"
               description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
               rating: 5
-              firstname: "Isabelle"
-              lastname: "Rossetti"
-              address: "3 rue du Temple"
-              zip_code: "1304"
+              display_name: "Hans M."
               city: "Cossonay"
               language: "fr"
 
@@ -1801,6 +1793,33 @@ definitions:
         minimum: 1
         maximum: 5
         description: Given rating
+      display_name:
+        type: string
+        description: Person's (public) name
+      city:
+        type: string
+        description: Person's city
+      language:
+        type: string
+        description: Locale
+
+  NewAppraisal:
+    type: object
+    properties:
+      wine_year:
+        $ref: '#/definitions/Year'
+      title:
+        type: string
+        description: Title
+      description:
+        type: string
+        description: Description
+      rating:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 5
+        description: Given rating
       firstname:
         type: string
         description: Person's first name
@@ -1825,6 +1844,19 @@ definitions:
     required:
       - title
       - rating
+    example:
+      application/json:
+
+        wine_year: "2013"
+        title: "un très très bon vin"
+        description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+        rating: 5
+        firstname: "Isabelle"
+        lastname: "Rossetti"
+        address: "3 rue du Temple"
+        zip_code: "1304"
+        city: "Cossonay"
+        language: "fr"
 
   ### Banner
   Banner:
@@ -2080,7 +2112,7 @@ definitions:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
-      appraisals:
+      banners:
         $ref: '#/definitions/Banners'
 
   FeaturedArticlesResponse:
