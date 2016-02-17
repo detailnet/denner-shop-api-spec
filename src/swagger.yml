@@ -1013,10 +1013,6 @@ paths:
                   link: null
                   image:
                     image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/banners/ec63c8de-eb6d-41f4-813b-35cd6ef8631f/lindt.png"
-                  campaign:
-                    source: null
-                    medium: null
-                    name: null
 
 parameters:
   PageParam:
@@ -1859,18 +1855,6 @@ definitions:
         properties:
           image_url:
             $ref: '#/definitions/Url'
-      campaign:
-        type: object
-        properties:
-          source:
-            type: string
-            description: Campaign source (UTM)
-          medium:
-            type: string
-            description: Campaign medium (UTM)
-          name:
-            type: string
-            description: Campaign name (UTM)
     required:
       - types
       - title
