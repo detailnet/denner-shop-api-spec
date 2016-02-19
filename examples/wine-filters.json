@@ -31,7 +31,6 @@
                     "value": 3
                 },
                 {
-                    "id": "5",
                     "title": "Andere",
                     "value": 5
                 }
@@ -249,7 +248,7 @@
             ]
         },
         {
-            "id": "promotion_type",
+            "id": "promotion_types",
             "title": "Aktionen",
             "type": "list",
             "filter": {
