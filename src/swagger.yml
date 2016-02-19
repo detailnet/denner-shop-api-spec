@@ -21,26 +21,30 @@ paths:
       summary: List all stores
       description: >
         Use this operation to get a list of all stores (Filialen).
-
-
-        The query param "filter" supports the following properties:
-
-        - __opening__:
-          [{"property":"opening","operator":"in","type":"array","value":["now","20:00:00"]}]
-        - __services__ (e.g. "Humidor):
-          [{"property":"services","operator":"in","type":"array","value":["acb911fb-b7e3-480f-ab91-1109e750892a"]}]
-        - __channels__ (e.g. "Denner Satellit und Denner Express):
-          [{"property":"channels","operator":"in","type":"array","value":["18549f95-6471-4e21-968f-8a0bf2e0f79b"]}]
       tags:
-        - Store – Filialdaten
+        - store
       operationId: listStores
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
-        - $ref: '#/parameters/FilterParam'
-#        - $ref: '#/parameters/SortParam'
-#        - $ref: '#/parameters/PageParam'
-#        - $ref: '#/parameters/PageSizeParam'
+        - name: f.open
+          description: >
+            Filter by opening, e.g. "f.open=__in_now,20:00" will return all stores which are open right now or today at 8:00 pm.
+          in: query
+          type: string
+        - name: f.services
+          description: >
+            Filter by services, e.g. "f.services=__in_d4d34d84-b32b-46fb-b45f-2bde4b72be81" will return all stores which have at least one of the given services.
+          in: query
+          type: string
+        - name: f.channel
+          description: >
+            Filter by channels, e.g. "f.channel=__in_18549f95-6471-4e21-968f-8a0bf2e0f79b" will return all stores which have one of the given channels.
+          in: query
+          type: string
+        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
       responses:
         200:
           description: Successful listing
@@ -51,7 +55,7 @@ paths:
 
 #              page_count: 1
 #              page_size: 1
-              total_items: 794
+              total_stores: 794
               stores:
                 -
                   id: "bcb8a388-8998-4d08-85a6-4864199704ee"
@@ -142,9 +146,9 @@ paths:
   /store-filters:
     get:
       summary: List all store filters
-      description: Use this operation to get a list of the store filters
+      description: Use this operation to get a list of the store filters.
       tags:
-        - Store – Filialdaten
+        - store
       operationId: listStoreFilters
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -163,7 +167,7 @@ paths:
                   title: "Öffnungszeit"
                   type: "list"
                   filter:
-                    property: "open_on"
+                    property: "f.open"
                     operator: "in"
                     type: "array"
                   options:
@@ -178,7 +182,7 @@ paths:
                   title: "Besondere Sortimente"
                   type: "list"
                   filter:
-                    property: "services"
+                    property: "f.services"
                     operator: "in"
                     type: "array"
                   options:
@@ -202,7 +206,7 @@ paths:
                   title: "Filialtyp"
                   type: "list"
                   filter:
-                    property: "channel"
+                    property: "f.channel"
                     operator: "in"
                     type: "array"
                   options:
@@ -214,6 +218,122 @@ paths:
                       value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
   ### Promotion
+  /featured-articles:
+    get:
+      summary: List the featured articles
+      description: >
+        Use this operation to get a list of all featured articles.
+      tags:
+        - promotion
+      operationId: listFeaturedArticles
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/AcceptLanguageHeader'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/FeaturedArticlesResponse'
+          examples:
+            application/json:
+
+#              page_count: 1
+#              page_size: 1
+#              total_featured_articles: 1
+              featured_articles:
+                -
+                  id: "dfbc2b0d-0f47-4ac2-86e5-3bd4f9936ef6"
+                  article_id: "051273"
+                  title: "Mandorla Primitivo di Puglia IGT"
+                  description: "2013, Apulien, Italien, 6 x 75 cl"
+                  prices:
+                    sales: 59.4
+                    instead: 68.4
+                    base: 1.32
+                    by_quantity:
+                      -
+                        quantity: 1
+                        sales: 9.9
+                        instead: 11.4
+                      -
+                        quantity: 6
+                        sales: 59.4
+                        instead: 68.4
+                  price_info: "Konkurrenzvergleich"
+                  unit_price_info: "Einzelflasche: 9.90 statt 11.40"
+                  dots:
+                    -
+                      id: "d4bca729-10ad-482c-bdda-b1a1398173b5"
+                      type:
+                        id: "semi_price_winehit"
+                      images:
+                        -
+                          type: "image/svg+xml"
+                          url: "https://s3-eu-west-1.amazonaws.com/denner-assets/dots/d4bca729-10ad-482c-bdda-b1a1398173b5/051273-de.svg"
+                  panel: "9.- sparen"
+                  quantity: 6
+                  content:
+                    text: "75 cl"
+                  base:
+                    text: "10 cl"
+                  validity:
+                    from: "2015-06-23"
+                    to: "2015-06-29"
+                    short_text: "Gültig von 23.06.–29.06."
+                    long_text: "Angebot gültig von 23.06.2015 bis 29.06.2015"
+                  availability_limitations:
+                    region: "Nur in der deutschen und französischen Schweiz erhältlich"
+                    store: "Nur in Filialen mit Frischprodukten erhältlich"
+                  promoted: true
+                  compared: true
+                  cooling: 0
+                  eco_labels:
+                    -
+                      id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
+                      code: "bio"
+                  packshot:
+                    image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/2059e18a-9e93-452e-9eef-f9d7605a31ad/022617.png"
+                  layout:
+                    image_url: null
+                  wine:
+                    country:
+                      id: "IT"
+                      title: "Italien"
+                    region:
+                      id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
+                      title: "Apulien"
+                    type:
+                      id: 2
+                      title: "Rotwein"
+                    year: 2013
+                    fits_with: "Pasta, Fleisch mit würzigen Saucen"
+                    varietal: "Primitivo"
+                    character: "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
+                    temperature: "16-18 °C"
+                    awards: ""
+                    storage: "3 Jahre"
+                    rating:
+                      value: 4.45
+                      total: 11
+                      valid: true
+                    shop:
+                      url: "http://denner-wineshop.ch/skuredirect/051273/"
+                      quantity: 6
+                      prices:
+                        sales: 68.4
+                        base: 1.52
+                        by_quantity:
+                          -
+                            quantity: 1
+                            sales: 11.4
+                          -
+                            quantity: 6
+                            sales: 68.4
+                      stock:
+                        value: -15
+                        code: 2
+                        message: "Derzeit nicht bestellbar"
+
   /online-filters:
     get:
       summary: List the online filters of a given type
@@ -221,16 +341,18 @@ paths:
         Use this operation to get a list of all online filters
         (Angebotsfilter; e.g. "Aktionen aktuelle Woche" or "Aktionen der Folgewoche").
       tags:
-        - Promotion – Aktionsdaten
+        - promotion
       operationId: listOnlineFilters
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
-        - name: type
-          description: Type of online filters to list (supported are "promotion" and "wine")
+        - name: f.types
+          description: >
+            Type of online filters to list (supported are "promotion" and "wine"),
+            e.g. "f.types=__in_promotion" will return all online filters which should be shown in the promotional area of the App (red color).
           in: query
           type: string
-          required: true
+        - $ref: '#/parameters/SortParam'
       responses:
         200:
           description: Successful listing
@@ -255,11 +377,16 @@ paths:
         for a specific online filter
         (e.g. "Wochenaktionen" and "Wochenend-Knaller", which are both appearing within "Aktionen aktuelle Woche").
       tags:
-        - Promotion – Aktionsdaten
+        - promotion
       operationId: listOnlinePublicationsByOnlineFilter
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: f.online_group
+          description: >
+            Filter by online groups, e.g. "f.online_groups=__in_58afec5c-ece9-4b66-bc55-00d6dc1b65b8" will return all online publications which have at least one of the given online groups.
+          in: query
+          type: string
         - $ref: '#/parameters/OnlineFilterIdPathParam'
       responses:
         200:
@@ -375,7 +502,7 @@ paths:
       description: >
         Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
       tags:
-        - Promotion – Aktionsdaten
+        - promotion
       operationId: listOnlineGroupsByOnlineFilter
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -406,18 +533,62 @@ paths:
   ### Wine
   /wines:
     get:
-      summary: List the online groups appearing in given online filter
+      summary: List wines
       description: >
-        Use this operation to get a list of all online groups (Internet-Sortimente) for a specific online filter.
+        Use this operation to get a list of all wines.
       tags:
-        - Wine – Weindaten
+        - wine
       operationId: listWines
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
-        - $ref: '#/parameters/FilterParam'
-        - $ref: '#/parameters/QueryParam'
-#        - $ref: '#/parameters/SortParam'
+        - name: f.type
+          description: >
+            Filter by wine types, e.g. "f.type=__in_2,3" will return all wines which are of wine type "red" or "rosé".
+          in: query
+          type: string
+        - name: f.country
+          description: >
+            Filter by countries, e.g. "f.country=__in_AR,CL" will return all wines which are coming from Argentinia or Chile.
+          in: query
+          type: string
+        - name: f.region
+          description: >
+            Filter by regions, e.g. "f.region=__in_3b7dfc06-94bd-45af-8baa-e269b8556659,f1cd9437-d240-4e9a-8eac-ff6e4f06acbf" will return all wines which are coming from Abruzzo or Apulia.
+          in: query
+          type: string
+        - name: price_from
+          description: >
+            Filter by price, e.g. "price_from=5" will return all wines that cost 5 CHF or more.
+          in: query
+          type: integer
+        - name: price_to
+          description: >
+            Filter by price, e.g. "price_to=50" will return all wines that cost 50 CHF or less.
+          in: query
+          type: integer
+        - name: f.fits_with
+          description: >
+            Filter by dish that fits withs, e.g. "f.fits_with=__in_4797e12c-75ef-4066-9fee-9c0f3ec3323a,caadd673-57cd-44b9-9880-51439bf5bcea" will return all wines which fits with dessert or starter dishes.
+          in: query
+          type: string
+        - name: f.awards
+          description: >
+            Filter by awards, e.g. "f.awards=__in_4c2ce3c7-d182-4c38-be9a-f6ec22166bea" will return all wines which where awarded in Expovina.
+          in: query
+          type: string
+        - name: f.promotion_type
+          description: >
+            Filter by promotion type, e.g. "f.promotion_type=__in_0" will return all wines which are in promotion.
+          in: query
+          type: string
+        - name: f.barcodes
+          description: >
+            Filter by barcodes, e.g. "f.barcodes=__in_EAN..." will return all wines with one of these barcodes.
+          in: query
+          type: string
+        - $ref: '#/parameters/SearchParam'
+        - $ref: '#/parameters/SortParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -430,7 +601,7 @@ paths:
 
 #              page_count: 1
 #              page_size: 1
-              total_items: 250
+              total_wines: 250
               wines:
                 -
                   id: "051273"
@@ -484,7 +655,7 @@ paths:
       summary: List all wine filters
       description: Use this operation to get a list of the wine filters
       tags:
-        - Wine – Weindaten
+        - wine
       operationId: listWineFilters
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -503,7 +674,7 @@ paths:
                   title: "Weintyp"
                   type: "list"
                   filter:
-                    property: "type"
+                    property: "f.type"
                     operator: "in"
                     type: "array"
                   options:
@@ -531,7 +702,7 @@ paths:
                   title: "Land"
                   type: "list"
                   filter:
-                    property: "country"
+                    property: "f.country"
                     operator: "in"
                     type: "array"
                   options:
@@ -552,7 +723,7 @@ paths:
                   title: "Region"
                   type: "list"
                   filter:
-                    property: "region"
+                    property: "f.region"
                     operator: "in"
                     type: "array"
                   options:
@@ -595,20 +766,20 @@ paths:
                       value: 1
                       filter:
                         property: "price_from"
-                        operator: ">="
+                        operator: "="
                         type: "integer"
                     max:
                       value: 75
                       filter:
                         property: "price_to"
-                        operator: "<="
+                        operator: "="
                         type: "integer"
                 -
                   id: "fits_withs"
                   title: "Passend zu"
                   type: "list"
                   filter:
-                    property: "fits_withs"
+                    property: "f.fits_with"
                     operator: "in"
                     type: "array"
                   options:
@@ -644,7 +815,7 @@ paths:
                   title: "Auszeichnungen"
                   type: "list"
                   filter:
-                    property: "awards"
+                    property: "f.awards"
                     operator: "in"
                     type: "array"
                   options:
@@ -685,11 +856,11 @@ paths:
                       title: "Wine&Spirit"
                       value: "669ed4a8-88dd-457f-a3b2-de9ef31400f3"
                 -
-                  id: "promotion_type"
+                  id: "promotion_types"
                   title: "Aktionen"
                   type: "list"
                   filter:
-                    property: "promotion_type"
+                    property: "f.promotion_type"
                     operator: "in"
                     type: "array"
                   options:
@@ -718,7 +889,7 @@ paths:
       description: >
         Use this operation to get a list of all appraisals (Bewertungen) for a specific wine.
       tags:
-        - Wine – Weindaten
+        - wine
       operationId: listAppraisalsByWine
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -734,7 +905,7 @@ paths:
           examples:
             application/json:
 
-              total_items: 15
+              total_appraisals: 15
               appraisals:
                 -
                   id: "7063984c-4eea-4abe-825b-e80612ba89c3"
@@ -743,10 +914,7 @@ paths:
                   title: "un très très bon vin"
                   description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
                   rating: 5
-                  firstname: "Isabelle"
-                  lastname: "Rossetti"
-                  address: "3 rue du Temple"
-                  zip_code: "1304"
+                  display_name: "Hans M."
                   city: "Cossonay"
                   language: "fr"
                 -
@@ -756,18 +924,15 @@ paths:
                   title: "Ein Primitivo passt immer."
                   description: null
                   rating: 4
-                  firstname: "Pitsch"
-                  lastname: "Frei"
-                  address: "Au 7"
-                  zip_code: "5420"
-                  city: "Ehrendingen"
+                  display_name: "Michelle M."
+                  city: "Zürich"
                   language: "de"
     post:
       summary: Create a new appraisals for the given wine
       description: >
         Use this operation to create a new appraisal (Bewertung) for a specific wine.
       tags:
-        - Wine – Weindaten
+        - wine
       operationId: createAppraisal
       parameters:
         - $ref: '#/parameters/AcceptHeader'
@@ -779,8 +944,9 @@ paths:
             Data for the appraisal
           in: body
           schema:
-            $ref: '#/definitions/Appraisal'
+            $ref: '#/definitions/NewAppraisal'
           required: true
+
       responses:
         201:
           description: Successful creation
@@ -795,10 +961,7 @@ paths:
               title: "un très très bon vin"
               description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
               rating: 5
-              firstname: "Isabelle"
-              lastname: "Rossetti"
-              address: "3 rue du Temple"
-              zip_code: "1304"
+              display_name: "Hans M."
               city: "Cossonay"
               language: "fr"
 
@@ -809,13 +972,12 @@ paths:
       description: >
         Use this operation to get a list of all banners.
       tags:
-        - Banner – Bannerdaten
+        - banner
       operationId: listBanners
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
         - $ref: '#/parameters/UserAgentHeader'
-#        - $ref: '#/parameters/FilterParam'
 #        - $ref: '#/parameters/SortParam'
 #        - $ref: '#/parameters/PageParam'
 #        - $ref: '#/parameters/PageSizeParam'
@@ -829,7 +991,7 @@ paths:
 
 #              page_count: 1
 #              page_size: 1
-#              total_items: 250
+#              total_banners: 250
               banners:
                 -
                   id: "73f91ae8-fa76-4f76-86d9-78f6bcd5d3ab"
@@ -843,10 +1005,6 @@ paths:
                   link: null
                   image:
                     image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/banners/ec63c8de-eb6d-41f4-813b-35cd6ef8631f/lindt.png"
-                  campaign:
-                    source: null
-                    medium: null
-                    name: null
 
 parameters:
   PageParam:
@@ -864,12 +1022,21 @@ parameters:
     name: page_size
     description: >
       The page size.
-      Default: -1 (no limit)
+      Default: 10
+
+      To disable pagination (when supported) send "-1".
     in: query
     type: integer
     required: false
     format: int32
-    default: -1
+    default: 10
+  SortParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
   OnlineFilterIdPathParam:
     name: filter_id
     description: The unique identifier of an online filter
@@ -884,32 +1051,8 @@ parameters:
     type: string
     required: true
     pattern: '/^\d{6}$/'
-  FilterParam:
-    name: filter
-    in: query
-    type: string
-    required: false
-    description: >
-      Filters: JSON array of Filter object, urlencoded.
-
-
-      Filter object:
-
-      - __property__:
-        Property to filter on.
-      - __operator__:
-        Operation property. Enumeration ('eq', 'like', 'lt', 'gt', 'in', ...). Dependent from property (not all might be allowed).
-      - __type__:
-        Type of value. Enumeration ('string', 'integer', 'boolean', 'array') Dependent from property and operator (not all might be allowed).
-      - __value__:
-        Value. Must be of the defined type.
-
-
-      Example:
-
-      [{"property":"id","operator":"eq","type":"string","value":"bcb8a388-8998-4d08-85a6-4864199704ee"}]
-  QueryParam:
-      name: query
+  SearchParam:
+      name: search
       description: Search text
       in: query
       type: string
@@ -1558,6 +1701,18 @@ definitions:
       wine:
         $ref: '#/definitions/ArticleWine'
 
+  ### Online publication article
+  FeaturedArticle:
+    allOf:
+      - $ref: '#/definitions/OnlinePublicationArticle'
+      - properties:
+          layout:
+            type: object
+            #description: Featured article layout
+            properties:
+              image_url:
+                $ref: '#/definitions/Url'
+
   ### Online publication
   OnlinePublication:
     type: object
@@ -1638,6 +1793,33 @@ definitions:
         minimum: 1
         maximum: 5
         description: Given rating
+      display_name:
+        type: string
+        description: Person's (public) name
+      city:
+        type: string
+        description: Person's city
+      language:
+        type: string
+        description: Locale
+
+  NewAppraisal:
+    type: object
+    properties:
+      wine_year:
+        $ref: '#/definitions/Year'
+      title:
+        type: string
+        description: Title
+      description:
+        type: string
+        description: Description
+      rating:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 5
+        description: Given rating
       firstname:
         type: string
         description: Person's first name
@@ -1662,6 +1844,19 @@ definitions:
     required:
       - title
       - rating
+    example:
+      application/json:
+
+        wine_year: "2013"
+        title: "un très très bon vin"
+        description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+        rating: 5
+        firstname: "Isabelle"
+        lastname: "Rossetti"
+        address: "3 rue du Temple"
+        zip_code: "1304"
+        city: "Cossonay"
+        language: "fr"
 
   ### Banner
   Banner:
@@ -1692,18 +1887,6 @@ definitions:
         properties:
           image_url:
             $ref: '#/definitions/Url'
-      campaign:
-        type: object
-        properties:
-          source:
-            type: string
-            description: Campaign source (UTM)
-          medium:
-            type: string
-            description: Campaign medium (UTM)
-          name:
-            type: string
-            description: Campaign name (UTM)
     required:
       - types
       - title
@@ -1764,6 +1947,11 @@ definitions:
     items:
       $ref: '#/definitions/Banner'
 
+  FeaturedArticles:
+    type: array
+    items:
+      $ref: '#/definitions/FeaturedArticle'
+
   ### Responses
   StoresResponse:
     type: object
@@ -1776,7 +1964,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-      total_items:
+      total_stores:
         description: The number of items on all pages
         type: integer
         format: int32
@@ -1794,7 +1982,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_store_filters:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
@@ -1812,7 +2000,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_online_filters:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
@@ -1830,7 +2018,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_online_groups:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
@@ -1848,7 +2036,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_online_publications:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
@@ -1866,7 +2054,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-      total_items:
+      total_wines:
         description: The number of items on all pages
         type: integer
         format: int32
@@ -1884,7 +2072,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_wine_filters:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
@@ -1902,7 +2090,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-      total_items:
+      total_appraisals:
         description: The number of items on all pages
         type: integer
         format: int32
@@ -1920,9 +2108,27 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-#      total_items:
+#      total_banners:
 #        description: The number of items on all pages
 #        type: integer
 #        format: int32
-      appraisals:
+      banners:
         $ref: '#/definitions/Banners'
+
+  FeaturedArticlesResponse:
+    type: object
+    properties:
+#    page_count:
+#      description: The number of pages
+#      type: integer
+#      format: int32
+#    page_size:
+#      description: The page size
+#      type: integer
+#      format: int32
+#    total_featured_articles:
+#      description: The number of items on all pages
+#      type: integer
+#      format: int32
+      featured_articles:
+        $ref: '#/definitions/FeaturedArticles'
