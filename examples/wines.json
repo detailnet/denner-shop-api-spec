@@ -10,6 +10,9 @@
             "base": {
                 "text": "10 cl"
             },
+            "packshot": {
+                "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/8c089312-e4fa-48e8-b309-afc1077c4fa6/051199_1.png"
+            },
             "wine": {
                 "country": {
                     "id": "IT",
