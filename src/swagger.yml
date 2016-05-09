@@ -214,7 +214,7 @@ paths:
                       title: "Denner"
                       value: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
                     -
-                      title: "Denner Satellit und Denner Express"
+                      title: "Denner Satellit"
                       value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
   ### Promotion
@@ -293,8 +293,6 @@ paths:
                       code: "bio"
                   packshot:
                     image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
-                  layout:
-                    image_url: null
                   wine:
                     country:
                       id: "IT"
@@ -542,6 +540,16 @@ paths:
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: f.id
+          description: >
+            Filter by ID, e.g. "f.id=012345" will return the wine 012345.
+          in: query
+          type: string
+        - name: f.promotion_type
+          description: >
+            Filter by promotion type, e.g. "f.promotion_type=__in_0" will return all wines which are in promotion.
+          in: query
+          type: string
         - name: f.type
           description: >
             Filter by wine types, e.g. "f.type=__in_2,3" will return all wines which are of wine type "red" or "rosé".
@@ -557,14 +565,14 @@ paths:
             Filter by regions, e.g. "f.region=__in_3b7dfc06-94bd-45af-8baa-e269b8556659,f1cd9437-d240-4e9a-8eac-ff6e4f06acbf" will return all wines which are coming from Abruzzo or Apulia.
           in: query
           type: string
-        - name: price_from
+        - name: f.price_from
           description: >
-            Filter by price, e.g. "price_from=5" will return all wines that cost 5 CHF or more.
+            Filter by price, e.g. "f.price_from=5" will return all wines that cost 5 CHF or more.
           in: query
           type: integer
-        - name: price_to
+        - name: f.price_to
           description: >
-            Filter by price, e.g. "price_to=50" will return all wines that cost 50 CHF or less.
+            Filter by price, e.g. "f.price_to=50" will return all wines that cost 50 CHF or less.
           in: query
           type: integer
         - name: f.fits_with
@@ -575,11 +583,6 @@ paths:
         - name: f.awards
           description: >
             Filter by awards, e.g. "f.awards=__in_4c2ce3c7-d182-4c38-be9a-f6ec22166bea" will return all wines which where awarded in Expovina.
-          in: query
-          type: string
-        - name: f.promotion_type
-          description: >
-            Filter by promotion type, e.g. "f.promotion_type=__in_0" will return all wines which are in promotion.
           in: query
           type: string
         - name: f.barcodes
@@ -671,6 +674,18 @@ paths:
             application/json:
 
               wine_filters:
+                -
+                  id: "promotion_types"
+                  title: "Aktionen"
+                  type: "list"
+                  filter:
+                    property: "f.promotion_type"
+                    operator: "in"
+                    type: "array"
+                  options:
+                    -
+                      title: "Alle Aktionen"
+                      value: 0
                 -
                   id: "types"
                   title: "Weintyp"
@@ -767,14 +782,14 @@ paths:
                     min:
                       value: 1
                       filter:
-                        property: "price_from"
-                        operator: "="
+                        property: "f.price_from"
+                        operator: "eq"
                         type: "integer"
                     max:
                       value: 75
                       filter:
-                        property: "price_to"
-                        operator: "="
+                        property: "f.price_to"
+                        operator: "eq"
                         type: "integer"
                 -
                   id: "fits_withs"
@@ -857,33 +872,6 @@ paths:
                     -
                       title: "Wine&Spirit"
                       value: "669ed4a8-88dd-457f-a3b2-de9ef31400f3"
-                -
-                  id: "promotion_types"
-                  title: "Aktionen"
-                  type: "list"
-                  filter:
-                    property: "f.promotion_type"
-                    operator: "in"
-                    type: "array"
-                  options:
-                    -
-                      title: "Alle Aktionen"
-                      value: 0
-                    -
-                      title: "Rotwein-Aktionen"
-                      value: 2
-                    -
-                      title: "Weisswein-Aktionen"
-                      value: 1
-                    -
-                      title: "Schaumwein-Aktionen"
-                      value: 4
-                    -
-                      title: "Rosé-Aktionen"
-                      value: 3
-                    -
-                      title: "Andere Aktionen"
-                      value: 5
 
   /wines/{article_id}/appraisals:
     get:
@@ -912,7 +900,7 @@ paths:
                 -
                   id: "7063984c-4eea-4abe-825b-e80612ba89c3"
                   created_on: "2015-10-30T10:16:41+02:00"
-                  wine_year: "2013"
+                  wine_year: 2013
                   title: "un très très bon vin"
                   description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
                   rating: 5
@@ -959,7 +947,7 @@ paths:
 
               id: "7063984c-4eea-4abe-825b-e80612ba89c3"
               created_on: "2015-10-30T10:16:41+02:00"
-              wine_year: "2013"
+              wine_year: 2013
               title: "un très très bon vin"
               description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
               rating: 5
@@ -1738,17 +1726,10 @@ definitions:
       wine:
         $ref: '#/definitions/ArticleWine'
 
-  ### Online publication article
+  ### Featured online publication article
   FeaturedArticle:
     allOf:
       - $ref: '#/definitions/OnlinePublicationArticle'
-      - properties:
-          layout:
-            type: object
-            #description: Featured article layout
-            properties:
-              image_url:
-                $ref: '#/definitions/Url'
 
   ### Online publication
   OnlinePublication:
@@ -1895,7 +1876,7 @@ definitions:
     example:
       application/json:
 
-        wine_year: "2013"
+        wine_year: 2013
         title: "un très très bon vin"
         description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
         rating: 5
