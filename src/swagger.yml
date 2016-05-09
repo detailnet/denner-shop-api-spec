@@ -214,7 +214,7 @@ paths:
                       title: "Denner"
                       value: "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
                     -
-                      title: "Denner Satellit und Denner Express"
+                      title: "Denner Satellit"
                       value: "18549f95-6471-4e21-968f-8a0bf2e0f79b"
 
   ### Promotion
@@ -293,8 +293,6 @@ paths:
                       code: "bio"
                   packshot:
                     image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
-                  layout:
-                    image_url: null
                   wine:
                     country:
                       id: "IT"
@@ -1693,17 +1691,10 @@ definitions:
       wine:
         $ref: '#/definitions/ArticleWine'
 
-  ### Online publication article
+  ### Featured online publication article
   FeaturedArticle:
     allOf:
       - $ref: '#/definitions/OnlinePublicationArticle'
-      - properties:
-          layout:
-            type: object
-            #description: Featured article layout
-            properties:
-              image_url:
-                $ref: '#/definitions/Url'
 
   ### Online publication
   OnlinePublication:
