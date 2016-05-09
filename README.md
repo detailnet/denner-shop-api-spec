@@ -5,26 +5,30 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 
 ### Stores
 
-* `/stores` (Filialen, [example](examples/stores.json))
-* `/store-filters` (Filter, [example](examples/store-filters.json))
+* `GET /stores` (Filialen, [example](examples/stores.json))
+* `GET /store-filters` (Filialfilter, [example](examples/store-filters.json))
 
 ### Promotions
 
-* `/featured-articles` (Startseitenartikel, [example](examples/featured-articles.json))
-* `/online-filters` (Angebotsfilter, [example](examples/online-filters.json))
-* `/online-filters/{id}/online-publications` (Werbemittel, [example](examples/online-publications.json))
-* `/online-filters/{id}/online-groups` (Internet-Sortimente, [example](examples/online-groups.json))
+* `GET /featured-articles` (Startseitenartikel, [example](examples/featured-articles.json))
+* `GET /online-filters` (Angebotsfilter, [example](examples/online-filters.json))
+* `GET /online-filters/{id}/online-publications` (Werbemittel, [example](examples/online-publications.json))
+* `GET /online-filters/{id}/online-groups` (Internet-Sortimente, [example](examples/online-groups.json))
 
 ### Wines
 
-* `/wines` (Weine, [example](examples/wines.json))
-* `/wine-filters` (Filter, [example](examples/wine-filters.json))
-* `/wines/{id}/appraisals` (Weinbewertungen, [example](examples/wine-appraisals.json))
+* `GET /wines` (Weine, [example](examples/wines.json))
+* `GET /wine-filters` (Weinfilter, [example](examples/wine-filters.json))
+* `GET /wines/{id}/appraisals` (Weinbewertungen, [example](examples/wine-appraisals.json))
+* `POST /wines/{id}/appraisals` (Weinbewertungen, [example request](examples/wine-appraisals.post-request.json))
 
 ### Banners
 
-* `/banners` (Banner, [example](examples/banners.json))
+* `GET /banners` (Banner, [example](examples/banners.json))
 
+### Other
+
+* `POST /sweepstake-participants` (Gewinnspielteilnehmer, [example request](examples/sweepstake-participants.post-request.json))
 
 ## Building
 

@@ -6,8 +6,7 @@ info:
   contact:
     name: DETAIL NET
     email: support+denner-mobile-api@detailnet.ch
-host: denner-mobile-api.detailnet.ch
-basePath: /v1
+host: denner-mobile-api-v1.detailnet.ch
 schemes:
   - https
 consumes:
@@ -962,7 +961,7 @@ paths:
       description: >
         Use this operation to create a sweepstake participant (Gewinnspielteilnehmer).
       tags:
-        - appraisal
+        - other
       operationId: createSweepstakeParticipant
       parameters:
         - $ref: '#/parameters/AcceptHeader'
