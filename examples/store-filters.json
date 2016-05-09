@@ -16,7 +16,7 @@
                 },
                 {
                     "title": "Heute bis 20 Uhr geöffnet",
-                    "value": "20:00"
+                    "value": "20:00:00"
                 }
             ]
         },
@@ -67,7 +67,7 @@
                     "value": "5d1c3dd5-35a9-4c66-ab20-3409ea640334"
                 },
                 {
-                    "title": "Denner Satellit und Denner Express",
+                    "title": "Denner Satellit",
                     "value": "18549f95-6471-4e21-968f-8a0bf2e0f79b"
                 }
             ]
