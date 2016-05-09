@@ -899,7 +899,7 @@ paths:
               appraisals:
                 -
                   id: "7063984c-4eea-4abe-825b-e80612ba89c3"
-                  created_on: "2015-10-30T10:16:41+0200"
+                  created_on: "2015-10-30T10:16:41+02:00"
                   wine_year: 2013
                   title: "un très très bon vin"
                   description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
@@ -909,7 +909,7 @@ paths:
                   language: "fr"
                 -
                   id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
-                  created_on: "2015-10-20T14:37:56+0200"
+                  created_on: "2015-10-20T14:37:56+02:00"
                   wine_year: null
                   title: "Ein Primitivo passt immer."
                   description: null
@@ -946,7 +946,7 @@ paths:
             application/json:
 
               id: "7063984c-4eea-4abe-825b-e80612ba89c3"
-              created_on: "2015-10-30T10:16:41+0200"
+              created_on: "2015-10-30T10:16:41+02:00"
               wine_year: 2013
               title: "un très très bon vin"
               description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
@@ -954,6 +954,41 @@ paths:
               display_name: "Hans M."
               city: "Cossonay"
               language: "fr"
+
+  ### Sweepstake participants
+  /sweepstake-participants:
+    post:
+      summary: Create a new sweepstake participant
+      description: >
+        Use this operation to create a sweepstake participant (Gewinnspielteilnehmer).
+      tags:
+        - appraisal
+      operationId: createSweepstakeParticipant
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/ContentTypeHeader'
+#        - $ref: '#/parameters/AcceptLanguageHeader'
+        - name: participant
+          description: >
+            Data for the participant
+          in: body
+          schema:
+            $ref: '#/definitions/NewSweepstakeParticipant'
+          required: true
+
+      responses:
+        201:
+          description: Successful creation
+          schema:
+            $ref: '#/definitions/SweepstakeParticipant'
+          examples:
+            application/json:
+
+              id: "ed20c828-17b4-4a19-b403-ae223e1cfece"
+              created_on: "2016-05-09T13:30:29+00:00"
+              display_name: "Michelle M."
+              city: "Zurich"
+              language: "de"
 
   ### Banner
   /banners:
@@ -1823,6 +1858,15 @@ definitions:
       city:
         type: string
         description: Person's city
+      email:
+        type: string
+        description: Person's email address
+      gender:
+        type: string
+        description: Person's gender (either "male" or "female")
+      shop_user_id:
+        type: integer
+        description: Identifier for the person's Wineshop user account
       language:
         type: string
         description: Locale
@@ -1842,6 +1886,80 @@ definitions:
         zip_code: "1304"
         city: "Cossonay"
         language: "fr"
+
+  ### Sweepstake participant
+  SweepstakeParticipant:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      created_on:
+        type: string
+        format: date-time
+        description: Timestamp
+      display_name:
+        type: string
+        description: Person's (public) name
+      city:
+        type: string
+        description: Person's city
+      language:
+        type: string
+        description: Locale
+
+  NewSweepstakeParticipant:
+    type: object
+    properties:
+      firstname:
+        type: string
+        description: Person's first name
+      lastname:
+        type: string
+        description: Person's last name
+      address:
+        type: string
+        description: Person's address
+      zip_code:
+        type: integer
+        format: int32
+        minimum: 1000
+        maximum: 9699
+        description: Person's ZIP code
+      city:
+        type: string
+        description: Person's city
+      email:
+        type: string
+        description: Person's email address
+      gender:
+        type: string
+        description: Person's gender (either "male" or "female")
+      shop_user_id:
+        type: integer
+        description: Identifier for the person's Wineshop user account
+      language:
+        type: string
+        description: Locale
+    required:
+      - firstname
+      - lastname
+      - address
+      - zip_code
+      - city
+      - email
+      - gender
+    example:
+      application/json:
+
+        firstname: "Michelle"
+        lastname: "Muster"
+        address: "Bahnhofstrasse 7"
+        zip_code: "8034"
+        city: "Zurich"
+        email: "email@gmx.ch"
+        gender: "female"
+        shop_user_id: 123456789
+        language: "de"
 
   ### Banner
   Banner:
