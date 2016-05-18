@@ -5,8 +5,6 @@ The Denner Shop Web Service provides data and functions for the Denner Wineshop.
 
 ### Wines
 
-* `GET /wines` (Weine, [example](examples/wines.json))
-* `GET /wine-filters` (Weinfilter, [example](examples/wine-filters.json))
 * `GET /wines/{id}/appraisals` (Weinbewertungen, [example](examples/wine-appraisals.json))
 * `POST /wines/{id}/appraisals` (Weinbewertungen, [example request](examples/wine-appraisals.post-request.json))
 
