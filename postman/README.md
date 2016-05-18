@@ -1,4 +1,4 @@
-# denner-mobile-api for Postman
+# Denner Shop API for Postman
 [Postman](https://www.getpostman.com/) settings for Denner Shop Web Service.
 
 ## How to use it
@@ -45,7 +45,7 @@ Choose the one that best fits the testing situation you need:
 
 - Move your mouse pointer over the collection name (left menu), click on "Share collection" icon.
 - Click on "Download" button.
-- Overwrite your local repository's [denner-shop-api.json](postman/collections/denner-shop-api.json) file.
+- Overwrite your local repository's [denner-shop-api.json](collections/denner-shop-api.json) file.
 - Review changes with your preferred editor:
   - Replace tabs with 4 whitespaces.
   - Reset owner to original.
