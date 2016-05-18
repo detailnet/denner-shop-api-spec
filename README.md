@@ -1,19 +1,7 @@
-# Denner Mobile API Spec
+# Denner Shop API Spec
 
 ## Data and resources
-The Denner Mobile Web Service provides data and functions for the Denner Mobile Apps.
-
-### Stores
-
-* `GET /stores` (Filialen, [example](examples/stores.json))
-* `GET /store-filters` (Filialfilter, [example](examples/store-filters.json))
-
-### Promotions
-
-* `GET /featured-articles` (Startseitenartikel, [example](examples/featured-articles.json))
-* `GET /online-filters` (Angebotsfilter, [example](examples/online-filters.json))
-* `GET /online-filters/{id}/online-publications` (Werbemittel, [example](examples/online-publications.json))
-* `GET /online-filters/{id}/online-groups` (Internet-Sortimente, [example](examples/online-groups.json))
+The Denner Shop Web Service provides data and functions for the Denner Wineshop.
 
 ### Wines
 
@@ -21,10 +9,6 @@ The Denner Mobile Web Service provides data and functions for the Denner Mobile 
 * `GET /wine-filters` (Weinfilter, [example](examples/wine-filters.json))
 * `GET /wines/{id}/appraisals` (Weinbewertungen, [example](examples/wine-appraisals.json))
 * `POST /wines/{id}/appraisals` (Weinbewertungen, [example request](examples/wine-appraisals.post-request.json))
-
-### Banners
-
-* `GET /banners` (Banner, [example](examples/banners.json))
 
 ### Other
 
@@ -47,9 +31,9 @@ Run the following commands in [Protobox](https://bitbucket.org/detailnet/protobo
 Once installed, `swagger.json` can be generated as follows:
 
         java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-            -i ../denner-mobile-api-spec/src/swagger.yml \
+            -i ../denner-shop-api-spec/src/swagger.yml \
             -l swagger \
-            -o ../denner-mobile-api-spec/build/swagger
+            -o ../denner-shop-api-spec/build/swagger
         
 The file will be located at `build/swagger/swagger.json`.
 
@@ -57,8 +41,8 @@ The file will be located at `build/swagger/swagger.json`.
 You can also generate a static HTML page:
 
         java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-            -i ../denner-mobile-api-spec/src/swagger.yml \
+            -i ../denner-shop-api-spec/src/swagger.yml \
             -l html \
-            -o ../denner-mobile-api-spec/build/html
+            -o ../denner-shop-api-spec/build/html
             
 The file will be located at `build/html/index.html`.
