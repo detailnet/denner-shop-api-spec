@@ -60,7 +60,7 @@ paths:
                   city: "Zürich"
                   language: "de"
     post:
-      summary: Create a new appraisals for the given wine
+      summary: Create a new appraisal for the given wine
       description: >
         Use this operation to create a new appraisal (Bewertung) for a specific wine.
       tags:
