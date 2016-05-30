@@ -45,6 +45,69 @@
                     "value": ""
                 }
             ],
+            "article_group": {
+                "id": "0c309757-5432-4652-8201-ec35f31c5260",
+                "code": "60-56",
+                "name": "Italien Rot 70 cl",
+                "parent": {
+                    "id": "3f3df00f-6a7e-49a9-8eca-a36727ca4977",
+                    "code": "60",
+                    "name": "Weine"
+                }
+            },
+            "purchasing_department": "W",
+            "online_group": {
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein/Champagner"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Vins/champagnes"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vino/champagne"
+                    }
+                ],
+                "parent": {
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Getränke"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande"
+                        }
+                    ]
+                }
+            },
+            "packshots": [
+                {
+                    "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
+                    "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
+                    "quantity": 6,
+                    "created_on": "2016-01-07 15:42:19"
+                }
+            ],
             "prices": {
                 "sales": 9.9,
                 "instead": 11.4,
@@ -139,74 +202,11 @@
                 ]
             },
             "cooling": 0,
-            "online_group": {
-                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
-                "code": "2-9",
-                "disabled": false,
-                "allow_featuring": true,
-                "allow_promotion": true,
-                "allow_background": true,
-                "title": [
-                    {
-                        "locale": "de",
-                        "value": "Wein/Champagner"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Vins/champagnes"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Vino/champagne"
-                    }
-                ],
-                "parent": {
-                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
-                    "code": "2",
-                    "disabled": false,
-                    "allow_featuring": true,
-                    "allow_promotion": true,
-                    "allow_background": true,
-                    "title": [
-                        {
-                            "locale": "de",
-                            "value": "Getränke"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "Boissons"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "Bevande"
-                        }
-                    ]
-                }
-            },
-            "article_group": {
-                "id": "0c309757-5432-4652-8201-ec35f31c5260",
-                "code": "60-56",
-                "name": "Italien Rot 70 cl",
-                "parent": {
-                    "id": "3f3df00f-6a7e-49a9-8eca-a36727ca4977",
-                    "code": "60",
-                    "name": "Weine"
-                }
-            },
-            "purchasing_department": "W",
             "eco_labels": [
                 {
                     "id": "66d94617-bbd7-477e-ae66-183deb67ba5b",
                     "code": "bio",
                     "name": "Bio"
-                }
-            ],
-            "packshots": [
-                {
-                    "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
-                    "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
-                    "quantity": 6,
-                    "created_on": "2016-01-07 15:42:19"
                 }
             ],
             "wine": {
