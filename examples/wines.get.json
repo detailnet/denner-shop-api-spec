@@ -1,0 +1,301 @@
+{
+    "wines": [
+        {
+            "id": "051273",
+            "name": "Mandorla Primitivo IGT Puglia",
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Mandorla Primitivo di Puglia IGT"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Mandorla Primitivo di Puglia IGT"
+                },
+                {
+                    "locale": "it",
+                    "value": "Mandorla Primitivo di Puglia IGT"
+                }
+            ],
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "2013, Apulien, Italien, 6 x 75 cl"
+                },
+                {
+                    "locale": "fr",
+                    "value": "2013, les Pouilles, Italie, 6 x 75 cl"
+                },
+                {
+                    "locale": "it",
+                    "value": "2013, Puglia, Italia, 6 x 75 cl"
+                }
+            ],
+            "prices": {
+                "sales": 9.9,
+                "instead": 11.4,
+                "base": 1.32,
+                "by_quantity": [
+                    {
+                        "quantity": 1,
+                        "sales": 9.9,
+                        "instead": 11.4
+                    },
+                    {
+                        "quantity": 6,
+                        "sales": 59.4,
+                        "instead": 68.4
+                    }
+                ]
+            },
+            "base": {
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "10 cl"
+                    }
+                ]
+            },
+            "cooling": 0,
+            "online_group": {
+                "id": "671988cc-ca5f-484e-8db8-23a65ea0044a",
+                "code": 4003,
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Vins"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vini"
+                    }
+                ],
+                "parent": {
+                    "id": "5b79391b-b436-45f9-b3e4-93ec3ae1fae2",
+                    "code": 4001,
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Tafelgetränke und Mineralwasser"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons table et eau minérale"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande da tavola e acque minerali"
+                        }
+                    ]
+                }
+            },
+            "article_group": {
+                "id": "0c309757-5432-4652-8201-ec35f31c5260",
+                "code": "60-56",
+                "name": "Italien Rot 70 cl",
+                "parent": {
+                    "id": "3f3df00f-6a7e-49a9-8eca-a36727ca4977",
+                    "code": "60",
+                    "name": "Weine"
+                }
+            },
+            "eco_labels": [
+                {
+                    "id": "66d94617-bbd7-477e-ae66-183deb67ba5b",
+                    "code": "bio",
+                    "name": "Bio"
+                }
+            ],
+            "packshots": [
+                {
+                    "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
+                    "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
+                    "quantity": 6,
+                    "created_on": "2016-01-07 15:42:19"
+                }
+            ],
+            "wine": {
+                "country": {
+                    "id": "IT",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Italien"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Italie"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Italia"
+                        }
+                    ]
+                },
+                "region": {
+                    "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Apulien"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Les Pouilles"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Puglia"
+                        }
+                    ]
+                },
+                "type": {
+                    "id": 2,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Rotwein"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Vin rouge"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Vino rosso"
+                        }
+                    ]
+                },
+                "year": 2013,
+                "fits_with": [
+                    {
+                        "locale": "de",
+                        "value": "Pasta, Fleisch mit würzigen Saucen"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Pâtes, viande aux sauces relevées"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Pasta, carni accompagnate da salse aromatiche"
+                    }
+                ],
+                "varietal": [
+                    {
+                        "locale": "de",
+                        "value": "Primitivo"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Primitivo"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Primitivo"
+                    }
+                ],
+                "character": [
+                    {
+                        "locale": "de",
+                        "value": "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Robe rubis foncé. Nez de baies rouges, de cerises matures et de mûres. Bouche moelleuse."
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Rosso rubino scuro. Al naso aromi di bacche rosse, ciliege mature e more. Morbido al palato."
+                    }
+                ],
+                "temperature": [
+                    {
+                        "locale": "de",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "16-18 °C"
+                    }
+                ],
+                "awards": [
+                    {
+                        "locale": "de",
+                        "value": ""
+                    },
+                    {
+                        "locale": "fr",
+                        "value": ""
+                    },
+                    {
+                        "locale": "it",
+                        "value": ""
+                    }
+                ],
+                "storage": [
+                    {
+                        "locale": "de",
+                        "value": "3 Jahre"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "3 ans"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "3 anni"
+                    }
+                ],
+                "rating": {
+                    "value": 4.45,
+                    "total": 11,
+                    "valid": true
+                },
+                "stock": {
+                    "value": -15,
+                    "code": 2,
+                    "message": [
+                        {
+                            "locale": "de",
+                            "value": "Derzeit nicht bestellbar"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Actuellement pas disponible"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Attualmente non disponibile"
+                        }
+                    ]
+                },
+                "shop_url": "http://denner-wineshop.ch/skuredirect/051273/"
+            }
+        }
+    ]
+}
