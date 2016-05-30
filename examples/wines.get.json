@@ -31,20 +31,94 @@
                     "value": "2013, Puglia, Italia, 6 x 75 cl"
                 }
             ],
+            "composite_description": [
+                {
+                    "locale": "de",
+                    "value": ""
+                },
+                {
+                    "locale": "fr",
+                    "value": ""
+                },
+                {
+                    "locale": "it",
+                    "value": ""
+                }
+            ],
             "prices": {
                 "sales": 9.9,
                 "instead": 11.4,
                 "base": 1.32,
+                "final": true,
                 "by_quantity": [
                     {
                         "quantity": 1,
                         "sales": 9.9,
-                        "instead": 11.4
+                        "instead": 11.4,
+                        "final": true
                     },
                     {
                         "quantity": 6,
                         "sales": 59.4,
-                        "instead": 68.4
+                        "instead": 68.4,
+                        "final": true
+                    }
+                ]
+            },
+            "barcodes": [
+                {
+                    "value": "086003000094",
+                    "type": "UPC12",
+                    "quantity": 1,
+                    "master": false
+                },
+                {
+                    "value": "086003004344",
+                    "type": "UPC12",
+                    "quantity": 6,
+                    "master": false
+                },
+                {
+                    "value": "5010186016172",
+                    "type": "EAN13",
+                    "quantity": 1,
+                    "master": true
+                },
+                {
+                    "value": "0860030043442",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": true
+                }
+            ],
+            "content": {
+                "size": 0.75,
+                "label": [
+                    {
+                        "locale": "de",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cl"
+                    }
+                ],
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "75 cl"
                     }
                 ]
             },
@@ -66,8 +140,8 @@
             },
             "cooling": 0,
             "online_group": {
-                "id": "671988cc-ca5f-484e-8db8-23a65ea0044a",
-                "code": 4003,
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
                 "disabled": false,
                 "allow_featuring": true,
                 "allow_promotion": true,
@@ -75,20 +149,20 @@
                 "title": [
                     {
                         "locale": "de",
-                        "value": "Wein"
+                        "value": "Wein/Champagner"
                     },
                     {
                         "locale": "fr",
-                        "value": "Vins"
+                        "value": "Vins/champagnes"
                     },
                     {
                         "locale": "it",
-                        "value": "Vini"
+                        "value": "Vino/champagne"
                     }
                 ],
                 "parent": {
-                    "id": "5b79391b-b436-45f9-b3e4-93ec3ae1fae2",
-                    "code": 4001,
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
                     "disabled": false,
                     "allow_featuring": true,
                     "allow_promotion": true,
@@ -96,15 +170,15 @@
                     "title": [
                         {
                             "locale": "de",
-                            "value": "Tafelgetränke und Mineralwasser"
+                            "value": "Getränke"
                         },
                         {
                             "locale": "fr",
-                            "value": "Boissons table et eau minérale"
+                            "value": "Boissons"
                         },
                         {
                             "locale": "it",
-                            "value": "Bevande da tavola e acque minerali"
+                            "value": "Bevande"
                         }
                     ]
                 }
@@ -119,6 +193,7 @@
                     "name": "Weine"
                 }
             },
+            "purchasing_department": "W",
             "eco_labels": [
                 {
                     "id": "66d94617-bbd7-477e-ae66-183deb67ba5b",
@@ -150,7 +225,10 @@
                             "locale": "it",
                             "value": "Italia"
                         }
-                    ]
+                    ],
+                    "flag": {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                    }
                 },
                 "region": {
                     "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
@@ -276,25 +354,47 @@
                     "total": 11,
                     "valid": true
                 },
-                "stock": {
-                    "value": -15,
-                    "code": 2,
-                    "message": [
-                        {
-                            "locale": "de",
-                            "value": "Derzeit nicht bestellbar"
-                        },
-                        {
-                            "locale": "fr",
-                            "value": "Actuellement pas disponible"
-                        },
-                        {
-                            "locale": "it",
-                            "value": "Attualmente non disponibile"
-                        }
-                    ]
-                },
-                "shop_url": "http://denner-wineshop.ch/skuredirect/051273/"
+                "shop": {
+                    "url": "http://denner-wineshop.ch/skuredirect/051273/",
+                    "stock": {
+                        "value": -15,
+                        "code": 2,
+                        "message": [
+                            {
+                                "locale": "de",
+                                "value": "Derzeit nicht bestellbar"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Actuellement pas disponible"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Attualmente non disponibile"
+                            }
+                        ]
+                    },
+                    "quantity": 6,
+                    "prices": {
+                        "sales": 59.4,
+                        "instead": 68.4,
+                        "final": true,
+                        "by_quantity": [
+                            {
+                                "quantity": 1,
+                                "sales": 9.9,
+                                "instead": 11.4,
+                                "final": true
+                            },
+                            {
+                                "quantity": 6,
+                                "sales": 59.4,
+                                "instead": 68.4,
+                                "final": true
+                            }
+                        ]
+                    }
+                }
             }
         }
     ]
