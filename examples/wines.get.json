@@ -127,6 +127,20 @@
                     }
                 ]
             },
+            "discount": [
+                {
+                    "locale": "de",
+                    "value": "13%"
+                },
+                {
+                    "locale": "fr",
+                    "value": "13%"
+                },
+                {
+                    "locale": "it",
+                    "value": "13%"
+                }
+            ],
             "barcodes": [
                 {
                     "value": "086003000094",
