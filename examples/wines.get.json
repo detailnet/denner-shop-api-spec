@@ -413,6 +413,797 @@
                     "batch_size": "3"
                 }
             }
+        },
+        {
+            "id": "050364",
+            "name": "Robert Mondavi Woodbridge Cabernet Sauvignon California 75",
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Robert Mondavi Woodbridge Cabernet Sauvignon"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Robert Mondavi Woodbridge Cabernet Sauvignon"
+                },
+                {
+                    "locale": "it",
+                    "value": "Robert Mondavi Woodbridge Cabernet Sauvignon"
+                }
+            ],
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "2014, Kalifornien, USA, 6 x 75 cl"
+                },
+                {
+                    "locale": "fr",
+                    "value": "2014, Californie, USA, 6 x 75 cl"
+                },
+                {
+                    "locale": "it",
+                    "value": "2014, California, USA, 6 x 75 cl"
+                }
+            ],
+            "composite_description": [
+                {
+                    "locale": "de",
+                    "value": ""
+                },
+                {
+                    "locale": "fr",
+                    "value": ""
+                },
+                {
+                    "locale": "it",
+                    "value": ""
+                }
+            ],
+            "article_group": {
+                "id": "f7f0fb83-60d6-49e9-af77-5663230566dc",
+                "code": "60-64",
+                "name": "USA / Mexico Rot 70 cl",
+                "parent": {
+                    "id": "cb1fad16-a420-4a3b-865b-b3e176a8edea",
+                    "code": "60",
+                    "name": "Weine"
+                }
+            },
+            "purchasing_department": "W",
+            "online_group": {
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein/Champagner"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Vins/champagnes"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vino/champagne"
+                    }
+                ],
+                "parent": {
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Getränke"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande"
+                        }
+                    ]
+                }
+            },
+            "prices": {
+                "sales": 11.65,
+                "base": 1.55,
+                "final": true,
+                "by_quantity": [
+                    {
+                        "quantity": 1,
+                        "sales": 11.65,
+                        "final": true
+                    },
+                    {
+                        "quantity": 6,
+                        "sales": 69.9,
+                        "final": true
+                    }
+                ]
+            },
+            "discount": [],
+            "barcodes": [
+                {
+                    "value": "5010186016172",
+                    "type": "EAN13",
+                    "quantity": 1,
+                    "master": true
+                },
+                {
+                    "value": "5010186016615",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": false
+                },
+                {
+                    "value": "086003000094",
+                    "type": "UPC12",
+                    "quantity": 1,
+                    "master": false
+                },
+                {
+                    "value": "086003004344",
+                    "type": "UPC12",
+                    "quantity": 6,
+                    "master": false
+                },
+                {
+                    "value": "0860030043442",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": true
+                },
+                {
+                    "value": "086003409828",
+                    "type": "UPC12",
+                    "quantity": 6,
+                    "master": false
+                },
+                {
+                    "value": "086003424043",
+                    "type": "UPC12",
+                    "quantity": 6,
+                    "master": false
+                },
+                {
+                    "value": "086003428676",
+                    "type": "UPC12",
+                    "quantity": 6,
+                    "master": false
+                }
+            ],
+            "content": {
+                "size": 0.75,
+                "label": [
+                    {
+                        "locale": "de",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cl"
+                    }
+                ],
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "75 cl"
+                    }
+                ]
+            },
+            "base": {
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "10 cl"
+                    }
+                ]
+            },
+            "cooling": 0,
+            "eco_labels": [],
+            "wine": {
+                "country": {
+                    "id": "US",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Vereinigte Staaten"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Etats-Unis"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Stati Uniti"
+                        }
+                    ],
+                    "flag": {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/US.png"
+                    }
+                },
+                "region": {
+                    "id": "ad1a0337-f41f-41bb-90b4-f790275a07cd",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Kalifornien"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Californie"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "California"
+                        }
+                    ]
+                },
+                "type": {
+                    "id": 2,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Rotwein"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Vin rouge"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Vino rosso"
+                        }
+                    ]
+                },
+                "year": 2014,
+                "fits_with": [
+                    {
+                        "locale": "de",
+                        "value": "Fleisch: rot (Rind, Lamm, Wild, Ente), Eintopf"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Viande: rouge (boeuf, agneau, gibier, canard), potée"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Carne: rossa (manzo, agnello, selvaggina, anatra), piatto unico"
+                    }
+                ],
+                "varietal": [
+                    {
+                        "locale": "de",
+                        "value": "Cabernet Sauvignon"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Cabernet sauvignon"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Cabernet Sauvignon"
+                    }
+                ],
+                "character": [
+                    {
+                        "locale": "de",
+                        "value": "Glänzendes Purpurrot. Duftet nach Cassis und Gewürzen. Mittlerer, kräftiger Körper mit runden Tanninen. Anhaltendes Finale."
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Robe pourpre brillant. Nez de cassis et d'épices. Bouche moyennement corsée aux tanins ronds. Finale persistante."
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Rosso porpora brillante. Profumo di ribes nero e spezie. Corpo medio e robusto con tannini rotondi. Finale persistente."
+                    }
+                ],
+                "temperature": [
+                    {
+                        "locale": "de",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "16-18 °C"
+                    }
+                ],
+                "awards": [
+                    {
+                        "locale": "de",
+                        "value": "Gold Mundus Vini"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Or Mundus Vini"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Oro Mundus Vini"
+                    }
+                ],
+                "storage": [
+                    {
+                        "locale": "de",
+                        "value": "1-5 Jahre"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "1-5 ans"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "1-5 anni"
+                    }
+                ],
+                "rating": {
+                    "value": 4.2323,
+                    "total": 198,
+                    "valid": true
+                },
+                "shop": {
+                    "url": "http://denner-wineshop.ch/skuredirect/050364/",
+                    "stock": {
+                        "value": 1657,
+                        "code": 0,
+                        "message": []
+                    },
+                    "quantity": 6,
+                    "prices": {
+                        "sales": 69.9,
+                        "base": 1.55,
+                        "final": true,
+                        "by_quantity": [
+                            {
+                                "quantity": 6,
+                                "sales": 69.9,
+                                "final": true
+                            },
+                            {
+                                "quantity": 1,
+                                "sales": 11.65,
+                                "final": true
+                            }
+                        ]
+                    },
+                    "packshot": {
+                        "id": "3a861e25-4d87-4e9d-b961-aba24cf81642",
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
+                        "cdn_image_url": "https://denner.imgix.net/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
+                        "quantity": 1,
+                        "created_on": "2016-05-12 16:38:55"
+                    }
+                },
+                "box": {
+                    "code": "KA",
+                    "batch_size": "3"
+                }
+            }
+        },
+        {
+            "id": "301609",
+            "name": "Château Duhart Milon Rothschild Pauillac AOC, 2013 75",
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Château Duhart Milon Rothschild"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Château Duhart Milon Rothschild"
+                },
+                {
+                    "locale": "it",
+                    "value": "Château Duhart Milon Rothschild"
+                }
+            ],
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "2013, Pauillac AOC, 4e Cru Classé, 75 cl"
+                },
+                {
+                    "locale": "fr",
+                    "value": "2013, Pauillac AOC, 4e Cru Classé, 75 cl"
+                },
+                {
+                    "locale": "it",
+                    "value": "2013, Pauillac AOC, 4e Cru Classé, 75 cl"
+                }
+            ],
+            "composite_description": [
+                {
+                    "locale": "de",
+                    "value": ""
+                },
+                {
+                    "locale": "fr",
+                    "value": ""
+                },
+                {
+                    "locale": "it",
+                    "value": ""
+                }
+            ],
+            "article_group": {
+                "id": "4eb2f423-1aac-4e69-a2b4-dd22e660d3a7",
+                "code": "60-40",
+                "name": "Bordeaux Rot 70 cl",
+                "parent": {
+                    "id": "cb1fad16-a420-4a3b-865b-b3e176a8edea",
+                    "code": "60",
+                    "name": "Weine"
+                }
+            },
+            "purchasing_department": "W",
+            "online_group": {
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein/Champagner"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Vins/champagnes"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vino/champagne"
+                    }
+                ],
+                "parent": {
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Getränke"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande"
+                        }
+                    ]
+                }
+            },
+            "prices": {
+                "sales": 68.95,
+                "list": 86.2,
+                "base": 9.19,
+                "final": true,
+                "by_quantity": [
+                    {
+                        "quantity": 1,
+                        "sales": 68.95,
+                        "list": 86.2,
+                        "final": true
+                    },
+                    {
+                        "quantity": 6,
+                        "sales": 413.7,
+                        "list": 517.2,
+                        "final": true
+                    }
+                ]
+            },
+            "discount": [
+                {
+                    "locale": "de",
+                    "value": "20%"
+                },
+                {
+                    "locale": "fr",
+                    "value": "20%"
+                },
+                {
+                    "locale": "it",
+                    "value": "20%"
+                }
+            ],
+            "barcodes": [
+                {
+                    "value": "7610029176919",
+                    "type": "EAN13",
+                    "quantity": 1,
+                    "master": true
+                },
+                {
+                    "value": "7610029176926",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": true
+                }
+            ],
+            "content": {
+                "size": 0.75,
+                "label": [
+                    {
+                        "locale": "de",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cl"
+                    }
+                ],
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "75 cl"
+                    }
+                ]
+            },
+            "base": {
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "10 cl"
+                    }
+                ]
+            },
+            "cooling": 0,
+            "eco_labels": [],
+            "wine": {
+                "country": {
+                    "id": "FR",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Frankreich"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "France"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Francia"
+                        }
+                    ],
+                    "flag": {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/FR.png"
+                    }
+                },
+                "region": {
+                    "id": "35a159be-6495-4240-aebc-e7eacacd8683",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Bordeaux"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Bordeaux"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bordeaux"
+                        }
+                    ]
+                },
+                "type": {
+                    "id": 2,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Rotwein"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Vin rouge"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Vino rosso"
+                        }
+                    ]
+                },
+                "year": 2013,
+                "fits_with": [
+                    {
+                        "locale": "de",
+                        "value": "Fleisch: rot (Rind, Lamm, Wild, Ente), Grilladen, Eintopf"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Viande: rouge (bœuf, agneau, gibier, canard), grillades, potée"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Carne: rossa (manzo, agnello, selvaggina, anatra), grigliate, piatti unici"
+                    }
+                ],
+                "varietal": [
+                    {
+                        "locale": "de",
+                        "value": "Cabernet Sauvignon, Merlot"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Cabernet sauvignon, merlot"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Cabernet Sauvignon, Merlot"
+                    }
+                ],
+                "character": [
+                    {
+                        "locale": "de",
+                        "value": "Intensives Rubinrot, zarte Aromen von Brombeeren, Cassis, etwas Zederholz und feine Röstnoten. Voller Körper mit präsenten Tanninen und langem Abgang. Der Wein erreicht in 1 – 3 Jahren seinen Höhepunkt und bietet weitere 8 Jahre vollen Genuss."
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Robe rouge rubis intense. Nez aux arômes délicats de mûre et de cassis avec des notes fines de bois de cèdre et de toast. Corps plein aux tanins présents, finale persistante. Le vin atteint son apogée après 1 à 3 ans et se laisse savourer pendant encore 8 ans."
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Rosso rubino intenso, aromi delicati di more, ribes nero e una nota di legno di cedro e delicata tostatura. Corpo pieno con tannini presenti. Retrogusto lungo. Il vino raggiunge il suo apice dopo 1-3 anni e può essere gustato appieno per altri 8 anni."
+                    }
+                ],
+                "temperature": [
+                    {
+                        "locale": "de",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "16-18 °C"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "16-18 °C"
+                    }
+                ],
+                "awards": [
+                    {
+                        "locale": "de",
+                        "value": "85-87 Punkte Robert Parker, 88-91 Punkte Wine Spectator"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "85-87 points Robert Parker, 88-91 points Wine Spectator"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "85-87 punti Robert Parker, 88-91  punti Wine Spectator"
+                    }
+                ],
+                "storage": [
+                    {
+                        "locale": "de",
+                        "value": "3-15 Jahre"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "3-15 ans"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "3-15 anni"
+                    }
+                ],
+                "rating": {
+                    "value": 5,
+                    "total": 2,
+                    "valid": false
+                },
+                "shop": {
+                    "url": "http://denner-wineshop.ch/skuredirect/301609/",
+                    "stock": {
+                        "value": 2,
+                        "code": 1,
+                        "message": [
+                            {
+                                "locale": "de",
+                                "value": "Nur noch wenige Stück verfügbar"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Seulement peu de pièces disponibles"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Solo pochi pezzi restanti"
+                            }
+                        ]
+                    },
+                    "quantity": 6,
+                    "prices": {
+                        "sales": 413.7,
+                        "list": 517.2,
+                        "base": 9.19,
+                        "final": true,
+                        "by_quantity": [
+                            {
+                                "quantity": 6,
+                                "sales": 413.7,
+                                "list": 517.2,
+                                "final": true
+                            },
+                            {
+                                "quantity": 1,
+                                "sales": 68.95,
+                                "list": 86.2,
+                                "final": true
+                            }
+                        ]
+                    }
+                },
+                "box": {
+                    "type": "HB",
+                    "batch_size": "2"
+                }
+            }
         }
     ]
 }
