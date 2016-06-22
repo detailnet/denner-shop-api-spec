@@ -410,7 +410,7 @@
                 },
                 "box": {
                     "code": "KA",
-                    "batch_size": "3"
+                    "batch_size": 3
                 }
             }
         },
@@ -811,7 +811,7 @@
                 },
                 "box": {
                     "code": "KA",
-                    "batch_size": "3"
+                    "batch_size": 3
                 }
             }
         },
@@ -1201,7 +1201,7 @@
                 },
                 "box": {
                     "type": "HB",
-                    "batch_size": "2"
+                    "batch_size": 2
                 }
             }
         }
