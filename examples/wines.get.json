@@ -1,5 +1,5 @@
 {
-    "wines": [
+    "articles": [
         {
             "id": "051273",
             "name": "Mandorla Primitivo IGT Puglia",
@@ -120,20 +120,6 @@
                     }
                 ]
             },
-            "discount": [
-                {
-                    "locale": "de",
-                    "value": "13%"
-                },
-                {
-                    "locale": "fr",
-                    "value": "13%"
-                },
-                {
-                    "locale": "it",
-                    "value": "13%"
-                }
-            ],
             "barcodes": [
                 {
                     "value": "086003000094",
@@ -400,6 +386,20 @@
                             }
                         ]
                     },
+                    "discount": [
+                        {
+                            "locale": "de",
+                            "value": "13%"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "13%"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "13%"
+                        }
+                    ],
                     "packshot": {
                         "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
                         "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
@@ -531,7 +531,6 @@
                     }
                 ]
             },
-            "discount": [],
             "barcodes": [
                 {
                     "value": "5010186016172",
@@ -801,12 +800,13 @@
                             }
                         ]
                     },
+                    "discount": [],
                     "packshot": {
                         "id": "3a861e25-4d87-4e9d-b961-aba24cf81642",
                         "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
                         "cdn_image_url": "https://denner.imgix.net/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
                         "quantity": 1,
-                        "created_on": "2016-05-12 16:38:55"
+                        "created_on": "2016-05-12T16:38:55+0200"
                     }
                 },
                 "box": {
@@ -935,20 +935,6 @@
                     }
                 ]
             },
-            "discount": [
-                {
-                    "locale": "de",
-                    "value": "20%"
-                },
-                {
-                    "locale": "fr",
-                    "value": "20%"
-                },
-                {
-                    "locale": "it",
-                    "value": "20%"
-                }
-            ],
             "barcodes": [
                 {
                     "value": "7610029176919",
@@ -1197,6 +1183,27 @@
                                 "final": true
                             }
                         ]
+                    },
+                    "discount": [
+                        {
+                            "locale": "de",
+                            "value": "20%"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "20%"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "20%"
+                        }
+                    ],
+                    "packshot": {
+                        "id": "3c8cc89e-6350-4a8a-8854-d2feafc9b62e",
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/3c8cc89e-6350-4a8a-8854-d2feafc9b62e/301609_1.png",
+                        "cdn_image_url": "https://denner.imgix.net/assets/3c8cc89e-6350-4a8a-8854-d2feafc9b62e/301609_1.png",
+                        "quantity": 1,
+                        "created_on": "2016-02-08T11:07:51+0100"
                     }
                 },
                 "box": {
