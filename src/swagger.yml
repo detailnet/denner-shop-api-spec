@@ -13,6 +13,17 @@ consumes:
   - application/json
 produces:
   - application/json
+securityDefinitions:
+  appKey:
+    type: apiKey
+    description: Application identifier
+    name: App-ID
+    in: header
+  appId:
+    type: apiKey
+    description: Application key
+    name: App-Key
+    in: header
 paths:
   ### Wines
   /shop-wines:
@@ -579,8 +590,8 @@ definitions:
 
   Url:
     type: string
-#    pattern: @todo Fixed pattern?
     description: Web URL address
+#    pattern: @todo Fixed pattern?
 
   CountryFlag:
     type: object
@@ -896,11 +907,6 @@ definitions:
         description: Navision stock code
       message:
         $ref: '#/definitions/Translations'
-
-  Barcodes:
-    type: array
-    items:
-      $ref: '#/definitions/Barcode'
 
   Barcode:
     type: object
