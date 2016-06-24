@@ -23,9 +23,9 @@ paths:
   ### Wines
   /wines:
     get:
-      summary: List all wines currently targetted for the shop
+      summary: List all wines currently targetted for the Wineshop
       description: |
-        Use this operation to get a list of all wines targetted for the shop.
+        Use this operation to get a list of all wines targetted for the Wineshop.
       tags:
         - wine
       operationId: listWines
