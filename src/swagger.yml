@@ -13,8 +13,356 @@ consumes:
   - application/json
 produces:
   - application/json
+securityDefinitions:
+  appKey:
+    type: apiKey
+    description: Application key
+    name: App-Key
+    in: header
 paths:
   ### Wines
+  /wines:
+    get:
+      summary: List all wines currently targetted for the shop
+      description: |
+        Use this operation to get a list of all wines targetted for the shop.
+      tags:
+        - wine
+      operationId: listWines
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/FilterParam'
+#        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/ArticlesResponse'
+          examples:
+            application/json:
+
+              page_count: 1
+              page_size: 1
+              total_items: 1
+              articles:
+              -
+                id: "051273"
+                name: "Mandorla Primitivo IGT Puglia"
+                title:
+                  -
+                    locale: "de"
+                    value: "Mandorla Primitivo di Puglia IGT"
+                  -
+                    locale: "fr"
+                    value: "Mandorla Primitivo di Puglia IGT"
+                  -
+                    locale: "it"
+                    value: "Mandorla Primitivo di Puglia IGT"
+                description:
+                  -
+                    locale: "de"
+                    value: "2013, Apulien, Italien, 6 x 75 cl"
+                  -
+                    locale: "fr"
+                    value: "2013, les Pouilles, Italie, 6 x 75 cl"
+                  -
+                    locale: "it"
+                    value: "2013, Puglia, Italia, 6 x 75 cl"
+#                composite_description:
+#                  -
+#                    locale: "de"
+#                    value: ""
+#                  -
+#                    locale: "fr"
+#                    value: ""
+#                  -
+#                    locale: "it"
+#                    value: ""
+                article_group:
+                  id: "0c309757-5432-4652-8201-ec35f31c5260"
+                  code: "60-56"
+                  name: "Italien Rot 70 cl"
+                  parent:
+                    id: "3f3df00f-6a7e-49a9-8eca-a36727ca4977"
+                    code: "60"
+                    name: "Weine"
+#                purchasing_department: "W"
+#                online_group:
+#                  id: "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee"
+#                  code: "2-9"
+#                  disabled: false
+#                  allow_featuring: true
+#                  allow_promotion: true
+#                  allow_background: true
+#                  title:
+#                    -
+#                      locale: "de"
+#                      value: "Wein/Champagner"
+#                    -
+#                      locale: "fr"
+#                      value: "Vins/champagnes"
+#                    -
+#                      locale: "it"
+#                      value: "Vino/champagne"
+#                  parent:
+#                    id: "8fd653c3-a86b-4529-bbb5-58d06919d484"
+#                    code: "2"
+#                    disabled: false
+#                    allow_featuring: true
+#                    allow_promotion: true
+#                    allow_background: true
+#                    title:
+#                      -
+#                        locale: "de"
+#                        value: "Getränke"
+#                      -
+#                        locale: "fr"
+#                        value: "Boissons"
+#                      -
+#                        locale: "it"
+#                        value: "Bevande"
+#                prices:
+#                  sales: 9.9
+#                  instead: 11.4
+#                  base: 1.32
+#                  final: true
+#                  by_quantity:
+#                    -
+#                      quantity: 1
+#                      sales: 9.9
+#                      instead: 11.4
+#                      final: true
+#                    -
+#                      quantity: 6
+#                      sales: 59.4
+#                      instead: 68.4
+#                      final: true
+                barcodes:
+                  -
+                    value: "086003000094"
+                    type: "UPC12"
+                    quantity: 1
+                    master: false
+                  -
+                    value: "086003004344"
+                    type: "UPC12"
+                    quantity: 6
+                    master: false
+                  -
+                    value: "5010186016172"
+                    type: "EAN13"
+                    quantity: 1
+                    master: true
+                  -
+                    value: "0860030043442"
+                    type: "EAN13"
+                    quantity: 6
+                    master: true
+                content:
+                  size: 0.75
+                  label:
+                    -
+                      locale: "de"
+                      value: "cl"
+                    -
+                      locale: "fr"
+                      value: "cl"
+                    -
+                      locale: "it"
+                      value: "cl"
+                  text:
+                    -
+                      locale: "de"
+                      value: "75 cl"
+                    -
+                      locale: "fr"
+                      value: "75 cl"
+                    -
+                      locale: "it"
+                      value: "75 cl"
+                base:
+                  text:
+                    -
+                      locale: "de"
+                      value: "10 cl"
+                    -
+                      locale: "fr"
+                      value: "10 cl"
+                    -
+                      locale: "it"
+                      value: "10 cl"
+#                cooling: 0
+                eco_labels:
+                  -
+                    id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
+                    code: "bio"
+                    name: "Bio"
+#                # packshots is present but not supported in this spec
+#                packshots:
+#                  -
+#                    id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
+#                    image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
+#                    cdn_image_url: "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
+#                    quantity: 6
+#                    created_on: "2016-01-07 15:42:19"
+                wine:
+                  country:
+                    id: "IT"
+                    title:
+                      -
+                        locale: "de"
+                        value: "Italien"
+                      -
+                        locale: "fr"
+                        value: "Italie"
+                      -
+                        locale: "it"
+                        value: "Italia"
+                    flag:
+                      image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                  region:
+                    id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
+                    title:
+                      -
+                        locale: "de"
+                        value: "Apulien"
+                      -
+                        locale: "fr"
+                        value: "Les Pouilles"
+                      -
+                        locale: "it"
+                        value: "Puglia"
+                  type:
+                    id: 2
+                    title:
+                      -
+                        locale: "de"
+                        value: "Rotwein"
+                      -
+                        locale: "fr"
+                        value: "Vin rouge"
+                      -
+                        locale: "it"
+                        value: "Vino rosso"
+                  year: 2013
+                  fits_with:
+                    -
+                      locale: "de"
+                      value: "Pasta, Fleisch mit würzigen Saucen"
+                    -
+                      locale: "fr"
+                      value: "Pâtes, viande aux sauces relevées"
+                    -
+                      locale: "it"
+                      value: "Pasta, carni accompagnate da salse aromatiche"
+                  varietal:
+                    -
+                      locale: "de"
+                      value: "Primitivo"
+                    -
+                      locale: "fr"
+                      value: "Primitivo"
+                    -
+                      locale: "it"
+                      value: "Primitivo"
+                  character:
+                    -
+                      locale: "de"
+                      value: "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
+                    -
+                      locale: "fr"
+                      value: "Robe rubis foncé. Nez de baies rouges, de cerises matures et de mûres. Bouche moelleuse."
+                    -
+                      locale: "it"
+                      value: "Rosso rubino scuro. Al naso aromi di bacche rosse, ciliege mature e more. Morbido al palato."
+                  temperature:
+                    -
+                      locale: "de"
+                      value: "16-18 °C"
+                    -
+                      locale: "fr"
+                      value: "16-18 °C"
+                    -
+                      locale: "it"
+                      value: "16-18 °C"
+                  awards:
+                    -
+                      locale: "de"
+                      value: ""
+                    -
+                      locale: "fr"
+                      value: ""
+                    -
+                      locale: "it"
+                      value: ""
+                  storage:
+                    -
+                      locale: "de"
+                      value: "3 Jahre"
+                    -
+                      locale: "fr"
+                      value: "3 ans"
+                    -
+                      locale: "it"
+                      value: "3 anni"
+                  rating:
+                    value: 4.45
+                    total: 11
+                    valid: true
+                  shop:
+                    url: "http://denner-wineshop.ch/skuredirect/051273/"
+                    stock:
+                      value: -15
+                      code: 2
+                      message:
+                        -
+                          locale: "de"
+                          value: "Derzeit nicht bestellbar"
+                        -
+                          locale: "fr"
+                          value: "Actuellement pas disponible"
+                        -
+                          locale: "it"
+                          value: "Attualmente non disponibile"
+                    quantity: 6
+                    prices:
+                      sales: 59.4
+                      instead: 68.4
+                      final: true
+                      by_quantity:
+                        -
+                          quantity: 1
+                          sales: 9.9
+                          instead: 11.4
+                          final: true
+                        -
+                          quantity: 6
+                          sales: 59.4
+                          instead: 68.4
+                          final: true
+                    discount:
+                      -
+                        locale: "de"
+                        value: "13%"
+                      -
+                        locale: "fr"
+                        value: "13%"
+                      -
+                        locale: "it"
+                        value: "13%"
+                    packshot:
+                      id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
+                      image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
+                      cdn_image_url: "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
+                      quantity: 6
+                      created_on: "2016-01-07 15:42:19"
+                  box:
+                    code: "KA"
+                    batch_size: 3
+
   /wines/{article_id}/appraisals:
     get:
       summary: List the appraisals of given wine
@@ -23,6 +371,8 @@ paths:
       tags:
         - wine
       operationId: listAppraisalsByWine
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
 #        - $ref: '#/parameters/AcceptLanguageHeader'
@@ -66,6 +416,8 @@ paths:
       tags:
         - wine
       operationId: createAppraisal
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -106,6 +458,8 @@ paths:
       tags:
         - other
       operationId: createSweepstakeParticipant
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -170,6 +524,23 @@ parameters:
     type: string
     required: true
     pattern: '/^\d{6}$/'
+  FilterParam:
+    name: filter
+    in: query
+    type: string
+    required: false
+    description: |
+      Filters: JSON array of Filter object, urlencoded.
+
+      Filter object:
+      - property: Property to filter on.
+      - operator: Operation property. Enumeration ('eq', 'like', 'lt', 'gt', 'in', ...). Dependent from property (not all might be allowed).
+      - type: Type of value. Enumeration ('string', 'integer', 'boolean', 'array') Dependent from property and operator (not all might be allowed).
+      - value: Value. Must be of the defined type.
+
+      Examples:
+      - [{"property":"id","operator":"in","type":"array","value":["7627150d-36bd-4867-89b2-091800a03d24","58afec5c-ece9-4b66-bc55-00d6dc1b65b8"]}]
+      - [{"property":"in_shop","operator":"eq","type":"boolean","value":true}]
   AcceptHeader:
     name: Accept
     in: header
@@ -203,10 +574,49 @@ definitions:
     pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
     description: Unique identifier
 
-#  Date:
-#    type: string
-#    format: date
-#    description: 'Date; Format full-date of RFC3339 (http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14)'
+  Locale:
+    type: string
+    pattern: '/^(de|fr|it)$/'
+    description: Locale
+
+  Translation:
+    type: object
+    properties:
+      locale:
+        $ref: '#/definitions/Locale'
+      value:
+        type: string
+        description: Translated text value
+
+  Url:
+    type: string
+    description: Web URL address
+#    pattern: @todo Fixed pattern?
+
+  CountryFlag:
+    type: object
+    description: Country flag
+    properties:
+      image_url:
+        $ref: '#/definitions/Url'
+
+  Country:
+    type: object
+    properties:
+      id:
+        type: string
+        pattern: '/^[A-Z]{2}$/'
+        description: Country code definition from ISO 3166
+      title:
+        $ref: '#/definitions/Translations'
+      flag:
+        $ref: '#/definitions/CountryFlag'
+    description: Country
+
+  Date:
+    type: string
+    format: date
+    description: 'Date; Format full-date of RFC3339 (http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14)'
 
 #  Time:
 #    type: string
@@ -219,10 +629,339 @@ definitions:
     minimum: 1800
     description: Year
 
-#  Url:
+  Price:
+    type: number
+    format: float
+    minimum: 0
+    description: Price in CHF
+
+  Quantity:
+    type: integer
+    format: int32
+    minimum: 0
+    description: Quantity
+
+  ContentSize:
+    type: number
+    format: float
+    minimum: 0
+    description: Content size
+
+#  Removed because we cannot calculate a valid size, neither display a standardized unit
+#  ContentUnit:
+#    # @todo Define an pattern or standard reference (e.g. ISO 80000-3)?
+#    type: integer
+#    format: int32
+#    description: Content unit code from navision
+
+#  Cooling:
+#    type: number
+#    format: int32
+#    minimum: 0
+#    description: Cooling type (0 = no cooling, 1 = refrigerated, 2 = frozen)
+
+  ### Article group
+  AssignedArticleGroup:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      code:
+        type: string
+        pattern: '/^\d{2}(-\d{2,3})?$/'
+        description: Navision article group code (e.g. '01', '20', '01-60', '38-998')
+      name:
+        type: string
+        description: Article group name
+      parent:
+        $ref: '#/definitions/AssignedArticleGroup'
+
+  ### Eco label
+  EcoLabel:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      code:
+        type: string
+        description: Navision identification code
+      name:
+        type: string
+        description: German name for the eco label
+
+  ### Purchasing department
+#  PurchasingDepartment:
 #    type: string
-##    pattern: @todo Fixed pattern?
-#    description: Web URL address
+#    pattern: '/^[A-Z]{1,2}$/'
+#    description: Denner purchasing depatment code (e.g. 'BC', 'DD', 'F', 'FG', 'FR', 'G', 'NF', 'TW', 'W')
+
+  ### Article
+  Article:
+    type: object
+    properties:
+      id:
+        type: string
+        pattern: '/^\d{6}$/'
+        description: Navision article code
+      name:
+        type: string
+        description: Article name
+      title:
+        $ref: '#/definitions/Translations'
+      description:
+        $ref: '#/definitions/Translations'
+#      composite_description:
+#        $ref: '#/definitions/Translations'
+      article_group:
+        $ref: '#/definitions/AssignedArticleGroup'
+#      purchasing_department:
+#        $ref: '#/definitions/PurchasingDepartment'
+#      online_group:
+#        $ref: '#/definitions/AssignedOnlineGroup'
+#      prices:
+#        $ref: '#/definitions/ArticlePrices'
+      barcodes:
+        $ref: '#/definitions/Barcodes'
+      content:
+        $ref: '#/definitions/Content'
+      base:
+        $ref: '#/definitions/BaseContent'
+#      cooling:
+#        $ref: '#/definitions/Cooling'
+      eco_labels:
+        $ref: '#/definitions/EcoLabels'
+#      # packshots is present but not supported in this spec
+#      packshots:
+#        $ref: '#/definitions/Packshots'
+      wine:
+        $ref: '#/definitions/ArticleWine'
+
+  ArticlePrices:
+    type: object
+    properties:
+      sales:
+        $ref: '#/definitions/Price'
+      list:
+        $ref: '#/definitions/Price'
+      instead:
+        $ref: '#/definitions/Price'
+      base:
+        $ref: '#/definitions/Price'
+      final:
+        type: boolean
+        description: Is the price final?
+      by_quantity:
+        $ref: '#/definitions/QuantityPrices'
+
+  QuantityPrices:
+    type: array
+    items:
+      $ref: '#/definitions/QuantityPrice'
+
+  QuantityPrice:
+    type: object
+    properties:
+      quantity:
+        $ref: '#/definitions/Quantity'
+      sales:
+        $ref: '#/definitions/Price'
+      list:
+        $ref: '#/definitions/Price'
+      instead:
+        $ref: '#/definitions/Price'
+      final:
+        type: boolean
+        description: Is the price final?
+
+  Content:
+    type: object
+    properties:
+      size:
+        $ref: '#/definitions/ContentSize'
+#      unit:
+#        $ref: '#/definitions/ContentUnit'
+      label:
+        $ref: '#/definitions/Translations'
+      text:
+        $ref: '#/definitions/Translations'
+
+  BaseContent:
+    type: object
+    properties:
+#      Removed because we cannot calculate a valid size, neither display a standardized unit
+#      size:
+#        $ref: '#/definitions/ContentSize'
+#      unit:
+#        $ref: '#/definitions/ContentUnit'
+      text:
+        $ref: '#/definitions/Translations'
+
+  Packshot:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      image_url:
+        $ref: '#/definitions/Url'
+      cdn_image_url:
+        $ref: '#/definitions/Url'
+      quantity:
+        $ref: '#/definitions/Quantity'
+      created_on:
+        $ref: '#/definitions/Date'
+
+  ArticleWine:
+    type: object
+    properties:
+      country:
+        $ref: '#/definitions/Country'
+      region:
+        $ref: '#/definitions/Region'
+      type:
+        $ref: '#/definitions/WineType'
+      year:
+        $ref: '#/definitions/Year'
+      fits_with:
+        $ref: '#/definitions/Translations'
+      varietal:
+        $ref: '#/definitions/Translations'
+      character:
+        $ref: '#/definitions/Translations'
+      temperature:
+        $ref: '#/definitions/Translations'
+      awards:
+        $ref: '#/definitions/Translations'
+      storage:
+        $ref: '#/definitions/Translations'
+      rating:
+        $ref: '#/definitions/Rating'
+      shop:
+        $ref: '#/definitions/WineShop'
+      box:
+        $ref: '#/definitions/WineBox'
+
+  WineShop:
+    type: object
+    properties:
+      url:
+        $ref: '#/definitions/Url'
+      stock:
+        $ref: '#/definitions/Stock'
+      quantity:
+        $ref: '#/definitions/Quantity'
+      prices:
+        $ref: '#/definitions/ArticlePrices'
+      discount:
+        $ref: '#/definitions/Translations'
+      packshot:
+        $ref: '#/definitions/Packshot'
+
+  Region:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      title:
+        $ref: '#/definitions/Translations'
+
+  WineType:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Navision wine type code
+      title:
+        $ref: '#/definitions/Translations'
+
+  Rating:
+    type: object
+    properties:
+      value:
+        type: number
+        format: float
+        minimum: 0
+        maximum: 5
+        description: Rating value
+      total:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Ratng count
+      valid:
+        type: boolean
+        description: Is a valid rating?
+
+  Stock:
+    type: object
+    properties:
+      value:
+        type: integer
+        format: int32
+        description: Navision stock count, might be negative
+      code:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Navision stock code
+      message:
+        $ref: '#/definitions/Translations'
+
+  Barcode:
+    type: object
+    properties:
+      value:
+        type: string
+        description: Barcode text value (pattern according to type)
+      type:
+        type: string
+        description: Barcode type code (e.g. 'EAN13', 'UPC12', 'ITF14', 'EAN8', 'PLU')
+      quantity:
+        $ref: '#/definitions/Quantity'
+      master:
+        type: boolean
+        description: Is master barcode?
+
+  WineBox:
+    type: object
+    properties:
+      code:
+        type: string
+        pattern: '/^[A-Z]{2}$/'
+        description: Denner box type code (e.g. 'KA', 'HA', 'HB')
+      batch_size:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Batch size
+
+  ### Online group
+  AssignedOnlineGroup:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      code:
+        type: integer
+        format: int32
+        description: Navision online group code
+      disabled:
+        type: boolean
+        description: Is the group disabled?
+      allow_featuring:
+        type: boolean
+        description: Does the group allow the assigned articles to be featured (i.e. displayed on front/main/home page)?
+      allow_promotion:
+        type: boolean
+        description: Does the group allow the assigned articles to be promoted (i.e. displayed on a promotional page)?
+      allow_background:
+        type: boolean
+        description: Does the group allow the assigned articles to be displayed with a background (i.e. displayed on a page with a deceptive/trivializing background)?
+      title:
+        $ref: '#/definitions/Translations'
+      parent:
+        $ref: '#/definitions/AssignedOnlineGroup'
 
   ### Wine
   Appraisal:
@@ -397,12 +1136,55 @@ definitions:
         language: "de"
 
   ### Collections
+  Translations:
+    type: array
+    items:
+      $ref: '#/definitions/Translation'
+
+  EcoLabels:
+    type: array
+    items:
+      $ref: '#/definitions/EcoLabel'
+
+#  Packshots:
+#    type: array
+#    items:
+#      $ref: '#/definitions/Packshot'
+
+  Barcodes:
+    type: array
+    items:
+      $ref: '#/definitions/Barcode'
+
+  Articles:
+    type: array
+    items:
+      $ref: '#/definitions/Article'
+
   Appraisals:
     type: array
     items:
       $ref: '#/definitions/Appraisal'
 
   ### Responses
+  ArticlesResponse:
+    type: object
+    properties:
+      page_count:
+        description: The number of pages
+        type: integer
+        format: int32
+      page_size:
+        description: The page size
+        type: integer
+        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      articles:
+        $ref: '#/definitions/Articles'
+
   AppraisalsResponse:
     type: object
     properties:
