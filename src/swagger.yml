@@ -71,16 +71,16 @@ paths:
                   -
                     locale: "it"
                     value: "2013, Puglia, Italia, 6 x 75 cl"
-                composite_description:
-                  -
-                    locale: "de"
-                    value: ""
-                  -
-                    locale: "fr"
-                    value: ""
-                  -
-                    locale: "it"
-                    value: ""
+#                composite_description:
+#                  -
+#                    locale: "de"
+#                    value: ""
+#                  -
+#                    locale: "fr"
+#                    value: ""
+#                  -
+#                    locale: "it"
+#                    value: ""
                 article_group:
                   id: "0c309757-5432-4652-8201-ec35f31c5260"
                   code: "60-56"
@@ -89,57 +89,57 @@ paths:
                     id: "3f3df00f-6a7e-49a9-8eca-a36727ca4977"
                     code: "60"
                     name: "Weine"
-                purchasing_department: "W"
-                online_group:
-                  id: "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee"
-                  code: "2-9"
-                  disabled: false
-                  allow_featuring: true
-                  allow_promotion: true
-                  allow_background: true
-                  title:
-                    -
-                      locale: "de"
-                      value: "Wein/Champagner"
-                    -
-                      locale: "fr"
-                      value: "Vins/champagnes"
-                    -
-                      locale: "it"
-                      value: "Vino/champagne"
-                  parent:
-                    id: "8fd653c3-a86b-4529-bbb5-58d06919d484"
-                    code: "2"
-                    disabled: false
-                    allow_featuring: true
-                    allow_promotion: true
-                    allow_background: true
-                    title:
-                      -
-                        locale: "de"
-                        value: "Getränke"
-                      -
-                        locale: "fr"
-                        value: "Boissons"
-                      -
-                        locale: "it"
-                        value: "Bevande"
-                prices:
-                  sales: 9.9
-                  instead: 11.4
-                  base: 1.32
-                  final: true
-                  by_quantity:
-                    -
-                      quantity: 1
-                      sales: 9.9
-                      instead: 11.4
-                      final: true
-                    -
-                      quantity: 6
-                      sales: 59.4
-                      instead: 68.4
-                      final: true
+#                purchasing_department: "W"
+#                online_group:
+#                  id: "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee"
+#                  code: "2-9"
+#                  disabled: false
+#                  allow_featuring: true
+#                  allow_promotion: true
+#                  allow_background: true
+#                  title:
+#                    -
+#                      locale: "de"
+#                      value: "Wein/Champagner"
+#                    -
+#                      locale: "fr"
+#                      value: "Vins/champagnes"
+#                    -
+#                      locale: "it"
+#                      value: "Vino/champagne"
+#                  parent:
+#                    id: "8fd653c3-a86b-4529-bbb5-58d06919d484"
+#                    code: "2"
+#                    disabled: false
+#                    allow_featuring: true
+#                    allow_promotion: true
+#                    allow_background: true
+#                    title:
+#                      -
+#                        locale: "de"
+#                        value: "Getränke"
+#                      -
+#                        locale: "fr"
+#                        value: "Boissons"
+#                      -
+#                        locale: "it"
+#                        value: "Bevande"
+#                prices:
+#                  sales: 9.9
+#                  instead: 11.4
+#                  base: 1.32
+#                  final: true
+#                  by_quantity:
+#                    -
+#                      quantity: 1
+#                      sales: 9.9
+#                      instead: 11.4
+#                      final: true
+#                    -
+#                      quantity: 6
+#                      sales: 59.4
+#                      instead: 68.4
+#                      final: true
                 barcodes:
                   -
                     value: "086003000094"
@@ -194,7 +194,7 @@ paths:
                     -
                       locale: "it"
                       value: "10 cl"
-                cooling: 0
+#                cooling: 0
                 eco_labels:
                   -
                     id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
@@ -371,6 +371,8 @@ paths:
       tags:
         - wine
       operationId: listAppraisalsByWine
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
 #        - $ref: '#/parameters/AcceptLanguageHeader'
@@ -414,6 +416,8 @@ paths:
       tags:
         - wine
       operationId: createAppraisal
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -454,6 +458,8 @@ paths:
       tags:
         - other
       operationId: createSweepstakeParticipant
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -648,11 +654,11 @@ definitions:
 #    format: int32
 #    description: Content unit code from navision
 
-  Cooling:
-    type: number
-    format: int32
-    minimum: 0
-    description: Cooling type (0 = no cooling, 1 = refrigerated, 2 = frozen)
+#  Cooling:
+#    type: number
+#    format: int32
+#    minimum: 0
+#    description: Cooling type (0 = no cooling, 1 = refrigerated, 2 = frozen)
 
   ### Article group
   AssignedArticleGroup:
@@ -684,10 +690,10 @@ definitions:
         description: German name for the eco label
 
   ### Purchasing department
-  PurchasingDepartment:
-    type: string
-    pattern: '/^[A-Z]{1,2}$/'
-    description: Denner purchasing depatment code (e.g. 'BC', 'DD', 'F', 'FG', 'FR', 'G', 'NF', 'TW', 'W')
+#  PurchasingDepartment:
+#    type: string
+#    pattern: '/^[A-Z]{1,2}$/'
+#    description: Denner purchasing depatment code (e.g. 'BC', 'DD', 'F', 'FG', 'FR', 'G', 'NF', 'TW', 'W')
 
   ### Article
   Article:
@@ -704,24 +710,24 @@ definitions:
         $ref: '#/definitions/Translations'
       description:
         $ref: '#/definitions/Translations'
-      composite_description:
-        $ref: '#/definitions/Translations'
+#      composite_description:
+#        $ref: '#/definitions/Translations'
       article_group:
         $ref: '#/definitions/AssignedArticleGroup'
-      purchasing_department:
-        $ref: '#/definitions/PurchasingDepartment'
-      online_group:
-        $ref: '#/definitions/AssignedOnlineGroup'
-      prices:
-        $ref: '#/definitions/ArticlePrices'
+#      purchasing_department:
+#        $ref: '#/definitions/PurchasingDepartment'
+#      online_group:
+#        $ref: '#/definitions/AssignedOnlineGroup'
+#      prices:
+#        $ref: '#/definitions/ArticlePrices'
       barcodes:
         $ref: '#/definitions/Barcodes'
       content:
         $ref: '#/definitions/Content'
       base:
         $ref: '#/definitions/BaseContent'
-      cooling:
-        $ref: '#/definitions/Cooling'
+#      cooling:
+#        $ref: '#/definitions/Cooling'
       eco_labels:
         $ref: '#/definitions/EcoLabels'
 #      # packshots is present but not supported in this spec
