@@ -3,9 +3,11 @@
 	"name": "denner-shop-api",
 	"description": "",
 	"order": [
-		"89f6abe4-5268-3124-b1b6-284ca1f88b4f",
+		"1192a33d-d7e5-41fa-8407-6b763cb622c4",
+		"b1d2c30a-0426-4f92-8b39-c383745bb1f1",
 		"edc83ed4-f8fc-ae80-fbb6-0c24ccf85d0c",
-		"bd81c158-c0cb-499c-10eb-8076bb386a2b"
+		"bd81c158-c0cb-499c-10eb-8076bb386a2b",
+		"89f6abe4-5268-3124-b1b6-284ca1f88b4f"
 	],
 	"folders": [],
 	"timestamp": 1463571672474,
@@ -15,6 +17,9 @@
 	"requests": [
 		{
 			"id": "89f6abe4-5268-3124-b1b6-284ca1f88b4f",
+			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
+			"name": "/sweepstake-participants",
+			"description": "Create a sweepstake participant",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "{{base_url}}/sweepstake-participants",
 			"preRequestScript": "",
@@ -27,14 +32,14 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1463571892707,
-			"name": "/sweepstake-participants",
-			"description": "Create a sweepstake participant",
-			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
 			"responses": [],
 			"rawModeData": "{\r\n  \"firstname\": \"Michelle\",\r\n  \"lastname\": \"Muster\",\r\n  \"address\": \"Bahnhofstrasse 7\",\r\n  \"zip_code\": \"8034\",\r\n  \"city\": \"Zurich\",\r\n  \"email\": \"email@gmx.ch\",\r\n  \"gender\": \"female\",\r\n  \"shop_user_id\": 123456789,\r\n  \"language\": \"de\"\r\n}\r\n"
 		},
 		{
 			"id": "bd81c158-c0cb-499c-10eb-8076bb386a2b",
+			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
+			"name": "/wines/{article_id}/appraisals",
+			"description": "Create a wine appraisal",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "{{base_url}}/wines/012345/appraisals",
 			"preRequestScript": "",
@@ -47,14 +52,14 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1463571888792,
-			"name": "/wines/{article_id}/appraisals",
-			"description": "Create a wine appraisal",
-			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
 			"responses": [],
 			"rawModeData": "{\r\n  \"wine_year\": 2013,\r\n  \"title\": \"un très très bon vin\",\r\n  \"description\": \"mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???\",\r\n  \"rating\": 5,\r\n  \"display_name\": \"Hans M.\",\r\n  \"city\": \"Cossonay\",\r\n  \"language\": \"fr\"\r\n}"
 		},
 		{
 			"id": "edc83ed4-f8fc-ae80-fbb6-0c24ccf85d0c",
+			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
+			"name": "/wines/{article_id}/appraisals",
+			"description": "List a wine's appraisals",
 			"headers": "Accept: application/json\n",
 			"url": "{{base_url}}/wines/012345/appraisals",
 			"preRequestScript": "",
@@ -67,9 +72,44 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1463571883418,
-			"name": "/wines/{article_id}/appraisals",
-			"description": "List a wine's appraisals",
+			"responses": []
+		},
+		{
+			"id": "1192a33d-d7e5-41fa-8407-6b763cb622c4",
 			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
+			"name": "/wines",
+			"description": "List all wines currently targeted for the Wineshop",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"headers": "Accept: {{header_accept}}\nApp-Key: {{shop_header_app_key}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{base_url}}/wines",
+			"preRequestScript": "",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"responses": []
+		},
+		{
+			"id": "b1d2c30a-0426-4f92-8b39-c383745bb1f1",
+			"collectionId": "84732262-2f13-7878-9859-8a06c6d97a23",
+			"name": "/wines/{article_id}",
+			"description": "Fetch wine targeted for the Wineshop",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"headers": "Accept: {{header_accept}}\nApp-Key: {{shop_header_app_key}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{base_url}}/wines/050006",
+			"preRequestScript": "",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
 			"responses": []
 		}
 	]
