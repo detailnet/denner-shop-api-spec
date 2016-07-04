@@ -88,7 +88,7 @@
 			"pathVariables": {},
 			"url": "{{base_url}}/wines",
 			"preRequestScript": "",
-			"tests": "",
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nfor (var i =0; i < jsonData.articles.length; ++i) {\n    var article = jsonData.articles[i],\n        testName = 'Test content: ' + article.id + ' - ' + article.name;\n\n    tests[testName] = article.content &&  article.content !== null;\n}\n",
 			"currentHelper": "normal",
 			"helperAttributes": "{}",
 			"responses": []
