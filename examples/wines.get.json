@@ -256,6 +256,25 @@
                         }
                     ]
                 },
+                "online_specials": [
+                    {
+                        "id": "rarity",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Rärität"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Rareté"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Rarità"
+                            }
+                        ]
+                    }
+                ],
                 "year": 2013,
                 "fits_with": [
                     {
@@ -685,6 +704,7 @@
                         }
                     ]
                 },
+                "online_specials": [],
                 "year": 2014,
                 "fits_with": [
                     {
@@ -1053,6 +1073,25 @@
                         }
                     ]
                 },
+                "online_specials": [
+                    {
+                        "id": "bordeaux",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Bordeaux Grand Cru"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Bordeaux Grand Cru"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Bordeaux Grand Cru"
+                            }
+                        ]
+                    }
+                ],
                 "year": 2013,
                 "fits_with": [
                     {
