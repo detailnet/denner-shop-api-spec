@@ -247,6 +247,16 @@ paths:
                       -
                         locale: "it"
                         value: "Vino rosso"
+                  online_specials:
+                    - id: wine
+                      sort_index: 10
+                      title:
+                        - locale: de
+                          value: Weine
+                        - locale: fr
+                          value: Vins
+                        - locale: it
+                          value: Vini
                   year: 2013
                   fits_with:
                     -
@@ -574,6 +584,12 @@ definitions:
     pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
     description: Unique identifier
 
+  SortIndex:
+    type: integer
+    format: int32
+    minimum: 0
+    description: Index for sorting
+
   Locale:
     type: string
     pattern: '/^(de|fr|it)$/'
@@ -819,6 +835,8 @@ definitions:
         $ref: '#/definitions/Region'
       type:
         $ref: '#/definitions/WineType'
+      online_specials:
+        $ref: '#/definitions/OnlineSpecials'
       year:
         $ref: '#/definitions/Year'
       fits_with:
@@ -962,6 +980,18 @@ definitions:
         $ref: '#/definitions/Translations'
       parent:
         $ref: '#/definitions/AssignedOnlineGroup'
+
+  ### Online special
+  OnlineSpecial:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique ID
+      sort_index:
+        $ref: '#/definitions/SortIndex'
+      title:
+        $ref: '#/definitions/Translations'
 
   ### Wine
   Appraisal:
@@ -1160,6 +1190,11 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Article'
+
+  OnlineSpecials:
+    type: array
+    items:
+      $ref: '#/definitions/OnlineSpecial'
 
   Appraisals:
     type: array
