@@ -8,5 +8,7 @@
     "address": "3 rue du Temple",
     "zip_code": "1304",
     "city": "Cossonay",
+    "email": "email@gmx.ch",
+    "gender": "female",
     "language": "fr"
 }
