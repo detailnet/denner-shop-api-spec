@@ -105,7 +105,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"wine_year\": 2013,\r\n  \"title\": \"un très très bon vin\",\r\n  \"description\": \"mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???\",\r\n  \"rating\": 5,\r\n  \"display_name\": \"Hans M.\",\r\n  \"city\": \"Cossonay\",\r\n  \"language\": \"fr\"\r\n}"
+					"raw": "{\r\n  \"wine_year\": 2013,\r\n  \"title\": \"un très très bon vin\",\r\n  \"description\": \"mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! Denner, qu'est ce qui vous arrive ???\",\r\n  \"rating\": 5,\r\n  \"display_name\": \"Hans M.\",\r\n  \"city\": \"Cossonay\",\r\n  \"email\": \"email@gmx.ch\",\r\n  \"gender\": \"female\",\r\n  \"language\": \"fr\"\r\n}"
 				},
 				"description": "Create a wine appraisal"
 			},

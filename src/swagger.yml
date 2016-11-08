@@ -1077,18 +1077,28 @@ definitions:
     required:
       - title
       - rating
+      - firstname
+      - lastname
+      - address
+      - zip_code
+      - city
+      - email
+      - gender
+      - language
     example:
       application/json:
 
         wine_year: 2013
         title: "un très très bon vin"
-        description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+        description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! Denner, qu'est ce qui vous arrive ???"
         rating: 5
         firstname: "Isabelle"
         lastname: "Rossetti"
         address: "3 rue du Temple"
         zip_code: "1304"
         city: "Cossonay"
+        email: "email@gmx.ch"
+        gender: "female"
         language: "fr"
 
   ### Sweepstake participant
@@ -1152,6 +1162,7 @@ definitions:
       - city
       - email
       - gender
+      - language
     example:
       application/json:
 
