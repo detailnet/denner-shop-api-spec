@@ -3,6 +3,13 @@
 	"name": "denner-shop-api apig-v1",
 	"values": [
 		{
+			"key": "header_app_key",
+			"value": "{{denner_shop_app_key}}",
+			"type": "text",
+			"name": "header_app_key",
+			"enabled": true
+		},
+		{
 			"key": "base_url",
 			"value": "https://denner-shop-api.detailnet.ch/v1",
 			"type": "text",
