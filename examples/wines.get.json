@@ -183,7 +183,7 @@
                         }
                     ],
                     "flag": {
-                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                        "cdn_url": "https://denner.imgix.net/flags/IT.png"
                     }
                 },
                 "region": {
@@ -625,7 +625,7 @@
                         }
                     ],
                     "flag": {
-                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/US.png"
+                        "cdn_url": "https://denner.imgix.net/flags/US.png"
                     }
                 },
                 "region": {
@@ -972,7 +972,7 @@
                         }
                     ],
                     "flag": {
-                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/FR.png"
+                        "cdn_url": "https://denner.imgix.net/flags/FR.png"
                     }
                 },
                 "region": {
