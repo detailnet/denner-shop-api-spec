@@ -221,7 +221,7 @@ paths:
                         locale: "it"
                         value: "Italia"
                     flag:
-                      image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                      cdn_url: "https://denner.imgix.net/flags/IT.png"
                   region:
                     id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
                     title:
@@ -626,7 +626,7 @@ definitions:
     type: object
     description: Country flag
     properties:
-      image_url:
+      cdn_url:
         $ref: '#/definitions/Url'
 
   Country:
