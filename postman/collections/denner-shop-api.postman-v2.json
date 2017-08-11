@@ -42,31 +42,6 @@
 			"response": []
 		},
 		{
-			"name": "/wines/{article_id}",
-			"request": {
-				"url": "{{base_url}}/wines/050006",
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "App-Key",
-						"value": "{{header_app_key}}",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"description": "Fetch wine targeted for the Wineshop"
-			},
-			"response": []
-		},
-		{
 			"name": "/wines/{article_id}/appraisals",
 			"request": {
 				"url": "{{base_url}}/wines/012345/appraisals",
