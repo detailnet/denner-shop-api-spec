@@ -200,7 +200,6 @@ paths:
                     id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
                     code: "bio"
                     name: "Bio"
-#                # packshots is present but not supported in this spec
 #                packshots:
 #                  -
 #                    id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
@@ -257,6 +256,9 @@ paths:
                           value: Vins
                         - locale: it
                           value: Vini
+                  box:
+                    code: "KA"
+                    batch_size: 3
                   year: 2013
                   fits_with:
                     -
@@ -363,15 +365,25 @@ paths:
                       -
                         locale: "it"
                         value: "13%"
+                    title:
+                      - locale: "de"
+                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
+                      - locale: "fr"
+                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
+                      - locale: "it"
+                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
                     packshot:
                       id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
-                      url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
                       cdn_url: "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
                       quantity: 6
                       created_on: "2016-01-07T15:42:19+02:00"
-                  box:
-                    code: "KA"
-                    batch_size: 3
+                    notes:
+                      - locale: "de"
+                        value: "<b>Allgemeiner</b> Hinweis"
+                      - locale: "fr"
+                        value: "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                      - locale: "it"
+                        value: "<font color=\"#ff0000\">​Allgemeiner Hinweis</font>"
 
   /wines/{article_id}/appraisals:
     get:
@@ -405,6 +417,7 @@ paths:
                   wine_year: 2013
                   title: "un très très bon vin"
                   description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+                  response: "Merci!"
                   rating: 5
                   display_name: "Hans M."
                   city: "Cossonay"
@@ -426,8 +439,8 @@ paths:
       tags:
         - wine
       operationId: createAppraisal
-      security:
-        - appKey: []
+#      security:
+#        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -468,8 +481,8 @@ paths:
       tags:
         - other
       operationId: createSweepstakeParticipant
-      security:
-        - appKey: []
+#      security:
+#        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -746,7 +759,6 @@ definitions:
 #        $ref: '#/definitions/Cooling'
       eco_labels:
         $ref: '#/definitions/EcoLabels'
-#      # packshots is present but not supported in this spec
 #      packshots:
 #        $ref: '#/definitions/Packshots'
       wine:
@@ -871,8 +883,12 @@ definitions:
         $ref: '#/definitions/ArticlePrices'
       discount:
         $ref: '#/definitions/Translations'
+      title:
+        $ref: '#/definitions/Translations'
       packshot:
         $ref: '#/definitions/Packshot'
+      notes:
+        $ref: '#/definitions/Translations'
 
   Region:
     type: object
@@ -954,32 +970,32 @@ definitions:
         minimum: 0
         description: Batch size
 
-  ### Online group
-  AssignedOnlineGroup:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      code:
-        type: integer
-        format: int32
-        description: Navision online group code
-      disabled:
-        type: boolean
-        description: Is the group disabled?
-      allow_featuring:
-        type: boolean
-        description: Does the group allow the assigned articles to be featured (i.e. displayed on front/main/home page)?
-      allow_promotion:
-        type: boolean
-        description: Does the group allow the assigned articles to be promoted (i.e. displayed on a promotional page)?
-      allow_background:
-        type: boolean
-        description: Does the group allow the assigned articles to be displayed with a background (i.e. displayed on a page with a deceptive/trivializing background)?
-      title:
-        $ref: '#/definitions/Translations'
-      parent:
-        $ref: '#/definitions/AssignedOnlineGroup'
+#  ### Online group
+#  AssignedOnlineGroup:
+#    type: object
+#    properties:
+#      id:
+#        $ref: '#/definitions/UUIDv4'
+#      code:
+#        type: integer
+#        format: int32
+#        description: Navision online group code
+#      disabled:
+#        type: boolean
+#        description: Is the group disabled?
+#      allow_featuring:
+#        type: boolean
+#        description: Does the group allow the assigned articles to be featured (i.e. displayed on front/main/home page)?
+#      allow_promotion:
+#        type: boolean
+#        description: Does the group allow the assigned articles to be promoted (i.e. displayed on a promotional page)?
+#      allow_background:
+#        type: boolean
+#        description: Does the group allow the assigned articles to be displayed with a background (i.e. displayed on a page with a deceptive/trivializing background)?
+#      title:
+#        $ref: '#/definitions/Translations'
+#      parent:
+#        $ref: '#/definitions/AssignedOnlineGroup'
 
   ### Online special
   OnlineSpecial:
@@ -1011,6 +1027,9 @@ definitions:
       description:
         type: string
         description: Description
+      response:
+        type: string
+        description: Denner's response
       rating:
         type: integer
         format: int32
@@ -1099,6 +1118,7 @@ definitions:
         city: "Cossonay"
         email: "email@gmx.ch"
         gender: "female"
+        shop_user_id: 123456789
         language: "fr"
 
   ### Sweepstake participant

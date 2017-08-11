@@ -31,20 +31,6 @@
                     "value": "2013, Puglia, Italia, 6 x 75 cl"
                 }
             ],
-            "composite_description": [
-                {
-                    "locale": "de",
-                    "value": ""
-                },
-                {
-                    "locale": "fr",
-                    "value": ""
-                },
-                {
-                    "locale": "it",
-                    "value": ""
-                }
-            ],
             "article_group": {
                 "id": "0c309757-5432-4652-8201-ec35f31c5260",
                 "code": "60-56",
@@ -55,7 +41,6 @@
                     "name": "Weine"
                 }
             },
-            "purchasing_department": "W",
             "online_group": {
                 "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
                 "code": "2-9",
@@ -99,26 +84,6 @@
                         }
                     ]
                 }
-            },
-            "prices": {
-                "sales": 9.9,
-                "instead": 11.4,
-                "base": 1.32,
-                "final": true,
-                "by_quantity": [
-                    {
-                        "quantity": 1,
-                        "sales": 9.9,
-                        "instead": 11.4,
-                        "final": true
-                    },
-                    {
-                        "quantity": 6,
-                        "sales": 59.4,
-                        "instead": 68.4,
-                        "final": true
-                    }
-                ]
             },
             "barcodes": [
                 {
@@ -193,7 +158,6 @@
                     }
                 ]
             },
-            "cooling": 0,
             "eco_labels": [
                 {
                     "id": "66d94617-bbd7-477e-ae66-183deb67ba5b",
@@ -275,6 +239,10 @@
                         ]
                     }
                 ],
+                "box": {
+                    "code": "KA",
+                    "batch_size": 3
+                },
                 "year": 2013,
                 "fits_with": [
                     {
@@ -419,17 +387,40 @@
                             "value": "13%"
                         }
                     ],
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
+                        }
+                    ],
                     "packshot": {
                         "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
-                        "url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
                         "cdn_url": "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
                         "quantity": 6,
                         "created_on": "2016-01-07T15:42:19+02:00"
-                    }
-                },
-                "box": {
-                    "code": "KA",
-                    "batch_size": 3
+                    },
+                    "notes": [
+                        {
+                            "locale": "de",
+                            "value": "<b>Allgemeiner </b>Hinweis"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "<font color=\"#ff0000\">​Allgemeiner Hinweis</font>"
+                        }
+                    ]
                 }
             }
         },
@@ -464,20 +455,6 @@
                     "value": "2014, California, USA, 6 x 75 cl"
                 }
             ],
-            "composite_description": [
-                {
-                    "locale": "de",
-                    "value": ""
-                },
-                {
-                    "locale": "fr",
-                    "value": ""
-                },
-                {
-                    "locale": "it",
-                    "value": ""
-                }
-            ],
             "article_group": {
                 "id": "f7f0fb83-60d6-49e9-af77-5663230566dc",
                 "code": "60-64",
@@ -488,7 +465,6 @@
                     "name": "Weine"
                 }
             },
-            "purchasing_department": "W",
             "online_group": {
                 "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
                 "code": "2-9",
@@ -532,23 +508,6 @@
                         }
                     ]
                 }
-            },
-            "prices": {
-                "sales": 11.65,
-                "base": 1.55,
-                "final": true,
-                "by_quantity": [
-                    {
-                        "quantity": 1,
-                        "sales": 11.65,
-                        "final": true
-                    },
-                    {
-                        "quantity": 6,
-                        "sales": 69.9,
-                        "final": true
-                    }
-                ]
             },
             "barcodes": [
                 {
@@ -647,7 +606,6 @@
                     }
                 ]
             },
-            "cooling": 0,
             "eco_labels": [],
             "wine": {
                 "country": {
@@ -705,6 +663,10 @@
                     ]
                 },
                 "online_specials": [],
+                "box": {
+                    "code": "KA",
+                    "batch_size": 3
+                },
                 "year": 2014,
                 "fits_with": [
                     {
@@ -821,17 +783,27 @@
                         ]
                     },
                     "discount": [],
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Robert Mondavi Woodbridge Cabernet Sauvignon 6 x 75 cl"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Robert Mondavi Woodbridge Cabernet Sauvignon 6 x 75 cl"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Robert Mondavi Woodbridge Cabernet Sauvignon 6 x 75 cl"
+                        }
+                    ],
                     "packshot": {
                         "id": "3a861e25-4d87-4e9d-b961-aba24cf81642",
-                        "url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
                         "cdn_url": "https://denner.imgix.net/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
                         "quantity": 1,
                         "created_on": "2016-05-12T16:38:55+02:00"
-                    }
-                },
-                "box": {
-                    "code": "KA",
-                    "batch_size": 3
+                    },
+                    "notes": []
                 }
             }
         },
@@ -866,20 +838,6 @@
                     "value": "2013, Pauillac AOC, 4e Cru Classé, 75 cl"
                 }
             ],
-            "composite_description": [
-                {
-                    "locale": "de",
-                    "value": ""
-                },
-                {
-                    "locale": "fr",
-                    "value": ""
-                },
-                {
-                    "locale": "it",
-                    "value": ""
-                }
-            ],
             "article_group": {
                 "id": "4eb2f423-1aac-4e69-a2b4-dd22e660d3a7",
                 "code": "60-40",
@@ -890,7 +848,6 @@
                     "name": "Weine"
                 }
             },
-            "purchasing_department": "W",
             "online_group": {
                 "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
                 "code": "2-9",
@@ -934,26 +891,6 @@
                         }
                     ]
                 }
-            },
-            "prices": {
-                "sales": 68.95,
-                "list": 86.2,
-                "base": 9.19,
-                "final": true,
-                "by_quantity": [
-                    {
-                        "quantity": 1,
-                        "sales": 68.95,
-                        "list": 86.2,
-                        "final": true
-                    },
-                    {
-                        "quantity": 6,
-                        "sales": 413.7,
-                        "list": 517.2,
-                        "final": true
-                    }
-                ]
             },
             "barcodes": [
                 {
@@ -1016,7 +953,6 @@
                     }
                 ]
             },
-            "cooling": 0,
             "eco_labels": [],
             "wine": {
                 "country": {
@@ -1092,6 +1028,10 @@
                         ]
                     }
                 ],
+                "box": {
+                    "type": "HB",
+                    "batch_size": 2
+                },
                 "year": 2013,
                 "fits_with": [
                     {
@@ -1237,17 +1177,27 @@
                             "value": "20%"
                         }
                     ],
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Château Duhart Milon Rothschild 6 x 75 cl"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Château Duhart Milon Rothschild 6 x 75 cl"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Château Duhart Milon Rothschild 6 x 75 cl"
+                        }
+                    ],
                     "packshot": {
                         "id": "3c8cc89e-6350-4a8a-8854-d2feafc9b62e",
-                        "url": "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/3c8cc89e-6350-4a8a-8854-d2feafc9b62e/301609_1.png",
                         "cdn_url": "https://denner.imgix.net/assets/3c8cc89e-6350-4a8a-8854-d2feafc9b62e/301609_1.png",
                         "quantity": 1,
                         "created_on": "2016-02-08T11:07:51+02:00"
-                    }
-                },
-                "box": {
-                    "type": "HB",
-                    "batch_size": 2
+                    },
+                    "notes": []
                 }
             }
         }

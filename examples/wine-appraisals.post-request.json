@@ -10,5 +10,6 @@
     "city": "Cossonay",
     "email": "email@gmx.ch",
     "gender": "female",
+    "shop_user_id": 123456789,
     "language": "fr"
 }
