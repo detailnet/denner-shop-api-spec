@@ -439,12 +439,26 @@
                             "value": "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
                         }
                     ],
-                    "packshot": {
-                        "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
-                        "cdn_url": "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png",
-                        "quantity": 6,
-                        "created_on": "2016-01-07T15:42:19+02:00"
-                    },
+                    "pictures": [
+                        {
+                            "id": "5983a33d-ac61-49a8-a836-43259e78e9d0",
+                            "cdn_url": "https://denner.imgix.net/assets/103354f2-1fbc-47e9-a40a-bf93b04e1680/web/051273_c_K_DL.png",
+                            "quantity": 1,
+                            "created_on": "2016-01-07T15:42:19+02:00",
+                            "view": {
+                                "id": "front"
+                            }
+                        },
+                        {
+                            "id": "dabfe014-eb50-4871-9c96-e49324af7493",
+                            "cdn_url": "https://denner.imgix.net/assets/103354f2-1fbc-47e9-a40a-bf93b04e1680/web/051273_c_K_DL_back.png",
+                            "quantity": 1,
+                            "created_on": "2016-01-07T15:49:03+02:00",
+                            "view": {
+                                "id": "back"
+                            }
+                        }
+                    ],
                     "notes": [
                         {
                             "locale": "de",
