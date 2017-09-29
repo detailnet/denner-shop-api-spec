@@ -244,32 +244,60 @@
                     "batch_size": 3
                 },
                 "year": 2013,
-                "fits_with": [
+                "food_matches": [
                     {
-                        "locale": "de",
-                        "value": "Pasta, Fleisch mit würzigen Saucen"
+                        "id": "PASTA",
+                        "titles": [
+                            {
+                                "locale": "de",
+                                "value": "Pasta"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Pâtes"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Pasta"
+                            }
+                        ]
                     },
                     {
-                        "locale": "fr",
-                        "value": "Pâtes, viande aux sauces relevées"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Pasta, carni accompagnate da salse aromatiche"
+                        "id": "MEAT-SAUCE",
+                        "titles": [
+                            {
+                                "locale": "de",
+                                "value": "leisch mit würzigen Saucen"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Viande aux sauces relevées"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Carni accompagnate da salse aromatiche"
+                            }
+                        ]
                     }
                 ],
-                "varietal": [
+                "grapes": [
                     {
-                        "locale": "de",
-                        "value": "Primitivo"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Primitivo"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Primitivo"
+                        "id": "PRIMITIVO",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Primitivo"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Primitivo"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Primitivo"
+                            }
+                        ],
+                        "sort_index": 0
                     }
                 ],
                 "character": [
@@ -300,18 +328,28 @@
                         "value": "16-18 °C"
                     }
                 ],
-                "awards": [
+                "medals": [
                     {
-                        "locale": "de",
-                        "value": ""
-                    },
-                    {
-                        "locale": "fr",
-                        "value": ""
-                    },
-                    {
-                        "locale": "it",
-                        "value": ""
+                        "expert": {
+                            "id": "EXPOVINA",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Expovina"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Expovina"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Expovina"
+                                }
+                            ]
+                        },
+                        "year": 2016,
+                        "wine_year": 2013,
+                        "valuation": "Gold"
                     }
                 ],
                 "storage": [
