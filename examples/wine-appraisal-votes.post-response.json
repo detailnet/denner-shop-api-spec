@@ -1,0 +1,19 @@
+{
+    "id": "2c8098fd-0a36-4a43-a93d-5068616e746e",
+    "type": "up",
+    "created_on": "2017-09-29T15:29:23+0200",
+    "appraisal": {
+        "id": "7063984c-4eea-4abe-825b-e80612ba89c3",
+        "created_on": "2015-10-30T10:16:41+0200",
+        "wine_year": 2013,
+        "title": "un très très bon vin",
+        "description": "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???",
+        "response": "Merci!",
+        "rating": 5,
+        "display_name": "Hans M.",
+        "city": "Cossonay",
+        "language": "fr",
+        "upvotes": 4,
+        "downvotes": 13
+    }
+}
