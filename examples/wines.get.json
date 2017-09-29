@@ -392,6 +392,7 @@
                         ]
                     },
                     "quantity": 6,
+                    "compared": false,
                     "prices": {
                         "sales": 59.4,
                         "instead": 68.4,
