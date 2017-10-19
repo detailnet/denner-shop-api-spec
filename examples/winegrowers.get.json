@@ -1,0 +1,65 @@
+{
+    "winegrowers": [
+        {
+            "id": "447ff1e5-798c-4ac8-8ff2-98bfbb4700bd",
+            "name": "Thomas Weinmacher",
+            "country": {
+                "id": "IT",
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Italien"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Italie"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Italia"
+                    }
+                ],
+                "flag": {
+                    "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                }
+            },
+            "region": {
+                "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Apulien"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Les Pouilles"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Puglia"
+                    }
+                ]
+            },
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "Es liegt in der Tradition der Familie Weinmacher, hervorragende Weine in Eichenfässern zu produzieren. ..."
+                },
+                {
+                    "locale": "fr",
+                    "value": ""
+                },
+                {
+                    "locale": "it",
+                    "value": ""
+                }
+            ],
+            "picture":{
+                "id": "3c8cc89e-6350-4a8a-8854-d2feafc9b62e",
+                "cdn_url": "https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png",
+                "created_on": "2017-10-19T10:20:57+01:00"
+            },
+            "url": "https://www.weinmacher-weine.com/"
+        }
+    ]
+}
