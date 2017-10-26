@@ -165,6 +165,20 @@
                     "name": "Bio"
                 }
             ],
+            "regional_availability": [
+                {
+                    "locale": "de",
+                    "value": "Nur in der deutschen und französischen Schweiz erhältlich"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Disponible uniquement en Suisse alémanique et romande"
+                },
+                {
+                    "locale": "it",
+                    "value": "Disponibile solo nella Svizzera tedesca e romanda"
+                }
+            ],
             "wine": {
                 "country": {
                     "id": "IT",
