@@ -3,43 +3,6 @@
         {
             "id": "447ff1e5-798c-4ac8-8ff2-98bfbb4700bd",
             "name": "Thomas Weinmacher",
-            "country": {
-                "id": "IT",
-                "title": [
-                    {
-                        "locale": "de",
-                        "value": "Italien"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Italie"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Italia"
-                    }
-                ],
-                "flag": {
-                    "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
-                }
-            },
-            "region": {
-                "id": "b19c42bf-ed78-46ff-ad6f-fc688a059e6a",
-                "title": [
-                    {
-                        "locale": "de",
-                        "value": "Apulien"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Les Pouilles"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Puglia"
-                    }
-                ]
-            },
             "description": [
                 {
                     "locale": "de",
