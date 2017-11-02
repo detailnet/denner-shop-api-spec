@@ -165,20 +165,6 @@
                     "name": "Bio"
                 }
             ],
-            "regional_availability": [
-                {
-                    "locale": "de",
-                    "value": "Nur in der deutschen und französischen Schweiz erhältlich"
-                },
-                {
-                    "locale": "fr",
-                    "value": "Disponible uniquement en Suisse alémanique et romande"
-                },
-                {
-                    "locale": "it",
-                    "value": "Disponibile solo nella Svizzera tedesca e romanda"
-                }
-            ],
             "wine": {
                 "country": {
                     "id": "IT",
@@ -281,7 +267,7 @@
                         "titles": [
                             {
                                 "locale": "de",
-                                "value": "leisch mit würzigen Saucen"
+                                "value": "Fleisch mit würzigen Saucen"
                             },
                             {
                                 "locale": "fr",
@@ -386,7 +372,8 @@
                     "valid": true
                 },
                 "shop": {
-                    "url": "http://denner-wineshop.ch/skuredirect/051273/",
+                    "url": "https://www.denner.ch/skuredirect/051273/",
+                    "for_sale": true,
                     "stock": {
                         "value": -15,
                         "code": 2,
@@ -735,34 +722,8 @@
                     "batch_size": 3
                 },
                 "year": 2014,
-                "fits_with": [
-                    {
-                        "locale": "de",
-                        "value": "Fleisch: rot (Rind, Lamm, Wild, Ente), Eintopf"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Viande: rouge (boeuf, agneau, gibier, canard), potée"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Carne: rossa (manzo, agnello, selvaggina, anatra), piatto unico"
-                    }
-                ],
-                "varietal": [
-                    {
-                        "locale": "de",
-                        "value": "Cabernet Sauvignon"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Cabernet sauvignon"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Cabernet Sauvignon"
-                    }
-                ],
+                "food_matches": [],
+                "grapes": [],
                 "character": [
                     {
                         "locale": "de",
@@ -791,20 +752,7 @@
                         "value": "16-18 °C"
                     }
                 ],
-                "awards": [
-                    {
-                        "locale": "de",
-                        "value": "Gold Mundus Vini"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Or Mundus Vini"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Oro Mundus Vini"
-                    }
-                ],
+                "medals": [],
                 "storage": [
                     {
                         "locale": "de",
@@ -825,11 +773,25 @@
                     "valid": true
                 },
                 "shop": {
-                    "url": "http://denner-wineshop.ch/skuredirect/050364/",
+                    "url": "https://www.denner.ch/skuredirect/050364/",
+                    "for_sale": true,
                     "stock": {
-                        "value": 1657,
-                        "code": 0,
-                        "message": []
+                        "value": 0,
+                        "code": 4,
+                        "message": [
+                            {
+                                "locale": "de",
+                                "value": "Ausverkauft"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Épuisé"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Esaurito"
+                            }
+                        ]
                     },
                     "quantity": 6,
                     "prices": {
@@ -864,12 +826,17 @@
                             "value": "Robert Mondavi Woodbridge Cabernet Sauvignon 6 x 75 cl"
                         }
                     ],
-                    "packshot": {
-                        "id": "3a861e25-4d87-4e9d-b961-aba24cf81642",
-                        "cdn_url": "https://denner.imgix.net/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
-                        "quantity": 1,
-                        "created_on": "2016-05-12T16:38:55+02:00"
-                    },
+                    "pictures": [
+                        {
+                            "id": "3a861e25-4d87-4e9d-b961-aba24cf81642",
+                            "cdn_url": "https://denner.imgix.net/assets/3a861e25-4d87-4e9d-b961-aba24cf81642/050364_1.png",
+                            "quantity": 1,
+                            "created_on": "2016-05-12T16:38:55+02:00",
+                            "view": {
+                                "id": "front"
+                            }
+                        }
+                    ],
                     "notes": []
                 }
             }
@@ -1100,32 +1067,61 @@
                     "batch_size": 2
                 },
                 "year": 2013,
-                "fits_with": [
+                "food_matches": [
                     {
-                        "locale": "de",
-                        "value": "Fleisch: rot (Rind, Lamm, Wild, Ente), Grilladen, Eintopf"
-                    },
-                    {
-                        "locale": "fr",
-                        "value": "Viande: rouge (bœuf, agneau, gibier, canard), grillades, potée"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Carne: rossa (manzo, agnello, selvaggina, anatra), grigliate, piatti unici"
+                        "id": "GRILL",
+                        "titles": [
+                            {
+                                "locale": "de",
+                                "value": "Grilladen"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "grillades"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "grigliate"
+                            }
+                        ]
                     }
                 ],
-                "varietal": [
+                "grapes": [
                     {
-                        "locale": "de",
-                        "value": "Cabernet Sauvignon, Merlot"
+                        "id": "CABERNET-SAUVIGNON",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Cabernet Sauvignon"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "cabernet sauvignon"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "cabernet sauvignon"
+                            }
+                        ],
+                        "sort_index": 0
                     },
                     {
-                        "locale": "fr",
-                        "value": "Cabernet sauvignon, merlot"
-                    },
-                    {
-                        "locale": "it",
-                        "value": "Cabernet Sauvignon, Merlot"
+                        "id": "MERLOT",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Merlot"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "merlot"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "merlot"
+                            }
+                        ],
+                        "sort_index": 1
                     }
                 ],
                 "character": [
@@ -1156,18 +1152,72 @@
                         "value": "16-18 °C"
                     }
                 ],
-                "awards": [
+                "medals": [
                     {
-                        "locale": "de",
-                        "value": "85-87 Punkte Robert Parker, 88-91 Punkte Wine Spectator"
+                        "expert": {
+                            "id": "PARKER",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Robert Parker"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Robert Parker"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Robert Parker"
+                                }
+                            ]
+                        },
+                        "year": 2015,
+                        "wine_year": 2013,
+                        "valuation": "87"
                     },
                     {
-                        "locale": "fr",
-                        "value": "85-87 points Robert Parker, 88-91 points Wine Spectator"
+                        "expert": {
+                            "id": "PARKER",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Robert Parker"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Robert Parker"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Robert Parker"
+                                }
+                            ]
+                        },
+                        "year": 2014,
+                        "wine_year": 2012,
+                        "valuation": "85"
                     },
                     {
-                        "locale": "it",
-                        "value": "85-87 punti Robert Parker, 88-91  punti Wine Spectator"
+                        "expert": {
+                            "id": "WINE-SPECTATOR",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Wine Spectator"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Wine Spectator"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Wine Spectator"
+                                }
+                            ]
+                        },
+                        "year": 2013,
+                        "wine_year": 2011,
+                        "valuation": "91"
                     }
                 ],
                 "storage": [
@@ -1190,7 +1240,8 @@
                     "valid": false
                 },
                 "shop": {
-                    "url": "http://denner-wineshop.ch/skuredirect/301609/",
+                    "url": "https://www.denner.ch/skuredirect/301609/",
+                    "for_sale": true,
                     "stock": {
                         "value": 2,
                         "code": 1,
@@ -1210,6 +1261,7 @@
                         ]
                     },
                     "quantity": 6,
+                    "compared": true,
                     "prices": {
                         "sales": 413.7,
                         "list": 517.2,
@@ -1258,12 +1310,672 @@
                             "value": "Château Duhart Milon Rothschild 6 x 75 cl"
                         }
                     ],
-                    "packshot": {
-                        "id": "3c8cc89e-6350-4a8a-8854-d2feafc9b62e",
-                        "cdn_url": "https://denner.imgix.net/assets/3c8cc89e-6350-4a8a-8854-d2feafc9b62e/301609_1.png",
-                        "quantity": 1,
-                        "created_on": "2016-02-08T11:07:51+02:00"
+                    "pictures": [],
+                    "notes": []
+                }
+            }
+        },
+        {
+            "id": "050074",
+            "name": "Féchy La Côte AOC 35 cl Le Pied de Vigne 35",
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Le Pied de Vigne Féchy AOC La Côte"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Le Pied de Vigne Féchy AOC La Côte"
+                },
+                {
+                    "locale": "it",
+                    "value": "Le Pied de Vigne Féchy AOC La Côte"
+                }
+            ],
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "2015, Waadt, Schweiz, 35 cl"
+                },
+                {
+                    "locale": "fr",
+                    "value": "2015, Vaud, Suisse, 35 cl"
+                },
+                {
+                    "locale": "it",
+                    "value": "2015, Vaud, Svizzera, 35 cl"
+                }
+            ],
+            "article_group": {
+                "id": "c3a6935a-4cfa-4db9-9d1e-2092623308e4",
+                "code": "60-08",
+                "name": "CH Weiss Liter",
+                "parent": {
+                    "id": "cb1fad16-a420-4a3b-865b-b3e176a8edea",
+                    "code": "60",
+                    "name": "Weine"
+                }
+            },
+            "online_group": {
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein/Champagner"
                     },
+                    {
+                        "locale": "fr",
+                        "value": "Vins/champagnes"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vino/champagne"
+                    }
+                ],
+                "parent": {
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Getränke"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande"
+                        }
+                    ]
+                }
+            },
+            "barcodes": [
+                {
+                    "value": "7610029173642",
+                    "type": "EAN13",
+                    "quantity": 1,
+                    "master": true
+                },
+                {
+                    "value": "7610029173659",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": true
+                }
+            ],
+            "content": {
+                "size": 0.35,
+                "label": [
+                    {
+                        "locale": "de",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cl"
+                    }
+                ],
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "35 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "35 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "35 cl"
+                    }
+                ]
+            },
+            "base": {
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "10 cl"
+                    }
+                ]
+            },
+            "eco_labels": [],
+            "wine": {
+                "country": {
+                    "id": "CH",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Schweiz"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Suisse"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Svizzera"
+                        }
+                    ],
+                    "flag": {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/CH.png"
+                    }
+                },
+                "region": {
+                    "id": "8fcb4743-6e70-4ac0-9166-0c1bf97b307b",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Waadt"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Vaud"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Vaud"
+                        }
+                    ]
+                },
+                "type": {
+                    "id": 1,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Weisswein"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Vin blanc"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Vino bianco"
+                        }
+                    ]
+                },
+                "online_specials": [],
+                "box": {
+                    "code": "KA",
+                    "batch_size": 3
+                },
+                "year": 2016,
+                "food_matches": [],
+                "grapes": [],
+                "character": [],
+                "temperature": [],
+                "medals": [],
+                "storage": [],
+                "shop": {
+                    "url": "https://www.denner.ch/skuredirect/050074/",
+                    "for_sale": false,
+                    "discount": [],
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Le Pied de Vigne Féchy AOC La Côte 35 cl"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Le Pied de Vigne Féchy AOC La Côte 35 cl"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Le Pied de Vigne Féchy AOC La Côte 35 cl"
+                        }
+                    ],
+                    "pictures": [
+                        {
+                            "id": "9e72423a-6c46-40f5-b208-2ea1055656c8",
+                            "cdn_url": "https://denner.imgix.net/assets/9e72423a-6c46-40f5-b208-2ea1055656c8/web/050074_1_c_K.png",
+                            "quantity": 1,
+                            "created_on": "2015-03-30T09:46:12+0200",
+                            "view": {
+                                "id": "front"
+                            }
+                        }
+                    ],
+                    "notes": []
+                }
+            }
+        },
+        {
+            "id": "050716",
+            "name": "Alfred Gratien Champagne AOC Brut 75",
+            "title": [
+                {
+                    "locale": "de",
+                    "value": "Alfred Gratien brut "
+                },
+                {
+                    "locale": "fr",
+                    "value": "Alfred Gratien brut "
+                },
+                {
+                    "locale": "it",
+                    "value": "Alfred Gratien brut "
+                }
+            ],
+            "description": [
+                {
+                    "locale": "de",
+                    "value": "Champagne AOC, Frankreich, 75 cl"
+                },
+                {
+                    "locale": "fr",
+                    "value": "Champagne AOC, France, 75 cl"
+                },
+                {
+                    "locale": "it",
+                    "value": "Champagne AOC, Francia, 75 cl"
+                }
+            ],
+            "article_group": {
+                "id": "f53b0b90-7aeb-4deb-854f-b33d6f4e92ae",
+                "code": "59-10",
+                "name": "Champagner",
+                "parent": {
+                    "id": "f171b2a4-c5cf-4a80-b0e5-bd455b0560f5",
+                    "code": "59",
+                    "name": "Schaumweine"
+                }
+            },
+            "online_group": {
+                "id": "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee",
+                "code": "2-9",
+                "disabled": false,
+                "allow_featuring": true,
+                "allow_promotion": true,
+                "allow_background": true,
+                "title": [
+                    {
+                        "locale": "de",
+                        "value": "Wein/Champagner"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Vins/champagnes"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Vino/champagne"
+                    }
+                ],
+                "parent": {
+                    "id": "8fd653c3-a86b-4529-bbb5-58d06919d484",
+                    "code": "2",
+                    "disabled": false,
+                    "allow_featuring": true,
+                    "allow_promotion": true,
+                    "allow_background": true,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Getränke"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Boissons"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Bevande"
+                        }
+                    ]
+                }
+            },
+            "barcodes": [
+                {
+                    "value": "3594580000095",
+                    "type": "EAN13",
+                    "quantity": 1,
+                    "master": true
+                },
+                {
+                    "value": "3594580000125",
+                    "type": "EAN13",
+                    "quantity": 6,
+                    "master": true
+                }
+            ],
+            "content": {
+                "size": 0.75,
+                "label": [
+                    {
+                        "locale": "de",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cl"
+                    }
+                ],
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "75 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "75 cl"
+                    }
+                ]
+            },
+            "base": {
+                "text": [
+                    {
+                        "locale": "de",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "10 cl"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "10 cl"
+                    }
+                ]
+            },
+            "eco_labels": [],
+            "wine": {
+                "country": {
+                    "id": "FR",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Frankreich"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "France"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Francia"
+                        }
+                    ],
+                    "flag": {
+                        "image_url": "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/FR.png"
+                    }
+                },
+                "region": {
+                    "id": "789b1878-0a20-4f79-be91-0de4899270ae",
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Champagne"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Champagne"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Champagne"
+                        }
+                    ]
+                },
+                "type": {
+                    "id": 4,
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Schaumwein"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Mousseux"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Spumante"
+                        }
+                    ]
+                },
+                "online_specials": [],
+                "box": {
+                    "code": "KA",
+                    "batch_size": 3
+                },
+                "food_matches": [
+                    {
+                        "id": "APERO-ANTIP",
+                        "titles": [
+                            {
+                                "locale": "de",
+                                "value": "Antipasti"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "antipasti"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "antipasti"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "APERO-TAPAS",
+                        "titles": [
+                            {
+                                "locale": "de",
+                                "value": "Tapas"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "tapas"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "tapas"
+                            }
+                        ]
+                    }
+                ],
+                "grapes": [
+                    {
+                        "id": "CHARDONNAY",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Chardonnay"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "chardonnay"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Chardonnay"
+                            }
+                        ],
+                        "sort_index": 2
+                    },
+                    {
+                        "id": "PINOT-NOIR",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Pinot Noir"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "pinot noir"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Pinot Noir"
+                            }
+                        ],
+                        "sort_index": 0
+                    },
+                    {
+                        "id": "PINOT-MEUNIERT",
+                        "title": [
+                            {
+                                "locale": "de",
+                                "value": "Pinot Meunier"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "pinot meunier"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Pinot Meunier"
+                            }
+                        ],
+                        "sort_index": 1
+                    }
+                ],
+                "character": [
+                    {
+                        "locale": "de",
+                        "value": "Blasses goldgelb. Frische fruchtige Noten von Äpfeln und Zitrusfrüchten. Feine Noten von frisch gebackenem Brot. Mittlerer Körper und feine Perlage und sehr langer eleganter Abgang mit frischer Säure."
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Robe dorée pâle. Nez fruité de pommes et d'agrumes, avec de délicates notes de brioche. Bouche moyennement corsée aux bulles fines. Finale persistante et élégante, à l'acidité fraîche."
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Giallo oro pallido. Note fresche e fruttate di mele e agrumi. Note delicate di pane appena sfornato. Corpo medio, perlage fine e retrogusto elegante e persistente con fresca acidità."
+                    }
+                ],
+                "temperature": [
+                    {
+                        "locale": "de",
+                        "value": "8-10 °C"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "8-10 °C"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "8-10 °C"
+                    }
+                ],
+                "medals": [],
+                "storage": [
+                    {
+                        "locale": "de",
+                        "value": "1 Jahr ab Kauf"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "1 an après l'achat"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "1 anno dall'acquisto"
+                    }
+                ],
+                "rating": {
+                    "value": 4.8,
+                    "total": 5,
+                    "valid": true
+                },
+                "shop": {
+                    "url": "https://www.denner.ch/skuredirect/050716/",
+                    "for_sale": true,
+                    "stock": {
+                        "value": 452,
+                        "code": 0,
+                        "message": []
+                    },
+                    "quantity": 6,
+                    "prices": {
+                        "sales": 143.7,
+                        "instead": 179.7,
+                        "base": 3.19,
+                        "final": true,
+                        "by_quantity": [
+                            {
+                                "quantity": 6,
+                                "sales": 143.7,
+                                "instead": 179.7,
+                                "final": true
+                            },
+                            {
+                                "quantity": 1,
+                                "sales": 23.95,
+                                "instead": 29.95,
+                                "final": true
+                            }
+                        ]
+                    },
+                    "discount": [
+                        {
+                            "locale": "de",
+                            "value": "20%"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "20%"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "20%"
+                        }
+                    ],
+                    "title": [
+                        {
+                            "locale": "de",
+                            "value": "Alfred Gratien brut  6 x 75 cl"
+                        },
+                        {
+                            "locale": "fr",
+                            "value": "Alfred Gratien brut  6 x 75 cl"
+                        },
+                        {
+                            "locale": "it",
+                            "value": "Alfred Gratien brut  6 x 75 cl"
+                        }
+                    ],
+                    "pictures": [
+                        {
+                            "id": "97033d86-24c0-4e34-82ba-9ef74f6280bd",
+                            "quantity": 1,
+                            "created_on": "2016-11-02T13:03:49+0100",
+                            "view": {
+                                "id": "front"
+                            }
+                        }
+                    ],
                     "notes": []
                 }
             }
