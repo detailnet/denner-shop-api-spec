@@ -1,12 +1,12 @@
 swagger: '2.0'
 info:
   description: RESTful API for the Denner Wineshop
-  version: 1.0.0
+  version: 2.0.0
   title: Denner Shop Web Service
   contact:
     name: DETAIL NET
     email: support+denner-shop-api@detailnet.ch
-host: denner-shop-api-v1.detailnet.ch
+host: denner-shop-api-v2.detailnet.ch
 schemes:
   - https
 consumes:

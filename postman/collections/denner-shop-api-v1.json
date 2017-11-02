@@ -1,0 +1,130 @@
+{
+	"variables": [],
+	"info": {
+		"name": "denner-shop-api-v1",
+		"_postman_id": "3aca5935-a378-72d6-92d8-4e5fa28ae0a6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/wines",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\n\nfor (var i =0; i < jsonData.articles.length; ++i) {\n    var article = jsonData.articles[i],\n        testName = 'Test content: ' + article.id + ' - ' + article.name;\n\n    tests[testName] = article.content &&  article.content !== null;\n}\n"
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/wines",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{header_app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "List all wines currently targeted for the Wineshop"
+			},
+			"response": []
+		},
+		{
+			"name": "/wines/{article_id}/appraisals",
+			"request": {
+				"url": "{{base_url}}/wines/012345/appraisals",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{header_app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "List a wine's appraisals"
+			},
+			"response": []
+		},
+		{
+			"name": "/wines/{article_id}/appraisals",
+			"request": {
+				"url": "{{base_url}}/wines/012345/appraisals",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{header_app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"wine_year\": 2013,\r\n  \"title\": \"un très très bon vin\",\r\n  \"description\": \"mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! Denner, qu'est ce qui vous arrive ???\",\r\n  \"rating\": 5,\r\n  \"display_name\": \"Hans M.\",\r\n  \"city\": \"Cossonay\",\r\n  \"email\": \"email@gmx.ch\",\r\n  \"gender\": \"female\",\r\n  \"language\": \"fr\"\r\n}"
+				},
+				"description": "Create a wine appraisal"
+			},
+			"response": []
+		},
+		{
+			"name": "/sweepstake-participants",
+			"request": {
+				"url": "{{base_url}}/sweepstake-participants",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{header_app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Michelle\",\r\n  \"lastname\": \"Muster\",\r\n  \"address\": \"Bahnhofstrasse 7\",\r\n  \"zip_code\": \"8034\",\r\n  \"city\": \"Zurich\",\r\n  \"email\": \"email@gmx.ch\",\r\n  \"gender\": \"female\",\r\n  \"shop_user_id\": 123456789,\r\n  \"language\": \"de\"\r\n}\r\n"
+				},
+				"description": "Create a sweepstake participant"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"id": "6c832c20-7392-4d21-aba7-256ff031ac9a",
+	"name": "denner-shop-api apig-v2",
+	"values": [
+		{
+			"key": "app_key",
+			"value": "{{denner_shop_app_key}}",
+			"type": "text",
+			"enabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "https://denner-shop-api.detailnet.ch/v2",
+			"type": "text",
+			"enabled": true
+		}
+	],
+	"team": null,
+	"timestamp": 1463572252593,
+	"synced": false,
+	"syncedFilename": "",
+	"isDeleted": false
+}

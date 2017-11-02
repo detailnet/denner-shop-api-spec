@@ -1,7 +1,7 @@
 {
 	"variables": [],
 	"info": {
-		"name": "denner-shop-api",
+		"name": "denner-shop-api-v2",
 		"_postman_id": "3aca5935-a378-72d6-92d8-4e5fa28ae0a6",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -29,7 +29,7 @@
 					},
 					{
 						"key": "App-Key",
-						"value": "{{header_app_key}}",
+						"value": "{{app_key}}",
 						"description": ""
 					}
 				],
@@ -54,7 +54,7 @@
 					},
 					{
 						"key": "App-Key",
-						"value": "{{header_app_key}}",
+						"value": "{{app_key}}",
 						"description": ""
 					}
 				],
@@ -84,7 +84,7 @@
 					},
 					{
 						"key": "App-Key",
-						"value": "{{header_app_key}}",
+						"value": "{{app_key}}",
 						"description": ""
 					}
 				],
@@ -114,7 +114,7 @@
 					},
 					{
 						"key": "App-Key",
-						"value": "{{header_app_key}}",
+						"value": "{{app_key}}",
 						"description": ""
 					}
 				],
