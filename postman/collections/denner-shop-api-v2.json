@@ -97,6 +97,31 @@
 			"response": []
 		},
 		{
+			"name": "/appraisals",
+			"request": {
+				"url": "{{base_url}}/appraisals",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "List appraisals"
+			},
+			"response": []
+		},
+		{
 			"name": "/sweepstake-participants",
 			"request": {
 				"url": "{{base_url}}/sweepstake-participants",
