@@ -11,6 +11,9 @@
             "display_name": "Hans M.",
             "city": "Cossonay",
             "language": "fr",
+            "article": {
+                "id": "051319"
+            },
             "upvotes": 3,
             "downvotes": 13
         },
@@ -25,6 +28,9 @@
             "display_name": "Michelle M.",
             "city": "Zürich",
             "language": "de",
+            "article": {
+                "id": "051319"
+            },
             "upvotes": 8,
             "downvotes": 4
         }
