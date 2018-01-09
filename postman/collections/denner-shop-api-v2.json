@@ -97,6 +97,36 @@
 			"response": []
 		},
 		{
+			"name": "/wines/{article_id}/appraisals/{appraisal_id}/votes",
+			"request": {
+				"url": "{{base_url}}/wines/012345/appraisals/44444444-aaaa-4444-aaaa-444444444444",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "App-Key",
+						"value": "{{app_key}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"up\",\r\n  \"shop_user_id\": 123456789\r\n}"
+				},
+				"description": "Vote on a wine appraisal"
+			},
+			"response": []
+		},
+		{
 			"name": "/appraisals",
 			"request": {
 				"url": "{{base_url}}/appraisals",
