@@ -424,6 +424,8 @@ paths:
                   language: "fr"
                   article:
                     id: 051901
+                  upvotes: 0
+                  downvotes: 1
                 -
                   id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
                   created_on: "2015-10-20T14:37:56+02:00"
@@ -436,6 +438,8 @@ paths:
                   language: "de"
                   article:
                     id: 051901
+                  upvotes: 2
+                  downvotes: 0
     post:
       summary: Create a new appraisal for the given wine
       description: >
@@ -443,8 +447,8 @@ paths:
       tags:
         - wine
       operationId: createAppraisal
-#      security:
-#        - appKey: []
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -475,6 +479,47 @@ paths:
               display_name: "Hans M."
               city: "Cossonay"
               language: "fr"
+
+  /wines/{article_id}/appraisals/{appraisal_id}/votes:
+    post:
+      summary: Vote on the given appraisal
+      description: >
+        Use this operation to create a new vote for a specific appraisal.
+      tags:
+        - wine
+      operationId: createVote
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/ContentTypeHeader'
+        - $ref: '#/parameters/ArticleIdPathParam'
+        - $ref: '#/parameters/AppraisalIdPathParam'
+        - name: vote
+          description: >
+            Data for the vote
+          in: body
+          schema:
+            $ref: '#/definitions/NewVote'
+          required: true
+
+      responses:
+        201:
+          description: Successful creation
+          schema:
+            $ref: '#/definitions/Vote'
+          examples:
+            application/json:
+
+              id: "d550a8cc-965d-4048-8a7f-12d2a3c0db0b"
+              created_on: "2018-01-09T08:45:16+00:00"
+              type: "up"
+              appraisal:
+                id: "9bbfabf0-3c05-4a84-ad91-b73a1c268c7e"
+                upvotes: 2
+                downvotes: 1
+              article:
+                id: "051296"
 
   ### Appraisals
   /appraisals:
@@ -541,6 +586,8 @@ paths:
                   language: "fr"
                   article:
                     id: 051901
+                  upvotes: 0
+                  downvotes: 1
                 -
                   id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
                   created_on: "2015-10-20T14:37:56+02:00"
@@ -553,6 +600,8 @@ paths:
                   language: "de"
                   article:
                     id: 051901
+                  upvotes: 2
+                  downvotes: 0
 
   ### Sweepstake participants
   /sweepstake-participants:
@@ -629,6 +678,13 @@ parameters:
     type: string
     required: true
     pattern: '/^\d{6}$/'
+  AppraisalIdPathParam:
+    name: appraisal_id
+    description: The unique identifier of an appraisal
+    in: path
+    type: string
+    required: true
+    pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
   FilterParam:
     name: filter
     in: query
@@ -1129,6 +1185,16 @@ definitions:
         description: Locale
       article:
         $ref: '#/definitions/AppraisalArticle'
+      upvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of up-votes
+      downvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of down-votes
 
   AppraisalArticle:
     type: object
@@ -1212,6 +1278,66 @@ definitions:
         gender: "female"
         shop_user_id: 123456789
         language: "fr"
+
+  ### Vote
+  Vote:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      created_on:
+        type: string
+        format: date-time
+        description: Timestamp
+      type:
+        type: string
+        description: Type ("up" or "down")
+      appraisal:
+        $ref: '#/definitions/VoteAppraisal'
+      article:
+        $ref: '#/definitions/VoteArticle'
+
+  VoteAppraisal:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      upvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of up-votes after this vote
+      downvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of down-votes after this vote
+
+  VoteArticle:
+    type: object
+    properties:
+      id:
+        type: string
+        pattern: '/^\d{6}$/'
+        description: Navision article code
+
+  NewVote:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Type ("up" or "down")
+      shop_user_id:
+        type: integer
+        description: Identifier for the person's Wineshop user account
+    required:
+      - type
+      - shop_user_id
+    example:
+      application/json:
+
+        type: "up"
+        shop_user_id: 123456789
 
   ### Sweepstake participant
   SweepstakeParticipant:
