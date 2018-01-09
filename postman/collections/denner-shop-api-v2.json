@@ -99,7 +99,7 @@
 		{
 			"name": "/wines/{article_id}/appraisals/{appraisal_id}/votes",
 			"request": {
-				"url": "{{base_url}}/wines/012345/appraisals/44444444-aaaa-4444-aaaa-444444444444",
+				"url": "{{base_url}}/wines/012345/appraisals/44444444-aaaa-4444-aaaa-444444444444/votes",
 				"method": "POST",
 				"header": [
 					{
