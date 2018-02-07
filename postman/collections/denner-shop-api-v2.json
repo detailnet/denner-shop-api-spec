@@ -8,25 +8,6 @@
 	"item": [
 		{
 			"name": "/wine-growers",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"",
-							"for (var i =0; i < jsonData.articles.length; ++i) {",
-							"    var article = jsonData.articles[i],",
-							"        testName = 'Test content: ' + article.id + ' - ' + article.name;",
-							"",
-							"    tests[testName] = article.content &&  article.content !== null;",
-							"}",
-							""
-						]
-					}
-				}
-			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -86,7 +67,10 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{base_url}}/wines",
 					"host": [
@@ -114,7 +98,10 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{base_url}}/wines/012345/appraisals",
 					"host": [
@@ -220,7 +207,10 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{base_url}}/appraisals",
 					"host": [
