@@ -577,7 +577,7 @@ paths:
           examples:
             application/json:
 
-              total_wine_growers: 15
+              total_items: 15
               wine_growers:
                 -
                   id: 447ff1e5-798c-4ac8-8ff2-98bfbb4700bd
@@ -1670,7 +1670,7 @@ definitions:
 #        description: The page size
 #        type: integer
 #        format: int32
-      total_wine_growers:
+      total_items:
         description: The number of items on all pages
         type: integer
         format: int32
