@@ -33,7 +33,7 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/FilterParam'
-#        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/SortParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -428,8 +428,8 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
-#        - $ref: '#/parameters/AcceptLanguageHeader'
         - $ref: '#/parameters/ArticleIdPathParam'
+#        - $ref: '#/parameters/SortSimpleParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -565,6 +565,8 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/FilterParam'
+        - $ref: '#/parameters/SortParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -610,7 +612,7 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
-#        - $ref: '#/parameters/AcceptLanguageHeader'
+        - $ref: '#/parameters/SortSimpleParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
         - name: f.id
@@ -740,13 +742,20 @@ parameters:
     required: false
     format: int32
     default: 10
-#  SortParam:
-#    name: sort
-#    description: >
-#      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
-#    in: query
-#    type: string
-#    required: false
+  SortParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=[{"property":"name","direction":"desc"}]" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
+  SortSimpleParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
   ArticleIdPathParam:
     name: article_id
     description: The unique identifier of an article
