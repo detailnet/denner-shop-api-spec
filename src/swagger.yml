@@ -1,12 +1,12 @@
 swagger: '2.0'
 info:
   description: RESTful API for the Denner Wineshop
-  version: 1.0.0
+  version: 2.0.0
   title: Denner Shop Web Service
   contact:
     name: DETAIL NET
     email: support+denner-shop-api@detailnet.ch
-host: denner-shop-api-v1.detailnet.ch
+host: denner-shop-api-v2.detailnet.ch
 schemes:
   - https
 consumes:
@@ -33,7 +33,7 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/FilterParam'
-#        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/SortParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -49,297 +49,312 @@ paths:
               total_items: 1
               articles:
               -
-                id: "051273"
-                name: "Mandorla Primitivo IGT Puglia"
+                id: '051273'
+                name: Mandorla Primitivo IGT Puglia
                 title:
                   -
-                    locale: "de"
-                    value: "Mandorla Primitivo di Puglia IGT"
+                    locale: de
+                    value: Mandorla Primitivo di Puglia IGT
                   -
-                    locale: "fr"
-                    value: "Mandorla Primitivo di Puglia IGT"
+                    locale: fr
+                    value: Mandorla Primitivo di Puglia IGT
                   -
-                    locale: "it"
-                    value: "Mandorla Primitivo di Puglia IGT"
+                    locale: it
+                    value: Mandorla Primitivo di Puglia IGT
                 description:
                   -
-                    locale: "de"
-                    value: "2013, Apulien, Italien, 6 x 75 cl"
+                    locale: de
+                    value: 2013, Apulien, Italien, 6 x 75 cl
                   -
-                    locale: "fr"
-                    value: "2013, les Pouilles, Italie, 6 x 75 cl"
+                    locale: fr
+                    value: 2013, les Pouilles, Italie, 6 x 75 cl
                   -
-                    locale: "it"
-                    value: "2013, Puglia, Italia, 6 x 75 cl"
-#                composite_description:
-#                  -
-#                    locale: "de"
-#                    value: ""
-#                  -
-#                    locale: "fr"
-#                    value: ""
-#                  -
-#                    locale: "it"
-#                    value: ""
+                    locale: it
+                    value: 2013, Puglia, Italia, 6 x 75 cl
                 article_group:
-                  id: "0c309757-5432-4652-8201-ec35f31c5260"
-                  code: "60-56"
-                  name: "Italien Rot 70 cl"
+                  id: 0c309757-5432-4652-8201-ec35f31c5260
+                  code: 60-56
+                  name: Italien Rot 70 cl
                   parent:
-                    id: "3f3df00f-6a7e-49a9-8eca-a36727ca4977"
-                    code: "60"
-                    name: "Weine"
-#                purchasing_department: "W"
-#                online_group:
-#                  id: "a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee"
-#                  code: "2-9"
-#                  disabled: false
-#                  allow_featuring: true
-#                  allow_promotion: true
-#                  allow_background: true
-#                  title:
-#                    -
-#                      locale: "de"
-#                      value: "Wein/Champagner"
-#                    -
-#                      locale: "fr"
-#                      value: "Vins/champagnes"
-#                    -
-#                      locale: "it"
-#                      value: "Vino/champagne"
-#                  parent:
-#                    id: "8fd653c3-a86b-4529-bbb5-58d06919d484"
-#                    code: "2"
-#                    disabled: false
-#                    allow_featuring: true
-#                    allow_promotion: true
-#                    allow_background: true
-#                    title:
-#                      -
-#                        locale: "de"
-#                        value: "Getränke"
-#                      -
-#                        locale: "fr"
-#                        value: "Boissons"
-#                      -
-#                        locale: "it"
-#                        value: "Bevande"
-#                prices:
-#                  sales: 9.9
-#                  instead: 11.4
-#                  base: 1.32
-#                  final: true
-#                  by_quantity:
-#                    -
-#                      quantity: 1
-#                      sales: 9.9
-#                      instead: 11.4
-#                      final: true
-#                    -
-#                      quantity: 6
-#                      sales: 59.4
-#                      instead: 68.4
-#                      final: true
+                    id: 3f3df00f-6a7e-49a9-8eca-a36727ca4977
+                    code: '60'
+                    name: Weine
+                online_group:
+                  id: a2664d3a-93b4-4277-9e6e-c95ad8b6c6ee
+                  code: 2-9
+                  disabled: false
+                  allow_featuring: true
+                  allow_promotion: true
+                  allow_background: true
+                  title:
+                    -
+                      locale: de
+                      value: Wein/Champagner
+                    -
+                      locale: fr
+                      value: Vins/champagnes
+                    -
+                      locale: it
+                      value: Vino/champagne
+                  parent:
+                    id: 8fd653c3-a86b-4529-bbb5-58d06919d484
+                    code: '2'
+                    disabled: false
+                    allow_featuring: true
+                    allow_promotion: true
+                    allow_background: true
+                    title:
+                      -
+                        locale: de
+                        value: Getränke
+                      -
+                        locale: fr
+                        value: Boissons
+                      -
+                        locale: it
+                        value: Bevande
                 barcodes:
                   -
-                    value: "086003000094"
-                    type: "UPC12"
+                    value: 086003000094
+                    type: UPC12
                     quantity: 1
                     master: false
                   -
-                    value: "086003004344"
-                    type: "UPC12"
+                    value: 086003004344
+                    type: UPC12
                     quantity: 6
                     master: false
                   -
-                    value: "5010186016172"
-                    type: "EAN13"
+                    value: '5010186016172'
+                    type: EAN13
                     quantity: 1
                     master: true
                   -
-                    value: "0860030043442"
-                    type: "EAN13"
+                    value: 0860030043442
+                    type: EAN13
                     quantity: 6
                     master: true
                 content:
                   size: 0.75
                   label:
                     -
-                      locale: "de"
-                      value: "cl"
+                      locale: de
+                      value: cl
                     -
-                      locale: "fr"
-                      value: "cl"
+                      locale: fr
+                      value: cl
                     -
-                      locale: "it"
-                      value: "cl"
+                      locale: it
+                      value: cl
                   text:
                     -
-                      locale: "de"
-                      value: "75 cl"
+                      locale: de
+                      value: 75 cl
                     -
-                      locale: "fr"
-                      value: "75 cl"
+                      locale: fr
+                      value: 75 cl
                     -
-                      locale: "it"
-                      value: "75 cl"
+                      locale: it
+                      value: 75 cl
                 base:
                   text:
                     -
-                      locale: "de"
-                      value: "10 cl"
+                      locale: de
+                      value: 10 cl
                     -
-                      locale: "fr"
-                      value: "10 cl"
+                      locale: fr
+                      value: 10 cl
                     -
-                      locale: "it"
-                      value: "10 cl"
-#                cooling: 0
+                      locale: it
+                      value: 10 cl
                 eco_labels:
                   -
-                    id: "66d94617-bbd7-477e-ae66-183deb67ba5b"
-                    code: "bio"
-                    name: "Bio"
-#                packshots:
-#                  -
-#                    id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
-#                    url: "https://denner-assets.s3-eu-west-1.amazonaws.com/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
-#                    cdn_url: "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
-#                    quantity: 6
-#                    created_on: "2016-01-07T15:42:19+02:00"
+                    id: 66d94617-bbd7-477e-ae66-183deb67ba5b
+                    code: bio
+                    name: Bio
                 wine:
                   country:
-                    id: "IT"
+                    id: IT
                     title:
                       -
-                        locale: "de"
-                        value: "Italien"
+                        locale: de
+                        value: Italien
                       -
-                        locale: "fr"
-                        value: "Italie"
+                        locale: fr
+                        value: Italie
                       -
-                        locale: "it"
-                        value: "Italia"
+                        locale: it
+                        value: Italia
                     flag:
-                      image_url: "https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png"
+                      image_url: https://denner-assets.s3-eu-west-1.amazonaws.com/flags/IT.png
                   region:
-                    id: "b19c42bf-ed78-46ff-ad6f-fc688a059e6a"
+                    id: b19c42bf-ed78-46ff-ad6f-fc688a059e6a
                     title:
                       -
-                        locale: "de"
-                        value: "Apulien"
+                        locale: de
+                        value: Apulien
                       -
-                        locale: "fr"
-                        value: "Les Pouilles"
+                        locale: fr
+                        value: Les Pouilles
                       -
-                        locale: "it"
-                        value: "Puglia"
+                        locale: it
+                        value: Puglia
                   type:
                     id: 2
                     title:
                       -
-                        locale: "de"
-                        value: "Rotwein"
+                        locale: de
+                        value: Rotwein
                       -
-                        locale: "fr"
-                        value: "Vin rouge"
+                        locale: fr
+                        value: Vin rouge
                       -
-                        locale: "it"
-                        value: "Vino rosso"
+                        locale: it
+                        value: Vino rosso
                   online_specials:
-                    - id: wine
-                      sort_index: 10
+                    -
+                      id: rarity
                       title:
-                        - locale: de
-                          value: Weine
-                        - locale: fr
-                          value: Vins
-                        - locale: it
-                          value: Vini
+                        -
+                          locale: de
+                          value: Rärität
+                        -
+                          locale: fr
+                          value: Rareté
+                        -
+                          locale: it
+                          value: Rarità
                   box:
-                    code: "KA"
+                    code: KA
                     batch_size: 3
                   year: 2013
-                  fits_with:
+                  food_matches:
                     -
-                      locale: "de"
-                      value: "Pasta, Fleisch mit würzigen Saucen"
+                      id: PASTA
+                      titles:
+                        -
+                          locale: de
+                          value: Pasta
+                        -
+                          locale: fr
+                          value: Pâtes
+                        -
+                          locale: it
+                          value: Pasta
                     -
-                      locale: "fr"
-                      value: "Pâtes, viande aux sauces relevées"
+                      id: MEAT-SAUCE
+                      titles:
+                        -
+                          locale: de
+                          value: Fleisch mit würzigen Saucen
+                        -
+                          locale: fr
+                          value: Viande aux sauces relevées
+                        -
+                          locale: it
+                          value: Carni accompagnate da salse aromatiche
+                  grapes:
                     -
-                      locale: "it"
-                      value: "Pasta, carni accompagnate da salse aromatiche"
-                  varietal:
-                    -
-                      locale: "de"
-                      value: "Primitivo"
-                    -
-                      locale: "fr"
-                      value: "Primitivo"
-                    -
-                      locale: "it"
-                      value: "Primitivo"
+                      id: PRIMITIVO
+                      title:
+                        -
+                          locale: de
+                          value: Primitivo
+                        -
+                          locale: fr
+                          value: Primitivo
+                        -
+                          locale: it
+                          value: Primitivo
+                      sort_index: 0
                   character:
                     -
-                      locale: "de"
-                      value: "Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen."
+                      locale: de
+                      value: Dunkles Rubinrot. In der Nase Aromen von roten Beeren, reifen Kirschen und Brombeeren. Geschmeidig im Gaumen.
                     -
-                      locale: "fr"
-                      value: "Robe rubis foncé. Nez de baies rouges, de cerises matures et de mûres. Bouche moelleuse."
+                      locale: fr
+                      value: Robe rubis foncé. Nez de baies rouges, de cerises matures et de mûres. Bouche moelleuse.
                     -
-                      locale: "it"
-                      value: "Rosso rubino scuro. Al naso aromi di bacche rosse, ciliege mature e more. Morbido al palato."
+                      locale: it
+                      value: Rosso rubino scuro. Al naso aromi di bacche rosse, ciliege mature e more. Morbido al palato.
                   temperature:
                     -
-                      locale: "de"
-                      value: "16-18 °C"
+                      locale: de
+                      value: 16-18 °C
                     -
-                      locale: "fr"
-                      value: "16-18 °C"
+                      locale: fr
+                      value: 16-18 °C
                     -
-                      locale: "it"
-                      value: "16-18 °C"
-                  awards:
+                      locale: it
+                      value: 16-18 °C
+                  medals:
                     -
-                      locale: "de"
-                      value: ""
-                    -
-                      locale: "fr"
-                      value: ""
-                    -
-                      locale: "it"
-                      value: ""
+                      expert:
+                        id: EXPOVINA
+                        title:
+                          -
+                            locale: de
+                            value: Expovina
+                          -
+                            locale: fr
+                            value: Expovina
+                          -
+                            locale: it
+                            value: Expovina
+                      year: 2016
+                      wine_year: 2013
+                      valuation: Gold
                   storage:
                     -
-                      locale: "de"
-                      value: "3 Jahre"
+                      locale: de
+                      value: 3 Jahre
                     -
-                      locale: "fr"
-                      value: "3 ans"
+                      locale: fr
+                      value: 3 ans
                     -
-                      locale: "it"
-                      value: "3 anni"
+                      locale: it
+                      value: 3 anni
+                  grower:
+                    id: 447ff1e5-798c-4ac8-8ff2-98bfbb4700bd
+                    name: Thomas Weinmacher
+                    description:
+                      -
+                        locale: de
+                        value: Es liegt in der Tradition der Familie Weinmacher, hervorragende Weine
+                          in Eichenfässern zu produzieren. ...
+                      -
+                        locale: fr
+                        value: ''
+                      -
+                        locale: it
+                        value: ''
+                    picture:
+                      id: 3c8cc89e-6350-4a8a-8854-d2feafc9b62e
+                      cdn_url: https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png
+                      created_on: '2017-10-19T10:20:57+01:00'
+                    url: https://www.weinmacher-weine.com/
                   rating:
                     value: 4.45
                     total: 11
                     valid: true
                   shop:
-                    url: "http://denner-wineshop.ch/skuredirect/051273/"
+                    url: https://www.denner.ch/skuredirect/051273/
+                    for_sale: true
                     stock:
                       value: -15
                       code: 2
                       message:
                         -
-                          locale: "de"
-                          value: "Derzeit nicht bestellbar"
+                          locale: de
+                          value: Derzeit nicht bestellbar
                         -
-                          locale: "fr"
-                          value: "Actuellement pas disponible"
+                          locale: fr
+                          value: Actuellement pas disponible
                         -
-                          locale: "it"
-                          value: "Attualmente non disponibile"
+                          locale: it
+                          value: Attualmente non disponibile
                     quantity: 6
+                    compared: false
                     prices:
                       sales: 59.4
                       instead: 68.4
@@ -357,33 +372,49 @@ paths:
                           final: true
                     discount:
                       -
-                        locale: "de"
-                        value: "13%"
+                        locale: de
+                        value: 13%
                       -
-                        locale: "fr"
-                        value: "13%"
+                        locale: fr
+                        value: 13%
                       -
-                        locale: "it"
-                        value: "13%"
+                        locale: it
+                        value: 13%
                     title:
-                      - locale: "de"
-                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
-                      - locale: "fr"
-                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
-                      - locale: "it"
-                        value: "Mandorla Primitivo di Puglia IGT 6 x 75 cl"
-                    packshot:
-                      id: "5983a33d-ac61-49a8-a836-43259e78e9d0"
-                      cdn_url: "https://denner.imgix.net/assets/5983a33d-ac61-49a8-a836-43259e78e9d0/051273_6.png"
-                      quantity: 6
-                      created_on: "2016-01-07T15:42:19+02:00"
+                      -
+                        locale: de
+                        value: Mandorla Primitivo di Puglia IGT 6 x 75 cl
+                      -
+                        locale: fr
+                        value: Mandorla Primitivo di Puglia IGT 6 x 75 cl
+                      -
+                        locale: it
+                        value: Mandorla Primitivo di Puglia IGT 6 x 75 cl
+                    pictures:
+                      -
+                        id: 5983a33d-ac61-49a8-a836-43259e78e9d0
+                        cdn_url: https://denner.imgix.net/assets/103354f2-1fbc-47e9-a40a-bf93b04e1680/web/051273_c_K_DL.png
+                        quantity: 1
+                        created_on: '2016-01-07T15:42:19+02:00'
+                        view:
+                          id: front
+                      -
+                        id: dabfe014-eb50-4871-9c96-e49324af7493
+                        cdn_url: https://denner.imgix.net/assets/103354f2-1fbc-47e9-a40a-bf93b04e1680/web/051273_c_K_DL_back.png
+                        quantity: 1
+                        created_on: '2016-01-07T15:49:03+02:00'
+                        view:
+                          id: back
                     notes:
-                      - locale: "de"
-                        value: "<b>Allgemeiner</b> Hinweis"
-                      - locale: "fr"
+                      -
+                        locale: de
+                        value: "<b>Allgemeiner </b>Hinweis"
+                      -
+                        locale: fr
                         value: "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
-                      - locale: "it"
-                        value: "<font color=\"#ff0000\">​Allgemeiner Hinweis</font>"
+                      -
+                        locale: it
+                        value: <font color="#ff0000">​Allgemeiner Hinweis</font>
 
   /wines/{article_id}/appraisals:
     get:
@@ -397,8 +428,8 @@ paths:
         - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
-#        - $ref: '#/parameters/AcceptLanguageHeader'
         - $ref: '#/parameters/ArticleIdPathParam'
+#        - $ref: '#/parameters/SortSimpleParam'
         - $ref: '#/parameters/PageParam'
         - $ref: '#/parameters/PageSizeParam'
       responses:
@@ -422,6 +453,10 @@ paths:
                   display_name: "Hans M."
                   city: "Cossonay"
                   language: "fr"
+                  article:
+                    id: 051901
+                  upvotes: 0
+                  downvotes: 1
                 -
                   id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
                   created_on: "2015-10-20T14:37:56+02:00"
@@ -432,6 +467,10 @@ paths:
                   display_name: "Michelle M."
                   city: "Zürich"
                   language: "de"
+                  article:
+                    id: 051901
+                  upvotes: 2
+                  downvotes: 0
     post:
       summary: Create a new appraisal for the given wine
       description: >
@@ -439,8 +478,8 @@ paths:
       tags:
         - wine
       operationId: createAppraisal
-#      security:
-#        - appKey: []
+      security:
+        - appKey: []
       parameters:
         - $ref: '#/parameters/AcceptHeader'
         - $ref: '#/parameters/ContentTypeHeader'
@@ -471,6 +510,176 @@ paths:
               display_name: "Hans M."
               city: "Cossonay"
               language: "fr"
+
+  /wines/{article_id}/appraisals/{appraisal_id}/votes:
+    post:
+      summary: Vote on the given appraisal
+      description: >
+        Use this operation to create a new vote for a specific appraisal.
+      tags:
+        - wine
+      operationId: createVote
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/ContentTypeHeader'
+        - $ref: '#/parameters/ArticleIdPathParam'
+        - $ref: '#/parameters/AppraisalIdPathParam'
+        - name: vote
+          description: >
+            Data for the vote
+          in: body
+          schema:
+            $ref: '#/definitions/NewVote'
+          required: true
+
+      responses:
+        201:
+          description: Successful creation
+          schema:
+            $ref: '#/definitions/Vote'
+          examples:
+            application/json:
+
+              id: "d550a8cc-965d-4048-8a7f-12d2a3c0db0b"
+              created_on: "2018-01-09T08:45:16+00:00"
+              type: "up"
+              appraisal:
+                id: "9bbfabf0-3c05-4a84-ad91-b73a1c268c7e"
+                upvotes: 2
+                downvotes: 1
+              article:
+                id: "051296"
+
+  ### Wine growers
+  /wine-growers:
+    get:
+      summary: List wine growers
+      description: >
+        Use this operation to get a list of all wine growers (Winzer).
+      tags:
+        - wineGrower
+      operationId: listWineGrowers
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/FilterParam'
+        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/WineGrowersResponse'
+          examples:
+            application/json:
+
+              total_items: 15
+              wine_growers:
+                -
+                  id: 447ff1e5-798c-4ac8-8ff2-98bfbb4700bd
+                  name: Thomas Weinmacher
+                  description:
+                    -
+                      locale: de
+                      value: Es liegt in der Tradition der Familie Weinmacher, hervorragende Weine in
+                        Eichenfässern zu produzieren. ...
+                    -
+                      locale: fr
+                      value: ''
+                    -
+                      locale: it
+                      value: ''
+                  picture:
+                    id: 3c8cc89e-6350-4a8a-8854-d2feafc9b62e
+                    cdn_url: https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png
+                    created_on: '2017-10-19T10:20:57+01:00'
+                  url: https://www.weinmacher-weine.com/
+
+  ### Appraisals
+  /appraisals:
+    get:
+      summary: List appraisals
+      description: >
+        Use this operation to get a list of all appraisals (Bewertungen).
+      tags:
+        - appraisal
+      operationId: listAppraisals
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/SortSimpleParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+        - name: f.id
+          description: Filter by ID
+          in: query
+          type: string
+          required: false
+        - name: f.wine_id
+          description: Filter by wine ID
+          in: query
+          type: string
+          required: false
+        - name: f.shop_user_id
+          description: Filter by Wineshop user ID
+          in: query
+          type: integer
+          format: int32
+          required: false
+        - name: f.email
+          description: Filter by email address
+          in: query
+          type: string
+          required: false
+        - name: f.source
+          description: Filter by source
+          in: query
+          type: string
+          required: false
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/AppraisalsResponse'
+          examples:
+            application/json:
+
+              total_appraisals: 15
+              appraisals:
+                -
+                  id: "7063984c-4eea-4abe-825b-e80612ba89c3"
+                  created_on: "2015-10-30T10:16:41+02:00"
+                  wine_year: 2013
+                  title: "un très très bon vin"
+                  description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! le cépage ORIGINAL !!! Denner, qu'est ce qui vous arrive ???"
+                  response: "Merci!"
+                  rating: 5
+                  display_name: "Hans M."
+                  city: "Cossonay"
+                  language: "fr"
+                  article:
+                    id: 051901
+                  upvotes: 0
+                  downvotes: 1
+                -
+                  id: "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7"
+                  created_on: "2015-10-20T14:37:56+02:00"
+                  wine_year: null
+                  title: "Ein Primitivo passt immer."
+                  description: null
+                  rating: 4
+                  display_name: "Michelle M."
+                  city: "Zürich"
+                  language: "de"
+                  article:
+                    id: 051901
+                  upvotes: 2
+                  downvotes: 0
 
   ### Sweepstake participants
   /sweepstake-participants:
@@ -533,13 +742,20 @@ parameters:
     required: false
     format: int32
     default: 10
-#  SortParam:
-#    name: sort
-#    description: >
-#      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
-#    in: query
-#    type: string
-#    required: false
+  SortParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=[{"property":"name","direction":"desc"}]" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
+  SortSimpleParam:
+    name: sort
+    description: >
+      Sort the results, e.g. "sort=name__desc" will sort by name (Z to A)
+    in: query
+    type: string
+    required: false
   ArticleIdPathParam:
     name: article_id
     description: The unique identifier of an article
@@ -547,6 +763,13 @@ parameters:
     type: string
     required: true
     pattern: '/^\d{6}$/'
+  AppraisalIdPathParam:
+    name: appraisal_id
+    description: The unique identifier of an appraisal
+    in: path
+    type: string
+    required: true
+    pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
   FilterParam:
     name: filter
     in: query
@@ -745,8 +968,8 @@ definitions:
         $ref: '#/definitions/AssignedArticleGroup'
 #      purchasing_department:
 #        $ref: '#/definitions/PurchasingDepartment'
-#      online_group:
-#        $ref: '#/definitions/AssignedOnlineGroup'
+      online_group:
+        $ref: '#/definitions/AssignedOnlineGroup'
 #      prices:
 #        $ref: '#/definitions/ArticlePrices'
       barcodes:
@@ -824,20 +1047,6 @@ definitions:
       text:
         $ref: '#/definitions/Translations'
 
-  Packshot:
-    type: object
-    properties:
-      id:
-        $ref: '#/definitions/UUIDv4'
-      url:
-        $ref: '#/definitions/Url'
-      cdn_url:
-        $ref: '#/definitions/Url'
-      quantity:
-        $ref: '#/definitions/Quantity'
-      created_on:
-        $ref: '#/definitions/Date'
-
   ArticleWine:
     type: object
     properties:
@@ -849,44 +1058,96 @@ definitions:
         $ref: '#/definitions/WineType'
       online_specials:
         $ref: '#/definitions/OnlineSpecials'
+      box:
+        $ref: '#/definitions/WineBox'
       year:
         $ref: '#/definitions/Year'
-      fits_with:
-        $ref: '#/definitions/Translations'
-      varietal:
-        $ref: '#/definitions/Translations'
+      food_matches:
+        $ref: '#/definitions/FoodMatches'
+      grapes:
+        $ref: '#/definitions/Grapes'
       character:
         $ref: '#/definitions/Translations'
       temperature:
         $ref: '#/definitions/Translations'
-      awards:
-        $ref: '#/definitions/Translations'
+      medals:
+        $ref: '#/definitions/Medals'
       storage:
         $ref: '#/definitions/Translations'
+      grower:
+        $ref: '#/definitions/WineGrowers'
       rating:
         $ref: '#/definitions/Rating'
       shop:
         $ref: '#/definitions/WineShop'
-      box:
-        $ref: '#/definitions/WineBox'
+
+  FoodMatch:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID
+      titles:
+        $ref: '#/definitions/Translations'
+
+  Grape:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID
+      titles:
+        $ref: '#/definitions/Translations'
+      sort_index:
+        $ref: '#/definitions/SortIndex'
+
+  Medal:
+    type: object
+    properties:
+      expert:
+        $ref: '#/definitions/Expert'
+      year:
+        $ref: '#/definitions/Year'
+      wine_year:
+        $ref: '#/definitions/Year'
+      valuation:
+        type: string
+        description: Given valuation/rating (e.g. Gold)
+
+  Expert:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID
+      titles:
+        $ref: '#/definitions/Translations'
+      sort_index:
+        $ref: '#/definitions/SortIndex'
 
   WineShop:
     type: object
     properties:
       url:
         $ref: '#/definitions/Url'
+      for_sale:
+        type: boolean
+        description: Is the wine for sale (can it be bought)?
       stock:
         $ref: '#/definitions/Stock'
       quantity:
         $ref: '#/definitions/Quantity'
+      compared:
+        type: boolean
+        description: Is the wine's instead price compared externally (Konkurrenzvergleich)?
       prices:
         $ref: '#/definitions/ArticlePrices'
       discount:
         $ref: '#/definitions/Translations'
       title:
         $ref: '#/definitions/Translations'
-      packshot:
-        $ref: '#/definitions/Packshot'
+      pictures:
+        $ref: '#/definitions/Packshots'
       notes:
         $ref: '#/definitions/Translations'
 
@@ -970,32 +1231,63 @@ definitions:
         minimum: 0
         description: Batch size
 
-#  ### Online group
-#  AssignedOnlineGroup:
-#    type: object
-#    properties:
-#      id:
-#        $ref: '#/definitions/UUIDv4'
-#      code:
-#        type: integer
-#        format: int32
-#        description: Navision online group code
-#      disabled:
-#        type: boolean
-#        description: Is the group disabled?
-#      allow_featuring:
-#        type: boolean
-#        description: Does the group allow the assigned articles to be featured (i.e. displayed on front/main/home page)?
-#      allow_promotion:
-#        type: boolean
-#        description: Does the group allow the assigned articles to be promoted (i.e. displayed on a promotional page)?
-#      allow_background:
-#        type: boolean
-#        description: Does the group allow the assigned articles to be displayed with a background (i.e. displayed on a page with a deceptive/trivializing background)?
-#      title:
-#        $ref: '#/definitions/Translations'
-#      parent:
-#        $ref: '#/definitions/AssignedOnlineGroup'
+  Asset:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      cdn_url:
+        $ref: '#/definitions/Url'
+      created_on:
+        $ref: '#/definitions/Date'
+
+  Packshot:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      cdn_url:
+        $ref: '#/definitions/Url'
+      quantity:
+        $ref: '#/definitions/Quantity'
+      created_on:
+        $ref: '#/definitions/Date'
+      view:
+        $ref: '#/definitions/PackshotView'
+
+  PackshotView:
+    type: object
+    properties:
+      id:
+        type: string
+        description: View ID
+
+  ### Online group
+  AssignedOnlineGroup:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      code:
+        type: integer
+        format: int32
+        description: Navision online group code
+      disabled:
+        type: boolean
+        description: Is the group disabled?
+      allow_featuring:
+        type: boolean
+        description: Does the group allow the assigned articles to be featured (i.e. displayed on front/main/home page)?
+      allow_promotion:
+        type: boolean
+        description: Does the group allow the assigned articles to be promoted (i.e. displayed on a promotional page)?
+      allow_background:
+        type: boolean
+        description: Does the group allow the assigned articles to be displayed with a background (i.e. displayed on a page with a deceptive/trivializing background)?
+      title:
+        $ref: '#/definitions/Translations'
+      parent:
+        $ref: '#/definitions/AssignedOnlineGroup'
 
   ### Online special
   OnlineSpecial:
@@ -1009,7 +1301,23 @@ definitions:
       title:
         $ref: '#/definitions/Translations'
 
-  ### Wine
+  ### Wine grower
+  WineGrower:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      name:
+        type: string
+        description: Name
+      description:
+        $ref: '#/definitions/Translations'
+      picture:
+        $ref: '#/definitions/Asset'
+      url:
+        $ref: '#/definitions/Url'
+
+  ### Appraisal
   Appraisal:
     type: object
     properties:
@@ -1045,6 +1353,26 @@ definitions:
       language:
         type: string
         description: Locale
+      article:
+        $ref: '#/definitions/AppraisalArticle'
+      upvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of up-votes
+      downvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of down-votes
+
+  AppraisalArticle:
+    type: object
+    properties:
+      id:
+        type: string
+        pattern: '/^\d{6}$/'
+        description: Navision article code
 
   NewAppraisal:
     type: object
@@ -1120,6 +1448,66 @@ definitions:
         gender: "female"
         shop_user_id: 123456789
         language: "fr"
+
+  ### Vote
+  Vote:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      created_on:
+        type: string
+        format: date-time
+        description: Timestamp
+      type:
+        type: string
+        description: Type ("up" or "down")
+      appraisal:
+        $ref: '#/definitions/VoteAppraisal'
+      article:
+        $ref: '#/definitions/VoteArticle'
+
+  VoteAppraisal:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      upvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of up-votes after this vote
+      downvotes:
+        type: integer
+        format: int32
+        minimum: 0
+        description: Number of down-votes after this vote
+
+  VoteArticle:
+    type: object
+    properties:
+      id:
+        type: string
+        pattern: '/^\d{6}$/'
+        description: Navision article code
+
+  NewVote:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Type ("up" or "down")
+      shop_user_id:
+        type: integer
+        description: Identifier for the person's Wineshop user account
+    required:
+      - type
+      - shop_user_id
+    example:
+      application/json:
+
+        type: "up"
+        shop_user_id: 123456789
 
   ### Sweepstake participant
   SweepstakeParticipant:
@@ -1207,10 +1595,10 @@ definitions:
     items:
       $ref: '#/definitions/EcoLabel'
 
-#  Packshots:
-#    type: array
-#    items:
-#      $ref: '#/definitions/Packshot'
+  Packshots:
+    type: array
+    items:
+      $ref: '#/definitions/Packshot'
 
   Barcodes:
     type: array
@@ -1226,6 +1614,26 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/OnlineSpecial'
+
+  FoodMatches:
+    type: array
+    items:
+      $ref: '#/definitions/FoodMatch'
+
+  Grapes:
+    type: array
+    items:
+      $ref: '#/definitions/Grape'
+
+  Medals:
+    type: array
+    items:
+      $ref: '#/definitions/Medal'
+
+  WineGrowers:
+    type: array
+    items:
+      $ref: '#/definitions/WineGrower'
 
   Appraisals:
     type: array
@@ -1250,6 +1658,24 @@ definitions:
         format: int32
       articles:
         $ref: '#/definitions/Articles'
+
+  WineGrowersResponse:
+    type: object
+    properties:
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      wine_growers:
+        $ref: '#/definitions/WineGrowers'
 
   AppraisalsResponse:
     type: object

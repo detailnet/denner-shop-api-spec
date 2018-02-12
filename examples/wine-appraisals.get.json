@@ -10,7 +10,12 @@
             "rating": 5,
             "display_name": "Hans M.",
             "city": "Cossonay",
-            "language": "fr"
+            "language": "fr",
+            "article": {
+                "id": "051319"
+            },
+            "upvotes": 3,
+            "downvotes": 13
         },
         {
             "id": "a8c82c69-e975-4d3b-b0ba-aae6ed961cd7",
@@ -22,8 +27,13 @@
             "rating": 4,
             "display_name": "Michelle M.",
             "city": "Zürich",
-            "language": "de"
+            "language": "de",
+            "article": {
+                "id": "051319"
+            },
+            "upvotes": 8,
+            "downvotes": 4
         }
     ],
-    "total_appraisals": 15
+    "total_appraisals": 2
 }

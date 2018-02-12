@@ -1,7 +1,7 @@
 {
 	"variables": [],
 	"info": {
-		"name": "denner-shop-api",
+		"name": "denner-shop-api-v1",
 		"_postman_id": "3aca5935-a378-72d6-92d8-4e5fa28ae0a6",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
