@@ -17,9 +17,10 @@
                     "value": ""
                 }
             ],
-            "picture":{
+            "picture": {
                 "id": "3c8cc89e-6350-4a8a-8854-d2feafc9b62e",
-                "cdn_url": "https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png"
+                "cdn_url": "https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png",
+                "created_on": "2017-10-19T10:20:57+01:00"
             },
             "url": "https://www.weinmacher-weine.com/"
         }
