@@ -13,7 +13,7 @@ The Denner Shop Web Service provides data and functions for the Denner Wineshop.
 * `GET /wine-growers` (Winzer, [example response](examples/wine-growers.get.json))
 
 ### Appraisals
-* `GET appraisals` (Weinbewertungen, [example response](examples/wine-appraisals.get.json))
+* `GET /appraisals` (Weinbewertungen, [example response](examples/wine-appraisals.get.json))
 
 ### Other
 * `POST /sweepstake-participants` (Gewinnspielteilnehmer, [example request](examples/sweepstake-participants.post-request.json))
