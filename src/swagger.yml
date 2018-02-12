@@ -553,7 +553,49 @@ paths:
                 id: "051296"
 
   ### Wine growers
-  # tbd
+  /wine-growers:
+    get:
+      summary: List wine growers
+      description: >
+        Use this operation to get a list of all wine growers (Winzer).
+      tags:
+        - wineGrower
+      operationId: listWineGrowers
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/WineGrowersResponse'
+          examples:
+            application/json:
+
+              total_wine_growers: 15
+              wine_growers:
+                -
+                  id: 447ff1e5-798c-4ac8-8ff2-98bfbb4700bd
+                  name: Thomas Weinmacher
+                  description:
+                    -
+                      locale: de
+                      value: Es liegt in der Tradition der Familie Weinmacher, hervorragende Weine in
+                        Eichenfässern zu produzieren. ...
+                    -
+                      locale: fr
+                      value: ''
+                    -
+                      locale: it
+                      value: ''
+                  picture:
+                    id: 3c8cc89e-6350-4a8a-8854-d2feafc9b62e
+                    cdn_url: https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png
+                    created_on: '2017-10-19T10:20:57+01:00'
+                  url: https://www.weinmacher-weine.com/
 
   ### Appraisals
   /appraisals:
@@ -1607,6 +1649,24 @@ definitions:
         format: int32
       articles:
         $ref: '#/definitions/Articles'
+
+  WineGrowersResponse:
+    type: object
+    properties:
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+      total_wine_growers:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      wine_growers:
+        $ref: '#/definitions/WineGrowers'
 
   AppraisalsResponse:
     type: object
