@@ -260,7 +260,8 @@
                                 "locale": "it",
                                 "value": "Pasta"
                             }
-                        ]
+                        ],
+                        "score": 1
                     },
                     {
                         "id": "MEAT-SAUCE",
@@ -277,7 +278,8 @@
                                 "locale": "it",
                                 "value": "Carni accompagnate da salse aromatiche"
                             }
-                        ]
+                        ],
+                        "score": 1
                     }
                 ],
                 "grapes": [
@@ -1107,7 +1109,8 @@
                                 "locale": "it",
                                 "value": "grigliate"
                             }
-                        ]
+                        ],
+                        "score": 2
                     }
                 ],
                 "grapes": [
@@ -1809,7 +1812,8 @@
                                 "locale": "it",
                                 "value": "antipasti"
                             }
-                        ]
+                        ],
+                        "score": 4
                     },
                     {
                         "id": "APERO-TAPAS",
@@ -1826,7 +1830,8 @@
                                 "locale": "it",
                                 "value": "tapas"
                             }
-                        ]
+                        ],
+                        "score": 0
                     }
                 ],
                 "grapes": [
