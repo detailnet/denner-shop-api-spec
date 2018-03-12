@@ -1089,6 +1089,11 @@ definitions:
         description: ID
       titles:
         $ref: '#/definitions/Translations'
+      score:
+        format: int32
+        minimum: 0
+        maximum: 4
+        description: Given score (0 = no match; 1 = slight match; 2 = good match; 3 = very good match; 4 = perfect match)
 
   Grape:
     type: object
