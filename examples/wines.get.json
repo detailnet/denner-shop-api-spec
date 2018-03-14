@@ -1306,7 +1306,7 @@
                         "valuation": {
                             "type": "points",
                             "value": 85,
-                            "min_value": 83,
+                            "lower_value": 83,
                             "text": [
                                 {
                                     "locale": "de",
