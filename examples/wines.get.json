@@ -354,8 +354,7 @@
                         "year": 2016,
                         "wine_year": 2013,
                         "valuation": {
-                            "type": "text",
-                            "value": "???",
+                            "type": "diploma",
                             "text": [
                                 {
                                     "locale": "de",
@@ -385,6 +384,20 @@
                                 "value": "Grande Diploma d'oro Expovina (anno 2016)"
                             }
                         ]
+                    }
+                ],
+                "medals_text": [
+                    {
+                        "locale": "de",
+                        "value": "Grosses Golddiplom Expovina (Jahr 2016)"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Grand diplôme d'Or Expovina (an 2016)"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Grande Diploma d'oro Expovina (anno 2016)"
                     }
                 ],
                 "storage": [
@@ -1229,12 +1242,14 @@
                                     "locale": "it",
                                     "value": "Robert Parker"
                                 }
-                            ]
+                            ],
+                            "sort_index": 20,
+                            "in_search": true
                         },
                         "year": 2015,
                         "wine_year": 2013,
                         "valuation": {
-                            "type": "number",
+                            "type": "points",
                             "value": 87,
                             "text": [
                                 {
@@ -1250,7 +1265,21 @@
                                     "value": "87 punti"
                                 }
                             ]
-                        }
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "87 Punkte Robert Parker (Jahr 2015)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "87 points Robert Parker (an 2015)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "87 punti Robert Parker (anno 2015)"
+                            }
+                        ]
                     },
                     {
                         "expert": {
@@ -1268,13 +1297,16 @@
                                     "locale": "it",
                                     "value": "Robert Parker"
                                 }
-                            ]
+                            ],
+                            "sort_index": 20,
+                            "in_search": true
                         },
                         "year": 2014,
                         "wine_year": 2012,
                         "valuation": {
-                            "type": "range",
+                            "type": "points",
                             "value": 85,
+                            "min_value": 83,
                             "text": [
                                 {
                                     "locale": "de",
@@ -1289,7 +1321,21 @@
                                     "value": "83-85 punti"
                                 }
                             ]
-                        }
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "83-85 Punkte Robert Parker (Jahr 2014)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "83-85 points Robert Parker (an 2014)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "83-85 punti Robert Parker (anno 2014)"
+                            }
+                        ]
                     },
                     {
                         "expert": {
@@ -1307,12 +1353,14 @@
                                     "locale": "it",
                                     "value": "Wine Spectator"
                                 }
-                            ]
+                            ],
+                            "sort_index": 30,
+                            "in_search": false
                         },
-                        "year": 2013,
-                        "wine_year": 2011,
+                        "year": 2016,
+                        "wine_year": 2013,
                         "valuation": {
-                            "type": "number",
+                            "type": "points",
                             "value": 91,
                             "text": [
                                 {
@@ -1328,7 +1376,35 @@
                                     "value": "91 punti"
                                 }
                             ]
-                        }
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "91 Punkte Wine Spectator (Jahr 2016)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "91 points Wine Spectator (an 2016)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "91 punti Wine Spectator (anno 2016)"
+                            }
+                        ]
+                    }
+                ],
+                "medals_text": [
+                    {
+                        "locale": "de",
+                        "value": "91 Punkte Wine Spectator (Jahr 2016), 87 Punkte Robert Parker (Jahr 2015)"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "91 points Wine Spectator (an 2016), 87 points Robert Parker (an 2015)"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "91 punti Wine Spectator (anno 2016), 87 punti Robert Parker (anno 2015)"
                     }
                 ],
                 "storage": [
