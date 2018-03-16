@@ -302,6 +302,20 @@
                         "sort_index": 0
                     }
                 ],
+                "grapes_text": [
+                    {
+                        "locale": "de",
+                        "value": "Primitivo"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "Primitivo"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Primitivo"
+                    }
+                ],
                 "character": [
                     {
                         "locale": "de",
@@ -750,6 +764,7 @@
                 "year": 2014,
                 "food_matches": [],
                 "grapes": [],
+                "grapes_text": [],
                 "character": [
                     {
                         "locale": "de",
@@ -1149,6 +1164,20 @@
                             }
                         ],
                         "sort_index": 1
+                    }
+                ],
+                "grapes_text": [
+                    {
+                        "locale": "de",
+                        "value": "Cabernet Sauvignon, Merlot"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "cabernet sauvignon, merlot"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "cabernet sauvignon, merlot"
                     }
                 ],
                 "character": [
@@ -1552,6 +1581,7 @@
                 "year": 2016,
                 "food_matches": [],
                 "grapes": [],
+                "grapes_text": [],
                 "character": [],
                 "temperature": [],
                 "medals": [],
@@ -1888,6 +1918,20 @@
                             }
                         ],
                         "sort_index": 1
+                    }
+                ],
+                "grapes_text": [
+                    {
+                        "locale": "de",
+                        "value": "Pinot Noir, Pinot Meunier, Chardonnay"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "pinot noir, pinot meunier, chardonnay"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "Pinot Noir, Pinot Meunier, Chardonnay"
                     }
                 ],
                 "character": [
