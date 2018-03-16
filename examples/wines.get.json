@@ -286,7 +286,7 @@
                         "display": false
                     }
                 ],
-                "food_match_text": [],
+                "food_matches_text": [],
                 "grapes": [
                     {
                         "id": "PRIMITIVO",
@@ -1120,7 +1120,7 @@
                         "display": false
                     }
                 ],
-                "food_match_text": [],
+                "food_matches_text": [],
                 "grapes": [
                     {
                         "id": "CABERNET-SAUVIGNON",
@@ -1846,7 +1846,7 @@
                         "display": false
                     }
                 ],
-                "food_match_text": [
+                "food_matches_text": [
                     {
                         "locale": "de",
                         "value": "Antipasti"
