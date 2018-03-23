@@ -35,6 +35,34 @@
 			"response": []
 		},
 		{
+			"name": "/wine-experts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "App-Key",
+						"value": "{{app_key}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{base_url}}/wine-experts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"wine-experts"
+					]
+				},
+				"description": "List all wine experts"
+			},
+			"response": []
+		},
+		{
 			"name": "/wines",
 			"event": [
 				{
