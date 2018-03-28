@@ -261,7 +261,9 @@
                                 "value": "Pasta"
                             }
                         ],
-                        "score": 1
+                        "sort_index": 7,
+                        "score": 1,
+                        "display": false
                     },
                     {
                         "id": "MEAT-SAUCE",
@@ -279,9 +281,12 @@
                                 "value": "Carni accompagnate da salse aromatiche"
                             }
                         ],
-                        "score": 1
+                        "sort_index": 23,
+                        "score": 1,
+                        "display": false
                     }
                 ],
+                "food_matches_text": [],
                 "grapes": [
                     {
                         "id": "PRIMITIVO",
@@ -1324,9 +1329,12 @@
                                 "value": "grigliate"
                             }
                         ],
-                        "score": 2
+                        "sort_index": 10,
+                        "score": 2,
+                        "display": false
                     }
                 ],
+                "food_matches_text": [],
                 "grapes": [
                     {
                         "id": "CABERNET-SAUVIGNON",
@@ -1961,10 +1969,13 @@
                                 "value": "antipasti"
                             }
                         ],
-                        "score": 4
+                        "sort_index": 3,
+                        "score": 4,
+                        "display": true
                     },
                     {
                         "id": "APERO-TAPAS",
+                        "sort_index": 2,
                         "titles": [
                             {
                                 "locale": "de",
@@ -1979,7 +1990,22 @@
                                 "value": "tapas"
                             }
                         ],
-                        "score": 0
+                        "score": 3,
+                        "display": false
+                    }
+                ],
+                "food_matches_text": [
+                    {
+                        "locale": "de",
+                        "value": "Antipasti"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "antipasti"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "antipasti"
                     }
                 ],
                 "grapes": [
