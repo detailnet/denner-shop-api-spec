@@ -290,7 +290,7 @@ paths:
                   medals:
                     -
                       expert:
-                        id: EXPOVINA
+                        id: eba162da-a71f-4945-a0a1-3bc60ebe55c1
                         title:
                           -
                             locale: de
@@ -301,9 +301,165 @@ paths:
                           -
                             locale: it
                             value: Expovina
+                        in_search: true
                       year: 2016
-                      wine_year: 2013
-                      valuation: Gold
+                      wine_year: 2015
+                      valuation:
+                        type: diploma
+                        diploma:
+                          id: cc8d2f6a-70c5-4679-af30-704862d34fdc
+                          name: Grosses Golddiplom
+                          text:
+                            -
+                              locale: de
+                              value: Grosses Golddiplom
+                            -
+                              locale: fr
+                              value: Grand diplôme d’Or
+                            -
+                              locale: it
+                              value: Grande Diploma d'oro
+                          priority: 1
+                        text:
+                          -
+                            locale: de
+                            value: Grosses Golddiplom
+                          -
+                            locale: fr
+                            value: Grand diplôme d’Or
+                          -
+                            locale: it
+                            value: Grande Diploma d'oro
+                        priority: 1
+                      text:
+                        -
+                          locale: de
+                          value: Grosses Golddiplom Expovina (2016)
+                        -
+                          locale: fr
+                          value: Grand diplôme d’Or Expovina (2016)
+                        -
+                          locale: it
+                          value: Grande Diploma d'oro Expovina (2016)
+                    -
+                      expert:
+                        id: 353e6031-62ff-4a9d-a455-6e3dc22f923a
+                        title:
+                          -
+                            locale: de
+                            value: Wine Spectator
+                          -
+                            locale: fr
+                            value: Wine Spectator
+                          -
+                            locale: it
+                            value: Wine Spectator
+                        in_search: true
+                      year: 2016
+                      wine_year: 2015
+                      valuation:
+                        type: points
+                        value: 91
+                        text:
+                          -
+                            locale: de
+                            value: 91 Punkte
+                          -
+                            locale: fr
+                            value: 91 points
+                          -
+                            locale: it
+                            value: 91 punti
+                        priority: 90
+                      text:
+                        -
+                          locale: de
+                          value: 91 Punkte Wine Spectator (2016)
+                        -
+                          locale: fr
+                          value: 91 points Wine Spectator (2016)
+                        -
+                          locale: it
+                          value: 91 punti Wine Spectator (2016)
+                    -
+                      expert:
+                        id: fab9b67f-6bba-4091-9247-9264e93461c8
+                        title:
+                          -
+                            locale: de
+                            value: Winery of the Year
+                          -
+                            locale: fr
+                            value: Winery of the Year
+                          -
+                            locale: it
+                            value: Winery of the Year
+                        sort_index: 2900
+                        in_search: true
+                      year: 2016
+                      wine_year: 2015
+                      text:
+                        -
+                          locale: de
+                          value: Winery of the Year (2016)
+                        -
+                          locale: fr
+                          value: Winery of the Year (2016)
+                        -
+                          locale: it
+                          value: Winery of the Year (2016)
+                    -
+                      expert:
+                        id: 86d68b9d-56d7-47d1-b2be-688647cc3929
+                        title:
+                          -
+                            locale: de
+                            value: Antonio Galloni
+                          -
+                            locale: fr
+                            value: Antonio Galloni
+                          -
+                            locale: it
+                            value: Antonio Galloni
+                        sort_index: 100
+                        in_search: true
+                      year: 2016
+                      wine_year: 2015
+                      valuation:
+                        type: points
+                        value: 85
+                        lower_value: 83
+                        text:
+                          -
+                            locale: de
+                            value: 83-85 Punkte
+                          -
+                            locale: fr
+                            value: 83-85 points
+                          -
+                            locale: it
+                            value: 83-85 punti
+                        priority: 151
+                      text:
+                        -
+                          locale: de
+                          value: 83-85 Punkte Antonio Galloni (2016)
+                        -
+                          locale: fr
+                          value: 83-85 points Antonio Galloni (2016)
+                        -
+                          locale: it
+                          value: 83-85 punti Antonio Galloni (2016)
+                  medals_text:
+                    -
+                      locale: de
+                      value: 91 Punkte Wine Spectator (2016), 83-85 Punkte Antonio Galloni (2016), Grosses Golddiplom Expovina (2016), Winery of the Year (2016)
+                    -
+                      locale: fr
+                      value: 91 points Wine Spectator (2016), 83-85 points Antonio Galloni (2016), Grand diplôme d’Or Expovina (2016), Winery of the Year (2016)
+                    -
+                      locale: it
+                      value: 91 punti Wine Spectator (2016), 83-85 punti Antonio Galloni (2016), Grande Diploma d'oro Expovina (2016), Winery of the Year (2016)
                   storage:
                     -
                       locale: de
@@ -598,6 +754,116 @@ paths:
                     cdn_url: https://denner.imgix.net/assets/74f174ba-109d-4555-8f32-fd4951232532/weinmacher-mood.png
                     created_on: '2017-10-19T10:20:57+01:00'
                   url: https://www.weinmacher-weine.com/
+
+  ### Wine experts
+  /wine-experts:
+    get:
+      summary: List wine experts
+      description: >
+        Use this operation to get a list of all wine experts (Experte für Auszeichnungen).
+      tags:
+        - wineExperts
+      operationId: listWineExperts
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+        - $ref: '#/parameters/FilterParam'
+        - $ref: '#/parameters/SortParam'
+        - $ref: '#/parameters/PageParam'
+        - $ref: '#/parameters/PageSizeParam'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/WineExpertsResponse'
+          examples:
+            application/json:
+
+              total_items: 2
+              wine_experts:
+                -
+                  id: 86e6f1cb-4339-458e-b1ae-ed3ba9ca71ea
+                  name: Bettane + Desseauve
+                  title:
+                    -
+                      locale: de
+                      value: Bettane + Desseauve
+                    -
+                      locale: fr
+                      value: Bettane + Desseauve
+                    -
+                      locale: it
+                      value: Bettane + Desseauve
+                  valuation_types:
+                    -
+                      id: points
+                      name: Punkte
+                      min: 1
+                      max: 20
+                    -
+                      id: diploma
+                      name: Diplom
+                      diplomas:
+                        -
+                          id: 7f2e1122-6bc1-432a-a6db-ae07536575dc
+                          name: Médaille d'Or
+                          text:
+                            -
+                              locale: de
+                              value: Médaille d'Or
+                            -
+                              locale: fr
+                              value: Médaille d'Or
+                            -
+                              locale: it
+                              value: Médaille d'Or
+                          priority: 1
+                        -
+                          id: 1ce6ae10-03e6-4d15-9940-eff9c7850ec8
+                          name: Médaille d'Argent
+                          text:
+                            -
+                              locale: de
+                              value: Médaille d'Argent
+                            -
+                              locale: fr
+                              value: Médaille d'Argent
+                            -
+                              locale: it
+                              value: Médaille d'Argent
+                          priority: 2
+                        -
+                          id: 3e14bd2e-37ec-42a0-985f-46bc1cfe8f08
+                          name: Médeaille de Bronze
+                          text:
+                            -
+                              locale: de
+                              value: Médeaille de Bronze
+                            -
+                              locale: fr
+                              value: Médeaille de Bronze
+                            -
+                              locale: it
+                              value: Médeaille de Bronze
+                          priority: 3
+                  sort_index: 500
+                  in_search: true
+                -
+                  id: fab9b67f-6bba-4091-9247-9264e93461c8
+                  name: Winery of the Year
+                  title:
+                    -
+                      locale: de
+                      value: Winery of the Year
+                    -
+                      locale: fr
+                      value: Winery of the Year
+                    -
+                      locale: it
+                      value: Winery of the Year
+                  sort_index: 2900
+                  in_search: true
 
   ### Appraisals
   /appraisals:
@@ -1116,8 +1382,31 @@ definitions:
       wine_year:
         $ref: '#/definitions/Year'
       valuation:
-        type: string
-        description: Given valuation/rating (e.g. Gold)
+        $ref: '#/definitions/MedalValuation'
+
+  MedalValuation:
+    type: object
+    properties:
+      type:
+         type: string
+         description: Valuation type (e.g. 'diploma' or 'points')
+      diploma:
+        $ref: '#/definitions/WineDiploma'
+      value:
+        type: integer
+        format: int32
+        description: Point valuation score
+      lower_value:
+        type: integer
+        format: int32
+        description: Point valuation lower score
+      text:
+        $ref: '#/definitions/Translations'
+      priority:
+        type: integer
+        format: int32
+    required:
+      - type
 
   Expert:
     type: object
@@ -1321,6 +1610,62 @@ definitions:
         $ref: '#/definitions/Asset'
       url:
         $ref: '#/definitions/Url'
+
+  ### Wine expert
+  WineExpert:
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      name:
+        type: string
+        description: Name
+      title:
+        $ref: '#/definitions/Translations'
+      valuation_types:
+        $ref: '#/definitions/ValuationTypes'
+      sort_index:
+        $ref: '#/definitions/SortIndex'
+      in_search:
+        type: boolean
+        description: Is in search?
+
+  ValuationType:
+    type: object
+    properties:
+      id:
+         type: string
+         description: Valuation type (e.g. 'diploma' or 'points')
+      name:
+        type: string
+        description: Name
+      diplomas:
+        $ref: '#/definitions/WineDiplomas'
+      min:
+        type: integer
+        format: int32
+        description: Point valuation minimum score
+      max:
+        type: integer
+        format: int32
+        description: Point valuation maximum score
+    required:
+      - id
+
+  WineDiploma:
+    description: Medal valuation diploma
+    type: object
+    properties:
+      id:
+        $ref: '#/definitions/UUIDv4'
+      name:
+        type: string
+        description: German name for the diploma
+      text:
+        $ref: '#/definitions/Translations'
+      priority:
+        type: integer
+        format: int32
 
   ### Appraisal
   Appraisal:
@@ -1640,6 +1985,21 @@ definitions:
     items:
       $ref: '#/definitions/WineGrower'
 
+  WineExperts:
+    type: array
+    items:
+      $ref: '#/definitions/WineExpert'
+
+  ValuationTypes:
+    type: array
+    items:
+      $ref: '#/definitions/ValuationType'
+
+  WineDiplomas:
+    type: array
+    items:
+      $ref: '#/definitions/WineDiploma'
+
   Appraisals:
     type: array
     items:
@@ -1681,6 +2041,24 @@ definitions:
         format: int32
       wine_growers:
         $ref: '#/definitions/WineGrowers'
+
+  WineExpertsResponse:
+    type: object
+    properties:
+#      page_count:
+#        description: The number of pages
+#        type: integer
+#        format: int32
+#      page_size:
+#        description: The page size
+#        type: integer
+#        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      wine_growers:
+        $ref: '#/definitions/WineExperts'
 
   AppraisalsResponse:
     type: object

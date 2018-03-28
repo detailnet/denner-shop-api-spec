@@ -12,6 +12,9 @@ The Denner Shop Web Service provides data and functions for the Denner Wineshop.
 ### Wine growers
 * `GET /wine-growers` (Winzer, [example response](examples/wine-growers.get.json))
 
+### Wine experts
+* `GET /wine-experts` (Experte, [example response](examples/wine-experts.get.json))
+
 ### Appraisals
 * `GET /appraisals` (Weinbewertungen, [example response](examples/wine-appraisals.get.json))
 

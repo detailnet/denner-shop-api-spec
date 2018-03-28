@@ -333,7 +333,7 @@
                 "medals": [
                     {
                         "expert": {
-                            "id": "EXPOVINA",
+                            "id": "eba162da-a71f-4945-a0a1-3bc60ebe55c1",
                             "title": [
                                 {
                                     "locale": "de",
@@ -347,11 +347,225 @@
                                     "locale": "it",
                                     "value": "Expovina"
                                 }
-                            ]
+                            ],
+                            "in_search": true
                         },
                         "year": 2016,
-                        "wine_year": 2013,
-                        "valuation": "Gold"
+                        "wine_year": 2015,
+                        "valuation": {
+                            "type": "diploma",
+                            "diploma": {
+                                "id": "cc8d2f6a-70c5-4679-af30-704862d34fdc",
+                                "name": "Grosses Golddiplom",
+                                "text": [
+                                    {
+                                        "locale": "de",
+                                        "value": "Grosses Golddiplom"
+                                    },
+                                    {
+                                        "locale": "fr",
+                                        "value": "Grand diplôme d’Or"
+                                    },
+                                    {
+                                        "locale": "it",
+                                        "value": "Grande Diploma d'oro"
+                                    }
+                                ],
+                                "priority": 1
+                            },
+                            "text": [
+                                {
+                                    "locale": "de",
+                                    "value": "Grosses Golddiplom"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Grand diplôme d’Or"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Grande Diploma d'oro"
+                                }
+                            ],
+                            "priority": 1
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "Grosses Golddiplom Expovina (2016)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Grand diplôme d’Or Expovina (2016)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Grande Diploma d'oro Expovina (2016)"
+                            }
+                        ]
+                    },
+                    {
+                        "expert": {
+                            "id": "353e6031-62ff-4a9d-a455-6e3dc22f923a",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Wine Spectator"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Wine Spectator"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Wine Spectator"
+                                }
+                            ],
+                            "in_search": true
+                        },
+                        "year": 2016,
+                        "wine_year": 2015,
+                        "valuation": {
+                            "type": "points",
+                            "value": 91,
+                            "text": [
+                                {
+                                    "locale": "de",
+                                    "value": "91 Punkte"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "91 points"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "91 punti"
+                                }
+                            ],
+                            "priority": 90
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "91 Punkte Wine Spectator (2016)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "91 points Wine Spectator (2016)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "91 punti Wine Spectator (2016)"
+                            }
+                        ]
+                    },
+                    {
+                        "expert": {
+                            "id": "fab9b67f-6bba-4091-9247-9264e93461c8",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Winery of the Year"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Winery of the Year"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Winery of the Year"
+                                }
+                            ],
+                            "sort_index": 2900,
+                            "in_search": true
+                        },
+                        "year": 2016,
+                        "wine_year": 2015,
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "Winery of the Year (2016)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "Winery of the Year (2016)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "Winery of the Year (2016)"
+                            }
+                        ]
+                    },
+                    {
+                        "expert": {
+                            "id": "86d68b9d-56d7-47d1-b2be-688647cc3929",
+                            "title": [
+                                {
+                                    "locale": "de",
+                                    "value": "Antonio Galloni"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "Antonio Galloni"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "Antonio Galloni"
+                                }
+                            ],
+                            "sort_index": 100,
+                            "in_search": true
+                        },
+                        "year": 2016,
+                        "wine_year": 2015,
+                        "valuation": {
+                            "type": "points",
+                            "value": 85,
+                            "lower_value": 83,
+                            "text": [
+                                {
+                                    "locale": "de",
+                                    "value": "83-85 Punkte"
+                                },
+                                {
+                                    "locale": "fr",
+                                    "value": "83-85 points"
+                                },
+                                {
+                                    "locale": "it",
+                                    "value": "83-85 punti"
+                                }
+                            ],
+                            "priority": 151
+                        },
+                        "text": [
+                            {
+                                "locale": "de",
+                                "value": "83-85 Punkte Antonio Galloni (2016)"
+                            },
+                            {
+                                "locale": "fr",
+                                "value": "83-85 points Antonio Galloni (2016)"
+                            },
+                            {
+                                "locale": "it",
+                                "value": "83-85 punti Antonio Galloni (2016)"
+                            }
+                        ]
+                    }
+                ],
+                "medals_text": [
+                    {
+                        "locale": "de",
+                        "value": "91 Punkte Wine Spectator (2016), 83-85 Punkte Antonio Galloni (2016), Grosses Golddiplom Expovina (2016), Winery of the Year (2016)"
+                    },
+                    {
+                        "locale": "fr",
+                        "value": "91 points Wine Spectator (2016), 83-85 points Antonio Galloni (2016), Grand diplôme d’Or Expovina (2016), Winery of the Year (2016)"
+                    },
+                    {
+                        "locale": "it",
+                        "value": "91 punti Wine Spectator (2016), 83-85 punti Antonio Galloni (2016), Grande Diploma d'oro Expovina (2016), Winery of the Year (2016)"
                     }
                 ],
                 "storage": [
@@ -1179,74 +1393,8 @@
                         "value": "16-18 °C"
                     }
                 ],
-                "medals": [
-                    {
-                        "expert": {
-                            "id": "PARKER",
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Robert Parker"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Robert Parker"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Robert Parker"
-                                }
-                            ]
-                        },
-                        "year": 2015,
-                        "wine_year": 2013,
-                        "valuation": "87"
-                    },
-                    {
-                        "expert": {
-                            "id": "PARKER",
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Robert Parker"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Robert Parker"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Robert Parker"
-                                }
-                            ]
-                        },
-                        "year": 2014,
-                        "wine_year": 2012,
-                        "valuation": "85"
-                    },
-                    {
-                        "expert": {
-                            "id": "WINE-SPECTATOR",
-                            "title": [
-                                {
-                                    "locale": "de",
-                                    "value": "Wine Spectator"
-                                },
-                                {
-                                    "locale": "fr",
-                                    "value": "Wine Spectator"
-                                },
-                                {
-                                    "locale": "it",
-                                    "value": "Wine Spectator"
-                                }
-                            ]
-                        },
-                        "year": 2013,
-                        "wine_year": 2011,
-                        "valuation": "91"
-                    }
-                ],
+                "medals": [ ],
+                "medals_text": [ ],
                 "storage": [
                     {
                         "locale": "de",
