@@ -282,6 +282,28 @@
                         "score": 1
                     }
                 ],
+                "flavors": [
+                    {
+                        "id": "acid",
+                        "score": 1
+                    },
+                    {
+                        "id": "sweet",
+                        "score": 2
+                    },
+                    {
+                        "id": "intensity",
+                        "score": 1
+                    },
+                    {
+                        "id": "barrique-aging",
+                        "score": 0
+                    },
+                    {
+                        "id": "tannins",
+                        "score": 1
+                    }
+                ],
                 "grapes": [
                     {
                         "id": "PRIMITIVO",
@@ -963,6 +985,7 @@
                 },
                 "year": 2014,
                 "food_matches": [],
+                "flavors": [],
                 "grapes": [],
                 "character": [
                     {
@@ -1324,6 +1347,28 @@
                                 "value": "grigliate"
                             }
                         ],
+                        "score": 2
+                    }
+                ],
+                "flavors": [
+                    {
+                        "id": "acid",
+                        "score": 1
+                    },
+                    {
+                        "id": "sweet",
+                        "score": 0
+                    },
+                    {
+                        "id": "intensity",
+                        "score": 2
+                    },
+                    {
+                        "id": "barrique-aging",
+                        "score": 2
+                    },
+                    {
+                        "id": "tannins",
                         "score": 2
                     }
                 ],
@@ -1699,6 +1744,20 @@
                 },
                 "year": 2016,
                 "food_matches": [],
+                "flavors": [
+                    {
+                        "id": "acid",
+                        "score": -1
+                    },
+                    {
+                        "id": "sweet",
+                        "score": -1
+                    },
+                    {
+                        "id": "intensity",
+                        "score": 0
+                    }
+                ],
                 "grapes": [],
                 "character": [],
                 "temperature": [],
@@ -1982,6 +2041,7 @@
                         "score": 0
                     }
                 ],
+                "flavors": [],
                 "grapes": [
                     {
                         "id": "CHARDONNAY",

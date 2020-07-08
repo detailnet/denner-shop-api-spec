@@ -253,6 +253,22 @@ paths:
                         -
                           locale: it
                           value: Carni accompagnate da salse aromatiche
+                  flavors:
+                    -
+                      id: acid
+                      score: 1
+                    -
+                      id: sweet
+                      score: 2
+                    -
+                      id: intensity
+                      score: 1
+                    -
+                      id: barrique-aging
+                      score: 0
+                    -
+                      id: tannins
+                      score: 1
                   grapes:
                     -
                       id: PRIMITIVO
@@ -707,6 +723,94 @@ paths:
                 downvotes: 1
               article:
                 id: "051296"
+
+  ### Wine flavors
+  /wine-flavors:
+    get:
+      summary: List of wine flavors
+      description: >
+        Use this operation to get a list of all wine flavors (Wein-Geschmacksprofil).
+      tags:
+        - wineFlavor
+      operationId: listWineGrowers
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/WineFlavorsResponse'
+          examples:
+            application/json:
+              wine_flavors:
+                -
+                  id: acid
+                  titles:
+                    -
+                      locale: de
+                      value: Säure
+                    -
+                      locale: fr
+                      value: "..."
+                    -
+                      locale: it
+                      value: acidità
+                  sort_index: 1
+                -
+                  id: sweet
+                  titles:
+                    -
+                      locale: de
+                      value: Zucker
+                    -
+                      locale: fr
+                      value: "..."
+                    -
+                      locale: it
+                      value: zuccheri
+                  sort_index: 2
+                -
+                  id: intensity
+                  titles:
+                    -
+                      locale: de
+                      value: Intensität
+                    -
+                      locale: fr
+                      value: "..."
+                    -
+                      locale: it
+                      value: intensità
+                  sort_index: 3
+                -
+                  id: barrique-aging
+                  titles:
+                    -
+                      locale: de
+                      value: Barrique Ausbau
+                    -
+                      locale: fr
+                      value: "..."
+                    -
+                      locale: it
+                      value: barricato
+                  sort_index: 4
+                -
+                  id: tannins
+                  titles:
+                    -
+                      locale: de
+                      value: Tannine
+                    -
+                      locale: fr
+                      value: "..."
+                    -
+                      locale: it
+                      value: tannini
+                  sort_index: 5
+              total_items: 5
 
   ### Wine growers
   /wine-growers:
@@ -1330,6 +1434,8 @@ definitions:
         $ref: '#/definitions/Year'
       food_matches:
         $ref: '#/definitions/FoodMatches'
+      flavors:
+        $ref: '#/definitions/FlavorScores'
       grapes:
         $ref: '#/definitions/Grapes'
       character:
@@ -1360,6 +1466,29 @@ definitions:
         minimum: 0
         maximum: 4
         description: Given score (0 = no match; 1 = slight match; 2 = good match; 3 = very good match; 4 = perfect match)
+
+  Flavor:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID
+      titles:
+        $ref: '#/definitions/Translations'
+      sort_index:
+        $ref: '#/definitions/SortIndex'
+
+  FlavorScore:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Flsvor ID
+      score:
+        format: int32
+        minimum: -2
+        maximum: 2
+        description: Given score (-2 = not at all; -1 = not much; 0 = neutral; 1 = has some; 2 = full flavor)
 
   Grape:
     type: object
@@ -1970,6 +2099,16 @@ definitions:
     items:
       $ref: '#/definitions/FoodMatch'
 
+  Flavors:
+    type: array
+    items:
+      $ref: '#/definitions/Flavor'
+
+  FlavorScores:
+    type: array
+    items:
+      $ref: '#/definitions/FlavorScore'
+
   Grapes:
     type: array
     items:
@@ -2024,6 +2163,24 @@ definitions:
       articles:
         $ref: '#/definitions/Articles'
 
+  WineFlavorsResponse:
+    type: object
+    properties:
+      #      page_count:
+      #        description: The number of pages
+      #        type: integer
+      #        format: int32
+      #      page_size:
+      #        description: The page size
+      #        type: integer
+      #        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      wine_flavors:
+        $ref: '#/definitions/Flavors'
+
   WineGrowersResponse:
     type: object
     properties:
@@ -2057,7 +2214,7 @@ definitions:
         description: The number of items on all pages
         type: integer
         format: int32
-      wine_growers:
+      wine_experts:
         $ref: '#/definitions/WineExperts'
 
   AppraisalsResponse:

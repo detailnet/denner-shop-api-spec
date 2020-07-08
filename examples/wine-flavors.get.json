@@ -1,0 +1,95 @@
+{
+    "wine_flavors": [
+        {
+            "id": "acid",
+            "titles": [
+                {
+                    "locale": "de",
+                    "value": "Säure"
+                },
+                {
+                    "locale": "fr",
+                    "value": "..."
+                },
+                {
+                    "locale": "it",
+                    "value": "acidità"
+                }
+            ],
+            "sort_index": 1
+        },
+        {
+            "id": "sweet",
+            "titles": [
+                {
+                    "locale": "de",
+                    "value": "Zucker"
+                },
+                {
+                    "locale": "fr",
+                    "value": "..."
+                },
+                {
+                    "locale": "it",
+                    "value": "zuccheri"
+                }
+            ],
+            "sort_index": 2
+        },
+        {
+            "id": "intensity",
+            "titles": [
+                {
+                    "locale": "de",
+                    "value": "Intensität"
+                },
+                {
+                    "locale": "fr",
+                    "value": "..."
+                },
+                {
+                    "locale": "it",
+                    "value": "intensità"
+                }
+            ],
+            "sort_index": 3
+        },
+        {
+            "id": "barrique-aging",
+            "titles": [
+                {
+                    "locale": "de",
+                    "value": "Barrique Ausbau"
+                },
+                {
+                    "locale": "fr",
+                    "value": "..."
+                },
+                {
+                    "locale": "it",
+                    "value": "barricato"
+                }
+            ],
+            "sort_index": 4
+        },
+        {
+            "id": "tannins",
+            "titles": [
+                {
+                    "locale": "de",
+                    "value": "Tannine"
+                },
+                {
+                    "locale": "fr",
+                    "value": "..."
+                },
+                {
+                    "locale": "it",
+                    "value": "tannini"
+                }
+            ],
+            "sort_index": 5
+        }
+    ],
+    "total_items": 5
+}
