@@ -282,26 +282,26 @@
                         "score": 1
                     }
                 ],
-                "flavors": [
+                "characteristics": [
                     {
                         "id": "acid",
-                        "score": 1
+                        "value": 1
                     },
                     {
-                        "id": "sweet",
-                        "score": 2
+                        "id": "sweetness",
+                        "value": 2
                     },
                     {
                         "id": "intensity",
-                        "score": 1
+                        "value": 1
                     },
                     {
                         "id": "barrique-aging",
-                        "score": 0
+                        "value": 0
                     },
                     {
                         "id": "tannins",
-                        "score": 1
+                        "value": 1
                     }
                 ],
                 "grapes": [
@@ -730,11 +730,11 @@
                         },
                         {
                             "locale": "fr",
-                            "value": "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                            "value": "<ul><li>Allgemeiner <i>Hinweis</i></li></ul>"
                         },
                         {
                             "locale": "it",
-                            "value": "<font color=\"#ff0000\">​Allgemeiner Hinweis</font>"
+                            "value": "<font color=\"#ff0000\">Allgemeiner Hinweis</font>"
                         }
                     ]
                 }
@@ -985,7 +985,7 @@
                 },
                 "year": 2014,
                 "food_matches": [],
-                "flavors": [],
+                "characteristics": [],
                 "grapes": [],
                 "character": [
                     {
@@ -1350,26 +1350,26 @@
                         "score": 2
                     }
                 ],
-                "flavors": [
+                "characteristics": [
                     {
                         "id": "acid",
-                        "score": 1
+                        "value": 1
                     },
                     {
-                        "id": "sweet",
-                        "score": 0
+                        "id": "sweetness",
+                        "value": 0
                     },
                     {
                         "id": "intensity",
-                        "score": 2
+                        "value": 2
                     },
                     {
                         "id": "barrique-aging",
-                        "score": 2
+                        "value": 2
                     },
                     {
                         "id": "tannins",
-                        "score": 2
+                        "value": 2
                     }
                 ],
                 "grapes": [
@@ -1744,18 +1744,18 @@
                 },
                 "year": 2016,
                 "food_matches": [],
-                "flavors": [
+                "characteristics": [
                     {
                         "id": "acid",
-                        "score": -1
+                        "value": -1
                     },
                     {
-                        "id": "sweet",
-                        "score": -1
+                        "id": "sweetness",
+                        "value": -1
                     },
                     {
                         "id": "intensity",
-                        "score": 0
+                        "value": 0
                     }
                 ],
                 "grapes": [],
@@ -2041,7 +2041,7 @@
                         "score": 0
                     }
                 ],
-                "flavors": [],
+                "characteristics": [],
                 "grapes": [
                     {
                         "id": "CHARDONNAY",

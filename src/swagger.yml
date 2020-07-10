@@ -253,22 +253,22 @@ paths:
                         -
                           locale: it
                           value: Carni accompagnate da salse aromatiche
-                  flavors:
+                  characteristics:
                     -
                       id: acid
-                      score: 1
+                      value: 1
                     -
-                      id: sweet
-                      score: 2
+                      id: sweetness
+                      value: 2
                     -
                       id: intensity
-                      score: 1
+                      value: 1
                     -
                       id: barrique-aging
-                      score: 0
+                      value: 0
                     -
                       id: tannins
-                      score: 1
+                      value: 1
                   grapes:
                     -
                       id: PRIMITIVO
@@ -583,10 +583,10 @@ paths:
                         value: "<b>Allgemeiner </b>Hinweis"
                       -
                         locale: fr
-                        value: "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                        value: "<ul><li>Allgemeiner <i>Hinweis</i></li></ul>"
                       -
                         locale: it
-                        value: <font color="#ff0000">​Allgemeiner Hinweis</font>
+                        value: "<font color=\"#ff0000\">Allgemeiner Hinweis</font>"
 
   /wines/{article_id}/appraisals:
     get:
@@ -724,15 +724,15 @@ paths:
               article:
                 id: "051296"
 
-  ### Wine flavors
-  /wine-flavors:
+  ### Wine characteristics
+  /wine-characteristics:
     get:
-      summary: List of wine flavors
+      summary: List of wine characteristics
       description: >
-        Use this operation to get a list of all wine flavors (Wein-Geschmacksprofil).
+        Use this operation to get a list of all wine characteristics (Wein-Geschmacksprofil).
       tags:
-        - wineFlavor
-      operationId: listWineGrowers
+        - wineCharacteristic
+      operationId: listWineCharacteristics
       security:
         - appKey: []
       parameters:
@@ -741,10 +741,10 @@ paths:
         200:
           description: Successful listing
           schema:
-            $ref: '#/definitions/WineFlavorsResponse'
+            $ref: '#/definitions/WineCharacteristicsResponse'
           examples:
             application/json:
-              wine_flavors:
+              wine_characteristics:
                 -
                   id: acid
                   titles:
@@ -753,20 +753,20 @@ paths:
                       value: Säure
                     -
                       locale: fr
-                      value: "..."
+                      value: acidité
                     -
                       locale: it
                       value: acidità
                   sort_index: 1
                 -
-                  id: sweet
+                  id: sweetness
                   titles:
                     -
                       locale: de
                       value: Zucker
                     -
                       locale: fr
-                      value: "..."
+                      value: sucres
                     -
                       locale: it
                       value: zuccheri
@@ -779,7 +779,7 @@ paths:
                       value: Intensität
                     -
                       locale: fr
-                      value: "..."
+                      value: intensité
                     -
                       locale: it
                       value: intensità
@@ -789,13 +789,13 @@ paths:
                   titles:
                     -
                       locale: de
-                      value: Barrique Ausbau
+                      value: Barrique-Ausbau
                     -
                       locale: fr
-                      value: "..."
+                      value: vieillissement en barrique
                     -
                       locale: it
-                      value: barricato
+                      value: invecchiamento in barrique
                   sort_index: 4
                 -
                   id: tannins
@@ -805,7 +805,7 @@ paths:
                       value: Tannine
                     -
                       locale: fr
-                      value: "..."
+                      value: tannins
                     -
                       locale: it
                       value: tannini
@@ -1434,8 +1434,8 @@ definitions:
         $ref: '#/definitions/Year'
       food_matches:
         $ref: '#/definitions/FoodMatches'
-      flavors:
-        $ref: '#/definitions/FlavorScores'
+      characteristics:
+        $ref: '#/definitions/CharacteristicValues'
       grapes:
         $ref: '#/definitions/Grapes'
       character:
@@ -1467,7 +1467,7 @@ definitions:
         maximum: 4
         description: Given score (0 = no match; 1 = slight match; 2 = good match; 3 = very good match; 4 = perfect match)
 
-  Flavor:
+  Characteristic:
     type: object
     properties:
       id:
@@ -1478,17 +1478,17 @@ definitions:
       sort_index:
         $ref: '#/definitions/SortIndex'
 
-  FlavorScore:
+  CharacteristicValue:
     type: object
     properties:
       id:
         type: string
-        description: Flsvor ID
-      score:
+        description: Characteristic ID
+      value:
         format: int32
         minimum: -2
         maximum: 2
-        description: Given score (-2 = not at all; -1 = not much; 0 = neutral; 1 = has some; 2 = full flavor)
+        description: Given value (-2 = not at all; -1 = not much; 0 = neutral; 1 = has some; 2 = full characteristic)
 
   Grape:
     type: object
@@ -2099,15 +2099,15 @@ definitions:
     items:
       $ref: '#/definitions/FoodMatch'
 
-  Flavors:
+  Characteristics:
     type: array
     items:
-      $ref: '#/definitions/Flavor'
+      $ref: '#/definitions/Characteristic'
 
-  FlavorScores:
+  CharacteristicValues:
     type: array
     items:
-      $ref: '#/definitions/FlavorScore'
+      $ref: '#/definitions/CharacteristicValue'
 
   Grapes:
     type: array
@@ -2163,7 +2163,7 @@ definitions:
       articles:
         $ref: '#/definitions/Articles'
 
-  WineFlavorsResponse:
+  WineCharacteristicsResponse:
     type: object
     properties:
       #      page_count:
@@ -2178,8 +2178,8 @@ definitions:
         description: The number of items on all pages
         type: integer
         format: int32
-      wine_flavors:
-        $ref: '#/definitions/Flavors'
+      wine_characteristics:
+        $ref: '#/definitions/Characteristics'
 
   WineGrowersResponse:
     type: object

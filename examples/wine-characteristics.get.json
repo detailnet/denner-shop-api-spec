@@ -1,5 +1,5 @@
 {
-    "wine_flavors": [
+    "wine_characteristics": [
         {
             "id": "acid",
             "titles": [
@@ -9,7 +9,7 @@
                 },
                 {
                     "locale": "fr",
-                    "value": "..."
+                    "value": "acidité"
                 },
                 {
                     "locale": "it",
@@ -19,7 +19,7 @@
             "sort_index": 1
         },
         {
-            "id": "sweet",
+            "id": "sweetness",
             "titles": [
                 {
                     "locale": "de",
@@ -27,7 +27,7 @@
                 },
                 {
                     "locale": "fr",
-                    "value": "..."
+                    "value": "sucres"
                 },
                 {
                     "locale": "it",
@@ -45,7 +45,7 @@
                 },
                 {
                     "locale": "fr",
-                    "value": "..."
+                    "value": "intensité"
                 },
                 {
                     "locale": "it",
@@ -59,15 +59,15 @@
             "titles": [
                 {
                     "locale": "de",
-                    "value": "Barrique Ausbau"
+                    "value": "Barrique-Ausbau"
                 },
                 {
                     "locale": "fr",
-                    "value": "..."
+                    "value": "vieillissement en barrique"
                 },
                 {
                     "locale": "it",
-                    "value": "barricato"
+                    "value": "invecchiamento in barrique"
                 }
             ],
             "sort_index": 4
@@ -81,7 +81,7 @@
                 },
                 {
                     "locale": "fr",
-                    "value": "..."
+                    "value": "tannins"
                 },
                 {
                     "locale": "it",
