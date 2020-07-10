@@ -2,6 +2,7 @@
     "wine_characteristics": [
         {
             "id": "acid",
+            "name": "Säure",
             "titles": [
                 {
                     "locale": "de",
@@ -20,6 +21,7 @@
         },
         {
             "id": "sweetness",
+            "name": "Zucker",
             "titles": [
                 {
                     "locale": "de",
@@ -38,6 +40,7 @@
         },
         {
             "id": "intensity",
+            "name": "Intensität",
             "titles": [
                 {
                     "locale": "de",
@@ -56,6 +59,7 @@
         },
         {
             "id": "barrique-aging",
+            "name": "Barrique-Ausbau",
             "titles": [
                 {
                     "locale": "de",
@@ -74,6 +78,7 @@
         },
         {
             "id": "tannins",
+            "name": "Tannine",
             "titles": [
                 {
                     "locale": "de",

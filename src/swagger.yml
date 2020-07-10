@@ -255,19 +255,19 @@ paths:
                           value: Carni accompagnate da salse aromatiche
                   characteristics:
                     -
-                      id: acid
+                      characteristic: acid
                       value: 1
                     -
-                      id: sweetness
+                      characteristic: sweetness
                       value: 2
                     -
-                      id: intensity
+                      characteristic: intensity
                       value: 1
                     -
-                      id: barrique-aging
+                      characteristic: barrique-aging
                       value: 0
                     -
-                      id: tannins
+                      characteristic: tannins
                       value: 1
                   grapes:
                     -
@@ -747,6 +747,7 @@ paths:
               wine_characteristics:
                 -
                   id: acid
+                  name: Säure
                   titles:
                     -
                       locale: de
@@ -760,6 +761,7 @@ paths:
                   sort_index: 1
                 -
                   id: sweetness
+                  name: Zucker
                   titles:
                     -
                       locale: de
@@ -773,6 +775,7 @@ paths:
                   sort_index: 2
                 -
                   id: intensity
+                  name: Intensität
                   titles:
                     -
                       locale: de
@@ -786,6 +789,7 @@ paths:
                   sort_index: 3
                 -
                   id: barrique-aging
+                  name: Barrique-Ausbau
                   titles:
                     -
                       locale: de
@@ -799,6 +803,7 @@ paths:
                   sort_index: 4
                 -
                   id: tannins
+                  name: Tannine
                   titles:
                     -
                       locale: de
@@ -1435,7 +1440,7 @@ definitions:
       food_matches:
         $ref: '#/definitions/FoodMatches'
       characteristics:
-        $ref: '#/definitions/CharacteristicValues'
+        $ref: '#/definitions/CharacteristicScores'
       grapes:
         $ref: '#/definitions/Grapes'
       character:
@@ -1473,15 +1478,17 @@ definitions:
       id:
         type: string
         description: ID
+      name:
+        type: string
       titles:
         $ref: '#/definitions/Translations'
       sort_index:
         $ref: '#/definitions/SortIndex'
 
-  CharacteristicValue:
+  CharacteristicScore:
     type: object
     properties:
-      id:
+      characteristic:
         type: string
         description: Characteristic ID
       value:
@@ -2104,10 +2111,10 @@ definitions:
     items:
       $ref: '#/definitions/Characteristic'
 
-  CharacteristicValues:
+  CharacteristicScores:
     type: array
     items:
-      $ref: '#/definitions/CharacteristicValue'
+      $ref: '#/definitions/CharacteristicScore'
 
   Grapes:
     type: array

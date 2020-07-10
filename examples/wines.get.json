@@ -284,23 +284,23 @@
                 ],
                 "characteristics": [
                     {
-                        "id": "acid",
+                        "characteristic": "acid",
                         "value": 1
                     },
                     {
-                        "id": "sweetness",
+                        "characteristic": "sweetness",
                         "value": 2
                     },
                     {
-                        "id": "intensity",
+                        "characteristic": "intensity",
                         "value": 1
                     },
                     {
-                        "id": "barrique-aging",
+                        "characteristic": "barrique-aging",
                         "value": 0
                     },
                     {
-                        "id": "tannins",
+                        "characteristic": "tannins",
                         "value": 1
                     }
                 ],
@@ -1352,23 +1352,23 @@
                 ],
                 "characteristics": [
                     {
-                        "id": "acid",
+                        "characteristic": "acid",
                         "value": 1
                     },
                     {
-                        "id": "sweetness",
+                        "characteristic": "sweetness",
                         "value": 0
                     },
                     {
-                        "id": "intensity",
+                        "characteristic": "intensity",
                         "value": 2
                     },
                     {
-                        "id": "barrique-aging",
+                        "characteristic": "barrique-aging",
                         "value": 2
                     },
                     {
-                        "id": "tannins",
+                        "characteristic": "tannins",
                         "value": 2
                     }
                 ],
@@ -1746,15 +1746,15 @@
                 "food_matches": [],
                 "characteristics": [
                     {
-                        "id": "acid",
+                        "characteristic": "acid",
                         "value": -1
                     },
                     {
-                        "id": "sweetness",
+                        "characteristic": "sweetness",
                         "value": -1
                     },
                     {
-                        "id": "intensity",
+                        "characteristic": "intensity",
                         "value": 0
                     }
                 ],
