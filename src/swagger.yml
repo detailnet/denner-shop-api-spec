@@ -253,7 +253,7 @@ paths:
                         -
                           locale: it
                           value: Carni accompagnate da salse aromatiche
-                  characteristics:
+                  characteristic_scores:
                     -
                       characteristic: acid
                       value: 1
@@ -1439,7 +1439,7 @@ definitions:
         $ref: '#/definitions/Year'
       food_matches:
         $ref: '#/definitions/FoodMatches'
-      characteristics:
+      characteristic_scores:
         $ref: '#/definitions/CharacteristicScores'
       grapes:
         $ref: '#/definitions/Grapes'

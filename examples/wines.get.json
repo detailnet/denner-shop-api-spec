@@ -282,7 +282,7 @@
                         "score": 1
                     }
                 ],
-                "characteristics": [
+                "characteristic_scores": [
                     {
                         "characteristic": "acid",
                         "value": 1
@@ -985,7 +985,7 @@
                 },
                 "year": 2014,
                 "food_matches": [],
-                "characteristics": [],
+                "characteristic_scores": [],
                 "grapes": [],
                 "character": [
                     {
@@ -1350,7 +1350,7 @@
                         "score": 2
                     }
                 ],
-                "characteristics": [
+                "characteristic_scores": [
                     {
                         "characteristic": "acid",
                         "value": 1
@@ -1744,7 +1744,7 @@
                 },
                 "year": 2016,
                 "food_matches": [],
-                "characteristics": [
+                "characteristic_scores": [
                     {
                         "characteristic": "acid",
                         "value": -1
@@ -2041,7 +2041,7 @@
                         "score": 0
                     }
                 ],
-                "characteristics": [],
+                "characteristic_scores": [],
                 "grapes": [
                     {
                         "id": "CHARDONNAY",
