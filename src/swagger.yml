@@ -253,6 +253,22 @@ paths:
                         -
                           locale: it
                           value: Carni accompagnate da salse aromatiche
+                  characteristic_scores:
+                    -
+                      characteristic: acid
+                      value: 1
+                    -
+                      characteristic: sweetness
+                      value: 2
+                    -
+                      characteristic: intensity
+                      value: 1
+                    -
+                      characteristic: barrique-aging
+                      value: 0
+                    -
+                      characteristic: tannins
+                      value: 1
                   grapes:
                     -
                       id: PRIMITIVO
@@ -567,10 +583,10 @@ paths:
                         value: "<b>Allgemeiner </b>Hinweis"
                       -
                         locale: fr
-                        value: "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                        value: "<ul><li>Allgemeiner <i>Hinweis</i></li></ul>"
                       -
                         locale: it
-                        value: <font color="#ff0000">​Allgemeiner Hinweis</font>
+                        value: "<font color=\"#ff0000\">Allgemeiner Hinweis</font>"
 
   /wines/{article_id}/appraisals:
     get:
@@ -707,6 +723,99 @@ paths:
                 downvotes: 1
               article:
                 id: "051296"
+
+  ### Wine characteristics
+  /wine-characteristics:
+    get:
+      summary: List of wine characteristics
+      description: >
+        Use this operation to get a list of all wine characteristics (Wein-Geschmacksprofil).
+      tags:
+        - wineCharacteristic
+      operationId: listWineCharacteristics
+      security:
+        - appKey: []
+      parameters:
+        - $ref: '#/parameters/AcceptHeader'
+      responses:
+        200:
+          description: Successful listing
+          schema:
+            $ref: '#/definitions/WineCharacteristicsResponse'
+          examples:
+            application/json:
+              wine_characteristics:
+                -
+                  id: acid
+                  name: Säure
+                  titles:
+                    -
+                      locale: de
+                      value: Säure
+                    -
+                      locale: fr
+                      value: acidité
+                    -
+                      locale: it
+                      value: acidità
+                  sort_index: 1
+                -
+                  id: sweetness
+                  name: Zucker
+                  titles:
+                    -
+                      locale: de
+                      value: Zucker
+                    -
+                      locale: fr
+                      value: sucres
+                    -
+                      locale: it
+                      value: zuccheri
+                  sort_index: 2
+                -
+                  id: intensity
+                  name: Intensität
+                  titles:
+                    -
+                      locale: de
+                      value: Intensität
+                    -
+                      locale: fr
+                      value: intensité
+                    -
+                      locale: it
+                      value: intensità
+                  sort_index: 3
+                -
+                  id: barrique-aging
+                  name: Barrique-Ausbau
+                  titles:
+                    -
+                      locale: de
+                      value: Barrique-Ausbau
+                    -
+                      locale: fr
+                      value: vieillissement en barrique
+                    -
+                      locale: it
+                      value: invecchiamento in barrique
+                  sort_index: 4
+                -
+                  id: tannins
+                  name: Tannine
+                  titles:
+                    -
+                      locale: de
+                      value: Tannine
+                    -
+                      locale: fr
+                      value: tannins
+                    -
+                      locale: it
+                      value: tannini
+                  sort_index: 5
+              total_items: 5
 
   ### Wine growers
   /wine-growers:
@@ -1330,6 +1439,8 @@ definitions:
         $ref: '#/definitions/Year'
       food_matches:
         $ref: '#/definitions/FoodMatches'
+      characteristic_scores:
+        $ref: '#/definitions/CharacteristicScores'
       grapes:
         $ref: '#/definitions/Grapes'
       character:
@@ -1360,6 +1471,31 @@ definitions:
         minimum: 0
         maximum: 4
         description: Given score (0 = no match; 1 = slight match; 2 = good match; 3 = very good match; 4 = perfect match)
+
+  Characteristic:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID
+      name:
+        type: string
+      titles:
+        $ref: '#/definitions/Translations'
+      sort_index:
+        $ref: '#/definitions/SortIndex'
+
+  CharacteristicScore:
+    type: object
+    properties:
+      characteristic:
+        type: string
+        description: Characteristic ID
+      value:
+        format: int32
+        minimum: -2
+        maximum: 2
+        description: Given value (-2 = not at all; -1 = not much; 0 = neutral; 1 = has some; 2 = full characteristic)
 
   Grape:
     type: object
@@ -1970,6 +2106,16 @@ definitions:
     items:
       $ref: '#/definitions/FoodMatch'
 
+  Characteristics:
+    type: array
+    items:
+      $ref: '#/definitions/Characteristic'
+
+  CharacteristicScores:
+    type: array
+    items:
+      $ref: '#/definitions/CharacteristicScore'
+
   Grapes:
     type: array
     items:
@@ -2024,6 +2170,24 @@ definitions:
       articles:
         $ref: '#/definitions/Articles'
 
+  WineCharacteristicsResponse:
+    type: object
+    properties:
+      #      page_count:
+      #        description: The number of pages
+      #        type: integer
+      #        format: int32
+      #      page_size:
+      #        description: The page size
+      #        type: integer
+      #        format: int32
+      total_items:
+        description: The number of items on all pages
+        type: integer
+        format: int32
+      wine_characteristics:
+        $ref: '#/definitions/Characteristics'
+
   WineGrowersResponse:
     type: object
     properties:
@@ -2057,7 +2221,7 @@ definitions:
         description: The number of items on all pages
         type: integer
         format: int32
-      wine_growers:
+      wine_experts:
         $ref: '#/definitions/WineExperts'
 
   AppraisalsResponse:

@@ -282,6 +282,28 @@
                         "score": 1
                     }
                 ],
+                "characteristic_scores": [
+                    {
+                        "characteristic": "acid",
+                        "value": 1
+                    },
+                    {
+                        "characteristic": "sweetness",
+                        "value": 2
+                    },
+                    {
+                        "characteristic": "intensity",
+                        "value": 1
+                    },
+                    {
+                        "characteristic": "barrique-aging",
+                        "value": 0
+                    },
+                    {
+                        "characteristic": "tannins",
+                        "value": 1
+                    }
+                ],
                 "grapes": [
                     {
                         "id": "PRIMITIVO",
@@ -708,11 +730,11 @@
                         },
                         {
                             "locale": "fr",
-                            "value": "<ul><li>​Allgemeiner <i>Hinweis</i></li></ul>"
+                            "value": "<ul><li>Allgemeiner <i>Hinweis</i></li></ul>"
                         },
                         {
                             "locale": "it",
-                            "value": "<font color=\"#ff0000\">​Allgemeiner Hinweis</font>"
+                            "value": "<font color=\"#ff0000\">Allgemeiner Hinweis</font>"
                         }
                     ]
                 }
@@ -963,6 +985,7 @@
                 },
                 "year": 2014,
                 "food_matches": [],
+                "characteristic_scores": [],
                 "grapes": [],
                 "character": [
                     {
@@ -1325,6 +1348,28 @@
                             }
                         ],
                         "score": 2
+                    }
+                ],
+                "characteristic_scores": [
+                    {
+                        "characteristic": "acid",
+                        "value": 1
+                    },
+                    {
+                        "characteristic": "sweetness",
+                        "value": 0
+                    },
+                    {
+                        "characteristic": "intensity",
+                        "value": 2
+                    },
+                    {
+                        "characteristic": "barrique-aging",
+                        "value": 2
+                    },
+                    {
+                        "characteristic": "tannins",
+                        "value": 2
                     }
                 ],
                 "grapes": [
@@ -1699,6 +1744,20 @@
                 },
                 "year": 2016,
                 "food_matches": [],
+                "characteristic_scores": [
+                    {
+                        "characteristic": "acid",
+                        "value": -1
+                    },
+                    {
+                        "characteristic": "sweetness",
+                        "value": -1
+                    },
+                    {
+                        "characteristic": "intensity",
+                        "value": 0
+                    }
+                ],
                 "grapes": [],
                 "character": [],
                 "temperature": [],
@@ -1982,6 +2041,7 @@
                         "score": 0
                     }
                 ],
+                "characteristic_scores": [],
                 "grapes": [
                     {
                         "id": "CHARDONNAY",
