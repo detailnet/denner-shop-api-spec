@@ -7,6 +7,33 @@
 	},
 	"item": [
 		{
+			"name": "/wine-characteristics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "App-Key",
+						"value": "{{app_key}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/wine-growers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"wine-growers"
+					]
+				},
+				"description": "List all wine characteristics"
+			},
+			"response": []
+		},
+		{
 			"name": "/wine-growers",
 			"request": {
 				"method": "GET",
@@ -20,7 +47,6 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "{{base_url}}/wine-growers",
 					"host": [
@@ -48,7 +74,6 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "{{base_url}}/wine-experts",
 					"host": [
@@ -95,10 +120,6 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "{{base_url}}/wines",
 					"host": [
@@ -126,10 +147,6 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "{{base_url}}/wines/012345/appraisals",
 					"host": [
@@ -235,10 +252,6 @@
 						"value": "{{app_key}}"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "{{base_url}}/appraisals",
 					"host": [
