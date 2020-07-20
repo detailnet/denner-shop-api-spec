@@ -871,7 +871,7 @@ paths:
       description: >
         Use this operation to get a list of all wine experts (Experte für Auszeichnungen).
       tags:
-        - wineExperts
+        - wineExpert
       operationId: listWineExperts
       security:
         - appKey: []
