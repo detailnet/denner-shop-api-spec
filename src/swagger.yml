@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   description: RESTful API for the Denner Wineshop
-  version: 2.0.0
+  version: 2.1.0
   title: Denner Shop Web Service
   contact:
     name: DETAIL NET
