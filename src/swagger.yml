@@ -725,18 +725,16 @@ paths:
           description: Successful creation
           schema:
             $ref: '#/definitions/Vote'
-          examples:
-            application/json:
-
-              id: "d550a8cc-965d-4048-8a7f-12d2a3c0db0b"
-              created_on: "2018-01-09T08:45:16+00:00"
-              type: "up"
-              appraisal:
-                id: "9bbfabf0-3c05-4a84-ad91-b73a1c268c7e"
-                upvotes: 2
-                downvotes: 1
-              article:
-                id: "051296"
+          example:
+            id: "d550a8cc-965d-4048-8a7f-12d2a3c0db0b"
+            created_on: "2018-01-09T08:45:16+00:00"
+            type: "up"
+            appraisal:
+              id: "9bbfabf0-3c05-4a84-ad91-b73a1c268c7e"
+              upvotes: 2
+              downvotes: 1
+            article:
+              id: "051296"
 
   ### Wine characteristics
   /wine-characteristics:
@@ -1933,21 +1931,19 @@ definitions:
       - gender
       - language
     example:
-      application/json:
-
-        wine_year: 2013
-        title: "un très très bon vin"
-        description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! Denner, qu'est ce qui vous arrive ???"
-        rating: 5
-        firstname: "Isabelle"
-        lastname: "Rossetti"
-        address: "3 rue du Temple"
-        zip_code: "1304"
-        city: "Cossonay"
-        email: "email@gmx.ch"
-        gender: "female"
-        shop_user_id: 123456789
-        language: "fr"
+      wine_year: 2013
+      title: "un très très bon vin"
+      description: "mais ce n'est pas du zinfandel !! c'est du PRIMITIVO !! Denner, qu'est ce qui vous arrive ???"
+      rating: 5
+      firstname: "Isabelle"
+      lastname: "Rossetti"
+      address: "3 rue du Temple"
+      zip_code: "1304"
+      city: "Cossonay"
+      email: "email@gmx.ch"
+      gender: "female"
+      shop_user_id: 123456789
+      language: "fr"
 
   ### Vote
   Vote:

@@ -23,7 +23,7 @@ components:
 info:
   description: Denner Shop Services
   title: denner-shop-v2
-  version: "2023-06-21T15:02:27Z"
+  version: "2023-06-21T15:58:43Z"
 openapi: 3.0.1
 paths:
   /appraisals:
@@ -747,9 +747,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/Empty'
           description: 201 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
         "422":
           content: {}
           description: 422 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
       security:
         - AppKeyHeader: []
       x-amazon-apigateway-integration:
@@ -763,6 +771,8 @@ paths:
           application/json: "{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"article_data\": {\r\n    \"id\": \"$input.params().path.get('article_id')\"\r\n  },\r\n  \"appraisal_data\": $input.json('$')\r\n}"
         responses:
           Appraisal validation failed:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             responseTemplates:
               application/json: |-
                 #set($inputRoot = $input.path('$'))
@@ -771,6 +781,8 @@ paths:
                 }
             statusCode: "422"
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "201"
         type: aws
         uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_saveAppraisal:${stageVariables.lambda_alias}/invocations
@@ -832,9 +844,17 @@ paths:
         "201":
           content: {}
           description: 201 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
         "422":
           content: {}
           description: 422 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
       security:
         - AppKeyHeader: []
       x-amazon-apigateway-integration:
@@ -849,6 +869,8 @@ paths:
           application/json: "{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"appraisal_data\": {\r\n    \"id\": \"$input.params().path.get('appraisal_id')\"\r\n  },\r\n  \"article_data\": {\r\n    \"id\": \"$input.params().path.get('article_id')\"\r\n  },\r\n  \"vote_data\": $input.json('$')\r\n}"
         responses:
           Appraisal validation failed:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             responseTemplates:
               application/json: |-
                 #set($inputRoot = $input.path('$'))
@@ -857,6 +879,8 @@ paths:
                 }
             statusCode: "422"
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "201"
         type: aws
         uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_createVote:${stageVariables.lambda_alias}/invocations
