@@ -317,7 +317,7 @@ paths:
                     -
                       locale: it
                       value: 16-18 °C
-                  medals:
+                  current_medals:
                     -
                       expert:
                         id: eba162da-a71f-4945-a0a1-3bc60ebe55c1
@@ -1151,14 +1151,14 @@ parameters:
     in: path
     type: string
     required: true
-    pattern: '/^\d{6}$/'
+    pattern: ^\d{6}$
   AppraisalIdPathParam:
     name: appraisal_id
     description: The unique identifier of an appraisal
     in: path
     type: string
     required: true
-    pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
+    pattern: ^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$
   FilterParam:
     name: filter
     in: query
@@ -1188,7 +1188,7 @@ parameters:
 #    name: Accept-Language
 #    in: header
 #    type: string
-##    pattern: '/^(de|fr|it)$/'
+##    pattern: ^(de|fr|it)$
 #    required: false
 #    default: de
 #    description: >
@@ -1206,7 +1206,7 @@ definitions:
   ### Common
   UUIDv4:
     type: string
-    pattern: '/^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$/'
+    pattern: ^[a-f0-9]{8}\-[a-f0-9]{4}\-4[a-f0-9]{3}\-(8|9|a|b)[a-f0-9]{3}\-[a-f0-9]{12}$
     description: Unique identifier
 
   SortIndex:
@@ -1217,7 +1217,7 @@ definitions:
 
   Locale:
     type: string
-    pattern: '/^(de|fr|it)$/'
+    pattern: ^(de|fr|it)$
     description: Locale
 
   Translation:
@@ -1246,7 +1246,7 @@ definitions:
     properties:
       id:
         type: string
-        pattern: '/^[A-Z]{2}$/'
+        pattern: ^[A-Z]{2}$
         description: Country code definition from ISO 3166
       title:
         $ref: '#/definitions/Translations'
@@ -1261,7 +1261,7 @@ definitions:
 
 #  Time:
 #    type: string
-#    pattern: '/^([0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/'
+#    pattern: ^([0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$
 #    description: 'Time; Format HH:MM:SS'
 
   Year:
@@ -1309,7 +1309,7 @@ definitions:
         $ref: '#/definitions/UUIDv4'
       code:
         type: string
-        pattern: '/^\d{2}(-\d{2,3})?$/'
+        pattern: ^\d{2}(-\d{2,3})?$
         description: Navision article group code (e.g. '01', '20', '01-60', '38-998')
       name:
         type: string
@@ -1333,7 +1333,7 @@ definitions:
   ### Purchasing department
 #  PurchasingDepartment:
 #    type: string
-#    pattern: '/^[A-Z]{1,2}$/'
+#    pattern: ^[A-Z]{1,2}$
 #    description: Denner purchasing depatment code (e.g. 'BC', 'DD', 'F', 'FG', 'FR', 'G', 'NF', 'TW', 'W')
 
   ### Article
@@ -1342,7 +1342,7 @@ definitions:
     properties:
       id:
         type: string
-        pattern: '/^\d{6}$/'
+        pattern: ^\d{6}$
         description: Navision article code
       name:
         type: string
@@ -1461,7 +1461,7 @@ definitions:
         $ref: '#/definitions/Translations'
       temperature:
         $ref: '#/definitions/Translations'
-      medals:
+      current_medals:
         $ref: '#/definitions/Medals'
       storage:
         $ref: '#/definitions/Translations'
@@ -1667,7 +1667,7 @@ definitions:
     properties:
       code:
         type: string
-        pattern: '/^[A-Z]{2}$/'
+        pattern: ^[A-Z]{2}$
         description: Denner box type code (e.g. 'KA', 'HA', 'HB')
       batch_size:
         type: integer
@@ -1871,7 +1871,7 @@ definitions:
     properties:
       id:
         type: string
-        pattern: '/^\d{6}$/'
+        pattern: ^\d{6}$
         description: Navision article code
 
   NewAppraisal:
@@ -1988,7 +1988,7 @@ definitions:
     properties:
       id:
         type: string
-        pattern: '/^\d{6}$/'
+        pattern: ^\d{6}$
         description: Navision article code
 
   NewVote:

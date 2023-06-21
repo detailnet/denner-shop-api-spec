@@ -23,7 +23,7 @@ components:
 info:
   description: Denner Shop Services
   title: denner-shop-v2
-  version: "2023-06-21T14:23:06Z"
+  version: "2023-06-21T15:02:27Z"
 openapi: 3.0.1
 paths:
   /appraisals:
@@ -96,7 +96,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
               method.response.header.Cache-Control: stageVariables.cache_control
             statusCode: "200"
         type: aws
@@ -128,7 +128,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /sweepstake-participants:
@@ -159,7 +159,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''OPTIONS,POST'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
     post:
@@ -246,7 +246,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-characteristics
@@ -277,7 +277,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /wine-experts:
@@ -341,7 +341,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-experts
@@ -372,7 +372,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /wine-growers:
@@ -436,7 +436,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-growers
@@ -467,7 +467,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /wines:
@@ -531,7 +531,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/shop-wines
@@ -562,7 +562,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /wines/{article_id}:
@@ -608,7 +608,7 @@ paths:
             statusCode: "404"
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/shop-wines/{article_id}
@@ -645,7 +645,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
   /wines/{article_id}/appraisals:
@@ -692,7 +692,7 @@ paths:
         responses:
           default:
             responseParameters:
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
               method.response.header.Cache-Control: stageVariables.cache_control
             statusCode: "200"
         type: aws
@@ -730,7 +730,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS,POST'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
     post:
@@ -813,7 +813,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
               method.response.header.Access-Control-Allow-Methods: '''OPTIONS,POST'''
-              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+              method.response.header.Access-Control-Allow-Origin: '''https://denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: mock
     post:

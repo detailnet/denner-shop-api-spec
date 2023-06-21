@@ -23,7 +23,6 @@
     "url" : "https://denner-shop-api-v2.detailnet.ch",
     "description": "CloudFront distribution for v2 (cache 1h)"
   } ],
-
   "paths" : {
     "/wines" : {
       "get" : {
@@ -355,7 +354,7 @@
                         "locale" : "it",
                         "value" : "16-18 °C"
                       } ],
-                      "medals" : [ {
+                      "current_medals" : [ {
                         "expert" : {
                           "id" : "eba162da-a71f-4945-a0a1-3bc60ebe55c1",
                           "title" : [ {
@@ -691,7 +690,7 @@
           "style" : "simple",
           "explode" : false,
           "schema" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string"
           }
         }, {
@@ -804,7 +803,7 @@
           "style" : "simple",
           "explode" : false,
           "schema" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string"
           }
         } ],
@@ -884,7 +883,7 @@
           "style" : "simple",
           "explode" : false,
           "schema" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string"
           }
         }, {
@@ -895,7 +894,7 @@
           "style" : "simple",
           "explode" : false,
           "schema" : {
-            "pattern" : "/^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$/",
+            "pattern" : "^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$",
             "type" : "string"
           }
         } ],
@@ -1539,7 +1538,7 @@
   "components" : {
     "schemas" : {
       "UUIDv4" : {
-        "pattern" : "/^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$/",
+        "pattern" : "^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$",
         "type" : "string",
         "description" : "Unique identifier"
       },
@@ -1550,7 +1549,7 @@
         "format" : "int32"
       },
       "Locale" : {
-        "pattern" : "/^(de|fr|it)$/",
+        "pattern" : "^(de|fr|it)$",
         "type" : "string",
         "description" : "Locale"
       },
@@ -1583,7 +1582,7 @@
         "type" : "object",
         "properties" : {
           "id" : {
-            "pattern" : "/^[A-Z]{2}$/",
+            "pattern" : "^[A-Z]{2}$",
             "type" : "string",
             "description" : "Country code definition from ISO 3166"
           },
@@ -1632,7 +1631,7 @@
             "$ref" : "#/components/schemas/UUIDv4"
           },
           "code" : {
-            "pattern" : "/^\\d{2}(-\\d{2,3})?$/",
+            "pattern" : "^\\d{2}(-\\d{2,3})?$",
             "type" : "string",
             "description" : "Navision article group code (e.g. '01', '20', '01-60', '38-998')"
           },
@@ -1665,7 +1664,7 @@
         "type" : "object",
         "properties" : {
           "id" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string",
             "description" : "Navision article code"
           },
@@ -1811,7 +1810,7 @@
           "temperature" : {
             "$ref" : "#/components/schemas/Translations"
           },
-          "medals" : {
+          "current_medals" : {
             "$ref" : "#/components/schemas/Medals"
           },
           "storage" : {
@@ -2081,7 +2080,7 @@
         "type" : "object",
         "properties" : {
           "code" : {
-            "pattern" : "/^[A-Z]{2}$/",
+            "pattern" : "^[A-Z]{2}$",
             "type" : "string",
             "description" : "Denner box type code (e.g. 'KA', 'HA', 'HB')"
           },
@@ -2345,7 +2344,7 @@
         "type" : "object",
         "properties" : {
           "id" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string",
             "description" : "Navision article code"
           }
@@ -2478,7 +2477,7 @@
         "type" : "object",
         "properties" : {
           "id" : {
-            "pattern" : "/^\\d{6}$/",
+            "pattern" : "^\\d{6}$",
             "type" : "string",
             "description" : "Navision article code"
           }
@@ -2817,7 +2816,7 @@
         "style" : "simple",
         "explode" : false,
         "schema" : {
-          "pattern" : "/^\\d{6}$/",
+          "pattern" : "^\\d{6}$",
           "type" : "string"
         }
       },
@@ -2829,7 +2828,7 @@
         "style" : "simple",
         "explode" : false,
         "schema" : {
-          "pattern" : "/^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$/",
+          "pattern" : "^[a-f0-9]{8}\\-[a-f0-9]{4}\\-4[a-f0-9]{3}\\-(8|9|a|b)[a-f0-9]{3}\\-[a-f0-9]{12}$",
           "type" : "string"
         }
       },
