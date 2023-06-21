@@ -9,26 +9,17 @@ info:
 # In Swagger definition is not possible to define multiple servers/hosts/basepth (ref https://swagger.io/docs/specification/2-0/api-host-and-base-path/)
 #on migration to OpenApi standard, define servers:
 #servers:
-#  - url: https://denner-online-api.detailnet.ch/{apiGatewayPath}
-#    description: ApiGateway (Regional optimized - eu-west-1)
-#    variables:
-#      apiGatewayPath
-#        enum:
-#          - test
-#          - v1
-#        default: test,
-#        description: ApiGateway path
-#  - url: https://denner-public-api.detailnet.ch/{apiGatewayPath}
+#  - url: https://denner-shop-api.detailnet.ch/{apiGatewayPath}
 #    description: ApiGateway (Edge optimized)
 #    variables:
 #      apiGatewayPath
 #        enum:
 #          - test
-#          - v1
+#          - v2
 #        default: test,
 #        description: ApiGateway path
-#  - url: https://denner-public-api-v1.detailnet.ch
-#    description: CloudFront distribution for V1 (cache 1h)
+#  - url: https://denner-shop-api-v2.detailnet.ch
+#    description: CloudFront distribution for V2 (cache 1h)
 host: denner-shop-api-v2.detailnet.ch
 schemes:
   - https

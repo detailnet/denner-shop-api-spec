@@ -23,7 +23,7 @@ components:
 info:
   description: Denner Shop Services
   title: denner-shop-v2
-  version: "2020-07-20T07:56:19Z"
+  version: "2023-06-21T14:23:06Z"
 openapi: 3.0.1
 paths:
   /appraisals:
@@ -69,6 +69,9 @@ paths:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
           headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
             Cache-Control:
               schema:
                 type: string
@@ -93,11 +96,72 @@ paths:
         responses:
           default:
             responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
               method.response.header.Cache-Control: stageVariables.cache_control
             statusCode: "200"
         type: aws
         uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_listAppraisals:${stageVariables.lambda_alias}/invocations
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /sweepstake-participants:
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''OPTIONS,POST'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
     post:
       requestBody:
         content:
@@ -161,6 +225,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
       security:
         - AppKeyHeader: []
       x-amazon-apigateway-integration:
@@ -177,9 +245,41 @@ paths:
           integration.request.querystring.page_size: method.request.querystring.page_size
         responses:
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-characteristics
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /wine-experts:
     get:
       parameters:
@@ -211,6 +311,9 @@ paths:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
           headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
             Cache-Control:
               schema:
                 type: string
@@ -237,9 +340,41 @@ paths:
           integration.request.querystring.size: method.request.querystring.size
         responses:
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-experts
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /wine-growers:
     get:
       parameters:
@@ -271,6 +406,9 @@ paths:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
           headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
             Cache-Control:
               schema:
                 type: string
@@ -297,9 +435,41 @@ paths:
           integration.request.querystring.sort: method.request.querystring.sort
         responses:
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/wine-growers
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /wines:
     get:
       parameters:
@@ -331,6 +501,9 @@ paths:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
           headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
             Cache-Control:
               schema:
                 type: string
@@ -357,9 +530,41 @@ paths:
           integration.request.querystring.sort: method.request.querystring.sort
         responses:
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/shop-wines
+    options:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /wines/{article_id}:
     get:
       parameters:
@@ -379,6 +584,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
         "404":
           content:
             application/json:
@@ -398,9 +607,47 @@ paths:
           "404":
             statusCode: "404"
           default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
             statusCode: "200"
         type: http
         uri: https://${stageVariables.url_articles}/shop-wines/{article_id}
+    options:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
   /wines/{article_id}/appraisals:
     get:
       parameters:
@@ -425,6 +672,9 @@ paths:
                 $ref: '#/components/schemas/Empty'
           description: 200 response
           headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
             Cache-Control:
               schema:
                 type: string
@@ -442,10 +692,47 @@ paths:
         responses:
           default:
             responseParameters:
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
               method.response.header.Cache-Control: stageVariables.cache_control
             statusCode: "200"
         type: aws
         uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_listAppraisals:${stageVariables.lambda_alias}/invocations
+    options:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS,POST'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
     post:
       parameters:
         - in: path
@@ -488,6 +775,47 @@ paths:
         type: aws
         uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_saveAppraisal:${stageVariables.lambda_alias}/invocations
   /wines/{article_id}/appraisals/{appraisal_id}/votes:
+    options:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: appraisal_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+      x-amazon-apigateway-integration:
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: '{"statusCode": 200}'
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: '''App-Key,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'''
+              method.response.header.Access-Control-Allow-Methods: '''OPTIONS,POST'''
+              method.response.header.Access-Control-Allow-Origin: '''denner-shop-api-docs.detailnet.ch'''
+            statusCode: "200"
+        type: mock
     post:
       parameters:
         - in: path

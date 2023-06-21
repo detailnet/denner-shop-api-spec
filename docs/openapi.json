@@ -10,8 +10,20 @@
     "version" : "2.1.0"
   },
   "servers" : [ {
-    "url" : "https://denner-shop-api-v2.detailnet.ch/"
+    "url" : "https://denner-shop-api.detailnet.ch/{apiGatewayPath}",
+    "variables": {
+      "apiGatewayPath": {
+        "enum": ["test", "v2"],
+        "default": "test",
+        "description": "ApiGateway path"
+      }
+    },
+    "description": "ApiGateway (Edge optimized)"
+  }, {
+    "url" : "https://denner-shop-api-v2.detailnet.ch",
+    "description": "CloudFront distribution for v2 (cache 1h)"
   } ],
+
   "paths" : {
     "/wines" : {
       "get" : {
