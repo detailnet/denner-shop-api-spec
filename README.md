@@ -24,35 +24,32 @@ The Denner Shop Web Service provides data and functions for the Denner Wineshop.
 ### Other
 * `POST /sweepstake-participants` (Gewinnspielteilnehmer, [example request](examples/sweepstake-participants.post-request.json))
 
-## Building
+## Documentation and Building
 
-### Protobox
+To see the documentation page [Swagger UI](https://swagger.io/tools/swagger-ui/) visit  http://denner-shop-api.detailnet.ch/
+or for development, start the Docker instance (`lando start`) that presents the static HTML pages in `/docs` directory and
+load the page http://denner-shop-apic.detailnet.me.
+
+### Building
 To build the specification we're using [swagger-codegen](https://github.com/swagger-api/swagger-codegen).
 
-Run the following commands in [Protobox](https://bitbucket.org/detailnet/protobox) to install it (and it's dependencies):
+This project is already setup to build directly through `lando`.
 
-        sudo apt-get install maven
-        sudo apt-get install openjdk-7-jdk
-        git clone git@github.com:swagger-api/swagger-codegen.git
-        cd swagger-codegen
-        mvn package
-      
-You should also install the JSON processor utility for further data manipulation:
-        
-        sudo npm install -g json
-  
-#### JSON
-Once installed, `swagger.json` can be generated as follows:
+```shell
+lando start
+lando build-docs
+```
 
-        java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-            -i ../denner-shop-api-spec/src/swagger.yml \
-            -l swagger \
-            -o ../denner-shop-api-spec/build/swagger
-        
-The file will be located at `build/swagger/swagger.json`.
+The file will be located at `docs/openapi.json`.
+
+**Important: after generation revert the servers section at beginning of `docs/openapi.json`**
+
+You can then review the changes in the [local browser](http://denner-shop-api.detailnet.me/) before commit.
+
 
 To filter out examples and descriptions execute following (JSON processor needed):
- 
+(You should install the JSON processor utility  `sudo npm install -g json`)
+
         json -e '
           function dropRecursive(obj, objName) {
             if (objName != "properties") {
@@ -70,17 +67,14 @@ To filter out examples and descriptions execute following (JSON processor needed
           }
           
           dropRecursive(this, 'this');
-        ' < ../denner-shop-api-spec/build/swagger/swagger.json > ../denner-shop-api-spec/build/swagger/swagger.no_texts.json
+        ' < docs/openapi.json > docs/openapi.no_texts.json
 
-The file will be located at `build/swagger/swagger.no_texts.json`.
+The file will be located at `docs/openapi.no_texts.json`.
 
 To compress all your JSON data execute following (JSON processor needed):
 
-        for f in `ls ../denner-shop-api-spec/build/swagger/*.json | grep -v "compressed"`
-        do 
-          json -o json-0 < $f > "${f%.json}.compressed.json"
-        done
-        
+        json -o json-0 < docs/openapi.no_texts.json > docs/openapi.no_texts.compressed.json
+
 #### HTML
 You can also generate a static HTML page:
 
@@ -88,5 +82,27 @@ You can also generate a static HTML page:
             -i ../denner-shop-api-spec/src/swagger.yml \
             -l html \
             -o ../denner-shop-api-spec/build/html
-            
+
 The file will be located at `build/html/index.html`.
+
+
+
+### Preserve AWS API changes
+
+AWS API gateway does a good job with the "Deployment History" but for a better consultation on changes and in case of disaster recovery,
+we download in this project the export as "OpenAPI 3 + API Gateway Extensions" after every deployment.
+
+The download is performed with `lando export-api`. (Can be also dane manually through the AWS console)
+
+
+### Compiling Stylesheets
+
+To compile the stylesheets for the swagger docs, globally install npm sass with `install -g sass` and run sass:
+
+        sass docs/style/main.scss docs/swagger-ui.css --style=compressed
+
+For continuous watch and build during development run:
+
+        sass docs/style/main.scss docs/swagger-ui.css --watch
+
+      

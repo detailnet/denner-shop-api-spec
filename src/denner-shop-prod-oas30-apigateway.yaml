@@ -1,0 +1,539 @@
+components:
+  schemas:
+    Empty:
+      title: Empty Schema
+      type: object
+    Error:
+      properties:
+        message:
+          type: string
+      title: Error Schema
+      type: object
+  securitySchemes:
+    AppKeyHeader:
+      in: header
+      name: App-Key
+      type: apiKey
+      x-amazon-apigateway-authorizer:
+        authorizerCredentials: arn:aws:iam::802555642192:role/aws-apigateway-role.denner-shop-api
+        authorizerResultTtlInSeconds: 3600
+        authorizerUri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-lambda-tools_authorizeApiRequest:live/invocations
+        type: token
+      x-amazon-apigateway-authtype: custom
+info:
+  description: Denner Shop Services
+  title: denner-shop-v2
+  version: "2020-07-20T07:56:19Z"
+openapi: 3.0.1
+paths:
+  /appraisals:
+    get:
+      parameters:
+        - in: query
+          name: f.id
+          schema:
+            type: string
+        - in: query
+          name: f.email
+          schema:
+            type: string
+        - in: query
+          name: sort
+          schema:
+            type: string
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: query
+          name: f.source
+          schema:
+            type: string
+        - in: query
+          name: f.wine_id
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+        - in: query
+          name: f.shop_user_id
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.querystring.page
+          - method.request.querystring.page_size
+          - method.request.querystring.sort
+          - method.request.querystring.f.wine_id
+          - method.request.querystring.f.source
+          - method.request.querystring.f.shop_user_id
+          - method.request.querystring.f.id
+          - method.request.querystring.f.email
+        cacheNamespace: 53vty5
+        contentHandling: CONVERT_TO_TEXT
+        httpMethod: POST
+        passthroughBehavior: when_no_templates
+        requestTemplates:
+          application/json: "#set($queryParams = $input.params().querystring)\r\n{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"query\": \"f.approved=__bool_true&#foreach($paramName in $queryParams.keySet())$paramName=$util.escapeJavaScript($queryParams.get($paramName))#if($foreach.hasNext)&#end#end\"\r\n}"
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Cache-Control: stageVariables.cache_control
+            statusCode: "200"
+        type: aws
+        uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_listAppraisals:${stageVariables.lambda_alias}/invocations
+  /sweepstake-participants:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Empty'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 201 response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 422 response
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        contentHandling: CONVERT_TO_TEXT
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: "{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"participant_data\": $input.json('$')\r\n}"
+        responses:
+          SweepstakeParticipant validation failed:
+            responseTemplates:
+              application/json: |-
+                #set($inputRoot = $input.path('$'))
+                {
+                  "message": "Validation error"
+                }
+            statusCode: "422"
+          default:
+            statusCode: "201"
+        type: aws
+        uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_saveSweepstakeParticipant:${stageVariables.lambda_alias}/invocations
+  /wine-characteristics:
+    get:
+      parameters:
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: header
+          name: App-Key
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.querystring.page
+          - method.request.querystring.page_size
+        cacheNamespace: y5h4rd
+        httpMethod: GET
+        passthroughBehavior: when_no_match
+        requestParameters:
+          integration.request.header.App-ID: '''3f24cee8'''
+          integration.request.header.App-Key: '''b70bc148ddc046286a3eaf46fa6bc23b'''
+          integration.request.querystring.page: method.request.querystring.page
+          integration.request.querystring.page_size: method.request.querystring.page_size
+        responses:
+          default:
+            statusCode: "200"
+        type: http
+        uri: https://${stageVariables.url_articles}/wine-characteristics
+  /wine-experts:
+    get:
+      parameters:
+        - in: header
+          name: App-Key
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: query
+          name: filter
+          schema:
+            type: string
+        - in: query
+          name: size
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.querystring.filter
+          - method.request.querystring.page
+          - method.request.querystring.page_size
+          - method.request.querystring.size
+        cacheNamespace: 327n6o
+        httpMethod: GET
+        passthroughBehavior: when_no_match
+        requestParameters:
+          integration.request.header.App-ID: '''3f24cee8'''
+          integration.request.header.App-Key: '''b70bc148ddc046286a3eaf46fa6bc23b'''
+          integration.request.querystring.filter: method.request.querystring.filter
+          integration.request.querystring.page: method.request.querystring.page
+          integration.request.querystring.page_size: method.request.querystring.page_size
+          integration.request.querystring.size: method.request.querystring.size
+        responses:
+          default:
+            statusCode: "200"
+        type: http
+        uri: https://${stageVariables.url_articles}/wine-experts
+  /wine-growers:
+    get:
+      parameters:
+        - in: header
+          name: App-Key
+          schema:
+            type: string
+        - in: query
+          name: sort
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: query
+          name: filter
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.querystring.filter
+          - method.request.querystring.page
+          - method.request.querystring.page_size
+          - method.request.querystring.sort
+        cacheNamespace: 7a95xa
+        httpMethod: GET
+        passthroughBehavior: when_no_match
+        requestParameters:
+          integration.request.header.App-ID: '''3f24cee8'''
+          integration.request.header.App-Key: '''b70bc148ddc046286a3eaf46fa6bc23b'''
+          integration.request.querystring.filter: method.request.querystring.filter
+          integration.request.querystring.page: method.request.querystring.page
+          integration.request.querystring.page_size: method.request.querystring.page_size
+          integration.request.querystring.sort: method.request.querystring.sort
+        responses:
+          default:
+            statusCode: "200"
+        type: http
+        uri: https://${stageVariables.url_articles}/wine-growers
+  /wines:
+    get:
+      parameters:
+        - in: header
+          name: App-Key
+          schema:
+            type: string
+        - in: query
+          name: sort
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: query
+          name: filter
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+            Vary:
+              schema:
+                type: string
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.querystring.sort
+          - method.request.querystring.page
+          - method.request.querystring.page_size
+          - method.request.querystring.filter
+        cacheNamespace: r7ulbu
+        httpMethod: GET
+        passthroughBehavior: when_no_match
+        requestParameters:
+          integration.request.header.App-ID: '''3f24cee8'''
+          integration.request.header.App-Key: '''b70bc148ddc046286a3eaf46fa6bc23b'''
+          integration.request.querystring.filter: method.request.querystring.filter
+          integration.request.querystring.page: method.request.querystring.page
+          integration.request.querystring.page_size: method.request.querystring.page_size
+          integration.request.querystring.sort: method.request.querystring.sort
+        responses:
+          default:
+            statusCode: "200"
+        type: http
+        uri: https://${stageVariables.url_articles}/shop-wines
+  /wines/{article_id}:
+    get:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+        - in: header
+          name: App-Key
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 404 response
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        httpMethod: GET
+        passthroughBehavior: when_no_match
+        requestParameters:
+          integration.request.header.App-ID: '''3f24cee8'''
+          integration.request.header.App-Key: '''b70bc148ddc046286a3eaf46fa6bc23b'''
+          integration.request.path.article_id: method.request.path.article_id
+        responses:
+          "404":
+            statusCode: "404"
+          default:
+            statusCode: "200"
+        type: http
+        uri: https://${stageVariables.url_articles}/shop-wines/{article_id}
+  /wines/{article_id}/appraisals:
+    get:
+      parameters:
+        - in: query
+          name: page_size
+          schema:
+            type: string
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 200 response
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.path.article_id
+        cacheNamespace: in1e07
+        contentHandling: CONVERT_TO_TEXT
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: "#set($queryParams = $input.params().querystring)\r\n{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"query\": \"f.approved=__bool_true&f.article.id=__streq_$input.params().path.get('article_id')&#foreach($paramName in $queryParams.keySet())$paramName=$util.escapeJavaScript($queryParams.get($paramName))#if($foreach.hasNext)&#end#end\"\r\n}"
+        responses:
+          default:
+            responseParameters:
+              method.response.header.Cache-Control: stageVariables.cache_control
+            statusCode: "200"
+        type: aws
+        uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_listAppraisals:${stageVariables.lambda_alias}/invocations
+    post:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Empty'
+          description: 201 response
+        "422":
+          content: {}
+          description: 422 response
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.path.article_id
+        cacheNamespace: in1e07
+        contentHandling: CONVERT_TO_TEXT
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: "{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"article_data\": {\r\n    \"id\": \"$input.params().path.get('article_id')\"\r\n  },\r\n  \"appraisal_data\": $input.json('$')\r\n}"
+        responses:
+          Appraisal validation failed:
+            responseTemplates:
+              application/json: |-
+                #set($inputRoot = $input.path('$'))
+                {
+                  "message": "Validation error"
+                }
+            statusCode: "422"
+          default:
+            statusCode: "201"
+        type: aws
+        uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_saveAppraisal:${stageVariables.lambda_alias}/invocations
+  /wines/{article_id}/appraisals/{appraisal_id}/votes:
+    post:
+      parameters:
+        - in: path
+          name: article_id
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: appraisal_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          content: {}
+          description: 201 response
+        "422":
+          content: {}
+          description: 422 response
+      security:
+        - AppKeyHeader: []
+      x-amazon-apigateway-integration:
+        cacheKeyParameters:
+          - method.request.path.appraisal_id
+          - method.request.path.article_id
+        cacheNamespace: 4sp1yl
+        contentHandling: CONVERT_TO_TEXT
+        httpMethod: POST
+        passthroughBehavior: when_no_templates
+        requestTemplates:
+          application/json: "{\r\n  \"serialization\": {\"group\": \"mobile-listing\"},\r\n  \"appraisal_data\": {\r\n    \"id\": \"$input.params().path.get('appraisal_id')\"\r\n  },\r\n  \"article_data\": {\r\n    \"id\": \"$input.params().path.get('article_id')\"\r\n  },\r\n  \"vote_data\": $input.json('$')\r\n}"
+        responses:
+          Appraisal validation failed:
+            responseTemplates:
+              application/json: |-
+                #set($inputRoot = $input.path('$'))
+                {
+                  "message": "Validation error"
+                }
+            statusCode: "422"
+          default:
+            statusCode: "201"
+        type: aws
+        uri: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:802555642192:function:denner-appraisals-api-${stageVariables.lambda_env}_createVote:${stageVariables.lambda_alias}/invocations
+servers:
+  - url: https://denner-shop-api.detailnet.ch/{basePath}
+    variables:
+      basePath:
+        default: v2

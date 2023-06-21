@@ -6,6 +6,29 @@ info:
   contact:
     name: DETAIL NET
     email: support+denner-shop-api@detailnet.ch
+# In Swagger definition is not possible to define multiple servers/hosts/basepth (ref https://swagger.io/docs/specification/2-0/api-host-and-base-path/)
+#on migration to OpenApi standard, define servers:
+#servers:
+#  - url: https://denner-online-api.detailnet.ch/{apiGatewayPath}
+#    description: ApiGateway (Regional optimized - eu-west-1)
+#    variables:
+#      apiGatewayPath
+#        enum:
+#          - test
+#          - v1
+#        default: test,
+#        description: ApiGateway path
+#  - url: https://denner-public-api.detailnet.ch/{apiGatewayPath}
+#    description: ApiGateway (Edge optimized)
+#    variables:
+#      apiGatewayPath
+#        enum:
+#          - test
+#          - v1
+#        default: test,
+#        description: ApiGateway path
+#  - url: https://denner-public-api-v1.detailnet.ch
+#    description: CloudFront distribution for V1 (cache 1h)
 host: denner-shop-api-v2.detailnet.ch
 schemes:
   - https
@@ -1240,7 +1263,7 @@ definitions:
         $ref: '#/definitions/CountryFlag'
     description: Country
 
-  Date:
+  DayDate:
     type: string
     format: date
     description: 'Date; Format full-date of RFC3339 (http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14)'
@@ -1669,7 +1692,7 @@ definitions:
       cdn_url:
         $ref: '#/definitions/Url'
       created_on:
-        $ref: '#/definitions/Date'
+        $ref: '#/definitions/DayDate'
 
   Packshot:
     type: object
@@ -1681,7 +1704,7 @@ definitions:
       quantity:
         $ref: '#/definitions/Quantity'
       created_on:
-        $ref: '#/definitions/Date'
+        $ref: '#/definitions/DayDate'
       view:
         $ref: '#/definitions/PackshotView'
 

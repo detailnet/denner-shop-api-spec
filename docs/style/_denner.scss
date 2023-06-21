@@ -1,0 +1,13 @@
+.swagger-ui {
+  &.header {
+    background-color: #666;
+    display: flex;
+
+    img {
+      width: 100%;
+      max-width: 133px !important;
+      flex: 1 1 auto;
+      display: block;
+    }
+  }
+}

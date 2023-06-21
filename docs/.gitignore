@@ -1,0 +1,5 @@
+.swagger-codegen
+.swagger-codegen-ignore
+openapi.no_texts.json
+openapi.no_texts.compressed.json
+README.md

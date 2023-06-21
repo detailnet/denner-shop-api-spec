@@ -1,0 +1,30 @@
+name: denner-shop-api
+
+proxy:
+  appserver:
+    - denner-shop-api.detailnet.me
+
+env_file:
+  - .lando.env
+
+services:
+  appserver:
+    type: apache # Could use 'tomcat' that has java within, but then we should configure it too
+    webroot: docs
+    build_as_root:
+      - ./docker/install-utilities.sh
+      - ./docker/install-java-environment.sh # Could use a separated service for JRE
+      - ./docker/install-aws-cli.sh
+    run:
+      - . ./docker/download-swagger-codegen.sh
+tooling:
+  build-docs:
+    description: Update openapi definition for docs from the swagger source
+    service: appserver
+    cmd: java -Dfile.encoding=UTF-8 -jar docs/.swagger-codegen/swagger-codegen-cli.jar generate -i src/swagger.yml -l openapi -o docs
+  export-api:
+    description: Download API Gateway definition from production stage (to be committed in this project for VCS)
+    service: appserver
+    cmd:
+      - aws apigateway get-export --parameters extensions='apigateway' --export-type oas30 --accept application/yaml --rest-api-id uopmdyqig4 --stage-name prod src/denner-shop-prod-oas30-apigateway.yaml
+      - yq -i -P 'sort_keys(..)' src/denner-shop-prod-oas30-apigateway.yaml

@@ -1,1 +1,4 @@
+.lando.env
 build
+/src/stage-configuration-prod.txt
+/src/stage-configuration-test.txt
