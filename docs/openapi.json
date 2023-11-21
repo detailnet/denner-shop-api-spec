@@ -7,7 +7,7 @@
       "name" : "DETAIL NET",
       "email" : "support+denner-shop-api@detailnet.ch"
     },
-    "version" : "2.1.0"
+    "version" : "2.2.0"
   },
   "servers" : [ {
     "url" : "https://denner-shop-api.detailnet.ch/{apiGatewayPath}",
