@@ -1703,6 +1703,9 @@
           "base" : {
             "$ref" : "#/components/schemas/Price"
           },
+          "checkout_discount" : {
+            "$ref" : "#/components/schemas/CheckoutDiscount"
+          },
           "final" : {
             "type" : "boolean",
             "description" : "Is the price final?"
@@ -1733,11 +1736,32 @@
           "instead" : {
             "$ref" : "#/components/schemas/Price"
           },
+          "checkout_discount" : {
+            "$ref" : "#/components/schemas/CheckoutDiscount"
+          },
           "final" : {
             "type" : "boolean",
             "description" : "Is the price final?"
           }
         }
+      },
+      "CheckoutDiscount" : {
+        "type" : "object",
+        "properties" : {
+          "percent" : {
+            "minimum" : 0,
+            "type" : "number",
+            "description" : "Percent discount to apply on checkout",
+            "format" : "float"
+          },
+          "value" : {
+            "minimum" : 0,
+            "type" : "number",
+            "description" : "Value discount in CHF to apply on checkout",
+            "format" : "float"
+          }
+        },
+        "description" : "Discounts to apply at checkout (new, only for D2.0)"
       },
       "Content" : {
         "type" : "object",

@@ -1381,10 +1381,13 @@ definitions:
         $ref: '#/definitions/Price'
       list:
         $ref: '#/definitions/Price'
+        description: No more in use for D2.0 # Note: this new descriptpion does not comes in the deal doc
       instead:
         $ref: '#/definitions/Price'
       base:
         $ref: '#/definitions/Price'
+      checkout_discount:
+        $ref: '#/definitions/CheckoutDiscount'
       final:
         type: boolean
         description: Is the price final?
@@ -1405,11 +1408,29 @@ definitions:
         $ref: '#/definitions/Price'
       list:
         $ref: '#/definitions/Price'
+        description: No more in use for D2.0 # Note: this new descriptpion does not comes in the deal doc
       instead:
         $ref: '#/definitions/Price'
+      checkout_discount:
+        $ref: '#/definitions/CheckoutDiscount'
       final:
         type: boolean
         description: Is the price final?
+
+  CheckoutDiscount:
+    type: object
+    description: Discounts to apply at checkout (new, only for D2.0)
+    properties:
+      percent:
+        type: number
+        format: float
+        minimum: 0
+        description: Percent discount to apply on checkout
+      value:
+        type: number
+        format: float
+        minimum: 0
+        description: Value discount in CHF to apply on checkout
 
   Content:
     type: object
